@@ -118,7 +118,7 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 
 	/**
 	 * Uses the Bellman-Ford algorithm with negative weights to find the longest
-	 * path in an acyclic directed graph.
+	 * path in an acyclic directed graph. Length is calculated by the sum of execution time.
 	 *
 	 * @param g
 	 * @return list of edges composing longest path
@@ -161,7 +161,7 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 
 	/**
 	 * Uses the Bellman-Ford algorithm with negative weights to find the longest
-	 * path in an acyclic directed graph.
+	 * path in an acyclic directed graph. Length is calculated by the number of nodes.
 	 *
 	 * @param g
 	 * @return list of edges composing longest path
@@ -192,7 +192,6 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 		// Now retrieve total cost
 		Node pre = predecessor.get("end");
 		int totalTime = 0;
-
 		while (pre != null) {
 			totalTime += 1;
 			pre = predecessor.get(pre.getName());
