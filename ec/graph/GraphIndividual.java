@@ -10,6 +10,11 @@ import ec.Individual;
 import ec.simple.SimpleFitness;
 import ec.util.Parameter;
 
+/**
+ * A GraphIndividual is a DAG solution to the web servcice composition problem.
+ * @author yanlong
+ *
+ */
 public class GraphIndividual extends Individual {
 
 	public Map<String, Node> nodeMap = new HashMap<String, Node>();
@@ -69,7 +74,7 @@ public class GraphIndividual extends Individual {
 
 	/**
 	 * Copies this graph structure to another GraphIndividual object.
-	 * 
+	 *
 	 * @param other
 	 */
     public void copyTo(GraphIndividual other) {
@@ -78,7 +83,7 @@ public class GraphIndividual extends Individual {
             other.nodeMap.put( newN.getName(), newN );
             other.considerableNodeMap.put( newN.getName(), newN );
         }
-        
+
         for (Edge e: edgeList) {
             Edge newE = new Edge(e.getIntersect());
             other.edgeList.add(newE);
