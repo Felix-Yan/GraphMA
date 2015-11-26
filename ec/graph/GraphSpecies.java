@@ -290,6 +290,14 @@ public class GraphSpecies extends Species {
     	return foundMatch;
     }
 
+    /**
+     * This connects a subgraph to the main graph with matched input and outputs
+     * @param init
+     * @param graph
+     * @param subgraph
+     * @param disconnectedInput
+     * @param disconnectedOutput
+     */
     public void fitMutatedSubgraph(GraphInitializer init, GraphIndividual graph, GraphIndividual subgraph, Map<Node, Set<String>> disconnectedInput, Set<Node> disconnectedOutput){
 
         // Add subgraph to main graph
