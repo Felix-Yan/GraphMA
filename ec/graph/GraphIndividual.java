@@ -17,7 +17,7 @@ import ec.util.Parameter;
  */
 public class GraphIndividual extends Individual {
 
-	public Map<String, Node> nodeMap = new HashMap<String, Node>();
+	public Map<String, Node> nodeMap = new HashMap<String, Node>();//Its values contains all the nodes in the graph
 	public Map<String, Node> considerableNodeMap= new HashMap<String, Node>();
 	public List<Edge> edgeList = new ArrayList<Edge>();
 	public List<Edge> considerableEdgeList = new ArrayList<Edge>();

@@ -57,7 +57,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
                     selected = temp;
                 }
             }
-//TODO do not recreate the whole graph. Instead, local search
+//TODO should not recreate the whole graph. Instead, local search
             if (selected.getName().equals( "start" )) {
                 // Create an entirely new graph
                 graph = species.createNewGraph( null, state, init.startNode.clone(), init.endNode.clone(), init.relevant );
