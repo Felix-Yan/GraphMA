@@ -61,11 +61,11 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 			// Find all nodes that should be removed
 			Node newEnd   = init.endNode.clone();
-			Set<Node> nodesToRemove = findNodesToRemove(selected);
+			Set<Node> nodesToReplace = findNodesToRemove(selected);
 			Set<Edge> edgesToRemove = new HashSet<Edge>();
 
 			// Remove nodes and edges
-			for (Node node : nodesToRemove) {
+			for (Node node : nodesToReplace) {
 				graph.nodeMap.remove( node.getName() );
 				graph.considerableNodeMap.remove( node.getName() );
 
