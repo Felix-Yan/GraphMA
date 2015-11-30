@@ -333,6 +333,17 @@ public class GraphInitializer extends SimpleInitializer {
 		}
 	}
 
+	/**
+	 * This helps invoke the getRelevantSevices(Map<String,Node> serviceMap, Set<String> inputs, Set<String> outputs)
+	 * method outside the GraphInitializer class, without the argument of serviceMap.
+	 * @param inputs
+	 * @param outputs
+	 * @return a set of relevant service nodes
+	 */
+	public Set<Node> getRelevantServices(Set<String> inputs, Set<String> outputs){
+		return getRelevantServices(serviceMap, inputs, outputs);
+	}
+
 	private void calculateNormalisationBounds(Set<Node> services) {
 		for(Node service: services) {
 			double[] qos = service.getQos();
@@ -556,7 +567,7 @@ public class GraphInitializer extends SimpleInitializer {
 			}
 		}
 	}
-	
+
 	public void countGraphElements(GraphIndividual graph) {
         // Keep track of nodes and edges for statistics
         for (String nodeName : graph.nodeMap.keySet())
@@ -564,7 +575,7 @@ public class GraphInitializer extends SimpleInitializer {
         for (Edge edge : graph.edgeList)
             addToCountMap(edgeCount, edge.toString());
 	}
-	
+
    private void addToCountMap(Map<String,Integer> map, String item) {
         if (map.containsKey( item )) {
             map.put( item, map.get( item ) + 1 );
