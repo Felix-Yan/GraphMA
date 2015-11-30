@@ -24,8 +24,8 @@ public class GraphSpecies extends Species {
 
 	@Override
 	public Individual newIndividual(EvolutionState state, int thread) {
-	    GraphInitializer init = (GraphInitializer) state.initializer;
-	    GraphIndividual graph = createNewGraph(null, state, init.startNode.clone(), init.endNode.clone(), init.relevant);
+		GraphInitializer init = (GraphInitializer) state.initializer;
+		GraphIndividual graph = createNewGraph(null, state, init.startNode.clone(), init.endNode.clone(), init.relevant);
 		return graph;
 	}
 
@@ -58,45 +58,45 @@ public class GraphSpecies extends Species {
 	}
 
 	public void finishConstructingGraph(Set<String> currentEndInputs, Node end, List<Node> candidateList, Map<String,Edge> connections,
-	        GraphInitializer init, GraphIndividual newGraph, GraphIndividual mergedGraph, Set<Node> seenNodes, Set<Node> relevant) {
+			GraphInitializer init, GraphIndividual newGraph, GraphIndividual mergedGraph, Set<Node> seenNodes, Set<Node> relevant) {
 
-	 // While end cannot be connected to graph
+		// While end cannot be connected to graph
 		while(!checkCandidateNodeSatisfied(init, connections, newGraph, end, end.getInputs(), null)){
 			connections.clear();
 
-            // Select node
-            int index;
+			// Select node
+			int index;
 
-            candidateLoop:
-            for (index = 0; index < candidateList.size(); index++) {
-                Node candidate = candidateList.get(index).clone();
-                // For all of the candidate inputs, check that there is a service already in the graph
-                // that can satisfy it
+			candidateLoop:
+				for (index = 0; index < candidateList.size(); index++) {
+					Node candidate = candidateList.get(index).clone();
+					// For all of the candidate inputs, check that there is a service already in the graph
+					// that can satisfy it
 
-                if (!checkCandidateNodeSatisfied(init, connections, newGraph, candidate, candidate.getInputs(), null)) {
-                    connections.clear();
-                	continue candidateLoop;
-                }
+					if (!checkCandidateNodeSatisfied(init, connections, newGraph, candidate, candidate.getInputs(), null)) {
+						connections.clear();
+						continue candidateLoop;
+					}
 
-                // Connect candidate to graph, adding its reachable services to the candidate list
-                connectCandidateToGraphByInputs(candidate, connections, newGraph, currentEndInputs, init);
-                connections.clear();
+					// Connect candidate to graph, adding its reachable services to the candidate list
+					connectCandidateToGraphByInputs(candidate, connections, newGraph, currentEndInputs, init);
+					connections.clear();
 
-                if (mergedGraph != null)
-                    addToCandidateListFromEdges(candidate, mergedGraph, seenNodes, candidateList);
-                else
-                    addToCandidateList(candidate, seenNodes, relevant, candidateList, init);
+					if (mergedGraph != null)
+						addToCandidateListFromEdges(candidate, mergedGraph, seenNodes, candidateList);
+					else
+						addToCandidateList(candidate, seenNodes, relevant, candidateList, init);
 
-                break;
-            }
+					break;
+				}
 
-            candidateList.remove(index);
-            Collections.shuffle(candidateList, init.random);
-        }
+			candidateList.remove(index);
+			Collections.shuffle(candidateList, init.random);
+		}
 
-        connectCandidateToGraphByInputs(end, connections, newGraph, currentEndInputs, init);
-        connections.clear();
-        init.removeDanglingNodes(newGraph);
+		connectCandidateToGraphByInputs(end, connections, newGraph, currentEndInputs, init);
+		connections.clear();
+		init.removeDanglingNodes(newGraph);
 	}
 
 	private boolean checkCandidateNodeSatisfied(GraphInitializer init,
@@ -110,44 +110,44 @@ public class GraphSpecies extends Species {
 		Node start = newGraph.nodeMap.get("start");
 
 		if (fromNodes == null || fromNodes.contains(start)) {
-    		for(String output : start.getOutputs()) {
-    			Set<String> inputVals = init.taxonomyMap.get(output).servicesWithInput.get(candidate);
-    			if (inputVals != null) {
-    				candidateInputs.removeAll(inputVals);
-    				startIntersect.addAll(inputVals);
-    			}
-    		}
+			for(String output : start.getOutputs()) {
+				Set<String> inputVals = init.taxonomyMap.get(output).servicesWithInput.get(candidate);
+				if (inputVals != null) {
+					candidateInputs.removeAll(inputVals);
+					startIntersect.addAll(inputVals);
+				}
+			}
 
-    		if (!startIntersect.isEmpty()) {
-    			Edge startEdge = new Edge(startIntersect);
-    			startEdge.setFromNode(start);
-    			startEdge.setToNode(candidate);
-    			connections.put(start.getName(), startEdge);
-    		}
+			if (!startIntersect.isEmpty()) {
+				Edge startEdge = new Edge(startIntersect);
+				startEdge.setFromNode(start);
+				startEdge.setToNode(candidate);
+				connections.put(start.getName(), startEdge);
+			}
 		}
 
 
 		for (String input : candidateInputs) {
 			boolean found = false;
 			for (Node s : init.taxonomyMap.get(input).servicesWithOutput) {
-			    if (fromNodes == null || fromNodes.contains(s)) {
-    				if (newGraph.nodeMap.containsKey(s.getName())) {
-    					Set<String> intersect = new HashSet<String>();
-    					intersect.add(input);
+				if (fromNodes == null || fromNodes.contains(s)) {
+					if (newGraph.nodeMap.containsKey(s.getName())) {
+						Set<String> intersect = new HashSet<String>();
+						intersect.add(input);
 
-    					Edge mapEdge = connections.get(s.getName());
-    					if (mapEdge == null) {
-    						Edge e = new Edge(intersect);
-    						e.setFromNode(newGraph.nodeMap.get(s.getName()));
-    						e.setToNode(candidate);
-    						connections.put(e.getFromNode().getName(), e);
-    					} else
-    						mapEdge.getIntersect().addAll(intersect);
+						Edge mapEdge = connections.get(s.getName());
+						if (mapEdge == null) {
+							Edge e = new Edge(intersect);
+							e.setFromNode(newGraph.nodeMap.get(s.getName()));
+							e.setToNode(candidate);
+							connections.put(e.getFromNode().getName(), e);
+						} else
+							mapEdge.getIntersect().addAll(intersect);
 
-    					found = true;
-    					break;
-    				}
-			    }
+						found = true;
+						break;
+					}
+				}
 			}
 			// If that input cannot be satisfied, move on to another candidate
 			// node to connect
@@ -239,338 +239,344 @@ public class GraphSpecies extends Species {
 		}
 	}
 
-    public boolean checkNewGraphNode(GraphInitializer init, GraphIndividual graph, Node n, String input, Map<String,Edge> connections, Set<Node> fromNodes) {
-    	boolean foundMatch = false;
+	public boolean checkNewGraphNode(GraphInitializer init, GraphIndividual graph, Node n, String input, Map<String,Edge> connections, Set<Node> fromNodes) {
+		boolean foundMatch = false;
 
-    	// Check if start node should be considered as a candidate
-    	Node start = graph.nodeMap.get("start");
-    	if(fromNodes.contains(start)) {
+		// Check if start node should be considered as a candidate
+		Node start = graph.nodeMap.get("start");
+		if(fromNodes.contains(start)) {
 
-    	    Set<String> startIntersect = new HashSet<String>();
+			Set<String> startIntersect = new HashSet<String>();
 
-            for(String output : start.getOutputs()) {
-                Set<String> inputVals = init.taxonomyMap.get(output).servicesWithInput.get(n);
-                if (inputVals != null) {
-                    //candidateInputs.removeAll(inputVals);
-                    startIntersect.addAll(inputVals);
-                }
-            }
+			for(String output : start.getOutputs()) {
+				Set<String> inputVals = init.taxonomyMap.get(output).servicesWithInput.get(n);
+				if (inputVals != null) {
+					//candidateInputs.removeAll(inputVals);
+					startIntersect.addAll(inputVals);
+				}
+			}
 
-            if (!startIntersect.isEmpty()) {
-                Edge startEdge = new Edge(startIntersect);
-                startEdge.setFromNode(start);
-                startEdge.setToNode(n);
-                connections.put(start.getName(), startEdge);
-                return true;
-            }
-    	}
+			if (!startIntersect.isEmpty()) {
+				Edge startEdge = new Edge(startIntersect);
+				startEdge.setFromNode(start);
+				startEdge.setToNode(n);
+				connections.put(start.getName(), startEdge);
+				return true;
+			}
+		}
 
-    	for (Node candidate : init.taxonomyMap.get(input).servicesWithOutput){
-    		if (fromNodes.contains(candidate)) {
+		for (Node candidate : init.taxonomyMap.get(input).servicesWithOutput){
+			if (fromNodes.contains(candidate)) {
 
-    			Node graphC = graph.nodeMap.get(candidate.getName());
-    			Set<String> intersect = new HashSet<String>();
-                intersect.add(input);
+				Node graphC = graph.nodeMap.get(candidate.getName());
+				Set<String> intersect = new HashSet<String>();
+				intersect.add(input);
 
-                Edge mapEdge = connections.get(graphC.getName());
-                foundMatch = true;
+				Edge mapEdge = connections.get(graphC.getName());
+				foundMatch = true;
 
-                if (mapEdge == null) {
-                    Edge e = new Edge(intersect);
-                    e.setFromNode(graph.nodeMap.get(graphC.getName()));
-                    e.setToNode(n);
-                    connections.put(e.getFromNode().getName(), e);
-                }
-                else
-                    mapEdge.getIntersect().addAll(intersect);
+				if (mapEdge == null) {
+					Edge e = new Edge(intersect);
+					e.setFromNode(graph.nodeMap.get(graphC.getName()));
+					e.setToNode(n);
+					connections.put(e.getFromNode().getName(), e);
+				}
+				else
+					mapEdge.getIntersect().addAll(intersect);
 
-                break;
-    		}
-        }
-    	return foundMatch;
-    }
+				break;
+			}
+		}
+		return foundMatch;
+	}
 
-    /**
-     * This connects a subgraph to the main graph with matched input and outputs
-     * @param init
-     * @param graph
-     * @param subgraph
-     * @param disconnectedInput
-     * @param disconnectedOutput
-     */
-    public void fitMutatedSubgraph(GraphInitializer init, GraphIndividual graph, GraphIndividual subgraph, Map<Node, Set<String>> disconnectedInput, Set<Node> disconnectedOutput){
+	/**
+	 * This connects a subgraph to the main graph with matched input and outputs
+	 * @param init
+	 * @param graph
+	 * @param subgraph
+	 * @param disconnectedInput
+	 * @param disconnectedOutput
+	 */
+	public void fitMutatedSubgraph(GraphInitializer init, GraphIndividual graph, GraphIndividual subgraph, Map<Node, Set<String>> disconnectedInput, Set<Node> disconnectedOutput){
 
-        // Add subgraph to main graph
-        Map<Node, Set<String>> firstSubgraphLayer = new HashMap<Node, Set<String>>();
-        Set<Node> lastSubgraphLayer = new HashSet<Node>();
+		// Add subgraph to main graph
+		Map<Node, Set<String>> firstSubgraphLayer = new HashMap<Node, Set<String>>();//all the subgraph nodes connected to start
+		Set<Node> lastSubgraphLayer = new HashSet<Node>();//all the subgraph nodes connected to end
 
-        for (Node n : subgraph.nodeMap.values()) {
-            if (!n.getName().equals( "start" ) && !n.getName().equals( "end" )){
-                Node newN = n.clone();
-                graph.nodeMap.put( newN.getName(), newN );
-                graph.considerableNodeMap.put( newN.getName(), newN );
-            }
-        }
+		/*
+		 * add all nodes that are neither start nor end to the nodeMaps of the graph
+		 */
+		for (Node n : subgraph.nodeMap.values()) {
+			if (!n.getName().equals( "start" ) && !n.getName().equals( "end" )){
+				Node newN = n.clone();
+				graph.nodeMap.put( newN.getName(), newN );
+				graph.considerableNodeMap.put( newN.getName(), newN );
+			}
+		}
 
-        for (Node n : subgraph.nodeMap.values()) {
-            if(n.getName().equals( "end" )) {
-                for (Edge e : n.getIncomingEdgeList()) {
-                    lastSubgraphLayer.add(e.getFromNode());
-                }
-            }
-            else{
-                for (Edge e : n.getIncomingEdgeList()){
-                    if (e.getFromNode().getName().equals( "start" )) {
-                        firstSubgraphLayer.put(n, e.getIntersect());
-                    }
-                    else {
-                        addNewGraphEdge(e, graph);
-                    }
-                }
-            }
-        }
+		for (Node n : subgraph.nodeMap.values()) {
+			//add all the subgraph nodes connected with "end" to the last layer
+			if(n.getName().equals( "end" )) {
+				for (Edge e : n.getIncomingEdgeList()) {
+					lastSubgraphLayer.add(e.getFromNode());
+				}
+			}
+			else{
+				for (Edge e : n.getIncomingEdgeList()){
+					//add all the subgraph nodes connected with "start" to the first layer
+					if (e.getFromNode().getName().equals( "start" )) {
+						firstSubgraphLayer.put(n, e.getIntersect());
+					}
+					//add all other edges to the graph
+					else {
+						addNewGraphEdge(e, graph);
+					}
+				}
+			}
+		}
 
-        // Match first subgraph layer with nodes from main graph whose output has been disconnected
-        Map<String,Edge> connections = new HashMap<String,Edge>();
+		// Match first subgraph layer with nodes from main graph whose output has been disconnected
+		Map<String,Edge> connections = new HashMap<String,Edge>();
 
-        for (Entry <Node, Set<String>> entry: firstSubgraphLayer.entrySet()) {
-            connections.clear();
-            Node n = graph.nodeMap.get( entry.getKey().getName() );
+		for (Entry <Node, Set<String>> entry: firstSubgraphLayer.entrySet()) {
+			connections.clear();
+			Node n = graph.nodeMap.get( entry.getKey().getName() );
 
-            // Find all input connections
-            if (!checkCandidateNodeSatisfied(init, connections, graph, n, entry.getValue(), disconnectedOutput))
-                throw new RuntimeException("Cannot satisfy subgraph outputs.");
+			// Find all input connections
+			if (!checkCandidateNodeSatisfied(init, connections, graph, n, entry.getValue(), disconnectedOutput))
+				throw new RuntimeException("Cannot satisfy subgraph outputs.");
 
-            // Connect it to graph
-            for (Edge e : connections.values()) {
-                graph.edgeList.add(e);
-                graph.considerableEdgeList.add(e);
-                e.getFromNode().getOutgoingEdgeList().add(e);
-                e.getToNode().getIncomingEdgeList().add(e);
-            }
-        }
+			// Connect it to graph
+			for (Edge e : connections.values()) {
+				graph.edgeList.add(e);
+				graph.considerableEdgeList.add(e);
+				e.getFromNode().getOutgoingEdgeList().add(e);
+				e.getToNode().getIncomingEdgeList().add(e);
+			}
+		}
 
-        // Match last subgraph layer with nodes from main graph whose input has been disconnected
-        for (Entry<Node, Set<String>> entry : disconnectedInput.entrySet()) {
-            connections.clear();
+		// Match last subgraph layer with nodes from main graph whose input has been disconnected
+		for (Entry<Node, Set<String>> entry : disconnectedInput.entrySet()) {
+			connections.clear();
 
-            // Find all input connections
-            if (!checkCandidateNodeSatisfied(init, connections, graph, entry.getKey(), entry.getValue(), lastSubgraphLayer))
-                throw new RuntimeException("Cannot satisfy subgraph outputs.");
+			// Find all input connections
+			if (!checkCandidateNodeSatisfied(init, connections, graph, entry.getKey(), entry.getValue(), lastSubgraphLayer))
+				throw new RuntimeException("Cannot satisfy subgraph outputs.");
 
-            // Connect it to graph
-            for (Edge e : connections.values()) {
-                graph.edgeList.add(e);
-                graph.considerableEdgeList.add(e);
-                e.getFromNode().getOutgoingEdgeList().add(e);
-                e.getToNode().getIncomingEdgeList().add(e);
-            }
-        }
-    }
+			// Connect it to graph
+			for (Edge e : connections.values()) {
+				graph.edgeList.add(e);
+				graph.considerableEdgeList.add(e);
+				e.getFromNode().getOutgoingEdgeList().add(e);
+				e.getToNode().getIncomingEdgeList().add(e);
+			}
+		}
+	}
 
-    private void addNewGraphEdge(Edge e, GraphIndividual destGraph){
-        Edge newE = new Edge(e.getIntersect());
-        newE.setFromNode( destGraph.nodeMap.get( e.getFromNode().getName() ) );
-        newE.setToNode( destGraph.nodeMap.get( e.getToNode().getName() ) );
+	private void addNewGraphEdge(Edge e, GraphIndividual destGraph){
+		Edge newE = new Edge(e.getIntersect());
+		newE.setFromNode( destGraph.nodeMap.get( e.getFromNode().getName() ) );
+		newE.setToNode( destGraph.nodeMap.get( e.getToNode().getName() ) );
 
-        destGraph.nodeMap.get( e.getFromNode().getName() ).getOutgoingEdgeList().add(newE);
-        destGraph.nodeMap.get( e.getToNode().getName() ).getIncomingEdgeList().add(newE);
+		destGraph.nodeMap.get( e.getFromNode().getName() ).getOutgoingEdgeList().add(newE);
+		destGraph.nodeMap.get( e.getToNode().getName() ).getIncomingEdgeList().add(newE);
 
-        destGraph.edgeList.add(newE);
-        destGraph.considerableEdgeList.add(newE);
-    }
+		destGraph.edgeList.add(newE);
+		destGraph.considerableEdgeList.add(newE);
+	}
 
-    public Set<Node> selectNodes(Node root, int numNodes) {
+	public Set<Node> selectNodes(Node root, int numNodes) {
 
-    	Set<Node> nodes = new HashSet<Node>();
+		Set<Node> nodes = new HashSet<Node>();
 
-        Queue<Node> queue = new LinkedList<Node>();
-        queue.offer( root );
+		Queue<Node> queue = new LinkedList<Node>();
+		queue.offer( root );
 
-        for (int i = 0; i < numNodes; i++) {
-             Node current = queue.poll();
+		for (int i = 0; i < numNodes; i++) {
+			Node current = queue.poll();
 
-             if(current == null || current.getName().equals( "end" )){
-                 break;
-             }
-             else {
-                 nodes.add(current);
-                 for(Edge e : current.getOutgoingEdgeList()){
+			if(current == null || current.getName().equals( "end" )){
+				break;
+			}
+			else {
+				nodes.add(current);
+				for(Edge e : current.getOutgoingEdgeList()){
 
-                	 // Check that node is entirely fulfilled by nodes already selected
-                	 boolean isInternal = true;
-                	 for (Edge incomingList : e.getToNode().getIncomingEdgeList()) {
-                		 if (!nodes.contains(incomingList.getFromNode())) {
-                			isInternal = false;
-                			break;
-                		 }
-                	 }
+					// Check that node is entirely fulfilled by nodes already selected
+					boolean isInternal = true;
+					for (Edge incomingList : e.getToNode().getIncomingEdgeList()) {
+						if (!nodes.contains(incomingList.getFromNode())) {
+							isInternal = false;
+							break;
+						}
+					}
 
-                     if (isInternal) {
-                         queue.offer( e.getToNode() );
-                     }
-                 }
-             }
-        }
-        return nodes;
-    }
+					if (isInternal) {
+						queue.offer( e.getToNode() );
+					}
+				}
+			}
+		}
+		return nodes;
+	}
 
 	//==========================================================================================================================
 	//                                                 Debugging Routines
 	//==========================================================================================================================
 
-    public boolean structureValidator1( GraphIndividual graph ) {
-        for ( Edge e : graph.edgeList ) {
-            //Node fromNode = e.getFromNode();
-            Node fromNode = graph.nodeMap.get( e.getFromNode().getName());
+	public boolean structureValidator1( GraphIndividual graph ) {
+		for ( Edge e : graph.edgeList ) {
+			//Node fromNode = e.getFromNode();
+			Node fromNode = graph.nodeMap.get( e.getFromNode().getName());
 
-            boolean isContained = false;
-            for ( Edge outEdge : fromNode.getOutgoingEdgeList() ) {
-                if ( e == outEdge ) {
-                    isContained = true;
-                    break;
-                }
-            }
+			boolean isContained = false;
+			for ( Edge outEdge : fromNode.getOutgoingEdgeList() ) {
+				if ( e == outEdge ) {
+					isContained = true;
+					break;
+				}
+			}
 
-            if ( !isContained ) {
-                System.out.println( "Outgoing edge for node " + fromNode.getName() + " not detected." );
-                return false;
-            }
+			if ( !isContained ) {
+				System.out.println( "Outgoing edge for node " + fromNode.getName() + " not detected." );
+						return false;
+			}
 
-            //Node toNode = e.getToNode();
-            Node toNode = graph.nodeMap.get( e.getToNode().getName());
+			//Node toNode = e.getToNode();
+			Node toNode = graph.nodeMap.get( e.getToNode().getName());
 
-            isContained = false;
-            for ( Edge inEdge : toNode.getIncomingEdgeList() ) {
-                if ( e == inEdge ) {
-                    isContained = true;
-                    break;
-                }
-            }
+			isContained = false;
+			for ( Edge inEdge : toNode.getIncomingEdgeList() ) {
+				if ( e == inEdge ) {
+					isContained = true;
+					break;
+				}
+			}
 
-            if ( !isContained ) {
-                System.out.println( "Incoming edge for node " + toNode.getName() + " not detected." );
-                return false;
-            }
-        }
-        //System.out.println("----------------------------------------------1");
-        return true;
-    }
+			if ( !isContained ) {
+				System.out.println( "Incoming edge for node " + toNode.getName() + " not detected." );
+						return false;
+			}
+		}
+		//System.out.println("----------------------------------------------1");
+		return true;
+	}
 
-    public boolean structureValidator2( GraphIndividual graph ) {
-        for ( Edge e : graph.considerableEdgeList ) {
-            Node fromNode = graph.considerableNodeMap.get( e.getFromNode().getName());
+	public boolean structureValidator2( GraphIndividual graph ) {
+		for ( Edge e : graph.considerableEdgeList ) {
+			Node fromNode = graph.considerableNodeMap.get( e.getFromNode().getName());
 
-            boolean isContained = false;
-            for ( Edge outEdge : fromNode.getOutgoingEdgeList() ) {
-                if ( e == outEdge ) {
-                    isContained = true;
-                    break;
-                }
-            }
+			boolean isContained = false;
+			for ( Edge outEdge : fromNode.getOutgoingEdgeList() ) {
+				if ( e == outEdge ) {
+					isContained = true;
+					break;
+				}
+			}
 
-            if ( !isContained ) {
-                System.out.println( "Considerable: Outgoing edge for node " + fromNode.getName() + " not detected." );
-                return false;
-            }
+			if ( !isContained ) {
+				System.out.println( "Considerable: Outgoing edge for node " + fromNode.getName() + " not detected." );
+						return false;
+			}
 
-            Node toNode = graph.considerableNodeMap.get( e.getToNode().getName());
+			Node toNode = graph.considerableNodeMap.get( e.getToNode().getName());
 
-            isContained = false;
-            for ( Edge inEdge : toNode.getIncomingEdgeList() ) {
-                if ( e == inEdge ) {
-                    isContained = true;
-                    break;
-                }
-            }
+			isContained = false;
+			for ( Edge inEdge : toNode.getIncomingEdgeList() ) {
+				if ( e == inEdge ) {
+					isContained = true;
+					break;
+				}
+			}
 
-            if ( !isContained ) {
-                System.out.println( "Considerable: Incoming edge for node " + toNode.getName() + " not detected." );
-                return false;
-            }
-        }
-        //System.out.println("----------------------------------------------2");
-        return true;
-    }
+			if ( !isContained ) {
+				System.out.println( "Considerable: Incoming edge for node " + toNode.getName() + " not detected." );
+				return false;
+			}
+		}
+		//System.out.println("----------------------------------------------2");
+		return true;
+	}
 
-    /**
-     * Checks whether there are edges beginning and ending at the same node.
-     *
-     * @param graph
-     */
-    public boolean structureValidator3( GraphIndividual graph ) {
-    	for (Edge e : graph.edgeList) {
-    		if (e.getFromNode().getName().equals(e.getToNode().getName())) {
-    			System.out.println(String.format("Edge '%s' makes a loop.", e));
-    			return false;
-    		}
-    	}
-        //System.out.println("----------------------------------------------3");
-        return true;
-    }
+	/**
+	 * Checks whether there are edges beginning and ending at the same node.
+	 *
+	 * @param graph
+	 */
+	public boolean structureValidator3( GraphIndividual graph ) {
+		for (Edge e : graph.edgeList) {
+			if (e.getFromNode().getName().equals(e.getToNode().getName())) {
+				System.out.println(String.format("Edge '%s' makes a loop.", e));
+				return false;
+			}
+		}
+		//System.out.println("----------------------------------------------3");
+		return true;
+	}
 
-    /**
-     * Checks whether there are any duplicated edges
-     * @param graph
-     */
-    public boolean structureValidator4( GraphIndividual graph ) {
-    	for (Edge e1 : graph.edgeList) {
-    		for (Edge e2 : graph.edgeList) {
-    			if (e1 != e2 && e1.getFromNode().getName().equals(e2.getFromNode().getName()) && e1.getToNode().getName().equals(e2.getToNode().getName())) {
-    				System.out.println(String.format("Edge '%s' has a duplicate.", e1));
-    				return false;
-    			}
-    		}
-    	}
-        //System.out.println("----------------------------------------------4");
-        return true;
-    }
+	/**
+	 * Checks whether there are any duplicated edges
+	 * @param graph
+	 */
+	public boolean structureValidator4( GraphIndividual graph ) {
+		for (Edge e1 : graph.edgeList) {
+			for (Edge e2 : graph.edgeList) {
+				if (e1 != e2 && e1.getFromNode().getName().equals(e2.getFromNode().getName()) && e1.getToNode().getName().equals(e2.getToNode().getName())) {
+					System.out.println(String.format("Edge '%s' has a duplicate.", e1));
+					return false;
+				}
+			}
+		}
+		//System.out.println("----------------------------------------------4");
+		return true;
+	}
 
-    /**
-     * Checks if the total number of inputs provided by the incoming edges matches the total number
-     * of inputs required by a given node, across all nodes in the graph.
-     *
-     * @param graph
-     * @return
-     */
-    public boolean structureValidator5( GraphIndividual graph ) {
-    	for (Node n : graph.nodeMap.values()) {
-    		Set<String> incomingValues = new HashSet<String>();
-    		for (Edge e : n.getIncomingEdgeList()) {
-    			incomingValues.addAll(e.getIntersect());
-    		}
+	/**
+	 * Checks if the total number of inputs provided by the incoming edges matches the total number
+	 * of inputs required by a given node, across all nodes in the graph.
+	 *
+	 * @param graph
+	 * @return
+	 */
+	public boolean structureValidator5( GraphIndividual graph ) {
+		for (Node n : graph.nodeMap.values()) {
+			Set<String> incomingValues = new HashSet<String>();
+			for (Edge e : n.getIncomingEdgeList()) {
+				incomingValues.addAll(e.getIntersect());
+			}
 
-    		if (incomingValues.size() != n.getInputs().size()) {
-    			System.out.println(String.format("Not all inputs of node '%s' are being satisfied.", n));
-    			return false;
-    		}
-    	}
-        //System.out.println("----------------------------------------------5");
-    	return true;
-    }
+			if (incomingValues.size() != n.getInputs().size()) {
+				System.out.println(String.format("Not all inputs of node '%s' are being satisfied.", n));
+				return false;
+			}
+		}
+		//System.out.println("----------------------------------------------5");
+		return true;
+	}
 
-    /**
-     * Checks if our graph has start and end nodes.
-     *
-     * @param graph
-     * @return
-     */
-    public boolean structureValidator6( GraphIndividual graph ) {
-    	if (!graph.nodeMap.containsKey("start")) {
-    		System.out.println(String.format("The graph doesn't have a start node."));
-    		return false;
-    	}
-    	else if (!graph.nodeMap.containsKey("end")) {
-    		System.out.println(String.format("The graph doesn't have an end node."));
-    		return false;
-    	}
-    	return true;
-    }
+	/**
+	 * Checks if our graph has start and end nodes.
+	 *
+	 * @param graph
+	 * @return
+	 */
+	public boolean structureValidator6( GraphIndividual graph ) {
+		if (!graph.nodeMap.containsKey("start")) {
+			System.out.println(String.format("The graph doesn't have a start node."));
+			return false;
+		}
+		else if (!graph.nodeMap.containsKey("end")) {
+			System.out.println(String.format("The graph doesn't have an end node."));
+			return false;
+		}
+		return true;
+	}
 
-    public boolean structureValidator7( GraphIndividual graph ) {
-    	for (Node n : graph.nodeMap.values()) {
+	public boolean structureValidator7( GraphIndividual graph ) {
+		for (Node n : graph.nodeMap.values()) {
 
-    	}
-    	return true;
-    }
+		}
+		return true;
+	}
 }
