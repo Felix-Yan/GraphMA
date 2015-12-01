@@ -69,19 +69,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 			do{
 				bestFitness = currentBestFitness;
-				for (Node node : nodesToReplace) {
-					replaceNode(node, graph);
-					((GraphEvol)state.evaluator.p_problem).evaluate(state, graph, subpopulation, thread);
-					graph.evaluated = false;
-
-					double fitness = graph.fitness.fitness();
-
-					if(fitness > currentBestFitness){
-						currentBestFitness = fitness;
-					}
-
-				}
-
+				currentBestFitness = findFitness(nodesToReplace, init, state, graph, subpopulation, thread);
 
 			}while(currentBestFitness > bestFitness);
 
@@ -90,9 +78,34 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	}
 
 	/*
-	 * Replace the node with one of its neighbours.
+	 * This returns the best new fitness of the graph after a local search
 	 */
-	private void replaceNode(Node node, GraphIndividual graph){
+	private double findFitness(Set<Node> nodesToReplace, GraphInitializer init, EvolutionState state,
+			GraphIndividual graph, int subpopulation, int thread){
+
+		double currentFitness = 0;
+
+		for (Node node : nodesToReplace) {
+			Set<Node> neighbours = findNeighbourNodes(node, init);
+			for(Node neighbour: neighbours){
+				replaceNode(node, neighbour, graph, init);
+				((GraphEvol)state.evaluator.p_problem).evaluate(state, graph, subpopulation, thread);
+				graph.evaluated = false;
+
+				double fitness = graph.fitness.fitness();
+				if(fitness > currentFitness){
+					currentFitness = fitness;
+				}
+			}
+
+		}
+		return currentFitness;
+	}
+
+	/*
+	 * Replace the node with its neighbour in the graph.
+	 */
+	private void replaceNode(Node node, Node neighbour, GraphIndividual graph, GraphInitializer init){
 
 		Set<Edge> outgoingEdges = new HashSet<Edge>();
 		Set<Edge> incomingEdges = new HashSet<Edge>();
