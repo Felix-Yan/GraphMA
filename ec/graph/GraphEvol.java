@@ -61,6 +61,20 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
         ind2.evaluated = true;
 	}
 
+    /**
+     * Evaluate the QoS of graph indivudual for memetic algorithm. Set the individual.evaluated to be false after the
+     * evaluation for future local search.
+     * @param init
+     * @param state
+     * @param ind
+     * @param subpopulation
+     * @param threadnum
+     */
+    public void memeticEvaluate(final GraphInitializer init, final EvolutionState state, final Individual ind, final int subpopulation, final int threadnum){
+    	evaluateQoS(init, state, ind, subpopulation, threadnum);
+    	ind.evaluated = false;
+    }
+
     public void evaluateOwls(final GraphInitializer init, final EvolutionState state, final Individual ind, final int subpopulation, final int threadnum) {
 
 		if (ind.evaluated) return;   //don't evaluate the individual if it's already evaluated
