@@ -18,7 +18,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 	@Override
 	public Parameter defaultBase() {
-		return new Parameter("graphmutationpipeline");
+		return new Parameter("graphmemeticpipeline");
 	}
 
 	@Override
@@ -61,82 +61,59 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}
 
 			// Find all nodes that should be locally searched and possibly replaced
-			Node newEnd   = init.endNode.clone();
 			Set<Node> nodesToReplace = findNodesToRemove(selected);
-			Set<Edge> edgesToRemove = new HashSet<Edge>();
-			Set<Edge> outgoingEdges = new HashSet<Edge>();
-			Set<Edge> incomingEdges = new HashSet<Edge>();
+
 
 			double bestFitness = 0;
-			double currentFitness = bestFitness;
+			double currentBestFitness = 0;
 
 			do{
+				bestFitness = currentBestFitness;
+				for (Node node : nodesToReplace) {
+					replaceNode(node, graph);
+					((GraphEvol)state.evaluator.p_problem).evaluate(state, graph, subpopulation, thread);
+					graph.evaluated = false;
 
+					double fitness = graph.fitness.fitness();
 
-			}while(currentFitness > bestFitness);
+					if(fitness > currentBestFitness){
+						currentBestFitness = fitness;
+					}
 
-			// Remove nodes and edges
-			for (Node node : nodesToReplace) {
-				graph.nodeMap.remove( node.getName() );
-				graph.considerableNodeMap.remove( node.getName() );
-
-				for (Edge e : node.getIncomingEdgeList()) {
-					incomingEdges.add( e );
-					edgesToRemove.add( e );
-					e.getFromNode().getOutgoingEdgeList().remove( e );
 				}
-				for (Edge e : node.getOutgoingEdgeList()) {
-					outgoingEdges.add( e );
-					edgesToRemove.add( e );
-					e.getToNode().getIncomingEdgeList().remove( e );
-				}
-			}
-
-			for (Edge edge : edgesToRemove) {
-				graph.edgeList.remove( edge );
-				graph.considerableEdgeList.remove( edge );
-			}
 
 
-			// Create data structures
-			Set<Node> unused = new HashSet<Node>(init.relevant);
-			Set<Node> relevant = init.relevant;
-			Set<String> currentEndInputs = new HashSet<String>();
-			Set<Node> seenNodes = new HashSet<Node>();
-			List<Node> candidateList = new ArrayList<Node>();
+			}while(currentBestFitness > bestFitness);
 
-			for (Node node: graph.nodeMap.values()) {
-				unused.remove( node );
-				seenNodes.add( node );
-			}
-
-			// Must add all nodes as seen before adding candidate list entries
-			for (Node node: graph.nodeMap.values()) {
-				if (!node.getName().equals( "end" ))
-					species.addToCandidateList( node, seenNodes, relevant, candidateList, init);
-			}
-
-			// Update currentEndInputs
-			for (Node node : graph.nodeMap.values()) {
-				for (String o : node.getOutputs()) {
-					currentEndInputs.addAll(init.taxonomyMap.get(o).endNodeInputs);
-				}
-			}
-
-
-			Collections.shuffle(candidateList, init.random);
-			Map<String,Edge> connections = new HashMap<String,Edge>();
-			graph.unused = unused;
-
-			// Continue constructing graph
-			species.finishConstructingGraph( currentEndInputs, newEnd, candidateList, connections, init,
-					graph, null, seenNodes, relevant );
-
-
-			graph.evaluated=false;
-			init.countGraphElements( graph );
 		}
 		return n;
+	}
+
+	/*
+	 * Replace the node with one of its neighbours.
+	 */
+	private void replaceNode(Node node, GraphIndividual graph){
+
+		Set<Edge> outgoingEdges = new HashSet<Edge>();
+		Set<Edge> incomingEdges = new HashSet<Edge>();
+
+		//remove the node to be replaced
+		graph.nodeMap.remove( node.getName() );
+		graph.considerableNodeMap.remove( node.getName() );
+
+		//remove edges of the replaced node
+		for (Edge e : node.getIncomingEdgeList()) {
+			incomingEdges.add( e );
+			e.getFromNode().getOutgoingEdgeList().remove( e );
+			graph.edgeList.remove( e );
+			graph.considerableEdgeList.remove( e );
+		}
+		for (Edge e : node.getOutgoingEdgeList()) {
+			outgoingEdges.add( e );
+			e.getToNode().getIncomingEdgeList().remove( e );
+			graph.edgeList.remove( e );
+			graph.considerableEdgeList.remove( e );
+		}
 	}
 
 	/*
