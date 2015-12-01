@@ -60,7 +60,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				}
 			}
 
-			// Find all nodes that should be removed
+			// Find all nodes that should be locally searched and possibly replaced
 			Node newEnd   = init.endNode.clone();
 			Set<Node> nodesToReplace = findNodesToRemove(selected);
 			Set<Edge> edgesToRemove = new HashSet<Edge>();
@@ -125,6 +125,27 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			init.countGraphElements( graph );
 		}
 		return n;
+	}
+
+	/*
+	 * This finds all the neighbouring nodes of the selected node. The neighbours can substitute the selected node without
+	 * losing any functionality.
+	 */
+	private Set<Node> findNeighbourNodes(Node selected, GraphInitializer init){
+		List <Edge> outgoingEdge = selected.getOutgoingEdgeList();
+
+		//use the selected node inputs as the possible neighbour inputs
+		Set<String> inputs = selected.getInputs();
+		Set<String> outputs = new HashSet<String>();
+
+		//use all the outputs in the outgoing edges as the required neighbour outputs
+		for(Edge e: outgoingEdge){
+			outputs.addAll(e.getIntersect());
+		}
+
+		Set<Node> neighbour = init.getRelevantServices(inputs, outputs);
+
+		return null;
 	}
 
 	private Set<Node> findNodesToRemove(Node selected) {
