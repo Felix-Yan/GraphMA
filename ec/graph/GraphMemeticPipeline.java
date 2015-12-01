@@ -88,7 +88,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		for (Node node : nodesToReplace) {
 			Set<Node> neighbours = findNeighbourNodes(node, init);
 			for(Node neighbour: neighbours){
+
 				replaceNode(node, neighbour, graph, init);
+
 				((GraphEvol)state.evaluator.p_problem).evaluate(state, graph, subpopulation, thread);
 				graph.evaluated = false;
 
@@ -127,6 +129,34 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			graph.edgeList.remove( e );
 			graph.considerableEdgeList.remove( e );
 		}
+
+		//give outgoingEdges to the neighbour node
+		for(Edge e: outgoingEdges){
+			e.setFromNode(neighbour);
+			neighbour.getOutgoingEdgeList().add(e);
+			graph.edgeList.add(e);
+			graph.considerableEdgeList.add(e);
+		}
+
+		//give incomingEdges to the neighbour node
+		for(Edge e: incomingEdges){
+			Set<String> nodeInputs = neighbour.getInputs();
+			Set<String> edgeInputs = e.getIntersect();
+			//check if the edge is still useful for the neighbour
+			if(init.isIntersection(edgeInputs, nodeInputs)){
+				e.setToNode(neighbour);
+				neighbour.getIncomingEdgeList().add(e);
+				graph.edgeList.add(e);
+				graph.considerableEdgeList.add(e);
+			}
+		}
+
+		init.removeDanglingNodes(graph);
+
+		//add the neighbour to the graph
+		graph.nodeMap.put(neighbour.getName(), neighbour);
+		graph.considerableNodeMap.put(neighbour.getName(), neighbour);
+
 	}
 
 	/*

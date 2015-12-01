@@ -143,7 +143,13 @@ public class GraphInitializer extends SimpleInitializer {
 		return satisfied;
 	}
 
-    private static boolean isIntersection( Set<String> a, Set<String> b ) {
+	/**
+	 * Checks whether two sets of strings have overlapping elements
+	 * @param a
+	 * @param b
+	 * @return
+	 */
+    public boolean isIntersection( Set<String> a, Set<String> b ) {
         for ( String v1 : a ) {
             if ( b.contains( v1 ) ) {
                 return true;
