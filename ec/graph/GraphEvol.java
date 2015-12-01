@@ -70,10 +70,10 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
      * @param subpopulation
      * @param threadnum
      */
-    public void memeticEvaluate(final GraphInitializer init, final EvolutionState state, final Individual ind, final int subpopulation, final int threadnum){
+    /*public void memeticEvaluate(final GraphInitializer init, final EvolutionState state, final Individual ind, final int subpopulation, final int threadnum){
     	evaluateQoS(init, state, ind, subpopulation, threadnum);
     	ind.evaluated = false;
-    }
+    }*/
 
     public void evaluateOwls(final GraphInitializer init, final EvolutionState state, final Individual ind, final int subpopulation, final int threadnum) {
 

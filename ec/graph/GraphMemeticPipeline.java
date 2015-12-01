@@ -64,6 +64,16 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			Node newEnd   = init.endNode.clone();
 			Set<Node> nodesToReplace = findNodesToRemove(selected);
 			Set<Edge> edgesToRemove = new HashSet<Edge>();
+			Set<Edge> outgoingEdges = new HashSet<Edge>();
+			Set<Edge> incomingEdges = new HashSet<Edge>();
+
+			double bestFitness = 0;
+			double currentFitness = bestFitness;
+
+			do{
+
+
+			}while(currentFitness > bestFitness);
 
 			// Remove nodes and edges
 			for (Node node : nodesToReplace) {
@@ -71,10 +81,12 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				graph.considerableNodeMap.remove( node.getName() );
 
 				for (Edge e : node.getIncomingEdgeList()) {
+					incomingEdges.add( e );
 					edgesToRemove.add( e );
 					e.getFromNode().getOutgoingEdgeList().remove( e );
 				}
 				for (Edge e : node.getOutgoingEdgeList()) {
+					outgoingEdges.add( e );
 					edgesToRemove.add( e );
 					e.getToNode().getIncomingEdgeList().remove( e );
 				}
