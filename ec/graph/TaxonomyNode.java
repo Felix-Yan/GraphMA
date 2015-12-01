@@ -37,6 +37,9 @@ public class TaxonomyNode {
 		return concepts;
 	}
 
+	/*
+	 * This recursively subsume all the descendent concepts of the current node
+	 */
     private void _getSubsumedConcepts(Set<String> concepts) {
         if (!concepts.contains( value )) {
             concepts.add(value);
