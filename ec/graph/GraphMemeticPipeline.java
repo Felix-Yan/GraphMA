@@ -187,27 +187,25 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}
 		}
 
-		Set<Node> nodeWithInput = new HashSet<Node>();
-		for(String input: inputs){
-			if(nodeWithInput.isEmpty()){
-				nodeWithInput = new HashSet<Node>(init.taxonomyMap.get(input).servicesWithInput.keySet());
-			}
-			else{
-				Set<Node> nodeWithInput2 = new HashSet<Node>(init.taxonomyMap.get(input).servicesWithInput.keySet());
-				nodeWithInput = findIntersection(nodeWithInput, nodeWithInput2);
+		Set<Node> neighbours = new HashSet<Node>();
+		neighbours.addAll(nodeWithOutput);
+		//This checks that all the neighbours can be satisfied by the given inputs
+		for(Node node: nodeWithOutput){
+			Set<String> nodeInput = node.getInputs();
+			if(!isSubset(nodeInput, inputs)){
+				neighbours.remove(node);
 			}
 		}
 
-
-		return null;
+		return neighbours;
 	}
 
 	/*
 	 * The following checks that the given set1 is a subset of set2.
 	 */
-	private boolean isSubset(Set<Node> set1, Set<Node> set2){
-		for(Node node: set1){
-			if(!set2.contains(node)){
+	private boolean isSubset(Set<String> set1, Set<String> set2){
+		for(String s: set1){
+			if(!set2.contains(s)){
 				return false;
 			}
 		}
