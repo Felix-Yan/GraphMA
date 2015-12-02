@@ -176,6 +176,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		}
 
 		Set<Node> nodeWithOutput = new HashSet<Node>();
+		//The following finds out all the nodes that satisfy all the outputs
 		for(String output: outputs){
 			if(nodeWithOutput.isEmpty()){
 				nodeWithOutput = new HashSet<Node>(init.taxonomyMap.get(output).servicesWithOutput);
@@ -186,8 +187,31 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}
 		}
 
+		Set<Node> nodeWithInput = new HashSet<Node>();
+		for(String input: inputs){
+			if(nodeWithInput.isEmpty()){
+				nodeWithInput = new HashSet<Node>(init.taxonomyMap.get(input).servicesWithInput.keySet());
+			}
+			else{
+				Set<Node> nodeWithInput2 = new HashSet<Node>(init.taxonomyMap.get(input).servicesWithInput.keySet());
+				nodeWithInput = findIntersection(nodeWithInput, nodeWithInput2);
+			}
+		}
+
 
 		return null;
+	}
+
+	/*
+	 * The following checks that the given set1 is a subset of set2.
+	 */
+	private boolean isSubset(Set<Node> set1, Set<Node> set2){
+		for(Node node: set1){
+			if(!set2.contains(node)){
+				return false;
+			}
+		}
+		return true;
 	}
 
 	/*
