@@ -346,9 +346,9 @@ public class GraphInitializer extends SimpleInitializer {
 	 * @param outputs
 	 * @return a set of relevant service nodes
 	 */
-	public Set<Node> getRelevantServices(Set<String> inputs, Set<String> outputs){
+	/*public Set<Node> getRelevantServices(Set<String> inputs, Set<String> outputs){
 		return getRelevantServices(serviceMap, inputs, outputs);
-	}
+	}*/
 
 	private void calculateNormalisationBounds(Set<Node> services) {
 		for(Node service: services) {

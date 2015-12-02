@@ -182,9 +182,10 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}
 			else{
 				Set<Node> nodeWithOutput2 = new HashSet<Node>(init.taxonomyMap.get(output).servicesWithOutput);
+				nodeWithOutput = findIntersection(nodeWithOutput, nodeWithOutput2);
 			}
 		}
-		Set<Node> neighbour = init.getRelevantServices(inputs, outputs);
+
 
 		return null;
 	}
