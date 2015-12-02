@@ -153,7 +153,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		init.removeDanglingNodes(graph);
 
-		//add the neighbour to the graph
+		//add the neighbour node to the graph
 		graph.nodeMap.put(neighbour.getName(), neighbour);
 		graph.considerableNodeMap.put(neighbour.getName(), neighbour);
 
@@ -175,9 +175,31 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			outputs.addAll(e.getIntersect());
 		}
 
+		Set<Node> nodeWithOutput = new HashSet<Node>();
+		for(String output: outputs){
+			if(nodeWithOutput.isEmpty()){
+				nodeWithOutput = new HashSet<Node>(init.taxonomyMap.get(output).servicesWithOutput);
+			}
+			else{
+				Set<Node> nodeWithOutput2 = new HashSet<Node>(init.taxonomyMap.get(output).servicesWithOutput);
+			}
+		}
 		Set<Node> neighbour = init.getRelevantServices(inputs, outputs);
 
 		return null;
+	}
+
+	/*
+	 * This gives the intersection of two set of nodes
+	 */
+	private Set<Node> findIntersection(Set<Node> set1, Set<Node> set2){
+		Set<Node> intersection = new HashSet<Node>();
+		for(Node n: set1){
+			if(set2.contains(n)){
+				intersection.add(n);
+			}
+		}
+		return intersection;
 	}
 
 	private Set<Node> findNodesToRemove(Node selected) {
