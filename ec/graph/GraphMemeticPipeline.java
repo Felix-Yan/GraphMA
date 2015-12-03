@@ -88,7 +88,10 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		double currentFitness = 0;
 		GraphIndividual bestGraph = new GraphIndividual();
-		//Set<Node> iteratingSet = cloneNodeSet(nodesToReplace);//a cloned set used for iteration
+		Node newMember = null;//The new node added in the subgraph
+		Node replaced = null;//The old node replaced by the new node in the subgraph
+		//debug
+		System.out.println("nodes to replace has size"+" "+nodesToReplace.size());
 
 		for (Node node : nodesToReplace) {
 			GraphIndividual newGraph = new GraphIndividual();
@@ -98,17 +101,21 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			for(Node neighbour: neighbours){
 				replaceNode(node, neighbour, newGraph, init);
 				((GraphEvol)state.evaluator.p_problem).evaluate(state, newGraph, subpopulation, thread);
-				newGraph.evaluated = false;
+				//newGraph.evaluated = false;//I think this is not necessary now
 
 				double fitness = newGraph.fitness.fitness();
 				if(fitness > currentFitness){
 					currentFitness = fitness;
 					bestGraph = newGraph;
+					replaced = node;
+					newMember = neighbour;
 				}
 			}
 
 		}
 		graph = bestGraph;
+		nodesToReplace.remove(replaced);
+		nodesToReplace.add(newMember);
 		return currentFitness;
 	}
 

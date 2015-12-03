@@ -80,6 +80,7 @@ public class GraphIndividual extends Individual {
 	 * @param other
 	 */
     public void copyTo(GraphIndividual other) {
+    	System.out.println("==================");//debug
         for (Node n : nodeMap.values()) {
             Node newN = n.clone();
             other.nodeMap.put( newN.getName(), newN );
@@ -94,8 +95,47 @@ public class GraphIndividual extends Individual {
             newE.setFromNode( newFromNode );
             newFromNode.getOutgoingEdgeList().add( newE );
             Node newToNode = other.nodeMap.get( e.getToNode().getName() );
+            //debug
+            if(!other.nodeMap.containsKey(e.getToNode().getName())){
+            	System.out.println("The node is not in the other graph");
+            }
             newE.setToNode( newToNode );
             newToNode.getIncomingEdgeList().add( newE );
         }
     }
+
+    /**
+     * This clones the GraphIndividual to the given argument.
+     * @param other
+     */
+   /* public void clone(GraphIndividual other){
+    	for (Node n : nodeMap.values()) {
+            Node newN = n.clone();
+            other.nodeMap.put( newN.getName(), newN );
+        }
+    	for (Node n : considerableNodeMap.values()) {
+            Node newN = n.clone();
+            other.considerableNodeMap.put( newN.getName(), newN );
+        }
+    	 for (Edge e: edgeList) {
+             Edge newE = new Edge(e.getIntersect());
+             other.edgeList.add(newE);
+             Node newFromNode = other.nodeMap.get( e.getFromNode().getName() );
+             newE.setFromNode( newFromNode );
+             newFromNode.getOutgoingEdgeList().add( newE );
+             Node newToNode = other.nodeMap.get( e.getToNode().getName() );
+             newE.setToNode( newToNode );
+             newToNode.getIncomingEdgeList().add( newE );
+         }
+    	 for (Edge e: considerableEdgeList) {
+             Edge newE = new Edge(e.getIntersect());
+             other.considerableEdgeList.add(newE);
+             Node newFromNode = other.considerableNodeMap.get( e.getFromNode().getName() );
+             newE.setFromNode( newFromNode );
+             newFromNode.getOutgoingEdgeList().add( newE );
+             Node newToNode = other.considerableNodeMap.get( e.getToNode().getName() );
+             newE.setToNode( newToNode );
+             newToNode.getIncomingEdgeList().add( newE );
+         }
+    }*/
 }
