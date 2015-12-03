@@ -88,6 +88,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		double currentFitness = 0;
 		GraphIndividual bestGraph = new GraphIndividual();
+		//Set<Node> iteratingSet = cloneNodeSet(nodesToReplace);//a cloned set used for iteration
 
 		for (Node node : nodesToReplace) {
 			GraphIndividual newGraph = new GraphIndividual();
@@ -112,16 +113,16 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	}
 
 	/*
-	 * This clones the given node set and return a new node set with same nodes but different references
+	 * This clones the given node set and return a new node set with same nodes but different set reference.
+	 * The nodes have the same references.
 	 */
-	private Set<Node> cloneNodeSet(Set<Node> nodeSet){
+	/*private Set<Node> cloneNodeSet(Set<Node> nodeSet){
 		Set<Node> cloned = new HashSet<Node>();
 		for(Node n: nodeSet){
-			Node clonedNode = n.clone();
-			cloned.add(clonedNode);
+			cloned.add(n);
 		}
 		return cloned;
-	}
+	}*/
 
 	/*
 	 * Replace the node with its neighbour in the graph.
