@@ -14,7 +14,7 @@ import ec.util.Log;
 public class GraphEvol extends Problem implements SimpleProblemForm {
 
 	@Override
-	public void evaluate(final EvolutionState state, final Individual ind, final int subpopulation, final int threadnum) {
+	public void evaluate(EvolutionState state, Individual ind, int subpopulation, int threadnum) {
 	    GraphInitializer init = (GraphInitializer) state.initializer;
 	    if (init.runningOwls) {
 	        evaluateOwls(init, state, ind, subpopulation, threadnum);
@@ -24,7 +24,7 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 	    }
 	}
 
-    public void evaluateQoS(final GraphInitializer init, final EvolutionState state, final Individual ind, final int subpopulation, final int threadnum) {
+    public void evaluateQoS(GraphInitializer init, EvolutionState state, Individual ind, int subpopulation, int threadnum) {
 		if (ind.evaluated) return;   //don't evaluate the individual if it's already evaluated
         if (!(ind instanceof GraphIndividual))
             state.output.fatal("Whoa!  It's not a GraphIndividual!!!",null);
@@ -75,7 +75,7 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
     	ind.evaluated = false;
     }*/
 
-    public void evaluateOwls(final GraphInitializer init, final EvolutionState state, final Individual ind, final int subpopulation, final int threadnum) {
+    public void evaluateOwls(GraphInitializer init, EvolutionState state, Individual ind, int subpopulation, int threadnum) {
 
 		if (ind.evaluated) return;   //don't evaluate the individual if it's already evaluated
         if (!(ind instanceof GraphIndividual))
@@ -152,7 +152,12 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 		// Step 2: relax edges repeatedly
 		for (int i = 1; i < g.considerableNodeMap.size(); i++) {
 			for (Edge e : g.considerableEdgeList) {
-				if ((distance.get(e.getFromNode().getName()) -
+				//debug
+				if(!distance.containsKey(e.getToNode().getName())){System.out.println("=="+e.getToNode().getName());}
+
+				if ((distance.get(
+						e.getFromNode()
+						.getName()) -
 				        e.getToNode().getQos()[GraphInitializer.TIME])
 				        < distance.get(e.getToNode().getName())) {
 					distance.put(e.getToNode().getName(), (distance.get(e.getFromNode().getName()) - e.getToNode().getQos()[GraphInitializer.TIME]));
