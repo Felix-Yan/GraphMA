@@ -15,89 +15,75 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 
 	@Override
 	public void evaluate(EvolutionState state, Individual ind, int subpopulation, int threadnum) {
-	    GraphInitializer init = (GraphInitializer) state.initializer;
-	    if (init.runningOwls) {
-	        evaluateOwls(init, state, ind, subpopulation, threadnum);
-	    }
-	    else {
-	        evaluateQoS(init, state, ind, subpopulation, threadnum);
-	    }
+		GraphInitializer init = (GraphInitializer) state.initializer;
+		if (init.runningOwls) {
+			evaluateOwls(init, state, ind, subpopulation, threadnum);
+		}
+		else {
+			evaluateQoS(init, state, ind, subpopulation, threadnum);
+		}
 	}
 
-    public void evaluateQoS(GraphInitializer init, EvolutionState state, Individual ind, int subpopulation, int threadnum) {
+	public void evaluateQoS(GraphInitializer init, EvolutionState state, Individual ind, int subpopulation, int threadnum) {
 		if (ind.evaluated) return;   //don't evaluate the individual if it's already evaluated
-        if (!(ind instanceof GraphIndividual))
-            state.output.fatal("Whoa!  It's not a GraphIndividual!!!",null);
-        GraphIndividual ind2 = (GraphIndividual)ind;
+		if (!(ind instanceof GraphIndividual))
+			state.output.fatal("Whoa!  It's not a GraphIndividual!!!",null);
+		GraphIndividual ind2 = (GraphIndividual)ind;
 
-        double a = 1.0;
-        double r = 1.0;
-        double t = 0.0;
-        double c = 0.0;
+		double a = 1.0;
+		double r = 1.0;
+		double t = 0.0;
+		double c = 0.0;
 
-        for (Node n : ind2.considerableNodeMap.values()) {
-        	double[] qos = n.getQos();
-        	a *= qos[GraphInitializer.AVAILABILITY];
-        	r *= qos[GraphInitializer.RELIABILITY];
-        	c += qos[GraphInitializer.COST];
-        }
+		for (Node n : ind2.considerableNodeMap.values()) {
+			double[] qos = n.getQos();
+			a *= qos[GraphInitializer.AVAILABILITY];
+			r *= qos[GraphInitializer.RELIABILITY];
+			c += qos[GraphInitializer.COST];
+		}
 
-        // Calculate longest time
-        t = findLongestPath(ind2);
+		// Calculate longest time
+		t = findLongestPath(ind2);
 
-        a = normaliseAvailability(a, init);
-        r = normaliseReliability(r, init);
-        t = normaliseTime(t, init);
-        c = normaliseCost(c, init);
+		a = normaliseAvailability(a, init);
+		r = normaliseReliability(r, init);
+		t = normaliseTime(t, init);
+		c = normaliseCost(c, init);
 
-        double fitness = init.w1 * a + init.w2 * r + init.w3 * t + init.w4 * c;
+		double fitness = init.w1 * a + init.w2 * r + init.w3 * t + init.w4 * c;
 
-        ((SimpleFitness)ind2.fitness).setFitness(state,
-                // ...the fitness...
-                fitness,
-                ///... is the individual ideal?  Indicate here...
-                false);
+		((SimpleFitness)ind2.fitness).setFitness(state,
+				// ...the fitness...
+				fitness,
+				///... is the individual ideal?  Indicate here...
+				false);
 
-        ind2.evaluated = true;
+		ind2.evaluated = true;
 	}
 
-    /**
-     * Evaluate the QoS of graph indivudual for memetic algorithm. Set the individual.evaluated to be false after the
-     * evaluation for future local search.
-     * @param init
-     * @param state
-     * @param ind
-     * @param subpopulation
-     * @param threadnum
-     */
-    /*public void memeticEvaluate(final GraphInitializer init, final EvolutionState state, final Individual ind, final int subpopulation, final int threadnum){
-    	evaluateQoS(init, state, ind, subpopulation, threadnum);
-    	ind.evaluated = false;
-    }*/
-
-    public void evaluateOwls(GraphInitializer init, EvolutionState state, Individual ind, int subpopulation, int threadnum) {
+	public void evaluateOwls(GraphInitializer init, EvolutionState state, Individual ind, int subpopulation, int threadnum) {
 
 		if (ind.evaluated) return;   //don't evaluate the individual if it's already evaluated
-        if (!(ind instanceof GraphIndividual))
-            state.output.fatal("Whoa!  It's not a GraphIndividual!!!",null);
-        GraphIndividual ind2 = (GraphIndividual)ind;
+		if (!(ind instanceof GraphIndividual))
+			state.output.fatal("Whoa!  It's not a GraphIndividual!!!",null);
+		GraphIndividual ind2 = (GraphIndividual)ind;
 
-        // Calculate longest time
-        int runPath = findLongestPath2(ind2) - 1;
-        ind2.longestPathLength = runPath;
-        ind2.numAtomicServices = (ind2.considerableNodeMap.size() - 2);
-        boolean isIdeal = runPath == init.idealPathLength && ind2.numAtomicServices == init.idealNumAtomic;
+		// Calculate longest time
+		int runPath = findLongestPath2(ind2) - 1;
+		ind2.longestPathLength = runPath;
+		ind2.numAtomicServices = (ind2.considerableNodeMap.size() - 2);
+		boolean isIdeal = runPath == init.idealPathLength && ind2.numAtomicServices == init.idealNumAtomic;
 
-        double fitness = 0.5 * (1.0 / runPath) + 0.5 * (1.0/ ind2.numAtomicServices);
-        //double fitness = (100 - runPath) + (100 - ind2.numAtomicServices);
+		double fitness = 0.5 * (1.0 / runPath) + 0.5 * (1.0/ ind2.numAtomicServices);
+		//double fitness = (100 - runPath) + (100 - ind2.numAtomicServices);
 
-        ((SimpleFitness)ind2.fitness).setFitness(state,
-                // ...the fitness...
-                fitness,
-                ///... is the individual ideal?  Indicate here...
-                isIdeal);
+		((SimpleFitness)ind2.fitness).setFitness(state,
+				// ...the fitness...
+				fitness,
+				///... is the individual ideal?  Indicate here...
+				isIdeal);
 
-        ind2.evaluated = true;
+		ind2.evaluated = true;
 	}
 
 
@@ -153,13 +139,15 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 		for (int i = 1; i < g.considerableNodeMap.size(); i++) {
 			for (Edge e : g.considerableEdgeList) {
 				//debug
-				if(!distance.containsKey(e.getToNode().getName())){System.out.println("=="+e.getToNode().getName());}
+				if(!distance.containsKey(e.getFromNode().getName())){
+					System.out.println("=="+e.getFromNode().getName());
+				}
 
 				if ((distance.get(
 						e.getFromNode()
 						.getName()) -
-				        e.getToNode().getQos()[GraphInitializer.TIME])
-				        < distance.get(e.getToNode().getName())) {
+						e.getToNode().getQos()[GraphInitializer.TIME])
+						< distance.get(e.getToNode().getName())) {
 					distance.put(e.getToNode().getName(), (distance.get(e.getFromNode().getName()) - e.getToNode().getQos()[GraphInitializer.TIME]));
 					predecessor.put(e.getToNode().getName(), e.getFromNode());
 				}
@@ -201,7 +189,7 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 		for (int i = 1; i < g.considerableNodeMap.size(); i++) {
 			for (Edge e : g.considerableEdgeList) {
 				if ((distance.get(e.getFromNode().getName()) - 1)
-				        < distance.get(e.getToNode().getName())) {
+						< distance.get(e.getToNode().getName())) {
 					distance.put(e.getToNode().getName(), (distance.get(e.getFromNode().getName()) - 1));
 					predecessor.put(e.getToNode().getName(), e.getFromNode());
 				}
@@ -219,12 +207,12 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 		return totalTime;
 	}
 
-//	@Override
-//	public void describe(EvolutionState state, Individual ind, int subpopulation, int thread, int log) {
-//		Log l = state.output.getLog(log);
-//		GraphIndividual graph = (GraphIndividual) ind;
-//
-//		System.out.println(String.format("runPath= %d #atomicProcess= %d\n", graph.longestPathLength, graph.considerableNodeMap.size() - 2));
-//		l.writer.append(String.format("runPath= %d #atomicProcess= %d\n", graph.longestPathLength, graph.considerableNodeMap.size() - 2));
-//	}
+	//	@Override
+	//	public void describe(EvolutionState state, Individual ind, int subpopulation, int thread, int log) {
+	//		Log l = state.output.getLog(log);
+	//		GraphIndividual graph = (GraphIndividual) ind;
+	//
+	//		System.out.println(String.format("runPath= %d #atomicProcess= %d\n", graph.longestPathLength, graph.considerableNodeMap.size() - 2));
+	//		l.writer.append(String.format("runPath= %d #atomicProcess= %d\n", graph.longestPathLength, graph.considerableNodeMap.size() - 2));
+	//	}
 }

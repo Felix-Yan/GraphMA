@@ -40,18 +40,6 @@ public class GraphIndividual extends Individual {
 		this.unused = unused;
 	}
 
-	/**
-	 * This constructs a GraphIndividual with a single node
-	 * Not sure if this should be used.
-	 * @param nodeMap
-	 */
-	/*public GraphIndividual(Node n){
-		super();
-		super.fitness = new SimpleFitness();
-		super.species = new GraphSpecies();
-		nodeMap.put(n.getName(), n);
-	}*/
-
 	@Override
 	public Parameter defaultBase() {
 		return new Parameter("graphindividual");

@@ -66,16 +66,19 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 			double bestFitness = 0;
 			double currentBestFitness = 0;
+//			GraphIndividual newGraph = new GraphIndividual();
+//			graph.copyTo(newGraph);
 
 			do{
 				bestFitness = currentBestFitness;
 				currentBestFitness = findFitness(nodesToReplace, init, state, graph, subpopulation, thread);
-
 			}while(currentBestFitness > bestFitness);
 
+//			graph = newGraph;
 		}
 		return n;
 	}
+
 
 	/*
 	 * This returns the best new fitness of the graph after a local search
@@ -84,30 +87,48 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			GraphIndividual graph, int subpopulation, int thread){
 
 		double currentFitness = 0;
+		GraphIndividual bestGraph = new GraphIndividual();
 
 		for (Node node : nodesToReplace) {
+			GraphIndividual newGraph = new GraphIndividual();
+			graph.copyTo(newGraph);
+
 			Set<Node> neighbours = findNeighbourNodes(node, init);
 			for(Node neighbour: neighbours){
+				replaceNode(node, neighbour, newGraph, init);
+				((GraphEvol)state.evaluator.p_problem).evaluate(state, newGraph, subpopulation, thread);
+				newGraph.evaluated = false;
 
-				replaceNode(node, neighbour, graph, init);
-
-				((GraphEvol)state.evaluator.p_problem).evaluate(state, graph, subpopulation, thread);
-				graph.evaluated = false;
-
-				double fitness = graph.fitness.fitness();
+				double fitness = newGraph.fitness.fitness();
 				if(fitness > currentFitness){
 					currentFitness = fitness;
+					bestGraph = newGraph;
 				}
 			}
 
 		}
+		graph = bestGraph;
 		return currentFitness;
+	}
+
+	/*
+	 * This clones the given node set and return a new node set with same nodes but different references
+	 */
+	private Set<Node> cloneNodeSet(Set<Node> nodeSet){
+		Set<Node> cloned = new HashSet<Node>();
+		for(Node n: nodeSet){
+			Node clonedNode = n.clone();
+			cloned.add(clonedNode);
+		}
+		return cloned;
 	}
 
 	/*
 	 * Replace the node with its neighbour in the graph.
 	 */
 	private void replaceNode(Node node, Node neighbour, GraphIndividual graph, GraphInitializer init){
+		//Node tempNode = graph.nodeMap.get(node.getName());
+
 		//do not replace end node
 		if(node.getName().equals("end")) return;
 
@@ -119,22 +140,24 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		graph.considerableNodeMap.remove( node.getName() );
 
 		//debug
-		if(node.getName().equals("serv353380906")){System.out.println("target is removed");}
+		if(node.getName().equals("serv353380906")){
+			System.out.println("target is removed");
+			}
 
 		//remove incoming edges of the replaced node
 		for (Edge e : node.getIncomingEdgeList()) {
 			incomingEdges.add( e );
 			e.getFromNode().getOutgoingEdgeList().remove( e );
 			//there may be duplicates in the edgelist?
-			Set<Edge> edgeSet = new HashSet<Edge>(graph.edgeList);
-			edgeSet.remove(e);
-			graph.edgeList.addAll(edgeSet);
-
-			Set<Edge> edgeSet2 = new HashSet<Edge>(graph.considerableEdgeList);
-			edgeSet2.remove(e);
-			graph.considerableEdgeList.addAll(edgeSet2 );
-//			graph.edgeList.remove( e );
-//			graph.considerableEdgeList.remove( e );
+//			Set<Edge> edgeSet = new HashSet<Edge>(graph.edgeList);
+//			edgeSet.remove(e);
+//			graph.edgeList.addAll(edgeSet);
+//
+//			Set<Edge> edgeSet2 = new HashSet<Edge>(graph.considerableEdgeList);
+//			edgeSet2.remove(e);
+//			graph.considerableEdgeList.addAll(edgeSet2 );
+			graph.edgeList.remove( e );
+			graph.considerableEdgeList.remove( e );
 		}
 
 		//give outgoingEdges to the neighbour node
