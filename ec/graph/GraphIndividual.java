@@ -102,6 +102,7 @@ public class GraphIndividual extends Individual {
             newE.setToNode( newToNode );
             newToNode.getIncomingEdgeList().add( newE );
         }
+        System.out.println("dummy");
     }
 
     /**
