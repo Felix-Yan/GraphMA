@@ -1,5 +1,6 @@
 package ec.graph;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Edge {
@@ -61,5 +62,22 @@ public class Edge {
 		}
 		else
 			return false;
+	}
+
+	/**
+	 * This clones the caller edge and returns an identical edge with completely different reference
+	 * @return a new edge
+	 */
+	public Edge cloneEdge(){
+		Set<String> newIntersect = new HashSet<String>();
+		for(String s: intersect){
+			newIntersect.add(s);
+		}
+		Edge newEdge = new Edge (newIntersect);
+		Node newFromNode = fromNode.clone();
+		Node newToNode = toNode.clone();
+		newEdge.setFromNode(newFromNode);
+		newEdge.setToNode(newToNode);
+		return newEdge;
 	}
 }
