@@ -1,6 +1,7 @@
 package ec.graph;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -49,8 +50,19 @@ public class Node implements Cloneable {
 		this.name = name;
 	}
 
+	/**
+	 * This clones the caller node and returns an identical node with completely different reference
+	 */
 	public Node clone() {
-		return new Node(name, qos, inputs, outputs);
+		Set<String> newInputs = new HashSet<String>();
+		Set<String> newOutputs = new HashSet<String>();
+		for(String s: inputs){
+			newInputs.add(s);
+		}
+		for(String s: outputs){
+			newOutputs.add(s);
+		}
+		return new Node(name, qos, newInputs, newOutputs);
 	}
 
 	public List<TaxonomyNode> getTaxonomyOutputs() {
