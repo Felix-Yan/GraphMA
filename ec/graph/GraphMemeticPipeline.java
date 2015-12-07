@@ -66,15 +66,15 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 			double bestFitness = 0;
 			double currentBestFitness = 0;
-//			GraphIndividual newGraph = new GraphIndividual();
-//			graph.copyTo(newGraph);
+			//			GraphIndividual newGraph = new GraphIndividual();
+			//			graph.copyTo(newGraph);
 
 			do{
 				bestFitness = currentBestFitness;
 				currentBestFitness = findFitness(nodesToReplace, init, state, graph, subpopulation, thread);
 			}while(currentBestFitness > bestFitness);
 
-//			graph = newGraph;
+			//			graph = newGraph;
 		}
 		return n;
 	}
@@ -132,26 +132,13 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		Set<Edge> outgoingEdges = new HashSet<Edge>();
 		Set<Edge> incomingEdges = new HashSet<Edge>();
 
-		//remove the node to be replaced
-		newGraph.nodeMap.remove( node.getName() );
-		newGraph.considerableNodeMap.remove( node.getName() );
-
 		//add the neighbour node to the graph
 		newGraph.nodeMap.put(neighbour.getName(), neighbour);
 		newGraph.considerableNodeMap.put(neighbour.getName(), neighbour);
 
-		//debug
-		if(node.getName().equals("serv353380906")){
-			System.out.println("target is removed");
-			}
-
 		//remove incoming edges of the replaced node
 		for (Edge e : node.getIncomingEdgeList()) {
-			/*Edge newEdge = new Edge(e.getIntersect());
-            newEdge.setFromNode( newGraph.nodeMap.get(e.getFromNode().getName()) );
-            newEdge.setToNode( node );*/
-            Edge newEdge = e.cloneEdge();
-
+			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
 			incomingEdges.add( newEdge );
 			e.getFromNode().getOutgoingEdgeList().remove( e );
 			newGraph.edgeList.remove( e );
@@ -160,14 +147,8 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		//remove outgoingEdges to the neighbour node
 		for (Edge e : node.getOutgoingEdgeList()) {
-/*			Edge newEdge = new Edge(e.getIntersect());
-			newEdge.setFromNode( node );
-            newEdge.setToNode( newGraph.nodeMap.get(e.getToNode().getName()) );*/
-            Edge newEdge = e.cloneEdge();
-
+			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
 			outgoingEdges.add( newEdge );
-
-			//Not used because it should not be removed. Outgoing edges should be kept in the graph
 			e.getToNode().getIncomingEdgeList().remove( e );
 			newGraph.edgeList.remove( e );
 			newGraph.considerableEdgeList.remove( e );
@@ -176,6 +157,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		//give outgoingEdges to the neighbour node
 		for(Edge e: outgoingEdges){
 			e.setFromNode(newGraph.nodeMap.get(neighbour.getName()));
+			//e.setFromNode(neighbour);
 			neighbour.getOutgoingEdgeList().add(e);
 			e.getToNode().getIncomingEdgeList().add(e);
 			newGraph.edgeList.add(e);
@@ -203,10 +185,12 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		init.removeDanglingNodes(newGraph);
 		//debug
-//		if(neighbour.getName().equals("serv353380906")){
-//			System.out.println("The neighbour should be in the graph");
-//		}
-
+		//		if(neighbour.getName().equals("serv353380906")){
+		//			System.out.println("The neighbour should be in the graph");
+		//		}
+		//remove the node to be replaced
+		newGraph.nodeMap.remove( node.getName() );
+		newGraph.considerableNodeMap.remove( node.getName() );
 
 	}
 

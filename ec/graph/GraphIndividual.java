@@ -87,7 +87,7 @@ public class GraphIndividual extends Individual {
             other.considerableNodeMap.put( newN.getName(), newN );
         }
         //may not be useful later
-        /*for (Edge e: edgeList) {
+       /* for (Edge e: edgeList) {
             Edge newE = new Edge(e.getIntersect());
             other.edgeList.add(newE);
             other.considerableEdgeList.add( newE );
@@ -103,17 +103,17 @@ public class GraphIndividual extends Individual {
             newToNode.getIncomingEdgeList().add( newE );
         }*/
         for (Edge e: edgeList) {
-        	Edge newE = e.cloneEdge();
+        	Edge newE = e.cloneEdge(other.nodeMap);
             other.edgeList.add(newE);
             other.considerableEdgeList.add( newE );
-            Node newFromNode = other.nodeMap.get( newE.getFromNode().getName() );
-            newFromNode.getOutgoingEdgeList().add( newE );
-            Node newToNode = other.nodeMap.get( newE.getToNode().getName() );
+            //Node newFromNode = other.nodeMap.get( newE.getFromNode().getName() );
+            newE.getFromNode().getOutgoingEdgeList().add( newE );
+           // Node newToNode = other.nodeMap.get( newE.getToNode().getName() );
             //debug
             if(!other.nodeMap.containsKey(e.getToNode().getName())){
             	System.out.println("The node is not in the other graph");
             }
-            newToNode.getIncomingEdgeList().add( newE );
+            newE.getToNode().getIncomingEdgeList().add( newE );
         }
         System.out.println("dummy");
     }
