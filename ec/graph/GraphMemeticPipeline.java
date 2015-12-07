@@ -94,19 +94,21 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		System.out.println("nodes to replace has size"+" "+nodesToReplace.size());
 
 		for (Node node : nodesToReplace) {
-			GraphIndividual newGraph = new GraphIndividual();
-			graph.copyTo(newGraph);
+			/*GraphIndividual newGraph = new GraphIndividual();
+			graph.copyTo(newGraph);*/
 
 			Set<Node> neighbours = findNeighbourNodes(node, init);
 			for(Node neighbour: neighbours){
-				replaceNode(node, neighbour, newGraph, init);
-				((GraphEvol)state.evaluator.p_problem).evaluate(state, newGraph, subpopulation, thread);
+				GraphIndividual innerGraph = new GraphIndividual();
+				graph.copyTo(innerGraph);
+				replaceNode(node, neighbour, innerGraph, init);
+				((GraphEvol)state.evaluator.p_problem).evaluate(state, innerGraph, subpopulation, thread);
 				//newGraph.evaluated = false;//I think this is not necessary now
 
-				double fitness = newGraph.fitness.fitness();
+				double fitness = innerGraph.fitness.fitness();
 				if(fitness > currentFitness){
 					currentFitness = fitness;
-					bestGraph = newGraph;
+					bestGraph = innerGraph;
 					replaced = node;
 					newMember = neighbour;
 				}
@@ -118,18 +120,6 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		nodesToReplace.add(newMember);
 		return currentFitness;
 	}
-
-	/*
-	 * This clones the given node set and return a new node set with same nodes but different set reference.
-	 * The nodes have the same references.
-	 */
-	/*private Set<Node> cloneNodeSet(Set<Node> nodeSet){
-		Set<Node> cloned = new HashSet<Node>();
-		for(Node n: nodeSet){
-			cloned.add(n);
-		}
-		return cloned;
-	}*/
 
 	/*
 	 * Replace the node with its neighbour in the graph.
