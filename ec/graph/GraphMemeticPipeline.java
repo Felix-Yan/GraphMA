@@ -147,9 +147,10 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		//remove incoming edges of the replaced node
 		for (Edge e : node.getIncomingEdgeList()) {
-			Edge newEdge = new Edge(e.getIntersect());
+			/*Edge newEdge = new Edge(e.getIntersect());
             newEdge.setFromNode( newGraph.nodeMap.get(e.getFromNode().getName()) );
-            newEdge.setToNode( node );
+            newEdge.setToNode( node );*/
+            Edge newEdge = e.cloneEdge();
 
 			incomingEdges.add( newEdge );
 			e.getFromNode().getOutgoingEdgeList().remove( e );
@@ -159,9 +160,10 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		//remove outgoingEdges to the neighbour node
 		for (Edge e : node.getOutgoingEdgeList()) {
-			Edge newEdge = new Edge(e.getIntersect());
+/*			Edge newEdge = new Edge(e.getIntersect());
 			newEdge.setFromNode( node );
-            newEdge.setToNode( newGraph.nodeMap.get(e.getToNode().getName()) );
+            newEdge.setToNode( newGraph.nodeMap.get(e.getToNode().getName()) );*/
+            Edge newEdge = e.cloneEdge();
 
 			outgoingEdges.add( newEdge );
 

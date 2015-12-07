@@ -14,18 +14,22 @@ public class Edge {
 	}
 
 	public Node getFromNode() {
+		if(fromNode == null) throw new NullPointerException();
 		return fromNode;
 	}
 
 	public Node getToNode() {
+		if(toNode == null) throw new NullPointerException();
 		return toNode;
 	}
 
 	public void setFromNode(Node fromNode) {
+		if(fromNode == null) throw new NullPointerException();
 		this.fromNode = fromNode;
 	}
 
 	public void setToNode(Node toNode) {
+		if(toNode == null) throw new NullPointerException();
 		this.toNode = toNode;
 	}
 
