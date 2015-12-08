@@ -16,6 +16,8 @@ import ec.util.Parameter;
  *
  */
 public class GraphIndividual extends Individual {
+	int count = 0;//debug
+
 	/* nodeMap's values contains all the nodes in the graph.
 	 * It is constructed in GraphSpecies by connectCandidateToGraphByInputs.
 	 */
@@ -80,7 +82,7 @@ public class GraphIndividual extends Individual {
 	 * @param other
 	 */
     public void copyTo(GraphIndividual other) {
-    	System.out.println("==================");//debug
+    	//System.out.println("==================");//debug
         for (Node n : nodeMap.values()) {
             Node newN = n.clone();
             other.nodeMap.put( newN.getName(), newN );
@@ -106,16 +108,17 @@ public class GraphIndividual extends Individual {
         	Edge newE = e.cloneEdge(other.nodeMap);
             other.edgeList.add(newE);
             other.considerableEdgeList.add( newE );
-            //Node newFromNode = other.nodeMap.get( newE.getFromNode().getName() );
             newE.getFromNode().getOutgoingEdgeList().add( newE );
-           // Node newToNode = other.nodeMap.get( newE.getToNode().getName() );
-            //debug
-            if(!other.nodeMap.containsKey(e.getToNode().getName())){
-            	System.out.println("The node is not in the other graph");
-            }
             newE.getToNode().getIncomingEdgeList().add( newE );
+            //debug
+            /*if(newE.getToNode().getName().equals("serv2016477448")){
+            	System.out.println("it should have incoming edgelist");
+            }*/
         }
-        System.out.println("dummy");
+        //System.out.println(count++);
+        /*if(count == 12){
+        	System.out.println("where are incoming edges?");
+        }*/
     }
 
     /**
