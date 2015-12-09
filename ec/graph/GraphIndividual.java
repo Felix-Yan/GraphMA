@@ -82,77 +82,22 @@ public class GraphIndividual extends Individual {
 	 * @param other
 	 */
     public void copyTo(GraphIndividual other) {
-    	//System.out.println("==================");//debug
         for (Node n : nodeMap.values()) {
             Node newN = n.clone();
             other.nodeMap.put( newN.getName(), newN );
             other.considerableNodeMap.put( newN.getName(), newN );
         }
-        //may not be useful later
-       /* for (Edge e: edgeList) {
-            Edge newE = new Edge(e.getIntersect());
-            other.edgeList.add(newE);
-            other.considerableEdgeList.add( newE );
-            Node newFromNode = other.nodeMap.get( e.getFromNode().getName() );
-            newE.setFromNode( newFromNode );
-            newFromNode.getOutgoingEdgeList().add( newE );
-            Node newToNode = other.nodeMap.get( e.getToNode().getName() );
-            //debug
-            if(!other.nodeMap.containsKey(e.getToNode().getName())){
-            	System.out.println("The node is not in the other graph");
-            }
-            newE.setToNode( newToNode );
-            newToNode.getIncomingEdgeList().add( newE );
-        }*/
+
         for (Edge e: edgeList) {
         	Edge newE = e.cloneEdge(other.nodeMap);
             other.edgeList.add(newE);
             other.considerableEdgeList.add( newE );
             newE.getFromNode().getOutgoingEdgeList().add( newE );
             newE.getToNode().getIncomingEdgeList().add( newE );
-            //debug
-            /*if(newE.getToNode().getName().equals("serv2016477448")){
-            	System.out.println("it should have incoming edgelist");
-            }*/
         }
         //System.out.println(count++);
         /*if(count == 12){
         	System.out.println("where are incoming edges?");
         }*/
     }
-
-    /**
-     * This clones the GraphIndividual to the given argument.
-     * @param other
-     */
-   /* public void clone(GraphIndividual other){
-    	for (Node n : nodeMap.values()) {
-            Node newN = n.clone();
-            other.nodeMap.put( newN.getName(), newN );
-        }
-    	for (Node n : considerableNodeMap.values()) {
-            Node newN = n.clone();
-            other.considerableNodeMap.put( newN.getName(), newN );
-        }
-    	 for (Edge e: edgeList) {
-             Edge newE = new Edge(e.getIntersect());
-             other.edgeList.add(newE);
-             Node newFromNode = other.nodeMap.get( e.getFromNode().getName() );
-             newE.setFromNode( newFromNode );
-             newFromNode.getOutgoingEdgeList().add( newE );
-             Node newToNode = other.nodeMap.get( e.getToNode().getName() );
-             newE.setToNode( newToNode );
-             newToNode.getIncomingEdgeList().add( newE );
-         }
-    	 for (Edge e: considerableEdgeList) {
-             Edge newE = new Edge(e.getIntersect());
-             other.considerableEdgeList.add(newE);
-             Node newFromNode = other.considerableNodeMap.get( e.getFromNode().getName() );
-             newE.setFromNode( newFromNode );
-             newFromNode.getOutgoingEdgeList().add( newE );
-             Node newToNode = other.considerableNodeMap.get( e.getToNode().getName() );
-             newE.setToNode( newToNode );
-             newToNode.getIncomingEdgeList().add( newE );
-         }
-    }*/
 }

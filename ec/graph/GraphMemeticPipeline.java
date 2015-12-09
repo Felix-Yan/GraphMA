@@ -64,16 +64,12 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			double bestFitness = 0;
 			double currentBestFitness = 0;
 			currentGraph = graph;
-			System.out.println("loop starts");//debug
-			//debug
-			if(nodesToReplace.size() == 32){
-				System.out.println("Problem arise");
-			}
+			//System.out.println("loop starts");//debug
 			do{
 				bestFitness = currentBestFitness;
 				currentBestFitness = findFitness(nodesToReplace, init, state, currentGraph, subpopulation, thread);
-				System.out.println("best is: "+bestFitness);//debug
-				System.out.println(currentBestFitness);//debug
+//				System.out.println("best is: "+bestFitness);//debug
+//				System.out.println(currentBestFitness);//debug
 			}while(currentBestFitness > bestFitness);
 
 			inds[q] = currentGraph;
@@ -93,7 +89,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		Node newMember = null;//The new node added in the subgraph
 		Node replaced = null;//The old node replaced by the new node in the subgraph
 		//debug
-		System.out.println("nodes to replace has size"+" "+domain.size());
+//		System.out.println("nodes to replace has size"+" "+domain.size());
 
 		for (Node node : domain) {
 
