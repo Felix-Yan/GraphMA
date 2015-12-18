@@ -52,6 +52,8 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 
 		double fitness = init.w1 * a + init.w2 * r + init.w3 * t + init.w4 * c;
 
+		System.out.println("a: "+a+", r: "+r+", t: "+t+", c: "+c);//show values of 4 attributes
+
 		((SimpleFitness)ind2.fitness).setFitness(state,
 				// ...the fitness...
 				fitness,

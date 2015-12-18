@@ -64,12 +64,12 @@ public class GraphInitializer extends SimpleInitializer {
 	public static File histogramLogFile;
 
 	// Statistics tracking
-    public static Map<String, Integer> nodeCount = new HashMap<String, Integer>();
-    public static Map<String, Integer> edgeCount = new HashMap<String, Integer>();
+	public static Map<String, Integer> nodeCount = new HashMap<String, Integer>();
+	public static Map<String, Integer> edgeCount = new HashMap<String, Integer>();
 
 	@Override
 	public void setup(EvolutionState state, Parameter base) {
-//	    watch.start();
+		//	    watch.start();
 		Parameter servicesParam = new Parameter("composition-services");
 		Parameter taskParam = new Parameter("composition-task");
 		Parameter taxonomyParam = new Parameter("composition-taxonomy");
@@ -90,9 +90,9 @@ public class GraphInitializer extends SimpleInitializer {
 		w2 = state.parameters.getDouble(weight2Param, null);
 		w3 = state.parameters.getDouble(weight3Param, null);
 		w4 = state.parameters.getDouble(weight4Param, null);
-	    overlapEnabled = state.parameters.getBoolean( overlapEnabledParam, null, false );
-	    runningOwls = state.parameters.getBoolean( runningOwlsParam, null, false );
-	    overlapPercentage = state.parameters.getDouble( overlapPercentageParam, null );
+		overlapEnabled = state.parameters.getBoolean( overlapEnabledParam, null, false );
+		runningOwls = state.parameters.getBoolean( runningOwlsParam, null, false );
+		overlapPercentage = state.parameters.getDouble( overlapPercentageParam, null );
 		idealPathLength = state.parameters.getInt(idealPathLengthParam, null);
 		idealNumAtomic = state.parameters.getInt(idealNumAtomicParam, null);
 		findConcepts = state.parameters.getBoolean( findConceptsParam, null, false );
@@ -103,7 +103,7 @@ public class GraphInitializer extends SimpleInitializer {
 		parseWSCTaskFile(state.parameters.getString(taskParam, null));
 		parseWSCTaxonomyFile(state.parameters.getString(taxonomyParam, null));
 		if (findConcepts)
-		    findConceptsForInstances();
+			findConceptsForInstances();
 
 		random = new GraphRandom(state.random[0]);
 
@@ -118,9 +118,11 @@ public class GraphInitializer extends SimpleInitializer {
 		endNode = new Node("end", mockQos, taskOutput ,new HashSet<String>());
 
 		populateTaxonomyTree();
-		relevant = getRelevantServices(serviceMap, taskInput, taskOutput);
+		//comment out the shrunk relevant services to compare with Alex's experiment
+		//relevant = getRelevantServices(serviceMap, taskInput, taskOutput);
+		relevant = new HashSet<Node>(serviceMap.values());
 		if(!runningOwls)
-		    calculateNormalisationBounds(relevant);
+			calculateNormalisationBounds(relevant);
 	}
 
 	/**
@@ -149,14 +151,14 @@ public class GraphInitializer extends SimpleInitializer {
 	 * @param b
 	 * @return
 	 */
-    public boolean isIntersection( Set<String> a, Set<String> b ) {
-        for ( String v1 : a ) {
-            if ( b.contains( v1 ) ) {
-                return true;
-            }
-        }
-        return false;
-    }
+	public boolean isIntersection( Set<String> a, Set<String> b ) {
+		for ( String v1 : a ) {
+			if ( b.contains( v1 ) ) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	/**
 	 * Populates the taxonomy tree by associating services to the
@@ -170,7 +172,7 @@ public class GraphInitializer extends SimpleInitializer {
 
 	private void addServiceToTaxonomyTree(Node s) {
 		// Populate outputs
-	    Set<TaxonomyNode> seenConceptsOutput = new HashSet<TaxonomyNode>();
+		Set<TaxonomyNode> seenConceptsOutput = new HashSet<TaxonomyNode>();
 		for (String outputVal : s.getOutputs()) {
 			TaxonomyNode n = taxonomyMap.get(outputVal);
 			s.getTaxonomyOutputs().add(n);
@@ -180,15 +182,15 @@ public class GraphInitializer extends SimpleInitializer {
 			queue.add( n );
 
 			while (!queue.isEmpty()) {
-			    TaxonomyNode current = queue.poll();
-		        seenConceptsOutput.add( current );
-		        current.servicesWithOutput.add(s);
-		        for (TaxonomyNode parent : current.parents) {
-		            if (!seenConceptsOutput.contains( parent )) {
-		                queue.add(parent);
-		                seenConceptsOutput.add(parent);
-		            }
-		        }
+				TaxonomyNode current = queue.poll();
+				seenConceptsOutput.add( current );
+				current.servicesWithOutput.add(s);
+				for (TaxonomyNode parent : current.parents) {
+					if (!seenConceptsOutput.contains( parent )) {
+						queue.add(parent);
+						seenConceptsOutput.add(parent);
+					}
+				}
 			}
 		}
 		// Populate inputs
@@ -205,22 +207,22 @@ public class GraphInitializer extends SimpleInitializer {
 				TaxonomyNode current = queue.poll();
 				seenConceptsInput.add( current );
 
-			    Set<String> inputs = current.servicesWithInput.get(s);
-			    if (inputs == null) {
-			    	inputs = new HashSet<String>();
-			    	inputs.add(inputVal);
-			    	current.servicesWithInput.put(s, inputs);
-			    }
-			    else {
-			    	inputs.add(inputVal);
-			    }
+				Set<String> inputs = current.servicesWithInput.get(s);
+				if (inputs == null) {
+					inputs = new HashSet<String>();
+					inputs.add(inputVal);
+					current.servicesWithInput.put(s, inputs);
+				}
+				else {
+					inputs.add(inputVal);
+				}
 
-			    for (TaxonomyNode child : current.children) {
-			        if (!seenConceptsInput.contains( child )) {
-			            queue.add(child);
-			            seenConceptsInput.add( child );
-			        }
-			    }
+				for (TaxonomyNode child : current.children) {
+					if (!seenConceptsInput.contains( child )) {
+						queue.add(child);
+						seenConceptsInput.add( child );
+					}
+				}
 			}
 		}
 		return;
@@ -258,7 +260,7 @@ public class GraphInitializer extends SimpleInitializer {
 
 		temp.clear();
 		for (String s : taskOutput)
-				temp.add(taxonomyMap.get(s).parents.get(0).value);
+			temp.add(taxonomyMap.get(s).parents.get(0).value);
 		taskOutput.clear();
 		taskOutput.addAll(temp);
 
@@ -280,28 +282,28 @@ public class GraphInitializer extends SimpleInitializer {
 	}
 
 	public void removeDanglingNodes(GraphIndividual graph) {
-	    List<Node> dangling = new ArrayList<Node>();
-	    for (Node g : graph.nodeMap.values()) {
-	        if (!g.getName().equals("end") && g.getOutgoingEdgeList().isEmpty())
-	            dangling.add( g );
-	    }
+		List<Node> dangling = new ArrayList<Node>();
+		for (Node g : graph.nodeMap.values()) {
+			if (!g.getName().equals("end") && g.getOutgoingEdgeList().isEmpty())
+				dangling.add( g );
+		}
 
-	    for (Node d: dangling) {
-	        removeDangling(d, graph);
-	    }
+		for (Node d: dangling) {
+			removeDangling(d, graph);
+		}
 	}
 
 	private void removeDangling(Node n, GraphIndividual graph) {
-	    if (n.getOutgoingEdgeList().isEmpty()) {
-	        graph.nodeMap.remove( n.getName() );
-	        graph.considerableNodeMap.remove( n.getName() );
-	        for (Edge e : n.getIncomingEdgeList()) {
-	            e.getFromNode().getOutgoingEdgeList().remove( e );
-	            graph.edgeList.remove( e );
-	            graph.considerableEdgeList.remove( e );
-	            removeDangling(e.getFromNode(), graph);
-	        }
-	    }
+		if (n.getOutgoingEdgeList().isEmpty()) {
+			graph.nodeMap.remove( n.getName() );
+			graph.considerableNodeMap.remove( n.getName() );
+			for (Edge e : n.getIncomingEdgeList()) {
+				e.getFromNode().getOutgoingEdgeList().remove( e );
+				graph.edgeList.remove( e );
+				graph.considerableEdgeList.remove( e );
+				removeDangling(e.getFromNode(), graph);
+			}
+		}
 	}
 
 	/**
@@ -410,29 +412,29 @@ public class GraphInitializer extends SimpleInitializer {
 	 * @param fileName
 	 */
 	private void parseWSCServiceFile(String fileName) {
-        Set<String> inputs = new HashSet<String>();
-        Set<String> outputs = new HashSet<String>();
-        double[] qos = new double[4];
+		Set<String> inputs = new HashSet<String>();
+		Set<String> outputs = new HashSet<String>();
+		double[] qos = new double[4];
 
-        try {
-        	File fXmlFile = new File(fileName);
-        	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-        	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-        	Document doc = dBuilder.parse(fXmlFile);
+		try {
+			File fXmlFile = new File(fileName);
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(fXmlFile);
 
-        	NodeList nList = doc.getElementsByTagName("service");
+			NodeList nList = doc.getElementsByTagName("service");
 
-        	for (int i = 0; i < nList.getLength(); i++) {
-        		org.w3c.dom.Node nNode = nList.item(i);
-        		Element eElement = (Element) nNode;
+			for (int i = 0; i < nList.getLength(); i++) {
+				org.w3c.dom.Node nNode = nList.item(i);
+				Element eElement = (Element) nNode;
 
-        		String name = eElement.getAttribute("name");
-        		if (!runningOwls) {
-        		    qos[TIME] = Double.valueOf(eElement.getAttribute("Res"));
-        		    qos[COST] = Double.valueOf(eElement.getAttribute("Pri"));
-        		    qos[AVAILABILITY] = Double.valueOf(eElement.getAttribute("Ava"));
-        		    qos[RELIABILITY] = Double.valueOf(eElement.getAttribute("Rel"));
-        		}
+				String name = eElement.getAttribute("name");
+				if (!runningOwls) {
+					qos[TIME] = Double.valueOf(eElement.getAttribute("Res"));
+					qos[COST] = Double.valueOf(eElement.getAttribute("Pri"));
+					qos[AVAILABILITY] = Double.valueOf(eElement.getAttribute("Ava"));
+					qos[RELIABILITY] = Double.valueOf(eElement.getAttribute("Rel"));
+				}
 
 				// Get inputs
 				org.w3c.dom.Node inputNode = eElement.getElementsByTagName("inputs").item(0);
@@ -452,23 +454,23 @@ public class GraphInitializer extends SimpleInitializer {
 					outputs.add(e.getAttribute("name"));
 				}
 
-                Node ws = new Node(name, qos, inputs, outputs);
-                serviceMap.put(name, ws);
-                inputs = new HashSet<String>();
-                outputs = new HashSet<String>();
-                qos = new double[4];
-        	}
-        }
-        catch(IOException ioe) {
-            System.out.println("Service file parsing failed...");
-        }
-        catch (ParserConfigurationException e) {
-            System.out.println("Service file parsing failed...");
+				Node ws = new Node(name, qos, inputs, outputs);
+				serviceMap.put(name, ws);
+				inputs = new HashSet<String>();
+				outputs = new HashSet<String>();
+				qos = new double[4];
+			}
 		}
-        catch (SAXException e) {
-            System.out.println("Service file parsing failed...");
+		catch(IOException ioe) {
+			System.out.println("Service file parsing failed...");
 		}
-    }
+		catch (ParserConfigurationException e) {
+			System.out.println("Service file parsing failed...");
+		}
+		catch (SAXException e) {
+			System.out.println("Service file parsing failed...");
+		}
+	}
 
 	/**
 	 * Parses the WSC task file with the given name, extracting input and
@@ -478,40 +480,40 @@ public class GraphInitializer extends SimpleInitializer {
 	 */
 	private void parseWSCTaskFile(String fileName) {
 		try {
-	    	File fXmlFile = new File(fileName);
-	    	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-	    	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-	    	Document doc = dBuilder.parse(fXmlFile);
+			File fXmlFile = new File(fileName);
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(fXmlFile);
 
-	    	org.w3c.dom.Node provided = doc.getElementsByTagName("provided").item(0);
-	    	NodeList providedList = ((Element) provided).getElementsByTagName("instance");
-	    	taskInput = new HashSet<String>();
-	    	for (int i = 0; i < providedList.getLength(); i++) {
+			org.w3c.dom.Node provided = doc.getElementsByTagName("provided").item(0);
+			NodeList providedList = ((Element) provided).getElementsByTagName("instance");
+			taskInput = new HashSet<String>();
+			for (int i = 0; i < providedList.getLength(); i++) {
 				org.w3c.dom.Node item = providedList.item(i);
 				Element e = (Element) item;
 				taskInput.add(e.getAttribute("name"));
-	    	}
+			}
 
-	    	org.w3c.dom.Node wanted = doc.getElementsByTagName("wanted").item(0);
-	    	NodeList wantedList = ((Element) wanted).getElementsByTagName("instance");
-	    	taskOutput = new HashSet<String>();
-	    	for (int i = 0; i < wantedList.getLength(); i++) {
+			org.w3c.dom.Node wanted = doc.getElementsByTagName("wanted").item(0);
+			NodeList wantedList = ((Element) wanted).getElementsByTagName("instance");
+			taskOutput = new HashSet<String>();
+			for (int i = 0; i < wantedList.getLength(); i++) {
 				org.w3c.dom.Node item = wantedList.item(i);
 				Element e = (Element) item;
 				taskOutput.add(e.getAttribute("name"));
-	    	}
+			}
 		}
 		catch (ParserConfigurationException e) {
-            System.out.println("Task file parsing failed...");
-            e.printStackTrace();
+			System.out.println("Task file parsing failed...");
+			e.printStackTrace();
 		}
 		catch (SAXException e) {
-            System.out.println("Task file parsing failed...");
-            e.printStackTrace();
+			System.out.println("Task file parsing failed...");
+			e.printStackTrace();
 		}
 		catch (IOException e) {
-            System.out.println("Task file parsing failed...");
-            e.printStackTrace();
+			System.out.println("Task file parsing failed...");
+			e.printStackTrace();
 		}
 	}
 
@@ -523,23 +525,23 @@ public class GraphInitializer extends SimpleInitializer {
 	 */
 	private void parseWSCTaxonomyFile(String fileName) {
 		try {
-	    	File fXmlFile = new File(fileName);
-	    	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-	    	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-	    	Document doc = dBuilder.parse(fXmlFile);
-	    	NodeList taxonomyRoots = doc.getChildNodes();
+			File fXmlFile = new File(fileName);
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(fXmlFile);
+			NodeList taxonomyRoots = doc.getChildNodes();
 
-	    	processTaxonomyChildren(null, taxonomyRoots);
+			processTaxonomyChildren(null, taxonomyRoots);
 		}
 
 		catch (ParserConfigurationException e) {
-            System.err.println("Taxonomy file parsing failed...");
+			System.err.println("Taxonomy file parsing failed...");
 		}
 		catch (SAXException e) {
-            System.err.println("Taxonomy file parsing failed...");
+			System.err.println("Taxonomy file parsing failed...");
 		}
 		catch (IOException e) {
-            System.err.println("Taxonomy file parsing failed...");
+			System.err.println("Taxonomy file parsing failed...");
 		}
 	}
 
@@ -559,11 +561,11 @@ public class GraphInitializer extends SimpleInitializer {
 					String value = currNode.getAttribute("name");
 					TaxonomyNode taxNode = taxonomyMap.get( value );
 					if (taxNode == null) {
-					    taxNode = new TaxonomyNode(value);
-					    taxonomyMap.put( value, taxNode );
+						taxNode = new TaxonomyNode(value);
+						taxonomyMap.put( value, taxNode );
 					}
 					if (parent != null) {
-					    taxNode.parents.add(parent);
+						taxNode.parents.add(parent);
 						parent.children.add(taxNode);
 					}
 
@@ -575,19 +577,19 @@ public class GraphInitializer extends SimpleInitializer {
 	}
 
 	public void countGraphElements(GraphIndividual graph) {
-        // Keep track of nodes and edges for statistics
-        for (String nodeName : graph.nodeMap.keySet())
-            addToCountMap(nodeCount, nodeName);
-        for (Edge edge : graph.edgeList)
-            addToCountMap(edgeCount, edge.toString());
+		// Keep track of nodes and edges for statistics
+		for (String nodeName : graph.nodeMap.keySet())
+			addToCountMap(nodeCount, nodeName);
+		for (Edge edge : graph.edgeList)
+			addToCountMap(edgeCount, edge.toString());
 	}
 
-   private void addToCountMap(Map<String,Integer> map, String item) {
-        if (map.containsKey( item )) {
-            map.put( item, map.get( item ) + 1 );
-        }
-        else {
-            map.put( item, 1 );
-        }
-    }
+	private void addToCountMap(Map<String,Integer> map, String item) {
+		if (map.containsKey( item )) {
+			map.put( item, map.get( item ) + 1 );
+		}
+		else {
+			map.put( item, 1 );
+		}
+	}
 }
