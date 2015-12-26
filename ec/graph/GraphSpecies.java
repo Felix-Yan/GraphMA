@@ -16,6 +16,11 @@ import ec.Individual;
 import ec.Species;
 import ec.util.Parameter;
 
+/**
+ * This constructs GraphIndividuals.
+ * @author yanlong
+ *
+ */
 public class GraphSpecies extends Species {
 	@Override
 	public Parameter defaultBase() {
