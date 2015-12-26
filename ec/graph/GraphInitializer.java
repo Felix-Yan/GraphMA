@@ -122,7 +122,7 @@ public class GraphInitializer extends SimpleInitializer {
 		//relevant = getRelevantServices(serviceMap, taskInput, taskOutput);
 		relevant = new HashSet<Node>(serviceMap.values());
 		if(!runningOwls)
-			calculateNormalisationBounds(relevant);
+			calculateAdditiveNormalisationBounds(relevant);
 	}
 
 	/**
@@ -352,11 +352,11 @@ public class GraphInitializer extends SimpleInitializer {
 		return getRelevantServices(serviceMap, inputs, outputs);
 	}*/
 
-	private void calculateNormalisationBounds(Set<Node> services) {
+	private void calculateAdditiveNormalisationBounds(Set<Node> services) {
 		for(Node service: services) {
 			double[] qos = service.getQos();
 
-			// Availability
+			/*// Availability
 			double availability = qos[AVAILABILITY];
 			if (availability > maxAvailability)
 				maxAvailability = availability;
@@ -364,7 +364,7 @@ public class GraphInitializer extends SimpleInitializer {
 			// Reliability
 			double reliability = qos[RELIABILITY];
 			if (reliability > maxReliability)
-				maxReliability = reliability;
+				maxReliability = reliability;*/
 
 			// Time
 			double time = qos[TIME];
@@ -383,7 +383,56 @@ public class GraphInitializer extends SimpleInitializer {
 		// Adjust max. cost and max. time based on the number of services in shrunk repository
 		maxCost *= services.size();
 		maxTime *= services.size();
+	}
 
+	/*
+	 * This calculates the availability and reliability of each path of the graph.
+	 */
+
+	/*public void calculateMultiplicativeNormalisationBounds(Node node, double availability, double reliability){
+
+		for(Edge e: node.getOutgoingEdgeList()){
+			Node service = e.getToNode();
+			//calculate overall availability and reliability before end node
+			if(!service.getName().equals("end")){
+				double[] qos = service.getQos();
+				double a = qos[AVAILABILITY];
+				double r = qos[RELIABILITY];
+				availability *= a;
+				reliability *= r;
+				//recursively calculate the graph overall availability and reliability
+				calculateMultiplicativeNormalisationBounds(service, availability, reliability);
+			}
+			//update maxAvailability and maxReliability only at the end node
+			else{
+				if (availability > maxAvailability)
+					maxAvailability = availability;
+				if (reliability > maxReliability)
+					maxReliability = reliability;
+			}
+		}
+	}*/
+
+	/**
+	 * This calculates the normalisation bounds for reliability and availability of the whole graph
+	 * @param services
+	 */
+	public void calculateMultiplicativeNormalisationBounds(Collection<Node> services){
+		double availability = 1;
+		double reliability = 1;
+		for(Node service: services) {
+			double[] qos = service.getQos();
+
+			//Availability
+			availability *= qos[AVAILABILITY];
+
+			// Reliability
+			reliability *= qos[RELIABILITY];
+		}
+		if (availability > maxAvailability)
+			maxAvailability = availability;
+		if (reliability > maxReliability)
+			maxReliability = reliability;
 	}
 
 	/**

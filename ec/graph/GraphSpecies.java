@@ -31,6 +31,7 @@ public class GraphSpecies extends Species {
 	public Individual newIndividual(EvolutionState state, int thread) {
 		GraphInitializer init = (GraphInitializer) state.initializer;
 		GraphIndividual graph = createNewGraph(null, state, init.startNode.clone(), init.endNode.clone(), init.relevant);
+		init.calculateMultiplicativeNormalisationBounds(graph.considerableNodeMap.values());
 		return graph;
 	}
 
