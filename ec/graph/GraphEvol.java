@@ -88,7 +88,9 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 		ind2.evaluated = true;
 	}
 
-
+/*
+ * The normalisation will maximize a and r, minimize t and c.
+ */
 
 	private double normaliseAvailability(double availability, GraphInitializer init) {
 		if (init.maxAvailability - init.minAvailability == 0.0)
