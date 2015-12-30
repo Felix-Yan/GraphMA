@@ -47,13 +47,17 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 
 		a = normaliseAvailability(a, init);
 		r = normaliseReliability(r, init);
+
+		//recalculate a and r with base e to make sure they are not too small
+		a = Math.pow(Math.E*0.5, a-1);
+		r = Math.pow(Math.E*0.5, r-1);
 		t = normaliseTime(t, init);
 		c = normaliseCost(c, init);
 
 		double fitness = init.w1 * a + init.w2 * r + init.w3 * t + init.w4 * c;
 
-		System.out.println("maxA: "+init.maxAvailability+", maxR: "+init.maxReliability);
-		System.out.println("a: "+a+", r: "+r+", t: "+t+", c: "+c);//show values of 4 attributes, debug
+		//System.out.println("maxA: "+init.maxAvailability+", maxR: "+init.maxReliability); //debug
+		//System.out.println("a: "+a+", r: "+r+", t: "+t+", c: "+c);//show values of 4 attributes, debug
 
 		((SimpleFitness)ind2.fitness).setFitness(state,
 				// ...the fitness...

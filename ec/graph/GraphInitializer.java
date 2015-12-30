@@ -122,7 +122,7 @@ public class GraphInitializer extends SimpleInitializer {
 		//relevant = getRelevantServices(serviceMap, taskInput, taskOutput);
 		relevant = new HashSet<Node>(serviceMap.values());
 		if(!runningOwls)
-			calculateAdditiveNormalisationBounds(relevant);
+			calculateNormalisationBounds(relevant);
 	}
 
 	/**
@@ -352,11 +352,11 @@ public class GraphInitializer extends SimpleInitializer {
 		return getRelevantServices(serviceMap, inputs, outputs);
 	}*/
 
-	private void calculateAdditiveNormalisationBounds(Set<Node> services) {
+	private void calculateNormalisationBounds(Set<Node> services) {
 		for(Node service: services) {
 			double[] qos = service.getQos();
 
-			/*// Availability
+			// Availability
 			double availability = qos[AVAILABILITY];
 			if (availability > maxAvailability)
 				maxAvailability = availability;
@@ -364,7 +364,7 @@ public class GraphInitializer extends SimpleInitializer {
 			// Reliability
 			double reliability = qos[RELIABILITY];
 			if (reliability > maxReliability)
-				maxReliability = reliability;*/
+				maxReliability = reliability;
 
 			// Time
 			double time = qos[TIME];
@@ -417,7 +417,7 @@ public class GraphInitializer extends SimpleInitializer {
 	 * This calculates the normalisation bounds for reliability and availability of the whole graph
 	 * @param services
 	 */
-	public void calculateMultiplicativeNormalisationBounds(Collection<Node> services){
+	/*public void calculateMultiplicativeNormalisationBounds(Collection<Node> services){
 		double availability = 1;
 		double reliability = 1;
 		for(Node service: services) {
@@ -429,12 +429,13 @@ public class GraphInitializer extends SimpleInitializer {
 			// Reliability
 			reliability *= qos[RELIABILITY];
 		}
+		//System.out.println("maxA: "+maxAvailability+", maxR: "+maxReliability);//debug
 		if (availability > maxAvailability)
 			maxAvailability = availability;
 		if (reliability > maxReliability)
 			maxReliability = reliability;
 	}
-
+*/
 	/**
 	 * Discovers all services from the provided collection whose
 	 * input can be satisfied either (a) by the input provided in
