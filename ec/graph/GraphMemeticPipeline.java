@@ -55,12 +55,19 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 					selected = temp;
 				}
 			}
-			// Find all nodes that should be locally searched and possibly replaced
-			Set<Node> nodesToReplace = findNodesToRemove(selected);
+			Set<Edge> edgesMemetic = findEdges(selected);
 			double bestFitness = 0;
 			double currentBestFitness = 0;
 			currentGraph = graph;
-			//System.out.println("loop starts");//debug
+			do{
+				bestFitness = currentBestFitness;
+				currentBestFitness = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread);
+				//				System.out.println("best is: "+bestFitness);//debug
+				//				System.out.println(currentBestFitness);//debug
+			}while(currentBestFitness > bestFitness);
+
+			// Find all nodes that should be locally searched and possibly replaced
+			Set<Node> nodesToReplace = findNodesToRemove(selected);
 			do{
 				bestFitness = currentBestFitness;
 				currentBestFitness = findFitness(nodesToReplace, init, state, currentGraph, subpopulation, thread);
@@ -73,6 +80,47 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		return n;
 	}
 
+	/*
+	 * This returns a fitness value after performing 2-1 node local search.
+	 */
+	private double execute2for1(Set<Edge> domain, GraphInitializer init, EvolutionState state,
+			GraphIndividual graph, int subpopulation, int thread){
+		double currentFitness = 0;
+		GraphIndividual bestGraph = new GraphIndividual();
+		Node newMember = null;//The new node added in the subgraph
+		Node replaced = null;//The old node replaced by the new node in the subgraph
+		//debug
+		//		System.out.println("nodes to replace has size"+" "+domain.size());
+
+		for (Edge e : domain) {
+			Set<Node> neighbours = find2for1Candidates(e,init);
+			for(Node neighbour: neighbours){
+				GraphIndividual innerGraph = new GraphIndividual();
+				graph.copyTo(innerGraph);
+				replaceNode(node, neighbour, innerGraph, init);
+				((GraphEvol)state.evaluator.p_problem).evaluate(state, innerGraph, subpopulation, thread);
+				//newGraph.evaluated = false;//I think this is not necessary now
+
+				double fitness = innerGraph.fitness.fitness();
+				if(fitness > currentFitness){
+					currentFitness = fitness;
+					bestGraph = innerGraph;
+					replaced = node;
+					newMember = neighbour;
+				}
+			}
+
+		}
+
+		if(replaced!=null){
+			currentGraph = bestGraph;
+			domain.remove(replaced);
+			domain.add(newMember);
+			//System.out.println("replaced: "+replaced.getName());
+			//System.out.println("added: "+newMember.getName());
+		}
+		return currentFitness;
+	}
 
 	/*
 	 * This returns the best new fitness of the graph after a local search
@@ -238,6 +286,50 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		return neighbours;
 	}
+
+	/*
+	 * This finds all the single nodes can be used to replace the given two neighbour nodes.
+	 */
+	private Set<Node> find2for1Candidates(Edge selected, GraphInitializer init){
+		Node fromNode = selected.getFromNode();
+		Node toNode = selected.getToNode();
+
+		List <Edge> outgoingEdge = toNode.getOutgoingEdgeList();
+
+		//use the fromNode inputs as the possible neighbour inputs
+		Set<String> inputs = fromNode.getInputs();
+		Set<String> outputs = new HashSet<String>();
+
+		//use all the outputs in the outgoing edges as the required neighbour outputs
+		for(Edge e: outgoingEdge){
+			outputs.addAll(e.getIntersect());
+		}
+
+		Set<Node> nodeWithOutput = new HashSet<Node>();
+		//The following finds out all the nodes that satisfy all the outputs
+		for(String output: outputs){
+			if(nodeWithOutput.isEmpty()){
+				nodeWithOutput = new HashSet<Node>(init.taxonomyMap.get(output).servicesWithOutput);
+			}
+			else{
+				Set<Node> nodeWithOutput2 = new HashSet<Node>(init.taxonomyMap.get(output).servicesWithOutput);
+				nodeWithOutput = findIntersection(nodeWithOutput, nodeWithOutput2);
+			}
+		}
+
+		Set<Node> neighbours = new HashSet<Node>();
+		neighbours.addAll(nodeWithOutput);
+		//This checks that all the neighbours can be satisfied by the given inputs
+		for(Node node: nodeWithOutput){
+			Set<String> nodeInput = node.getInputs();
+			if(!isSubset(nodeInput, inputs)){
+				neighbours.remove(node);
+			}
+		}
+
+		return neighbours;
+	}
+
 
 	/*
 	 * The following checks that the given set1 is a subset of set2.
