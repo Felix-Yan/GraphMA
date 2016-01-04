@@ -57,10 +57,6 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}
 			// Find all nodes that should be locally searched and possibly replaced
 			Set<Node> nodesToReplace = findNodesToRemove(selected);
-			/*			Map<String,Node> changingDomain = new HashMap<String,Node>();
-			for(Node node: nodesToReplace){
-				changingDomain.put(node.getName(), node);
-			}*/
 			double bestFitness = 0;
 			double currentBestFitness = 0;
 			currentGraph = graph;
@@ -68,8 +64,8 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			do{
 				bestFitness = currentBestFitness;
 				currentBestFitness = findFitness(nodesToReplace, init, state, currentGraph, subpopulation, thread);
-//				System.out.println("best is: "+bestFitness);//debug
-//				System.out.println(currentBestFitness);//debug
+				//				System.out.println("best is: "+bestFitness);//debug
+				//				System.out.println(currentBestFitness);//debug
 			}while(currentBestFitness > bestFitness);
 
 			inds[q] = currentGraph;
@@ -89,7 +85,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		Node newMember = null;//The new node added in the subgraph
 		Node replaced = null;//The old node replaced by the new node in the subgraph
 		//debug
-//		System.out.println("nodes to replace has size"+" "+domain.size());
+		//		System.out.println("nodes to replace has size"+" "+domain.size());
 
 		for (Node node : domain) {
 
@@ -279,6 +275,38 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		nodes.add( current );
 		for (Edge e: current.getOutgoingEdgeList()) {
 			_findNodesToRemove(e.getToNode(), nodes);
+		}
+	}
+
+	//Not sure if this is right. Might as well use Alex's version.
+	/*private Set<Edge> findEdges(Node selected, Set<Edge> edges){
+		for(Edge e: selected.getOutgoingEdgeList()){
+			edges.add(e);
+			Node node = e.getToNode();
+			edges.addAll(findEdges(node, edges));
+		}
+		return edges;
+	}*/
+
+	/*
+	 * This finds out all the edges involved in the memetic operator from the selected node.
+	 */
+	private Set<Edge> findEdges(Node selected){
+		Set<Edge> edges = new HashSet<Edge>();
+		recFindEdges(selected, edges);
+		return edges;
+	}
+
+	/*
+	 * This gathers all the required edges recursively.
+	 */
+	private void recFindEdges(Node current, Set<Edge> edges){
+		for(Edge e: current.getOutgoingEdgeList()){
+			Node toNode = e.getToNode();
+			if(!toNode.getName().equals("end")){
+				edges.add(e);
+			}
+			recFindEdges(toNode,edges);
 		}
 	}
 }
