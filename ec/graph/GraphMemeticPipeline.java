@@ -59,12 +59,13 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			double bestFitness = 0;
 			double currentBestFitness = 0;
 			currentGraph = graph;
-			do{
+
+			/*do{
 				bestFitness = currentBestFitness;
 				currentBestFitness = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread);
 				//				System.out.println("best is: "+bestFitness);//debug
 				//				System.out.println(currentBestFitness);//debug
-			}while(currentBestFitness > bestFitness);
+			}while(currentBestFitness > bestFitness);*/
 
 			// Find all nodes that should be locally searched and possibly replaced
 			Set<Node> nodesToReplace = findNodesToRemove(selected);
@@ -81,45 +82,69 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	}
 
 	/*
-	 * This returns a fitness value after performing 2-1 node local search.
+	 * This returns a fitness value after performing 2-1 node local optimization.
 	 */
 	private double execute2for1(Set<Edge> domain, GraphInitializer init, EvolutionState state,
 			GraphIndividual graph, int subpopulation, int thread){
 		double currentFitness = 0;
 		GraphIndividual bestGraph = new GraphIndividual();
 		Node newMember = null;//The new node added in the subgraph
-		Node replaced = null;//The old node replaced by the new node in the subgraph
+		Edge replaced = null;//The old node replaced by the new node in the subgraph
 		//debug
 		//		System.out.println("nodes to replace has size"+" "+domain.size());
 
-		for (Edge e : domain) {
-			Set<Node> neighbours = find2for1Candidates(e,init);
+		for (Edge edge : domain) {
+			Set<Node> neighbours = find2for1Candidates(edge,init);
 			for(Node neighbour: neighbours){
 				GraphIndividual innerGraph = new GraphIndividual();
 				graph.copyTo(innerGraph);
-				replaceNode(node, neighbour, innerGraph, init);
+				replaceNode2for1(edge, neighbour, innerGraph, init);
 				((GraphEvol)state.evaluator.p_problem).evaluate(state, innerGraph, subpopulation, thread);
-				//newGraph.evaluated = false;//I think this is not necessary now
-
 				double fitness = innerGraph.fitness.fitness();
 				if(fitness > currentFitness){
 					currentFitness = fitness;
 					bestGraph = innerGraph;
-					replaced = node;
+					replaced = edge;
 					newMember = neighbour;
 				}
 			}
-
 		}
-
 		if(replaced!=null){
 			currentGraph = bestGraph;
-			domain.remove(replaced);
-			domain.add(newMember);
+			updateEdges(domain, replaced, newMember);
 			//System.out.println("replaced: "+replaced.getName());
 			//System.out.println("added: "+newMember.getName());
 		}
 		return currentFitness;
+	}
+
+	/*
+	 * This update the set of involved edges once a 2-1 optimization has been performed
+	 */
+	private void updateEdges(Set<Edge> edges, Edge replaced, Node newNode){
+		edges.remove(replaced);
+		Node fromNode = replaced.getFromNode();
+		Node toNode = replaced.getToNode();
+		relevantEdges(edges, fromNode, newNode);
+		relevantEdges(edges, toNode, newNode);
+	}
+
+	/*
+	 * This finds out all the edges, from the given edge set, that contains the given node as either from or to Node.
+	 * Then it will replace the original node with new node for every relevant edge.
+	 */
+	private void relevantEdges(Set<Edge> edges, Node node, Node newNode){
+		for(Edge e: edges){
+			Node fromNode = e.getFromNode();
+			Node toNode = e.getToNode();
+			String name = node.getName();
+			if(fromNode.getName().equals(name)){
+				e.setFromNode(newNode);
+			}
+			else if(toNode.getName().equals(name)){
+				e.setToNode(newNode);
+			}
+		}
 	}
 
 	/*
@@ -136,15 +161,12 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		//		System.out.println("nodes to replace has size"+" "+domain.size());
 
 		for (Node node : domain) {
-
 			Set<Node> neighbours = findNeighbourNodes(node, init);
 			for(Node neighbour: neighbours){
 				GraphIndividual innerGraph = new GraphIndividual();
 				graph.copyTo(innerGraph);
 				replaceNode(node, neighbour, innerGraph, init);
 				((GraphEvol)state.evaluator.p_problem).evaluate(state, innerGraph, subpopulation, thread);
-				//newGraph.evaluated = false;//I think this is not necessary now
-
 				double fitness = innerGraph.fitness.fitness();
 				if(fitness > currentFitness){
 					currentFitness = fitness;
@@ -155,7 +177,6 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}
 
 		}
-
 		if(replaced!=null){
 			currentGraph = bestGraph;
 			domain.remove(replaced);
@@ -243,7 +264,79 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		//remove the node to be replaced
 		newGraph.nodeMap.remove( graphNode.getName() );
 		newGraph.considerableNodeMap.remove( graphNode.getName() );
+	}
 
+	/*
+	 * Replace 2 nodes with 1 node in the graph.
+	 */
+	private void replaceNode2for1(Edge selected, Node neighbour, GraphIndividual newGraph, GraphInitializer init){
+		//do not add the neighbour if the neighbour has already been in the graph. Do not allow duplicates
+		if(newGraph.nodeMap.get(neighbour.getName()) != null) return;
+
+		//this is to obtain the node with the name from the current graph
+		Node fromNode = selected.getFromNode();
+		Node toNode = selected.getToNode();
+
+		Node graphFromNode = newGraph.nodeMap.get(fromNode.getName());
+		Node graphToNode = newGraph.nodeMap.get(toNode.getName());
+
+		Set<Edge> outgoingEdges = new HashSet<Edge>();
+		Set<Edge> incomingEdges = new HashSet<Edge>();
+
+		//add the neighbour node to the graph
+		newGraph.nodeMap.put(neighbour.getName(), neighbour);
+		newGraph.considerableNodeMap.put(neighbour.getName(), neighbour);
+
+		//remove incoming edges of the replaced node
+		for (Edge e : graphFromNode.getIncomingEdgeList()) {
+			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
+			incomingEdges.add( newEdge );
+			e.getFromNode().getOutgoingEdgeList().remove( e );
+			newGraph.edgeList.remove( e );
+			newGraph.considerableEdgeList.remove( e );
+		}
+		//remove outgoingEdges to the neighbour node
+		for (Edge e : graphToNode.getOutgoingEdgeList()) {
+			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
+			outgoingEdges.add( newEdge );
+			e.getToNode().getIncomingEdgeList().remove( e );
+			newGraph.edgeList.remove( e );
+			newGraph.considerableEdgeList.remove( e );
+		}
+		//remove the selected edge
+		newGraph.edgeList.remove( selected );
+		newGraph.considerableEdgeList.remove( selected );
+		//this removes all other unnecessary inherited edges
+		neighbour.getOutgoingEdgeList().clear();
+		neighbour.getIncomingEdgeList().clear();
+		//give outgoingEdges to the neighbour node
+		for(Edge e: outgoingEdges){
+			//e.setFromNode(newGraph.nodeMap.get(neighbour.getName()));
+			e.setFromNode(neighbour);
+			neighbour.getOutgoingEdgeList().add(e);
+			e.getToNode().getIncomingEdgeList().add(e);
+			newGraph.edgeList.add(e);
+			newGraph.considerableEdgeList.add(e);
+		}
+		//give incomingEdges to the neighbour node
+		for(Edge e: incomingEdges){
+			Set<String> nodeInputs = neighbour.getInputs();
+			Set<String> edgeInputs = e.getIntersect();
+			//check if the edge is still useful for the neighbour
+			if(init.isIntersection(edgeInputs, nodeInputs)){
+				e.setToNode(newGraph.nodeMap.get(neighbour.getName()));
+				neighbour.getIncomingEdgeList().add(e);
+				e.getFromNode().getOutgoingEdgeList().add( e );
+				newGraph.edgeList.add(e);
+				newGraph.considerableEdgeList.add(e);
+			}
+		}
+		init.removeDanglingNodes(newGraph);
+		//remove the 2 nodes to be replaced
+		newGraph.nodeMap.remove( graphFromNode.getName() );
+		newGraph.considerableNodeMap.remove( graphFromNode.getName() );
+		newGraph.nodeMap.remove( graphToNode.getName() );
+		newGraph.considerableNodeMap.remove( graphToNode.getName() );
 	}
 
 	/*
