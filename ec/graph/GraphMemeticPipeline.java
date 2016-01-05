@@ -61,15 +61,13 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			currentGraph = graph;
 
 			Set<Edge> edgesMemetic = findEdges(selected);
-			System.out.println(edgesMemetic.size());//debug
+			//System.out.println(edgesMemetic.size());//debug
 			do{
 				bestFitness = currentBestFitness;
 				currentBestFitness = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread, selected);
-				//				System.out.println("best is: "+bestFitness);//debug
-				//				System.out.println(currentBestFitness);//debug
 			}while(currentBestFitness > bestFitness);
 			//debug
-			System.out.println("finish 2 for 1========================");
+			//System.out.println("finish 2 for 1========================");
 
 			//update the selected node if it has been replaced
 			if(!selected.getName().equals(newSelection.getName())){
@@ -106,7 +104,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		for (Edge edge : domain) {
 			Set<Node> neighbours = find2for1Candidates(edge,init);
-			System.out.println("neighbours: "+neighbours.size());//debug
+			if(neighbours.size() != 0){
+				System.out.println("neighbours: "+neighbours.size());//debug
+			}
 			for(Node neighbour: neighbours){
 				GraphIndividual innerGraph = new GraphIndividual();
 				graph.copyTo(innerGraph);
@@ -407,12 +407,14 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		Node fromNode = selected.getFromNode();
 		Node toNode = selected.getToNode();
 
+		List <Edge> outgoingEdges = new ArrayList<Edge>();
 		List <Edge> outgoingEdge1 = toNode.getOutgoingEdgeList();
 		List <Edge> outgoingEdge2 = fromNode.getOutgoingEdgeList();
+		outgoingEdges.addAll(outgoingEdge1);
 		//combine the outgoindEdges of both fromNode and toNode to be the desired outgoingEdges of a new node
 		for(Edge e: outgoingEdge2){
 			if(!e.getToNode().getName().equals(toNode.getName())){
-				outgoingEdge1.add(e);
+				outgoingEdges.add(e);
 			}
 		}
 
@@ -421,7 +423,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		Set<String> outputs = new HashSet<String>();
 
 		//use all the outputs in the outgoing edges as the required neighbour outputs
-		for(Edge e: outgoingEdge1){
+		for(Edge e: outgoingEdges){
 			outputs.addAll(e.getIntersect());
 		}
 
