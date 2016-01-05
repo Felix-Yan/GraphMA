@@ -61,13 +61,13 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			currentGraph = graph;
 
 			Set<Edge> edgesMemetic = findEdges(selected);
-			//System.out.println(edgesMemetic.size());//debug
+			System.out.println(edgesMemetic.size());//debug
 			do{
 				bestFitness = currentBestFitness;
 				currentBestFitness = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread, selected);
 			}while(currentBestFitness > bestFitness);
 			//debug
-			//System.out.println("finish 2 for 1========================");
+			System.out.println("finish 2 for 1========================");
 
 			//update the selected node if it has been replaced
 			if(!selected.getName().equals(newSelection.getName())){
