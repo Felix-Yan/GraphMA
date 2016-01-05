@@ -148,7 +148,7 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 		for (int i = 1; i < g.considerableNodeMap.size(); i++) {
 			for (Edge e : g.considerableEdgeList) {
 				//debug
-				if(!distance.containsKey(e.getToNode().getName())){
+				if(!distance.containsKey(e.getFromNode().getName())){
 					System.out.println("ToNode=="+e.getToNode().getName());
 					System.out.println("FromNode=="+e.getFromNode().getName());
 				}

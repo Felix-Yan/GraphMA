@@ -16,6 +16,7 @@ import ec.util.Parameter;
 
 public class GraphMemeticPipeline extends BreedingPipeline {
 	GraphIndividual currentGraph = new GraphIndividual();
+	Node newSelection;
 
 	@Override
 	public Parameter defaultBase() {
@@ -36,7 +37,6 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			for(int q=start;q<n+start;q++)
 				inds[q] = (Individual)(inds[q].clone());
 		}
-
 		if (!(inds[start] instanceof GraphIndividual))
 			// uh oh, wrong kind of individual
 			state.output.fatal("GraphAppendPipeline didn't get a GraphIndividual. The offending individual is in subpopulation "
@@ -53,20 +53,30 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				//Do not allow mutations for start or end node
 				if (!temp.getName().equals( "end" ) && !temp.getName().equals( "start" )) {
 					selected = temp;
+					newSelection = temp;
 				}
 			}
 			Set<Edge> edgesMemetic = findEdges(selected);
 			double bestFitness = 0;
 			double currentBestFitness = 0;
 			currentGraph = graph;
-
-			/*do{
+			System.out.println(edgesMemetic.size());//debug
+			do{
 				bestFitness = currentBestFitness;
-				currentBestFitness = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread);
+				currentBestFitness = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread, selected);
 				//				System.out.println("best is: "+bestFitness);//debug
 				//				System.out.println(currentBestFitness);//debug
-			}while(currentBestFitness > bestFitness);*/
+			}while(currentBestFitness > bestFitness);
 
+			//debug
+			System.out.println("finish 2 for 1========================");
+			//update the selected node if it has been replaced
+			if(!selected.getName().equals(newSelection.getName())){
+				selected = newSelection;
+			}
+			else{//update the selected node reference to the new graph otherwise
+				selected = currentGraph.nodeMap.get(selected.getName());
+			}
 			// Find all nodes that should be locally searched and possibly replaced
 			Set<Node> nodesToReplace = findNodesToRemove(selected);
 			do{
@@ -85,7 +95,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	 * This returns a fitness value after performing 2-1 node local optimization.
 	 */
 	private double execute2for1(Set<Edge> domain, GraphInitializer init, EvolutionState state,
-			GraphIndividual graph, int subpopulation, int thread){
+			GraphIndividual graph, int subpopulation, int thread, Node root){
 		double currentFitness = 0;
 		GraphIndividual bestGraph = new GraphIndividual();
 		Node newMember = null;//The new node added in the subgraph
@@ -95,10 +105,11 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		for (Edge edge : domain) {
 			Set<Node> neighbours = find2for1Candidates(edge,init);
+			System.out.println("neighbours: "+neighbours.size());//debug
 			for(Node neighbour: neighbours){
 				GraphIndividual innerGraph = new GraphIndividual();
 				graph.copyTo(innerGraph);
-				replaceNode2for1(edge, neighbour, innerGraph, init);
+				replaceNode2for1(edge, neighbour, innerGraph, init, root);
 				((GraphEvol)state.evaluator.p_problem).evaluate(state, innerGraph, subpopulation, thread);
 				double fitness = innerGraph.fitness.fitness();
 				if(fitness > currentFitness){
@@ -269,7 +280,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	/*
 	 * Replace 2 nodes with 1 node in the graph.
 	 */
-	private void replaceNode2for1(Edge selected, Node neighbour, GraphIndividual newGraph, GraphInitializer init){
+	private void replaceNode2for1(Edge selected, Node neighbour, GraphIndividual newGraph, GraphInitializer init, Node root){
 		//do not add the neighbour if the neighbour has already been in the graph. Do not allow duplicates
 		if(newGraph.nodeMap.get(neighbour.getName()) != null) return;
 
@@ -337,6 +348,10 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		newGraph.considerableNodeMap.remove( graphFromNode.getName() );
 		newGraph.nodeMap.remove( graphToNode.getName() );
 		newGraph.considerableNodeMap.remove( graphToNode.getName() );
+		//update the root node if it has been replaced
+		if(fromNode.getName().equals(root.getName())){
+			newSelection = neighbour;
+		}
 	}
 
 	/*
@@ -387,14 +402,21 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		Node fromNode = selected.getFromNode();
 		Node toNode = selected.getToNode();
 
-		List <Edge> outgoingEdge = toNode.getOutgoingEdgeList();
+		List <Edge> outgoingEdge1 = toNode.getOutgoingEdgeList();
+		List <Edge> outgoingEdge2 = fromNode.getOutgoingEdgeList();
+		//combine the outputs of both fromNode and toNode to be the desired outputs of a new node
+		for(Edge e: outgoingEdge2){
+			if(!e.getToNode().getName().equals(toNode.getName())){
+				outgoingEdge1.add(e);
+			}
+		}
 
 		//use the fromNode inputs as the possible neighbour inputs
 		Set<String> inputs = fromNode.getInputs();
 		Set<String> outputs = new HashSet<String>();
 
 		//use all the outputs in the outgoing edges as the required neighbour outputs
-		for(Edge e: outgoingEdge){
+		for(Edge e: outgoingEdge1){
 			outputs.addAll(e.getIntersect());
 		}
 
