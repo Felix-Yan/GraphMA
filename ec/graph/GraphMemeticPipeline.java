@@ -56,10 +56,11 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 					newSelection = temp;
 				}
 			}
-			Set<Edge> edgesMemetic = findEdges(selected);
 			double bestFitness = 0;
 			double currentBestFitness = 0;
 			currentGraph = graph;
+
+			Set<Edge> edgesMemetic = findEdges(selected);
 			System.out.println(edgesMemetic.size());//debug
 			do{
 				bestFitness = currentBestFitness;
@@ -67,9 +68,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				//				System.out.println("best is: "+bestFitness);//debug
 				//				System.out.println(currentBestFitness);//debug
 			}while(currentBestFitness > bestFitness);
-
 			//debug
 			System.out.println("finish 2 for 1========================");
+
 			//update the selected node if it has been replaced
 			if(!selected.getName().equals(newSelection.getName())){
 				selected = newSelection;
@@ -379,6 +380,10 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			else{
 				Set<Node> nodeWithOutput2 = new HashSet<Node>(init.taxonomyMap.get(output).servicesWithOutput);
 				nodeWithOutput = findIntersection(nodeWithOutput, nodeWithOutput2);
+				//if there is no intersection, return no neighbours
+				if(nodeWithOutput.size() == 0){
+					return new HashSet<Node>();
+				}
 			}
 		}
 
@@ -404,7 +409,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		List <Edge> outgoingEdge1 = toNode.getOutgoingEdgeList();
 		List <Edge> outgoingEdge2 = fromNode.getOutgoingEdgeList();
-		//combine the outputs of both fromNode and toNode to be the desired outputs of a new node
+		//combine the outgoindEdges of both fromNode and toNode to be the desired outgoingEdges of a new node
 		for(Edge e: outgoingEdge2){
 			if(!e.getToNode().getName().equals(toNode.getName())){
 				outgoingEdge1.add(e);
@@ -429,6 +434,10 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			else{
 				Set<Node> nodeWithOutput2 = new HashSet<Node>(init.taxonomyMap.get(output).servicesWithOutput);
 				nodeWithOutput = findIntersection(nodeWithOutput, nodeWithOutput2);
+				//if there is no intersection, return no neighbours
+				if(nodeWithOutput.size() == 0){
+					return new HashSet<Node>();
+				}
 			}
 		}
 
