@@ -70,12 +70,12 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			System.out.println("finish 2 for 1========================");
 
 			//update the selected node if it has been replaced
-			if(!selected.getName().equals(newSelection.getName())){
-				selected = newSelection;
-			}
-			else{//update the selected node reference to the new graph otherwise
+			/*if(!selected.getName().equals(newSelection.getName()))*/
+			selected = newSelection;
+
+			/*else{//update the selected node reference to the new graph otherwise
 				selected = currentGraph.nodeMap.get(selected.getName());
-			}
+			}*/
 			// Find all nodes that should be locally searched and possibly replaced
 			Set<Node> nodesToReplace = findNodesToRemove(selected);
 			do{
@@ -282,27 +282,38 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	 * Replace 2 nodes with 1 node in the graph.
 	 */
 	private void replaceNode2for1(Edge selected, Node neighbour, GraphIndividual newGraph, GraphInitializer init, Node root){
-		//do not add the neighbour if the neighbour has already been in the graph. Do not allow duplicates
-		if(newGraph.nodeMap.get(neighbour.getName()) != null) return;
-
 		//this is to obtain the node with the name from the current graph
 		Node fromNode = selected.getFromNode();
 		Node toNode = selected.getToNode();
+		String newName = neighbour.getName();
+		/*
+		 * do not add the neighbour if the neighbour has already been in the graph.
+		 * Unless the neighbour is one of the fromNode or toNode.
+		 * Do not allow duplicates
+		 */
+		if(newGraph.nodeMap.get(newName) != null /*&& !fromNode.getName().equals(newName)
+				&& !toNode.getName().equals(newName)*/) return;
 
 		Node graphFromNode = newGraph.nodeMap.get(fromNode.getName());
 		Node graphToNode = newGraph.nodeMap.get(toNode.getName());
 
 		Set<Edge> outgoingEdges = new HashSet<Edge>();
-		Set<Edge> incomingEdges = new HashSet<Edge>();
-
+		Set<Edge> incomingEdges = new HashSet<Edge>(graphFromNode.getIncomingEdgeList());
+		Set <Edge> outgoingEdge1 = new HashSet<Edge>(graphToNode.getOutgoingEdgeList());
+		Set <Edge> outgoingEdge2 = new HashSet<Edge>(graphFromNode.getOutgoingEdgeList());
+		outgoingEdges.addAll(outgoingEdge1);
+		//combine the outgoindEdges of both fromNode and toNode to be the desired outgoingEdges of a new node
+		for(Edge e: outgoingEdge2){
+			if(!e.getToNode().getName().equals(toNode.getName())){
+				outgoingEdges.add(e);
+			}
+		}
 		//add the neighbour node to the graph
 		newGraph.nodeMap.put(neighbour.getName(), neighbour);
 		newGraph.considerableNodeMap.put(neighbour.getName(), neighbour);
-
 		//remove incoming edges of the replaced node
 		for (Edge e : graphFromNode.getIncomingEdgeList()) {
 			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
-			incomingEdges.add( newEdge );
 			e.getFromNode().getOutgoingEdgeList().remove( e );
 			newGraph.edgeList.remove( e );
 			newGraph.considerableEdgeList.remove( e );
@@ -310,7 +321,6 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		//remove outgoingEdges to the neighbour node
 		for (Edge e : graphToNode.getOutgoingEdgeList()) {
 			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
-			outgoingEdges.add( newEdge );
 			e.getToNode().getIncomingEdgeList().remove( e );
 			newGraph.edgeList.remove( e );
 			newGraph.considerableEdgeList.remove( e );
