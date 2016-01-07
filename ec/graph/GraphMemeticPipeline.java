@@ -84,7 +84,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				//				System.out.println("best is: "+bestFitness);//debug
 				//				System.out.println(currentBestFitness);//debug
 			}while(currentBestFitness > bestFitness);
-
+			currentGraph.evaluated = false;
 			inds[q] = currentGraph;
 		}
 		return n;
@@ -313,9 +313,6 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				outgoingEdges.add(e);
 			}
 		}
-		//add the neighbour node to the graph
-		newGraph.nodeMap.put(neighbour.getName(), neighbour);
-		newGraph.considerableNodeMap.put(neighbour.getName(), neighbour);
 		//remove incoming and outgoing edges of the replaced node
 		removeIncomingEdges(graphFromNode,newGraph);
 		removeIncomingEdges(graphToNode,newGraph);
@@ -333,6 +330,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			newGraph.edgeList.add(e);
 			newGraph.considerableEdgeList.add(e);
 		}
+		//add the neighbour node to the graph
+		newGraph.nodeMap.put(neighbour.getName(), neighbour);
+		newGraph.considerableNodeMap.put(neighbour.getName(), neighbour);
 		//give incomingEdges to the neighbour node
 		for(Edge e: incomingEdges){
 			Set<String> nodeInputs = neighbour.getInputs();
