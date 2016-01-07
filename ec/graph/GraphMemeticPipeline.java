@@ -366,6 +366,29 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	}
 
 	/*
+	 * This removes the incoming edges of a node in the graph.
+	 */
+	private void removeIncomingEdges(Node node, GraphIndividual newGraph){
+		for (Edge e : node.getIncomingEdgeList()) {
+			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
+			e.getFromNode().getOutgoingEdgeList().remove( e );
+			newGraph.edgeList.remove( e );
+			newGraph.considerableEdgeList.remove( e );
+		}
+	}
+	
+	/*
+	 * This removes the outgoing edges of a node in the graph.
+	 */
+	private void removeOutgoingEdges(Node node, GraphIndividual newGraph){
+		for (Edge e : node.getOutgoingEdgeList()) {
+			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
+			e.getToNode().getIncomingEdgeList().remove( e );
+			newGraph.edgeList.remove( e );
+			newGraph.considerableEdgeList.remove( e );
+		}
+	}
+	/*
 	 * This finds all the neighbouring nodes of the selected node. The neighbours can substitute the selected node without
 	 * losing any functionality.
 	 */
