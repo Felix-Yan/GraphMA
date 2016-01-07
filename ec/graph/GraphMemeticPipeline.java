@@ -124,6 +124,10 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		if(replaced!=null){
 			currentGraph = bestGraph;
 			updateEdges(domain, replaced, newMember);
+			//update the root node if it has been replaced
+			if(replaced.getFromNode().getName().equals(root.getName())){
+				newSelection = newMember;
+			}
 			//System.out.println("replaced: "+replaced.getName());
 			//System.out.println("added: "+newMember.getName());
 		}
@@ -217,7 +221,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		//debug
 		if(graphNode == null){
-			System.out.println("The selected node is "+node.getName());
+			System.out.println("The nonexistent selected node is "+node.getName());
 			throw new NullPointerException("The node to be replaced does not exist in graph");
 		}
 
@@ -311,23 +315,11 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		//add the neighbour node to the graph
 		newGraph.nodeMap.put(neighbour.getName(), neighbour);
 		newGraph.considerableNodeMap.put(neighbour.getName(), neighbour);
-		//remove incoming edges of the replaced node
-		for (Edge e : graphFromNode.getIncomingEdgeList()) {
-			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
-			e.getFromNode().getOutgoingEdgeList().remove( e );
-			newGraph.edgeList.remove( e );
-			newGraph.considerableEdgeList.remove( e );
-		}
-		//remove outgoingEdges to the neighbour node
-		for (Edge e : graphToNode.getOutgoingEdgeList()) {
-			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
-			e.getToNode().getIncomingEdgeList().remove( e );
-			newGraph.edgeList.remove( e );
-			newGraph.considerableEdgeList.remove( e );
-		}
-		//remove the selected edge
-		newGraph.edgeList.remove( selected );
-		newGraph.considerableEdgeList.remove( selected );
+		//remove incoming and outgoing edges of the replaced node
+		removeIncomingEdges(graphFromNode,newGraph);
+		removeIncomingEdges(graphToNode,newGraph);
+		removeOutgoingEdges(graphFromNode,newGraph);
+		removeOutgoingEdges(graphToNode,newGraph);
 		//this removes all other unnecessary inherited edges
 		neighbour.getOutgoingEdgeList().clear();
 		neighbour.getIncomingEdgeList().clear();
@@ -359,10 +351,6 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		newGraph.considerableNodeMap.remove( graphFromNode.getName() );
 		newGraph.nodeMap.remove( graphToNode.getName() );
 		newGraph.considerableNodeMap.remove( graphToNode.getName() );
-		//update the root node if it has been replaced
-		if(fromNode.getName().equals(root.getName())){
-			newSelection = neighbour;
-		}
 	}
 
 	/*
@@ -376,7 +364,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			newGraph.considerableEdgeList.remove( e );
 		}
 	}
-	
+
 	/*
 	 * This removes the outgoing edges of a node in the graph.
 	 */
