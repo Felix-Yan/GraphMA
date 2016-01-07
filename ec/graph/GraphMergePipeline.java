@@ -98,6 +98,9 @@ public class GraphMergePipeline extends BreedingPipeline {
 		for (Edge e : edgesToMerge) {
 			Edge newE = new Edge(e.getIntersect());
 			Node fromNode = newG.nodeMap.get(e.getFromNode().getName());
+			if(fromNode == null){
+				System.out.println(e.toString());//debug
+			}
 			newE.setFromNode(fromNode);
 			Node toNode = newG.nodeMap.get(e.getToNode().getName());
 			newE.setToNode(toNode);

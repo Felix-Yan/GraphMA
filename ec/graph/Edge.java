@@ -15,7 +15,9 @@ public class Edge {
 	}
 
 	public Node getFromNode() {
-		if(fromNode == null) throw new NullPointerException();
+		if(fromNode == null){
+			throw new NullPointerException();
+		}
 		return fromNode;
 	}
 
@@ -25,7 +27,9 @@ public class Edge {
 	}
 
 	public void setFromNode(Node fromNode) {
-		if(fromNode == null) throw new NullPointerException();
+		if(fromNode == null){
+			throw new NullPointerException();
+		}
 		this.fromNode = fromNode;
 	}
 

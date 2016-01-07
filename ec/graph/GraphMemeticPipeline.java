@@ -295,6 +295,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		 * Unless the neighbour is one of the fromNode or toNode.
 		 * Do not allow duplicates
 		 */
+		//TODO uncomment
 		if(newGraph.nodeMap.get(newName) != null /*&& !fromNode.getName().equals(newName)
 				&& !toNode.getName().equals(newName)*/) return;
 
