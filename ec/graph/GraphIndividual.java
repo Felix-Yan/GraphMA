@@ -82,12 +82,15 @@ public class GraphIndividual extends Individual {
 	 * @param other
 	 */
     public void copyTo(GraphIndividual other) {
+    	other.nodeMap.clear();
+    	other.considerableNodeMap.clear();
+    	other.edgeList.clear();
+    	other.considerableEdgeList.clear();
         for (Node n : nodeMap.values()) {
             Node newN = n.clone();
             other.nodeMap.put( newN.getName(), newN );
             other.considerableNodeMap.put( newN.getName(), newN );
         }
-
         for (Edge e: edgeList) {
         	Edge newE = e.cloneEdge(other.nodeMap);
             other.edgeList.add(newE);
@@ -95,9 +98,34 @@ public class GraphIndividual extends Individual {
             newE.getFromNode().getOutgoingEdgeList().add( newE );
             newE.getToNode().getIncomingEdgeList().add( newE );
         }
-        //System.out.println(count++);
-        /*if(count == 12){
-        	System.out.println("where are incoming edges?");
-        }*/
+    }
+
+    /**
+     * This checks all the nodes in the edgeList are also in the nodemap
+     * @return
+     */
+    public boolean validation(){
+    	for (Edge e : edgeList) {
+			Node fromNode = nodeMap.get(e.getFromNode().getName());
+			if(fromNode == null){
+				return false;
+			}
+			if(fromNode != e.getFromNode()){
+				return false;
+			}
+			Node toNode = nodeMap.get(e.getToNode().getName());
+			if(toNode == null){
+				return false;
+			}
+			if(toNode != e.getToNode()){
+				return false;
+			}
+			for (Node g : nodeMap.values()) {
+				if (!g.getName().equals("end") && g.getOutgoingEdgeList().isEmpty())
+					return false;
+			}
+
+		}
+    	return true;
     }
 }

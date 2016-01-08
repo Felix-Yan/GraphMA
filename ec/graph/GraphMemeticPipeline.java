@@ -17,6 +17,7 @@ import ec.util.Parameter;
 public class GraphMemeticPipeline extends BreedingPipeline {
 	GraphIndividual currentGraph = new GraphIndividual();
 	Node newSelection;
+	int count;//debug
 
 	@Override
 	public Parameter defaultBase() {
@@ -58,7 +59,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}
 			double bestFitness = 0;
 			double currentBestFitness = 0;
-			currentGraph = graph;
+			graph.copyTo(currentGraph);
 
 			Set<Edge> edgesMemetic = findEdges(selected);
 			//System.out.println(edgesMemetic.size());//debug
@@ -66,8 +67,6 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				bestFitness = currentBestFitness;
 				currentBestFitness = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread, selected);
 			}while(currentBestFitness > bestFitness);
-			//debug
-			//System.out.println("finish 2 for 1========================");
 
 			//update the selected node if it has been replaced
 			selected = currentGraph.nodeMap.get(newSelection.getName());
@@ -79,10 +78,16 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}while(currentBestFitness > bestFitness);
 			currentGraph.evaluated = false;
 			inds[q] = currentGraph;
+			//debug
+			if(!currentGraph.validation()){
+				throw new IllegalArgumentException("Graph's edges and nodes are not consistent");
+			}
 			System.out.println(currentGraph.toString());
+			//debug
+			System.out.println(count+"Memetic");
+			count++;
+
 		}
-		//debug
-		//System.out.println("Finish memetic=============");
 		return n;
 	}
 
@@ -96,14 +101,14 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		double currentFitness = graph.fitness.fitness();
 		GraphIndividual bestGraph = new GraphIndividual();
 		Node newMember = null;//The new node added in the subgraph
-		Edge replaced = null;//The old node replaced by the new node in the subgraph
+		Edge replaced = null;//The old edge replaced in the subgraph
 		//debug
 		//		System.out.println("nodes to replace has size"+" "+domain.size());
 
 		for (Edge edge : domain) {
 			Set<Node> neighbours = find2for1Candidates(edge,init);
 			if(neighbours.size() != 0){
-				System.out.println("neighbours: "+neighbours.size());//debug
+				System.out.println("neighbours: "+neighbours.size()+"===========================================");//debug
 			}
 			for(Node neighbour: neighbours){
 				GraphIndividual innerGraph = new GraphIndividual();
@@ -113,14 +118,14 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				double fitness = innerGraph.fitness.fitness();
 				if(fitness > currentFitness){
 					currentFitness = fitness;
-					bestGraph = innerGraph;
+					innerGraph.copyTo(bestGraph);
 					replaced = edge;
 					newMember = neighbour;
 				}
 			}
 		}
 		if(replaced!=null){
-			currentGraph = bestGraph;
+			bestGraph.copyTo(currentGraph);
 			updateEdges(domain, replaced, newMember);
 			//update the root node if it has been replaced
 			if(replaced.getFromNode().getName().equals(root.getName())){
@@ -185,7 +190,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				double fitness = innerGraph.fitness.fitness();
 				if(fitness > currentFitness){
 					currentFitness = fitness;
-					bestGraph = innerGraph;
+					innerGraph.copyTo(bestGraph);
 					replaced = node;
 					newMember = neighbour;
 				}
@@ -193,7 +198,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		}
 		if(replaced!=null){
-			currentGraph = bestGraph;
+			bestGraph.copyTo(currentGraph);;
 			domain.remove(replaced);
 			domain.add(newMember);
 			//System.out.println("replaced: "+replaced.getName());
@@ -288,6 +293,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		//this is to obtain the node with the name from the current graph
 		Node fromNode = selected.getFromNode();
 		Node toNode = selected.getToNode();
+		Node newNeighbour = neighbour.clone();
 		String newName = neighbour.getName();
 		/*
 		 * do not add the neighbour if the neighbour has already been in the graph.
@@ -302,9 +308,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		Node graphToNode = newGraph.nodeMap.get(toNode.getName());
 
 		Set<Edge> outgoingEdges = new HashSet<Edge>();
-		Set<Edge> incomingEdges = new HashSet<Edge>(graphFromNode.getIncomingEdgeList());
-		Set <Edge> outgoingEdge1 = new HashSet<Edge>(graphToNode.getOutgoingEdgeList());
-		Set <Edge> outgoingEdge2 = new HashSet<Edge>(graphFromNode.getOutgoingEdgeList());
+		Set<Edge> incomingEdges = giveNewEdgeSet(graphFromNode.getIncomingEdgeList(), newGraph);
+		Set <Edge> outgoingEdge1 = giveNewEdgeSet(graphToNode.getOutgoingEdgeList(), newGraph);
+		Set <Edge> outgoingEdge2 = giveNewEdgeSet(graphFromNode.getOutgoingEdgeList(), newGraph);
 		outgoingEdges.addAll(outgoingEdge1);
 		//combine the outgoindEdges of both fromNode and toNode to be the desired outgoingEdges of a new node
 		for(Edge e: outgoingEdge2){
@@ -318,28 +324,27 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		removeOutgoingEdges(graphFromNode,newGraph);
 		removeOutgoingEdges(graphToNode,newGraph);
 		//this removes all other unnecessary inherited edges
-		neighbour.getOutgoingEdgeList().clear();
-		neighbour.getIncomingEdgeList().clear();
+		newNeighbour.getOutgoingEdgeList().clear();
+		newNeighbour.getIncomingEdgeList().clear();
 		//give outgoingEdges to the neighbour node
 		for(Edge e: outgoingEdges){
-			//e.setFromNode(newGraph.nodeMap.get(neighbour.getName()));
-			e.setFromNode(neighbour);
-			neighbour.getOutgoingEdgeList().add(e);
+			e.setFromNode(newNeighbour);
+			newNeighbour.getOutgoingEdgeList().add(e);
 			e.getToNode().getIncomingEdgeList().add(e);
 			newGraph.edgeList.add(e);
 			newGraph.considerableEdgeList.add(e);
 		}
 		//add the neighbour node to the graph
-		newGraph.nodeMap.put(neighbour.getName(), neighbour);
-		newGraph.considerableNodeMap.put(neighbour.getName(), neighbour);
+		newGraph.nodeMap.put(newNeighbour.getName(), newNeighbour);
+		newGraph.considerableNodeMap.put(newNeighbour.getName(), newNeighbour);
 		//give incomingEdges to the neighbour node
 		for(Edge e: incomingEdges){
-			Set<String> nodeInputs = neighbour.getInputs();
+			Set<String> nodeInputs = newNeighbour.getInputs();
 			Set<String> edgeInputs = e.getIntersect();
 			//check if the edge is still useful for the neighbour
 			if(init.isIntersection(edgeInputs, nodeInputs)){
-				e.setToNode(newGraph.nodeMap.get(neighbour.getName()));
-				neighbour.getIncomingEdgeList().add(e);
+				e.setToNode(newGraph.nodeMap.get(newNeighbour.getName()));
+				newNeighbour.getIncomingEdgeList().add(e);
 				e.getFromNode().getOutgoingEdgeList().add( e );
 				newGraph.edgeList.add(e);
 				newGraph.considerableEdgeList.add(e);
@@ -350,7 +355,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		newGraph.considerableNodeMap.remove( graphFromNode.getName() );
 		newGraph.nodeMap.remove( graphToNode.getName() );
 		newGraph.considerableNodeMap.remove( graphToNode.getName() );
-		
+
 		init.removeDanglingNodes(newGraph);
 
 	}
@@ -360,7 +365,6 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	 */
 	private void removeIncomingEdges(Node node, GraphIndividual newGraph){
 		for (Edge e : node.getIncomingEdgeList()) {
-			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
 			e.getFromNode().getOutgoingEdgeList().remove( e );
 			newGraph.edgeList.remove( e );
 			newGraph.considerableEdgeList.remove( e );
@@ -372,11 +376,22 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	 */
 	private void removeOutgoingEdges(Node node, GraphIndividual newGraph){
 		for (Edge e : node.getOutgoingEdgeList()) {
-			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
 			e.getToNode().getIncomingEdgeList().remove( e );
 			newGraph.edgeList.remove( e );
 			newGraph.considerableEdgeList.remove( e );
 		}
+	}
+
+	/*
+	 * This gives a new set of edges with new references from the original edgelist
+	 */
+	private Set<Edge> giveNewEdgeSet(List<Edge> edges, GraphIndividual newGraph){
+		Set<Edge> edgeset = new HashSet<Edge>();
+		for(Edge e: edges){
+			Edge newEdge = e.cloneEdge(newGraph.nodeMap);
+			edgeset.add(newEdge);
+		}
+		return edgeset;
 	}
 	/*
 	 * This finds all the neighbouring nodes of the selected node. The neighbours can substitute the selected node without

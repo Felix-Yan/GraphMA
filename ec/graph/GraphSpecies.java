@@ -32,6 +32,10 @@ public class GraphSpecies extends Species {
 		GraphInitializer init = (GraphInitializer) state.initializer;
 		GraphIndividual graph = createNewGraph(null, state, init.startNode.clone(), init.endNode.clone(), init.relevant);
 		//init.calculateMultiplicativeNormalisationBounds(graph.considerableNodeMap.values());
+		//debug
+		/*if(!graph.validation()){
+			throw new IllegalArgumentException("Graph's edges and nodes are not consistent");
+		}*/
 		return graph;
 	}
 
