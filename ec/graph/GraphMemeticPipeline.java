@@ -92,9 +92,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			System.out.println(currentGraph.toString());*/
 			//debug
 			System.out.println(count+"Memetic");
-			if(count == 0){
+			/*if(count == 0){
 				System.out.println("time to debug");
-			}
+			}*/
 			count++;
 
 		}
@@ -310,9 +310,8 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		 * Unless the neighbour is one of the fromNode or toNode.
 		 * Do not allow duplicates
 		 */
-		//TODO uncomment
-		if(newGraph.nodeMap.get(newName) != null/* && !fromNode.getName().equals(newName)
-				&& !toNode.getName().equals(newName)*/) return;
+		if(newGraph.nodeMap.get(newName) != null && !fromNode.getName().equals(newName)
+				&& !toNode.getName().equals(newName)) return;
 
 		Node graphFromNode = newGraph.nodeMap.get(fromNode.getName());
 		Node graphToNode = newGraph.nodeMap.get(toNode.getName());
