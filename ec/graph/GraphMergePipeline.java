@@ -79,8 +79,8 @@ public class GraphMergePipeline extends BreedingPipeline {
 				throw new IllegalArgumentException("Graph's edges and nodes are not consistent");
 			}*/
 			//debug
-			System.out.println(count+"Merge");
-			/*if(count == 14){
+			//System.out.println(count+"Merge");
+			/*if(count == 11){
 				System.out.println("time to debug");
 			}*/
 			count++;

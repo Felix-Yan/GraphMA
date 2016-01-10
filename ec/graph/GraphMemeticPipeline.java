@@ -15,7 +15,7 @@ import ec.Individual;
 import ec.util.Parameter;
 
 public class GraphMemeticPipeline extends BreedingPipeline {
-	GraphIndividual currentGraph = new GraphIndividual();
+	GraphIndividual currentGraph;
 	Node newSelection;
 	Set<Edge> newDomain;
 	int count;//debug
@@ -60,8 +60,14 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}
 			double bestFitness = 0;
 			double currentBestFitness = 0;
+			//reset currentGraph and newDomain
+			currentGraph = new GraphIndividual();
+			newDomain = new HashSet<Edge>();
 			graph.copyTo(currentGraph);
 			selected = currentGraph.nodeMap.get(selected.getName());//debug
+			if(selected == null){
+				throw new NullPointerException("The node selected should not be null");
+			}
 			Set<Edge> edgesMemetic = findEdges(selected);//selected is a node from "currentGraph"
 			do{
 				if(newDomain != null) edgesMemetic = newDomain;
@@ -80,12 +86,15 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			currentGraph.evaluated = false;
 			inds[q] = currentGraph;
 			//debug
-			if(!currentGraph.validation()){
+			/*if(!currentGraph.validation()){
 				throw new IllegalArgumentException("Graph's edges and nodes are not consistent");
 			}
-			System.out.println(currentGraph.toString());
+			System.out.println(currentGraph.toString());*/
 			//debug
 			System.out.println(count+"Memetic");
+			if(count == 0){
+				System.out.println("time to debug");
+			}
 			count++;
 
 		}
@@ -302,7 +311,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		 * Do not allow duplicates
 		 */
 		//TODO uncomment
-		if(newGraph.nodeMap.get(newName) != null /*&& !fromNode.getName().equals(newName)
+		if(newGraph.nodeMap.get(newName) != null/* && !fromNode.getName().equals(newName)
 				&& !toNode.getName().equals(newName)*/) return;
 
 		Node graphFromNode = newGraph.nodeMap.get(fromNode.getName());
@@ -311,7 +320,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			throw new NullPointerException("cannot find the edge in the graph");
 		}
 		Set<Edge> outgoingEdges = new HashSet<Edge>();
-		Set<Edge> incomingEdges = giveNewEdgeSet(graphFromNode.getIncomingEdgeList(), newGraph);
+		Set<Edge> incomingEdges = new HashSet<Edge>();
+		Set<Edge> incomingEdges2 = giveNewEdgeSet(graphToNode.getIncomingEdgeList(), newGraph);
+		Set<Edge> incomingEdges1 = giveNewEdgeSet(graphFromNode.getIncomingEdgeList(), newGraph);
 		Set <Edge> outgoingEdge1 = giveNewEdgeSet(graphToNode.getOutgoingEdgeList(), newGraph);
 		Set <Edge> outgoingEdge2 = giveNewEdgeSet(graphFromNode.getOutgoingEdgeList(), newGraph);
 		outgoingEdges.addAll(outgoingEdge1);
@@ -319,6 +330,13 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		for(Edge e: outgoingEdge2){
 			if(!e.getToNode().getName().equals(toNode.getName())){
 				outgoingEdges.add(e);
+			}
+		}
+		//combine the outgoindEdges of both fromNode and toNode to be the desired incomingEdges of a new node
+		incomingEdges.addAll(incomingEdges1);
+		for(Edge e: incomingEdges2){
+			if(!e.getFromNode().getName().equals(fromNode.getName())){
+				incomingEdges.add(e);
 			}
 		}
 		//remove incoming and outgoing edges of the replaced node
@@ -459,8 +477,12 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}
 		}
 
-		//use the fromNode inputs as the possible neighbour inputs//TODO add toNode inputs as well
-		Set<String> inputs = fromNode.getInputs();
+		//use the fromNode inputs as the possible neighbour inputs
+		Set<String> inputs = new HashSet<String>();
+		Set<String> inputs1 = fromNode.getInputs();
+		Set<String> inputs2 = toNode.getInputs();
+		inputs.addAll(inputs1);
+		inputs.addAll(inputs2);
 		Set<String> outputs = new HashSet<String>();
 
 		//use all the outputs in the outgoing edges as the required neighbour outputs
@@ -551,9 +573,6 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	 * This finds out all the edges involved in the memetic operator from the selected node.
 	 */
 	private Set<Edge> findEdges(Node selected){
-		if(selected == null){
-			throw new NullPointerException("The node selected should not be null");
-		}
 		Set<Edge> edges = new HashSet<Edge>();
 		recFindEdges(selected, edges);
 		return edges;
