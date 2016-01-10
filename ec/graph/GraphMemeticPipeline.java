@@ -17,6 +17,7 @@ import ec.util.Parameter;
 public class GraphMemeticPipeline extends BreedingPipeline {
 	GraphIndividual currentGraph = new GraphIndividual();
 	Node newSelection;
+	Set<Edge> newDomain;
 	int count;//debug
 
 	@Override
@@ -60,10 +61,10 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			double bestFitness = 0;
 			double currentBestFitness = 0;
 			graph.copyTo(currentGraph);
-
-			Set<Edge> edgesMemetic = findEdges(selected);
-			//System.out.println(edgesMemetic.size());//debug
+			selected = currentGraph.nodeMap.get(selected.getName());//debug
+			Set<Edge> edgesMemetic = findEdges(selected);//selected is a node from "currentGraph"
 			do{
+				if(newDomain != null) edgesMemetic = newDomain;
 				bestFitness = currentBestFitness;
 				currentBestFitness = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread, selected);
 			}while(currentBestFitness > bestFitness);
@@ -95,16 +96,13 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	 * This returns a fitness value after performing 2-1 node local optimization.
 	 */
 	private double execute2for1(Set<Edge> domain, GraphInitializer init, EvolutionState state,
-			GraphIndividual graph, int subpopulation, int thread, Node root){
-		((GraphEvol)state.evaluator.p_problem).evaluate(state, graph, subpopulation, thread);
+			GraphIndividual graph, int subpopulation, int thread, Node selected){
+		((GraphEvol)state.evaluator.p_problem).evaluate(state, graph, subpopulation, thread);//graph here is the "currentGraph"
 		graph.evaluated = false;
 		double currentFitness = graph.fitness.fitness();
 		GraphIndividual bestGraph = new GraphIndividual();
 		Node newMember = null;//The new node added in the subgraph
 		Edge replaced = null;//The old edge replaced in the subgraph
-		//debug
-		//		System.out.println("nodes to replace has size"+" "+domain.size());
-
 		for (Edge edge : domain) {
 			Set<Node> neighbours = find2for1Candidates(edge,init);
 			if(neighbours.size() != 0){
@@ -113,7 +111,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			for(Node neighbour: neighbours){
 				GraphIndividual innerGraph = new GraphIndividual();
 				graph.copyTo(innerGraph);
-				replaceNode2for1(edge, neighbour, innerGraph, init, root);
+				replaceNode2for1(edge, neighbour, innerGraph, init, selected);
 				((GraphEvol)state.evaluator.p_problem).evaluate(state, innerGraph, subpopulation, thread);
 				double fitness = innerGraph.fitness.fitness();
 				if(fitness > currentFitness){
@@ -126,11 +124,14 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		}
 		if(replaced!=null){
 			bestGraph.copyTo(currentGraph);
-			updateEdges(domain, replaced, newMember);
+			//updateEdges(domain, replaced, newMember);
 			//update the root node if it has been replaced
-			if(replaced.getFromNode().getName().equals(root.getName())){
+			if(replaced.getFromNode().getName().equals(selected.getName())){
 				newSelection = newMember;
+				selected = newMember;
 			}
+			newDomain = findEdges(currentGraph.nodeMap.get(selected.getName()));
+			System.out.println("edges updated");//debug
 			//System.out.println("replaced: "+replaced.getName());
 			//System.out.println("added: "+newMember.getName());
 		}
@@ -140,19 +141,19 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	/*
 	 * This update the set of involved edges once a 2-1 optimization has been performed
 	 */
-	private void updateEdges(Set<Edge> edges, Edge replaced, Node newNode){
+	/*private void updateEdges(Set<Edge> edges, Edge replaced, Node newNode){
 		edges.remove(replaced);
 		Node fromNode = replaced.getFromNode();
 		Node toNode = replaced.getToNode();
 		relevantEdges(edges, fromNode, newNode);
 		relevantEdges(edges, toNode, newNode);
-	}
+	}*/
 
 	/*
 	 * This finds out all the edges, from the given edge set, that contains the given node as either from or to Node.
 	 * Then it will replace the original node with new node for every relevant edge.
 	 */
-	private void relevantEdges(Set<Edge> edges, Node node, Node newNode){
+	/*private void relevantEdges(Set<Edge> edges, Node node, Node newNode){
 		for(Edge e: edges){
 			Node fromNode = e.getFromNode();
 			Node toNode = e.getToNode();
@@ -164,7 +165,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				e.setToNode(newNode);
 			}
 		}
-	}
+	}*/
 
 	/*
 	 * This returns the best new fitness of the graph after a local search
@@ -306,7 +307,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 
 		Node graphFromNode = newGraph.nodeMap.get(fromNode.getName());
 		Node graphToNode = newGraph.nodeMap.get(toNode.getName());
-
+		if(graphFromNode == null || graphToNode == null){
+			throw new NullPointerException("cannot find the edge in the graph");
+		}
 		Set<Edge> outgoingEdges = new HashSet<Edge>();
 		Set<Edge> incomingEdges = giveNewEdgeSet(graphFromNode.getIncomingEdgeList(), newGraph);
 		Set <Edge> outgoingEdge1 = giveNewEdgeSet(graphToNode.getOutgoingEdgeList(), newGraph);
@@ -548,6 +551,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	 * This finds out all the edges involved in the memetic operator from the selected node.
 	 */
 	private Set<Edge> findEdges(Node selected){
+		if(selected == null){
+			throw new NullPointerException("The node selected should not be null");
+		}
 		Set<Edge> edges = new HashSet<Edge>();
 		recFindEdges(selected, edges);
 		return edges;
