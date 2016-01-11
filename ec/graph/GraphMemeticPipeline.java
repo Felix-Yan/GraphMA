@@ -91,7 +91,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}
 			System.out.println(currentGraph.toString());*/
 			//debug
-			System.out.println(count+"Memetic");
+			//System.out.println(count+"Memetic");
 			/*if(count == 0){
 				System.out.println("time to debug");
 			}*/

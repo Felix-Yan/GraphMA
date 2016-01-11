@@ -49,8 +49,8 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 		r = normaliseReliability(r, init);
 
 		//recalculate a and r with base e to make sure they are not too small
-		a = Math.pow(Math.E*0.5, a-1);
-		r = Math.pow(Math.E*0.5, r-1);
+		//a = Math.pow(Math.E*0.5, a-1);
+		//r = Math.pow(Math.E*0.5, r-1);
 		t = normaliseTime(t, init);
 		c = normaliseCost(c, init);
 
