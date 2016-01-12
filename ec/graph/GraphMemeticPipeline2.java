@@ -14,7 +14,7 @@ import ec.EvolutionState;
 import ec.Individual;
 import ec.util.Parameter;
 
-public class GraphMemeticPipeline extends BreedingPipeline {
+public class GraphMemeticPipeline2 extends BreedingPipeline {
 	GraphIndividual currentGraph;
 	Node newSelection;
 	Set<Edge> newDomain;
@@ -64,7 +64,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			currentGraph = new GraphIndividual();
 			newDomain = new HashSet<Edge>();
 			graph.copyTo(currentGraph);
-			//selected = currentGraph.nodeMap.get(selected.getName());//change the reference to the currentGraph
+			selected = currentGraph.nodeMap.get(selected.getName());//change the reference to the currentGraph
 
 			// Find all nodes that should be locally searched and possibly replaced
 			Set<Node> nodesToReplace = findNodesToRemove(selected);
