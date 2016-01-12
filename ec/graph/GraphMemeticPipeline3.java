@@ -1,3 +1,4 @@
+
 package ec.graph;
 
 import java.util.ArrayList;
@@ -14,7 +15,13 @@ import ec.EvolutionState;
 import ec.Individual;
 import ec.util.Parameter;
 
-public class GraphMemeticPipeline2 extends BreedingPipeline {
+/**
+ * This reserves the 2-1 then 1-1 version of the memetic algorithm.
+ * @author yanlong
+ *
+ */
+
+public class GraphMemeticPipeline3 extends BreedingPipeline {
 	GraphIndividual currentGraph;
 	Node newSelection;
 	Set<Edge> newDomain;
@@ -64,29 +71,26 @@ public class GraphMemeticPipeline2 extends BreedingPipeline {
 			currentGraph = new GraphIndividual();
 			newDomain = new HashSet<Edge>();
 			graph.copyTo(currentGraph);
-			selected = currentGraph.nodeMap.get(selected.getName());//change the reference to the currentGraph
-
-			// Find all nodes that should be locally searched and possibly replaced
-			Set<Node> nodesToReplace = findNodesToRemove(selected);
-			do{
-				selected = currentGraph.nodeMap.get(newSelection.getName());//update the selected node in each loop
-				if(selected == null){
-					throw new NullPointerException("The node selected should not be null");
-				}
-				bestFitness = currentBestFitness;
-				currentBestFitness = findFitness(nodesToReplace, init, state, currentGraph, subpopulation, thread,selected);
-			}while(currentBestFitness > bestFitness);
-			currentGraph.evaluated = false;
+			selected = currentGraph.nodeMap.get(selected.getName());//debug
+			if(selected == null){
+				throw new NullPointerException("The node selected should not be null");
+			}
 			Set<Edge> edgesMemetic = findEdges(selected);//selected is a node from "currentGraph"
 			do{
 				if(newDomain != null) edgesMemetic = newDomain;
-				selected = currentGraph.nodeMap.get(newSelection.getName());//update the selected node if it has been replaced
-				if(selected == null){
-					throw new NullPointerException("The node selected should not be null");
-				}
 				bestFitness = currentBestFitness;
 				currentBestFitness = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread, selected);
 			}while(currentBestFitness > bestFitness);
+
+			//update the selected node if it has been replaced
+			selected = currentGraph.nodeMap.get(newSelection.getName());
+			// Find all nodes that should be locally searched and possibly replaced
+			Set<Node> nodesToReplace = findNodesToRemove(selected);
+			do{
+				bestFitness = currentBestFitness;
+				currentBestFitness = findFitness(nodesToReplace, init, state, currentGraph, subpopulation, thread);
+			}while(currentBestFitness > bestFitness);
+			currentGraph.evaluated = false;
 			inds[q] = currentGraph;
 			//debug
 			/*if(!currentGraph.validation()){
@@ -95,7 +99,7 @@ public class GraphMemeticPipeline2 extends BreedingPipeline {
 			System.out.println(currentGraph.toString());*/
 			//debug
 			//System.out.println(count+"Memetic");
-			/*if(count == 22){
+			/*if(count == 0){
 				System.out.println("time to debug");
 			}*/
 			count++;
@@ -138,10 +142,10 @@ public class GraphMemeticPipeline2 extends BreedingPipeline {
 			bestGraph.copyTo(currentGraph);
 			//updateEdges(domain, replaced, newMember);
 			//update the root node if it has been replaced
-			/*if(replaced.getFromNode().getName().equals(selected.getName())){
+			if(replaced.getFromNode().getName().equals(selected.getName())){
 				newSelection = newMember;
 				selected = newMember;
-			}*/
+			}
 			newDomain = findEdges(currentGraph.nodeMap.get(selected.getName()));
 			System.out.println("edges updated");//debug
 			//System.out.println("replaced: "+replaced.getName());
@@ -151,10 +155,39 @@ public class GraphMemeticPipeline2 extends BreedingPipeline {
 	}
 
 	/*
+	 * This update the set of involved edges once a 2-1 optimization has been performed
+	 */
+	/*private void updateEdges(Set<Edge> edges, Edge replaced, Node newNode){
+		edges.remove(replaced);
+		Node fromNode = replaced.getFromNode();
+		Node toNode = replaced.getToNode();
+		relevantEdges(edges, fromNode, newNode);
+		relevantEdges(edges, toNode, newNode);
+	}*/
+
+	/*
+	 * This finds out all the edges, from the given edge set, that contains the given node as either from or to Node.
+	 * Then it will replace the original node with new node for every relevant edge.
+	 */
+	/*private void relevantEdges(Set<Edge> edges, Node node, Node newNode){
+		for(Edge e: edges){
+			Node fromNode = e.getFromNode();
+			Node toNode = e.getToNode();
+			String name = node.getName();
+			if(fromNode.getName().equals(name)){
+				e.setFromNode(newNode);
+			}
+			else if(toNode.getName().equals(name)){
+				e.setToNode(newNode);
+			}
+		}
+	}*/
+
+	/*
 	 * This returns the best new fitness of the graph after a local search
 	 */
 	private double findFitness(Set<Node> domain, GraphInitializer init, EvolutionState state,
-			GraphIndividual graph, int subpopulation, int thread, Node selected){
+			GraphIndividual graph, int subpopulation, int thread){
 		((GraphEvol)state.evaluator.p_problem).evaluate(state, graph, subpopulation, thread);
 		graph.evaluated = false;
 		double currentFitness = graph.fitness.fitness();
@@ -185,10 +218,6 @@ public class GraphMemeticPipeline2 extends BreedingPipeline {
 			bestGraph.copyTo(currentGraph);;
 			domain.remove(replaced);
 			domain.add(newMember);
-			if(replaced.getName().equals(selected.getName())){
-				newSelection = newMember;
-				//System.out.println("Root changed");//debug
-			}
 			//System.out.println("replaced: "+replaced.getName());
 			//System.out.println("added: "+newMember.getName());
 		}
@@ -457,9 +486,14 @@ public class GraphMemeticPipeline2 extends BreedingPipeline {
 		//use the fromNode inputs as the possible neighbour inputs
 		Set<String> inputs = new HashSet<String>();
 		Set<String> inputs1 = fromNode.getInputs();
-		Set<String> inputs2 = toNode.getInputs();
 		inputs.addAll(inputs1);
-		inputs.addAll(inputs2);
+		//use toNode inputs that are not from the fromNode as neighbour inputs
+		List<Edge> incomingToNode = toNode.getIncomingEdgeList();
+		for(Edge e: incomingToNode){
+			if(!e.getFromNode().getName().equals(fromNode.getName())){
+				inputs.addAll(e.getIntersect());
+			}
+		}
 		Set<String> outputs = new HashSet<String>();
 
 		//use all the outputs in the outgoing edges as the required neighbour outputs
