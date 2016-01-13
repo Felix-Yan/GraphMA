@@ -315,9 +315,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		Node newNeighbour = neighbour.clone();
 		String newName = neighbour.getName();
 		//debug
-		if(newNeighbour.getName().equals("serv128737835")){
+		/*if(newNeighbour.getName().equals("serv128737835")){
 			System.out.println("problem arises");
-		}
+		}*/
 		/*
 		 * do not add the neighbour if the neighbour has already been in the graph.
 		 * Unless the neighbour is one of the fromNode or toNode.
@@ -520,9 +520,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	 * This finds all the single nodes can be used to replace the given two neighbour nodes.
 	 */
 	private Set<Node> find2for1Candidates(Edge selected, GraphInitializer init){
+		boolean forbidToNode = false;
 		Node fromNode = selected.getFromNode();
 		Node toNode = selected.getToNode();
-
 		List <Edge> outgoingEdges = new ArrayList<Edge>();
 		List <Edge> outgoingEdge1 = toNode.getOutgoingEdgeList();
 		List <Edge> outgoingEdge2 = fromNode.getOutgoingEdgeList();
@@ -533,7 +533,10 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				outgoingEdges.add(e);
 			}
 		}
-
+		Set<Node> outgoingNodes = new HashSet<Node>();
+		for(Edge e: outgoingEdges){
+			outgoingNodes.add(e.getToNode());
+		}
 		//use the fromNode inputs as the possible neighbour inputs
 		Set<String> inputs = new HashSet<String>();
 		Set<String> inputs1 = fromNode.getInputs();
@@ -542,6 +545,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		List<Edge> incomingToNode = toNode.getIncomingEdgeList();
 		for(Edge e: incomingToNode){
 			if(!e.getFromNode().getName().equals(fromNode.getName())){
+				if(outgoingNodes.contains(e.getFromNode())){//eliminate possible cycles
+					forbidToNode = true;
+				}
 				inputs.addAll(e.getIntersect());
 			}
 		}
@@ -567,7 +573,6 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				}
 			}
 		}
-
 		Set<Node> neighbours = new HashSet<Node>();
 		neighbours.addAll(nodeWithOutput);
 		//This checks that all the neighbours can be satisfied by the given inputs
@@ -577,7 +582,9 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				neighbours.remove(node);
 			}
 		}
-
+		if(forbidToNode){
+			neighbours.remove(toNode);
+		}
 		return neighbours;
 	}
 
