@@ -1,6 +1,6 @@
 breedthreads = 1
 evalthreads  = 1
-seed.0       = 1
+seed.0       = 5
 
 state        = ec.simple.SimpleEvolutionState
 pop		     = ec.Population
@@ -53,9 +53,9 @@ eval.problem         = ec.graph.GraphEvol
 #composition-task     = src/owlsTCTask4.xml
 #composition-taxonomy = src/owlsTCTaxonomy.xml
 #composition-services = src/owlsTCServices.xml
-composition-task     = src/problem0901.xml
-composition-taxonomy = src/taxonomy0901.xml
-composition-services = src/services-output0901.xml
+composition-task     = src/problem0807.xml
+composition-taxonomy = src/taxonomy0807.xml
+composition-services = src/services-output0807.xml
 #composition-task     = src/test_problem.xml
 #composition-taxonomy = src/test_taxonomy.xml
 #composition-services = src/test_serv.xml

@@ -42,6 +42,14 @@ public class Edge {
 		return intersect;
 	}
 
+	/**
+	 * This will add the intersects of another edge into this edge.
+	 * @param inputs
+	 */
+	public void addIntersects(Set<String> inputs){
+		intersect.addAll(inputs);
+	}
+
 	public boolean isConsidered() {
 		return consider;
 	}

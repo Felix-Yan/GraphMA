@@ -22,6 +22,7 @@ import ec.util.Parameter;
  *
  */
 public class GraphSpecies extends Species {
+	//int count;//debug
 	@Override
 	public Parameter defaultBase() {
 		return new Parameter("graphspecies");
@@ -36,6 +37,11 @@ public class GraphSpecies extends Species {
 		/*if(!graph.validation()){
 			throw new IllegalArgumentException("Graph's edges and nodes are not consistent");
 		}*/
+		//debug
+		/*if(count==499){
+			System.out.println("why stuck?");
+		}*/
+		//System.out.println(count++);
 		return graph;
 	}
 
