@@ -17,6 +17,7 @@ import ec.util.Parameter;
 
 /**
  * This reserves the 2-1 then 1-1 version of the memetic algorithm.
+ * This is version 3.
  * @author yanlong
  *
  */
@@ -147,7 +148,7 @@ public class GraphMemeticPipeline3 extends BreedingPipeline {
 				selected = newMember;
 			}
 			newDomain = findEdges(currentGraph.nodeMap.get(selected.getName()));
-			System.out.println("edges updated");//debug
+			//System.out.println("edges updated");//debug
 			//System.out.println("replaced: "+replaced.getName());
 			//System.out.println("added: "+newMember.getName());
 		}
@@ -326,23 +327,40 @@ public class GraphMemeticPipeline3 extends BreedingPipeline {
 			throw new NullPointerException("cannot find the edge in the graph");
 		}
 		Set<Edge> outgoingEdges = new HashSet<Edge>();
-		Set<Edge> incomingEdges = new HashSet<Edge>();
+		List<Edge> incomingEdges = new ArrayList<Edge>();
 		Set<Edge> incomingEdges2 = giveNewEdgeSet(graphToNode.getIncomingEdgeList(), newGraph);
 		Set<Edge> incomingEdges1 = giveNewEdgeSet(graphFromNode.getIncomingEdgeList(), newGraph);
 		Set <Edge> outgoingEdge1 = giveNewEdgeSet(graphToNode.getOutgoingEdgeList(), newGraph);
 		Set <Edge> outgoingEdge2 = giveNewEdgeSet(graphFromNode.getOutgoingEdgeList(), newGraph);
+		Set <Node> incomingNodes = new HashSet<Node>();//nodes that give incoming edges
+		Set <Node> outgoingNodes = new HashSet<Node>();//nodes that receive outgoing edges
 		outgoingEdges.addAll(outgoingEdge1);
+		for(Edge e: outgoingEdges){
+			outgoingNodes.add(e.getToNode());
+		}
 		//combine the outgoindEdges of both fromNode and toNode to be the desired outgoingEdges of a new node
 		for(Edge e: outgoingEdge2){
 			if(!e.getToNode().getName().equals(toNode.getName())){
-				outgoingEdges.add(e);
+				if(outgoingNodes.contains(e.getToNode())){
+					mergeOutgoingEdges(outgoingEdges, e);
+				}else{
+					outgoingEdges.add(e);
+				}
 			}
 		}
-		//combine the outgoindEdges of both fromNode and toNode to be the desired incomingEdges of a new node
+		//combine the incomingEdges of both fromNode and toNode to be the desired incomingEdges of a new node
 		incomingEdges.addAll(incomingEdges1);
+		for(Edge e: incomingEdges){
+			incomingNodes.add(e.getFromNode());
+		}
 		for(Edge e: incomingEdges2){
-			if(!e.getFromNode().getName().equals(fromNode.getName())){
-				incomingEdges.add(e);
+			if(!e.getFromNode().getName().equals(fromNode.getName())){//edges not from the fromNode
+				if(incomingNodes.contains(e.getFromNode())){
+					mergeIncomingEdges(incomingEdges,e);
+				}else{
+					incomingEdges.add(e);
+					//riskyEdges.add(e);
+				}
 			}
 		}
 		//remove incoming and outgoing edges of the replaced node
@@ -364,12 +382,13 @@ public class GraphMemeticPipeline3 extends BreedingPipeline {
 		//add the neighbour node to the graph
 		newGraph.nodeMap.put(newNeighbour.getName(), newNeighbour);
 		newGraph.considerableNodeMap.put(newNeighbour.getName(), newNeighbour);
+		Set<String> unsatisfiedInputs = new HashSet<String>(newNeighbour.getInputs());
 		//give incomingEdges to the neighbour node
 		for(Edge e: incomingEdges){
-			Set<String> nodeInputs = newNeighbour.getInputs();
 			Set<String> edgeInputs = e.getIntersect();
 			//check if the edge is still useful for the neighbour
-			if(init.isIntersection(edgeInputs, nodeInputs)){
+			if(init.isIntersection(edgeInputs, unsatisfiedInputs)){
+				unsatisfiedInputs.removeAll(edgeInputs);//by doing this, redundant edges will not be added
 				e.setToNode(newGraph.nodeMap.get(newNeighbour.getName()));
 				newNeighbour.getIncomingEdgeList().add(e);
 				e.getFromNode().getOutgoingEdgeList().add( e );
@@ -382,9 +401,39 @@ public class GraphMemeticPipeline3 extends BreedingPipeline {
 		newGraph.considerableNodeMap.remove( graphFromNode.getName() );
 		newGraph.nodeMap.remove( graphToNode.getName() );
 		newGraph.considerableNodeMap.remove( graphToNode.getName() );
-
+		//add the neighbour node to the graph again in case it was one of the from or to nodes.
+		newGraph.nodeMap.put(newNeighbour.getName(), newNeighbour);
+		newGraph.considerableNodeMap.put(newNeighbour.getName(), newNeighbour);
 		init.removeDanglingNodes(newGraph);
 
+	}
+
+	/*
+	 * This merges the outgoing edges that will result in same from and to Nodes
+	 */
+	private void mergeOutgoingEdges(Set<Edge> outgoingEdges, Edge edge){
+		Node toNode = edge.getToNode();
+		for(Edge e: outgoingEdges){
+			if(e.getToNode().getName().equals(toNode.getName())){
+				e.addIntersects(edge.getIntersect());
+				return;
+			}
+		}
+		throw new IllegalArgumentException("the edges cannot be merged");
+	}
+
+	/*
+	 * This merges the incoming edges that will result in same from and to Nodes
+	 */
+	private void mergeIncomingEdges(List<Edge> incomingEdges, Edge edge){
+		Node fromNode = edge.getFromNode();
+		for(Edge e: incomingEdges){
+			if(e.getFromNode().getName().equals(fromNode.getName())){
+				e.addIntersects(edge.getIntersect());
+				return;
+			}
+		}
+		throw new IllegalArgumentException("the edges cannot be merged");
 	}
 
 	/*
@@ -471,7 +520,6 @@ public class GraphMemeticPipeline3 extends BreedingPipeline {
 	private Set<Node> find2for1Candidates(Edge selected, GraphInitializer init){
 		Node fromNode = selected.getFromNode();
 		Node toNode = selected.getToNode();
-
 		List <Edge> outgoingEdges = new ArrayList<Edge>();
 		List <Edge> outgoingEdge1 = toNode.getOutgoingEdgeList();
 		List <Edge> outgoingEdge2 = fromNode.getOutgoingEdgeList();
@@ -482,7 +530,10 @@ public class GraphMemeticPipeline3 extends BreedingPipeline {
 				outgoingEdges.add(e);
 			}
 		}
-
+		Set<Node> outgoingNodes = new HashSet<Node>();
+		for(Edge e: outgoingEdges){
+			outgoingNodes.add(e.getToNode());
+		}
 		//use the fromNode inputs as the possible neighbour inputs
 		Set<String> inputs = new HashSet<String>();
 		Set<String> inputs1 = fromNode.getInputs();
@@ -491,7 +542,9 @@ public class GraphMemeticPipeline3 extends BreedingPipeline {
 		List<Edge> incomingToNode = toNode.getIncomingEdgeList();
 		for(Edge e: incomingToNode){
 			if(!e.getFromNode().getName().equals(fromNode.getName())){
-				inputs.addAll(e.getIntersect());
+				if(!outgoingNodes.contains(e.getFromNode())){//eliminate possible cycles
+					inputs.addAll(e.getIntersect());
+				}
 			}
 		}
 		Set<String> outputs = new HashSet<String>();
@@ -516,7 +569,6 @@ public class GraphMemeticPipeline3 extends BreedingPipeline {
 				}
 			}
 		}
-
 		Set<Node> neighbours = new HashSet<Node>();
 		neighbours.addAll(nodeWithOutput);
 		//This checks that all the neighbours can be satisfied by the given inputs
@@ -526,7 +578,6 @@ public class GraphMemeticPipeline3 extends BreedingPipeline {
 				neighbours.remove(node);
 			}
 		}
-
 		return neighbours;
 	}
 
