@@ -13,18 +13,14 @@ import ec.BreedingPipeline;
 import ec.EvolutionState;
 import ec.Individual;
 import ec.util.Parameter;
-
 /**
- * This algorithm will choose the better one of 2-1 or 1-1 operation in each loop.
- * This is version 5.
+ * This reserves the 1-1 then 2-1 version of memetic algorithm.
+ * This is version 4.
  * @author yanlong
  *
  */
-public class GraphMemeticPipeline5 extends BreedingPipeline {
-	GraphIndividual tempGraph1;
-	GraphIndividual tempGraph2;
-	Node newSelection1;
-	Node newSelection2;
+public class GraphMemeticPipeline4 extends BreedingPipeline {
+	GraphIndividual currentGraph;
 	Node newSelection;
 	Set<Edge> newDomain;
 	int count;//debug
@@ -69,56 +65,43 @@ public class GraphMemeticPipeline5 extends BreedingPipeline {
 			}
 			double bestFitness = 0;
 			double currentBestFitness = 0;
-			double currentFitness1 = 0;
-			double currentFitness2 = 0;
 			//reset currentGraph and newDomain
-			GraphIndividual currentGraph = new GraphIndividual();
-			newSelection1 = null;
-			newSelection2 = null;
-			tempGraph1 = new GraphIndividual();
-			tempGraph2 = new GraphIndividual();
+			currentGraph = new GraphIndividual();
 			newDomain = new HashSet<Edge>();
 			graph.copyTo(currentGraph);
 			selected = currentGraph.nodeMap.get(selected.getName());//change the reference to the currentGraph
+
 			// Find all nodes that should be locally searched and possibly replaced
-			Set<Node> nodesToReplace = new HashSet<Node>();
-			Set<Edge> edgesMemetic = new HashSet<Edge>();
+			Set<Node> nodesToReplace = findNodesToRemove(selected);
 			do{
-				//debug
-				/*if(newSelection1 != null){
-					if(newSelection1.getName().equals("serv470983406")){
-						System.out.println("time to debug");
-					}
-				}*/
-				//update the selected node in each loop
-				if(newSelection != null){
-					selected = currentGraph.nodeMap.get(newSelection.getName());
-				}
-				else selected = currentGraph.nodeMap.get(selected.getName());
+				selected = currentGraph.nodeMap.get(newSelection.getName());//update the selected node in each loop
 				if(selected == null){
 					throw new NullPointerException("The node selected should not be null");
 				}
-				nodesToReplace = findNodesToRemove(selected);//update nodesToReplace
-				edgesMemetic = findEdges(selected);//selected is a node from "currentGraph"
 				bestFitness = currentBestFitness;
-				currentFitness1 = findFitness(nodesToReplace, init, state, currentGraph, subpopulation, thread,selected);
-				if(newDomain.size() != 0) edgesMemetic = newDomain;
-				currentFitness2 = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread, selected);
-				if(currentFitness1 > currentFitness2){
-					tempGraph1.copyTo(currentGraph);
-					newDomain.clear();;//reset newDomain if 2for1 is not preferred
-					newSelection = newSelection1;
-					currentBestFitness = currentFitness1;
-				}else{
-					tempGraph2.copyTo(currentGraph);
-					newSelection = newSelection2;
-					currentBestFitness = currentFitness2;
+				currentBestFitness = findFitness(nodesToReplace, init, state, currentGraph, subpopulation, thread,selected);
+			}while(currentBestFitness > bestFitness);
+			currentGraph.evaluated = false;
+			selected = currentGraph.nodeMap.get(newSelection.getName());//update the selected node if it has been replaced
+			Set<Edge> edgesMemetic = findEdges(selected);//selected is a node from "currentGraph"
+			do{
+				if(newDomain != null) edgesMemetic = newDomain;
+				selected = currentGraph.nodeMap.get(newSelection.getName());//update the selected node if it has been replaced
+				if(selected == null){
+					throw new NullPointerException("The node selected should not be null");
 				}
+				bestFitness = currentBestFitness;
+				currentBestFitness = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread, selected);
 			}while(currentBestFitness > bestFitness);
 			inds[q] = currentGraph;
 			//debug
+			/*if(!currentGraph.validation()){
+				throw new IllegalArgumentException("Graph's edges and nodes are not consistent");
+			}
+			System.out.println(currentGraph.toString());*/
+			//debug
 			//System.out.println(count+"Memetic");
-			/*if(count == 23){
+			/*if(count == 22){
 				System.out.println("time to debug");
 			}*/
 			count++;
@@ -140,9 +123,9 @@ public class GraphMemeticPipeline5 extends BreedingPipeline {
 		Edge replaced = null;//The old edge replaced in the subgraph
 		for (Edge edge : domain) {
 			Set<Node> neighbours = find2for1Candidates(edge,init);
-			/*if(neighbours.size() != 0){
+			if(neighbours.size() != 0){
 				System.out.println("neighbours: "+neighbours.size()+"===========================================");//debug
-			}*/
+			}
 			for(Node neighbour: neighbours){
 				GraphIndividual innerGraph = new GraphIndividual();
 				graph.copyTo(innerGraph);
@@ -158,22 +141,16 @@ public class GraphMemeticPipeline5 extends BreedingPipeline {
 			}
 		}
 		if(replaced!=null){
-			bestGraph.copyTo(tempGraph2);
+			bestGraph.copyTo(currentGraph);
 			//update the root node if it has been replaced
-			if(replaced.getFromNode().getName().equals(selected.getName())){
-				newSelection2 = newMember;
+			/*if(replaced.getFromNode().getName().equals(selected.getName())){
+				newSelection = newMember;
 				selected = newMember;
-			}else{
-				newSelection2 = null;
-			}
-			newDomain = findEdges(tempGraph2.nodeMap.get(selected.getName()));
-			//System.out.println("edges updated");//debug
+			}*/
+			newDomain = findEdges(currentGraph.nodeMap.get(selected.getName()));
+			System.out.println("edges updated");//debug
 			//System.out.println("replaced: "+replaced.getName());
 			//System.out.println("added: "+newMember.getName());
-		}
-		else{
-			newSelection2 = null;
-			graph.copyTo(tempGraph2);
 		}
 		return currentFitness;
 	}
@@ -210,19 +187,15 @@ public class GraphMemeticPipeline5 extends BreedingPipeline {
 
 		}
 		if(replaced!=null){
-			bestGraph.copyTo(tempGraph1);;
+			bestGraph.copyTo(currentGraph);;
 			domain.remove(replaced);
 			domain.add(newMember);
 			if(replaced.getName().equals(selected.getName())){
-				newSelection1 = newMember;
+				newSelection = newMember;
 				//System.out.println("Root changed");//debug
-			}else{
-				newSelection1 = null;
 			}
-		}
-		else{
-			graph.copyTo(tempGraph1);
-			newSelection1 = null;
+			//System.out.println("replaced: "+replaced.getName());
+			//System.out.println("added: "+newMember.getName());
 		}
 		return currentFitness;
 	}
@@ -437,6 +410,7 @@ public class GraphMemeticPipeline5 extends BreedingPipeline {
 		}
 		throw new IllegalArgumentException("the edges cannot be merged");
 	}
+
 	/*
 	 * This removes the incoming edges of a node in the graph.
 	 */
@@ -636,9 +610,6 @@ public class GraphMemeticPipeline5 extends BreedingPipeline {
 	 * This finds out all the edges involved in the memetic operator from the selected node.
 	 */
 	private Set<Edge> findEdges(Node selected){
-		if(selected == null){
-			throw new NullPointerException("The node selected should not be null");
-		}
 		Set<Edge> edges = new HashSet<Edge>();
 		recFindEdges(selected, edges);
 		return edges;
