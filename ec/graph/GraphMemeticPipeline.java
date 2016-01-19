@@ -28,6 +28,8 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	Node newSelection;
 	//Set<Edge> newDomain;//unnecessary
 	int count;//debug
+	int totalNodeOpt;
+	int totalEdgeOpt;
 
 	@Override
 	public Parameter defaultBase() {
@@ -67,8 +69,8 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 					newSelection = temp;
 				}
 			}
-			int nodeOptNum = 0;
-			int edgeOptNum = 0;
+			/*int nodeOptNum = graph.getNodeOptNum();
+			int edgeOptNum = graph.getEdgeOptNum();*/
 			double bestFitness = 0;
 			double currentBestFitness = 0;
 			double currentFitness1 = 0;
@@ -106,17 +108,24 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 				currentFitness1 = findFitness(nodesToReplace, init, state, currentGraph, subpopulation, thread,selected);
 				//if(newDomain.size() != 0) edgesMemetic = newDomain;
 				currentFitness2 = execute2for1(edgesMemetic, init, state, currentGraph, subpopulation, thread, selected);
-				if(currentFitness1 > currentFitness2){
+				if(currentFitness1 >= currentFitness2){
 					tempGraph1.copyTo(currentGraph);
 					//newDomain.clear();;//reset newDomain if 2for1 is not preferred, unnecessary
 					newSelection = newSelection1;
 					currentBestFitness = currentFitness1;
+					//nodeOptNum++;
+					totalNodeOpt++;
 				}else{
 					tempGraph2.copyTo(currentGraph);
 					newSelection = newSelection2;
 					currentBestFitness = currentFitness2;
+					//edgeOptNum++;
+					totalEdgeOpt++;
 				}
 			}while(currentBestFitness > bestFitness);
+			/*currentGraph.setEdgeOptNum(edgeOptNum);
+			currentGraph.setNodeOptNum(nodeOptNum);*/
+			System.out.println(totalNodeOpt +", "+totalEdgeOpt);
 			inds[q] = currentGraph;
 			//debug
 			//System.out.println(count+"Memetic");

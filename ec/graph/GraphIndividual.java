@@ -28,6 +28,40 @@ public class GraphIndividual extends Individual {
 	public Set<Node> unused;
 	public int longestPathLength;
 	public int numAtomicServices;
+//	private int nodeOptNum;//the number of node optimizations performed
+//	private int edgeOptNum;//the number of edge optimizations performed
+
+	/**
+	 * getter for nodeOptNum
+	 * @return
+	 *//*
+	public int getNodeOptNum() {
+		return nodeOptNum;
+	}
+
+	*//**
+	 * setter for nodeOptNum
+	 * @param nodeOptNum
+	 *//*
+	public void setNodeOptNum(int nodeOptNum) {
+		this.nodeOptNum = nodeOptNum;
+	}
+
+	*//**
+	 * getter for edgeOptNum
+	 * @return
+	 *//*
+	public int getEdgeOptNum() {
+		return edgeOptNum;
+	}
+
+	*//**
+	 * setter for edgeOptNum
+	 * @param edgeOptNum
+	 *//*
+	public void setEdgeOptNum(int edgeOptNum) {
+		this.edgeOptNum = edgeOptNum;
+	}*/
 
 	public GraphIndividual(){
 		super();
@@ -98,6 +132,8 @@ public class GraphIndividual extends Individual {
             newE.getFromNode().getOutgoingEdgeList().add( newE );
             newE.getToNode().getIncomingEdgeList().add( newE );
         }
+        /*other.setEdgeOptNum(this.edgeOptNum);
+        other.setNodeOptNum(this.nodeOptNum);*/
     }
 
     /**
