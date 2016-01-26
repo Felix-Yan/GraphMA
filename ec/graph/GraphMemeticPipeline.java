@@ -28,8 +28,8 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 	Node newSelection;
 	//Set<Edge> newDomain;//unnecessary
 	int count;//debug
-	int totalNodeOpt;
-	int totalEdgeOpt;
+	/*int totalNodeOpt;
+	int totalEdgeOpt;*/
 
 	@Override
 	public Parameter defaultBase() {
@@ -71,8 +71,10 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			}
 			/*int nodeOptNum = graph.getNodeOptNum();
 			int edgeOptNum = graph.getEdgeOptNum();*/
-			double bestFitness = 0;
-			double currentBestFitness = 0;
+			((GraphEvol)state.evaluator.p_problem).evaluate(state, graph, subpopulation, thread);
+			double bestFitness = graph.fitness.fitness();
+			graph.evaluated = false;
+			double currentBestFitness = bestFitness;
 			double currentFitness1 = 0;
 			double currentFitness2 = 0;
 			//reset currentGraph and newDomain
@@ -87,7 +89,13 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 			// Find all nodes that should be locally searched and possibly replaced
 			Set<Node> nodesToReplace = new HashSet<Node>();
 			Set<Edge> edgesMemetic = new HashSet<Edge>();
+			int totalNodeOpt = ((GraphState)state).getTotalNodeOpt();
+			int totalEdgeOpt = ((GraphState)state).getTotalEdgeOpt();
+			int currentNodeOpt = totalNodeOpt;
+			int currentEdgeOpt = totalEdgeOpt;
 			do{
+				totalNodeOpt = currentNodeOpt;
+				totalEdgeOpt = currentEdgeOpt;
 				//debug
 				/*if(newSelection1 != null){
 					if(newSelection1.getName().equals("serv470983406")){
@@ -113,26 +121,24 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 					//newDomain.clear();;//reset newDomain if 2for1 is not preferred, unnecessary
 					newSelection = newSelection1;
 					currentBestFitness = currentFitness1;
-					//nodeOptNum++;
-					totalNodeOpt++;
+					currentNodeOpt++;
 				}else{
 					tempGraph2.copyTo(currentGraph);
 					newSelection = newSelection2;
 					currentBestFitness = currentFitness2;
-					//edgeOptNum++;
-					totalEdgeOpt++;
+					currentEdgeOpt++;
 				}
 			}while(currentBestFitness > bestFitness);
-			/*currentGraph.setEdgeOptNum(edgeOptNum);
-			currentGraph.setNodeOptNum(nodeOptNum);*/
-			System.out.println(totalNodeOpt +", "+totalEdgeOpt);
+			((GraphState)state).setTotalNodeOpt(totalNodeOpt);
+			((GraphState)state).setTotalEdgeOpt(totalEdgeOpt);
+			//System.out.println(totalNodeOpt +", "+totalEdgeOpt);
 			inds[q] = currentGraph;
 			//debug
+			count++;
 			//System.out.println(count+"Memetic");
-			/*if(count == 23){
+			/*if(count == 48){
 				System.out.println("time to debug");
 			}*/
-			count++;
 
 		}
 		return n;

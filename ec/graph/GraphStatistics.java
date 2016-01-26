@@ -192,8 +192,8 @@ public class GraphStatistics extends SimpleShortStatistics {
             // Print the best candidate at the end of the run
             if (state.generation == state.parameters.getInt(new Parameter("generations"), null)-1) {
                 state.output.println(popBestSoFar.toString(), statisticslog);
-                /*state.output.println("nodeOpt "+((GraphIndividual)popBestSoFar).getNodeOptNum(), statisticslog);
-                state.output.println("edgeOpt "+((GraphIndividual)popBestSoFar).getEdgeOptNum(), statisticslog);*/
+                state.output.println("nodeOpt "+((GraphState)state).getTotalNodeOpt(), statisticslog);
+                state.output.println("edgeOpt "+((GraphState)state).getTotalEdgeOpt(), statisticslog);
                 createHistogramLog(state);
                 createHistogramLog(state);
 
