@@ -540,6 +540,7 @@ public class GraphMemeticPipeline extends BreedingPipeline {
 		List <Edge> outgoingEdge2 = fromNode.getOutgoingEdgeList();
 		outgoingEdges.addAll(outgoingEdge1);
 		//combine the outgoindEdges of both fromNode and toNode to be the desired outgoingEdges of a new node
+		//the outgoingEdge of fromNode to toNode shouldn't be included
 		for(Edge e: outgoingEdge2){
 			if(!e.getToNode().getName().equals(toNode.getName())){
 				outgoingEdges.add(e);
