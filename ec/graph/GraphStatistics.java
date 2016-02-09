@@ -173,11 +173,13 @@ public class GraphStatistics extends SimpleShortStatistics {
         // print out fitness info
         if (output)
             {
-            state.output.print("" + popMeanFitness + " " , statisticslog);                                                                                  // mean fitness of pop this gen
+            state.output.print("" + popMeanFitness + " " , statisticslog);        // mean fitness of pop this gen
             state.output.print("" + (popBestOfGeneration.fitness.fitness()) + " " , statisticslog);                 // best fitness of pop this gen
             state.output.print("" + (popBestSoFar.fitness.fitness()) + " " , statisticslog);                // best fitness of pop so far
             state.output.print("" + numNodes + " ", statisticslog);
             state.output.print("" + path + " ", statisticslog);
+
+            //Also print the A, R, C, T values of the best individual so far
 
             }
 
