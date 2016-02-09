@@ -28,40 +28,74 @@ public class GraphIndividual extends Individual {
 	public Set<Node> unused;
 	public int longestPathLength;
 	public int numAtomicServices;
-//	private int nodeOptNum;//the number of node optimizations performed
-//	private int edgeOptNum;//the number of edge optimizations performed
+	private double availability;
+	private double reliability;
+	private double cost;
+	private double time;
 
 	/**
-	 * getter for nodeOptNum
+	 * getter for availability
 	 * @return
-	 *//*
-	public int getNodeOptNum() {
-		return nodeOptNum;
+	 */
+	public double getAvailability() {
+		return availability;
 	}
 
-	*//**
-	 * setter for nodeOptNum
-	 * @param nodeOptNum
-	 *//*
-	public void setNodeOptNum(int nodeOptNum) {
-		this.nodeOptNum = nodeOptNum;
+	/**
+	 * setter for availability
+	 * @param availability
+	 */
+	public void setAvailability(double availability) {
+		this.availability = availability;
 	}
 
-	*//**
-	 * getter for edgeOptNum
+	/**
+	 * getter for reliability
 	 * @return
-	 *//*
-	public int getEdgeOptNum() {
-		return edgeOptNum;
+	 */
+	public double getReliability() {
+		return reliability;
 	}
 
-	*//**
-	 * setter for edgeOptNum
-	 * @param edgeOptNum
-	 *//*
-	public void setEdgeOptNum(int edgeOptNum) {
-		this.edgeOptNum = edgeOptNum;
-	}*/
+	/**
+	 * setter for reliability
+	 * @param reliability
+	 */
+	public void setReliability(double reliability) {
+		this.reliability = reliability;
+	}
+
+	/**
+	 * getter for cost
+	 * @return
+	 */
+	public double getCost() {
+		return cost;
+	}
+
+	/**
+	 * setter for cost
+	 * @param cost
+	 */
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
+	/**
+	 * getter for time
+	 * @return
+	 */
+	public double getTime() {
+		return time;
+	}
+
+	/**
+	 * setter for time
+	 * @param time
+	 */
+	public void setTime(double time) {
+		this.time = time;
+	}
 
 	public GraphIndividual(){
 		super();

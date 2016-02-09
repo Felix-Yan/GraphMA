@@ -65,53 +65,12 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 				///... is the individual ideal?  Indicate here...
 				false);
 
+		ind2.setAvailability(a);
+		ind2.setReliability(r);
+		ind2.setCost(c);
+		ind2.setTime(t);
+
 		ind2.evaluated = true;
-	}
-
-	/**
-	 * This returns the normalized values of the four objectives in an array.
-	 * @param init
-	 * @param state
-	 * @param ind
-	 * @param subpopulation
-	 * @param threadnum
-	 * @return values of four objectives
-	 */
-	public double[] gatherObjectives(GraphInitializer init, EvolutionState state, Individual ind, int subpopulation, int threadnum) {
-		if (!(ind instanceof GraphIndividual))
-			state.output.fatal("Whoa!  It's not a GraphIndividual!!!",null);
-		GraphIndividual ind2 = (GraphIndividual)ind;
-		double[] objectives = new double[4];
-
-		double a = 1.0;
-		double r = 1.0;
-		double t = 0.0;
-		double c = 0.0;
-
-		for (Node n : ind2.considerableNodeMap.values()) {
-			double[] qos = n.getQos();
-			a *= qos[GraphInitializer.AVAILABILITY];
-			r *= qos[GraphInitializer.RELIABILITY];
-			c += qos[GraphInitializer.COST];
-		}
-
-		// Calculate longest time
-		t = findLongestPath(ind2);
-
-		a = normaliseAvailability(a, init);
-		r = normaliseReliability(r, init);
-
-		//recalculate a and r with base e to make sure they are not too small
-		//a = Math.pow(Math.E*0.5, a-1);
-		//r = Math.pow(Math.E*0.5, r-1);
-		t = normaliseTime(t, init);
-		c = normaliseCost(c, init);
-		objectives[0] = a;
-		objectives[1] = r;
-		objectives[2] = c;
-		objectives[3] = t;
-		return objectives;
-
 	}
 
 	public void evaluateOwls(GraphInitializer init, EvolutionState state, Individual ind, int subpopulation, int threadnum) {

@@ -179,8 +179,17 @@ public class GraphStatistics extends SimpleShortStatistics {
             state.output.print("" + numNodes + " ", statisticslog);
             state.output.print("" + path + " ", statisticslog);
 
-            //Also print the A, R, C, T values of the best individual so far
-
+            //Also print the A, R, C, T values of popBestOfGeneration & popBestSoFar
+            state.output.print("BestOfGeneration(ARCT): ", statisticslog);
+            state.output.print(((GraphIndividual) popBestOfGeneration).getAvailability()+" ", statisticslog);
+            state.output.print(((GraphIndividual) popBestOfGeneration).getReliability()+" ", statisticslog);
+            state.output.print(((GraphIndividual) popBestOfGeneration).getCost()+" ", statisticslog);
+            state.output.print(((GraphIndividual) popBestOfGeneration).getTime()+" ", statisticslog);
+            state.output.print("BestSoFar(ARCT): ", statisticslog);
+            state.output.print(((GraphIndividual) popBestSoFar).getAvailability()+" ", statisticslog);
+            state.output.print(((GraphIndividual) popBestSoFar).getReliability()+" ", statisticslog);
+            state.output.print(((GraphIndividual) popBestSoFar).getCost()+" ", statisticslog);
+            state.output.print(((GraphIndividual) popBestSoFar).getTime()+" ", statisticslog);
             }
 
         // hook for KozaShortStatistics etc.
