@@ -37,6 +37,11 @@ public class GraphEvol extends Problem implements SimpleProblemForm {
 
 		for (Node n : ind2.considerableNodeMap.values()) {
 			double[] qos = n.getQos();
+			
+			//debug
+			/*System.out.println("A: "+qos[GraphInitializer.AVAILABILITY]);
+			System.out.println("R: "+qos[GraphInitializer.RELIABILITY]);*/
+			
 			a *= qos[GraphInitializer.AVAILABILITY];
 			r *= qos[GraphInitializer.RELIABILITY];
 			c += qos[GraphInitializer.COST];
