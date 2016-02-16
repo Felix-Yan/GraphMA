@@ -207,15 +207,15 @@ public class GraphStatistics extends SimpleShortStatistics {
                 state.output.println("edgeOpt "+((GraphState)state).getTotalEdgeOpt(), statisticslog);
                 createHistogramLog(state);
                 createHistogramLog(state);
-                //debug
-                for(Node n: ((GraphIndividual) popBestSoFar).considerableNodeMap.values()){
+                //debug, this will print out the all a and r values in each service component of the final solution
+                /*for(Node n: ((GraphIndividual) popBestSoFar).considerableNodeMap.values()){
                 	double[] qos = n.getQos();
         			System.out.println("A: "+qos[GraphInitializer.AVAILABILITY]);
                 }
                 for(Node n: ((GraphIndividual) popBestSoFar).considerableNodeMap.values()){
                 	double[] qos = n.getQos();
         			System.out.println("R: "+qos[GraphInitializer.RELIABILITY]);
-                }
+                }*/
 
                 // Write node histogram
                 List<String> keyList = new ArrayList<String>(GraphInitializer.nodeCount.keySet());
