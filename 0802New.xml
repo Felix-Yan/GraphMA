@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <services>
-<service Ava="97.0" Lat="0.0" Pri="1.94" Rel="67.0" Res="4447.97" Suc="0.0" name="serv547889547">
+<service Ava="0.97" Lat="0.0" Pri="1.94" Rel="0.67" Res="4447.97" Suc="0.0" name="serv547889547">
 <inputs>
 <instance name="inst672827625"/>
 <instance name="inst1960908058"/>
@@ -20,7 +20,7 @@
 <instance name="inst716043458"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="0.51" Rel="73.0" Res="1740.6" Suc="0.0" name="serv757824790">
+<service Ava="0.91" Lat="0.0" Pri="0.51" Rel="0.73" Res="1740.6" Suc="0.0" name="serv757824790">
 <inputs>
 <instance name="inst878461457"/>
 <instance name="inst1523013854"/>
@@ -39,7 +39,7 @@
 <instance name="inst1978521674"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="6.08" Rel="67.0" Res="3748.37" Suc="0.0" name="serv2067206067">
+<service Ava="0.85" Lat="0.0" Pri="6.08" Rel="0.67" Res="3748.37" Suc="0.0" name="serv2067206067">
 <inputs>
 <instance name="inst1747285625"/>
 <instance name="inst990495340"/>
@@ -59,7 +59,7 @@
 <instance name="inst1572169604"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="3.68" Rel="73.0" Res="4802.04" Suc="0.0" name="serv1807500891">
+<service Ava="0.63" Lat="0.0" Pri="3.68" Rel="0.73" Res="4802.04" Suc="0.0" name="serv1807500891">
 <inputs>
 <instance name="inst1486352121"/>
 <instance name="inst136621883"/>
@@ -78,7 +78,7 @@
 <instance name="inst1677239209"/>
 </outputs>
 </service>
-<service Ava="50.0" Lat="0.0" Pri="5.01" Rel="67.0" Res="4562.83" Suc="0.0" name="serv1787838591">
+<service Ava="0.5" Lat="0.0" Pri="5.01" Rel="0.67" Res="4562.83" Suc="0.0" name="serv1787838591">
 <inputs>
 <instance name="inst769090441"/>
 <instance name="inst161199777"/>
@@ -93,7 +93,7 @@
 <instance name="inst115321077"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="6.21" Rel="67.0" Res="4880.4" Suc="0.0" name="serv1232380727">
+<service Ava="0.92" Lat="0.0" Pri="6.21" Rel="0.67" Res="4880.4" Suc="0.0" name="serv1232380727">
 <inputs>
 <instance name="inst436880025"/>
 <instance name="inst1939197074"/>
@@ -105,7 +105,7 @@
 <instance name="inst1211900239"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="2.55" Rel="73.0" Res="4818.0" Suc="0.0" name="serv1510109659">
+<service Ava="0.85" Lat="0.0" Pri="2.55" Rel="0.73" Res="4818.0" Suc="0.0" name="serv1510109659">
 <inputs>
 <instance name="inst1637914609"/>
 <instance name="inst1272115505"/>
@@ -119,7 +119,7 @@
 <instance name="inst1625216587"/>
 </outputs>
 </service>
-<service Ava="73.0" Lat="0.0" Pri="5.26" Rel="80.0" Res="1784.06" Suc="0.0" name="serv1786200085">
+<service Ava="0.73" Lat="0.0" Pri="5.26" Rel="0.8" Res="1784.06" Suc="0.0" name="serv1786200085">
 <inputs>
 <instance name="inst1092902078"/>
 <instance name="inst1587530493"/>
@@ -132,7 +132,7 @@
 <instance name="inst1905812391"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="3.59" Rel="60.0" Res="4527.52" Suc="0.0" name="serv1189164894">
+<service Ava="0.93" Lat="0.0" Pri="3.59" Rel="0.6" Res="4527.52" Suc="0.0" name="serv1189164894">
 <inputs>
 <instance name="inst63298417"/>
 <instance name="inst1926499052"/>
@@ -146,7 +146,7 @@
 <instance name="inst595816931"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="4.42" Rel="73.0" Res="3491.47" Suc="0.0" name="serv2070483117">
+<service Ava="1.0" Lat="0.0" Pri="4.42" Rel="0.73" Res="3491.47" Suc="0.0" name="serv2070483117">
 <inputs>
 <instance name="inst1508881293"/>
 <instance name="inst806366357"/>
@@ -161,7 +161,7 @@
 <instance name="inst1625216587"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="4.78" Rel="73.0" Res="2281.55" Suc="0.0" name="serv2262833">
+<service Ava="0.87" Lat="0.0" Pri="4.78" Rel="0.73" Res="2281.55" Suc="0.0" name="serv2262833">
 <inputs>
 <instance name="inst1833717291"/>
 <instance name="inst1949028224"/>
@@ -173,7 +173,7 @@
 <instance name="inst1211900239"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="3.95" Rel="73.0" Res="4189.3" Suc="0.0" name="serv1645697075">
+<service Ava="0.89" Lat="0.0" Pri="3.95" Rel="0.73" Res="4189.3" Suc="0.0" name="serv1645697075">
 <inputs>
 <instance name="inst2127627468"/>
 <instance name="inst1796441375"/>
@@ -192,7 +192,7 @@
 <instance name="inst1825320642"/>
 </outputs>
 </service>
-<service Ava="12.0" Lat="0.0" Pri="2.36" Rel="73.0" Res="4015.35" Suc="0.0" name="serv1040469278">
+<service Ava="0.12" Lat="0.0" Pri="2.36" Rel="0.73" Res="4015.35" Suc="0.0" name="serv1040469278">
 <inputs>
 <instance name="inst1799104242"/>
 <instance name="inst1159057261"/>
@@ -208,7 +208,7 @@
 <instance name="inst2081748768"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="7.22" Rel="83.0" Res="2494.18" Suc="0.0" name="serv680199913">
+<service Ava="0.97" Lat="0.0" Pri="7.22" Rel="0.83" Res="2494.18" Suc="0.0" name="serv680199913">
 <inputs>
 <instance name="inst986808112"/>
 <instance name="inst423157642"/>
@@ -227,7 +227,7 @@
 <instance name="inst1519736804"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="2.81" Rel="60.0" Res="4797.51" Suc="0.0" name="serv961205895">
+<service Ava="0.63" Lat="0.0" Pri="2.81" Rel="0.6" Res="4797.51" Suc="0.0" name="serv961205895">
 <inputs>
 <instance name="inst268318066"/>
 <instance name="inst1887788635"/>
@@ -244,7 +244,7 @@
 <instance name="inst2038122757"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="6.2" Rel="73.0" Res="3361.0" Suc="0.0" name="serv261968009">
+<service Ava="0.99" Lat="0.0" Pri="6.2" Rel="0.73" Res="3361.0" Suc="0.0" name="serv261968009">
 <inputs>
 <instance name="inst297401376"/>
 <instance name="inst532324615"/>
@@ -264,7 +264,7 @@
 <instance name="inst1289525078"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="7.1" Rel="73.0" Res="4426.35" Suc="0.0" name="serv691669607">
+<service Ava="0.87" Lat="0.0" Pri="7.1" Rel="0.73" Res="4426.35" Suc="0.0" name="serv691669607">
 <inputs>
 <instance name="inst787114197"/>
 <instance name="inst701910897"/>
@@ -276,7 +276,7 @@
 <instance name="inst1625216587"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="9.13" Rel="73.0" Res="753.25" Suc="0.0" name="serv972675589">
+<service Ava="0.72" Lat="0.0" Pri="9.13" Rel="0.73" Res="753.25" Suc="0.0" name="serv972675589">
 <inputs>
 <instance name="inst1091263572"/>
 <instance name="inst588238508"/>
@@ -290,7 +290,7 @@
 <instance name="inst762536341"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="8.33" Rel="60.0" Res="423.07" Suc="0.0" name="serv974314095">
+<service Ava="0.94" Lat="0.0" Pri="8.33" Rel="0.6" Res="423.07" Suc="0.0" name="serv974314095">
 <inputs>
 <instance name="inst1420196938"/>
 <instance name="inst281426266"/>
@@ -308,7 +308,7 @@
 <instance name="inst1385377754"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="1.1" Rel="73.0" Res="1462.59" Suc="0.0" name="serv1521579353">
+<service Ava="0.96" Lat="0.0" Pri="1.1" Rel="0.73" Res="1462.59" Suc="0.0" name="serv1521579353">
 <inputs>
 <instance name="inst286956043"/>
 <instance name="inst1914619218"/>
@@ -328,7 +328,7 @@
 <instance name="inst437904348"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="2.24" Rel="53.0" Res="1120.73" Suc="0.0" name="serv762740346">
+<service Ava="0.96" Lat="0.0" Pri="2.24" Rel="0.53" Res="1120.73" Suc="0.0" name="serv762740346">
 <inputs>
 <instance name="inst1552507304"/>
 <instance name="inst1781080486"/>
@@ -342,7 +342,7 @@
 <instance name="inst376664759"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="8.99" Rel="67.0" Res="4570.71" Suc="0.0" name="serv1529771959">
+<service Ava="0.89" Lat="0.0" Pri="8.99" Rel="0.67" Res="4570.71" Suc="0.0" name="serv1529771959">
 <inputs>
 <instance name="inst1820609091"/>
 <instance name="inst1368378321"/>
@@ -356,7 +356,7 @@
 <instance name="inst620394825"/>
 </outputs>
 </service>
-<service Ava="32.0" Lat="0.0" Pri="1.09" Rel="67.0" Res="4459.29" Suc="0.0" name="serv612406224">
+<service Ava="0.32" Lat="0.0" Pri="1.09" Rel="0.67" Res="4459.29" Suc="0.0" name="serv612406224">
 <inputs>
 <instance name="inst427459015"/>
 <instance name="inst1637300426"/>
@@ -376,7 +376,7 @@
 <instance name="inst448145676"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="4.67" Rel="60.0" Res="1409.62" Suc="0.0" name="serv1726599002">
+<service Ava="0.72" Lat="0.0" Pri="4.67" Rel="0.6" Res="1409.62" Suc="0.0" name="serv1726599002">
 <inputs>
 <instance name="inst1302223138"/>
 <instance name="inst772367491"/>
@@ -397,7 +397,7 @@
 <instance name="inst1079179695"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="2.09" Rel="73.0" Res="3226.51" Suc="0.0" name="serv1452147120">
+<service Ava="0.97" Lat="0.0" Pri="2.09" Rel="0.73" Res="3226.51" Suc="0.0" name="serv1452147120">
 <inputs>
 <instance name="inst995410896"/>
 <instance name="inst1362848544"/>
@@ -410,7 +410,7 @@
 <instance name="inst1215177289"/>
 </outputs>
 </service>
-<service Ava="73.0" Lat="0.0" Pri="8.22" Rel="73.0" Res="2210.78" Suc="0.0" name="serv476818808">
+<service Ava="0.73" Lat="0.0" Pri="8.22" Rel="0.73" Res="2210.78" Suc="0.0" name="serv476818808">
 <inputs>
 <instance name="inst2032182840"/>
 <instance name="inst771957313"/>
@@ -426,7 +426,7 @@
 <instance name="inst1823271958"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="4.22" Rel="67.0" Res="1601.84" Suc="0.0" name="serv346146948">
+<service Ava="0.83" Lat="0.0" Pri="4.22" Rel="0.67" Res="1601.84" Suc="0.0" name="serv346146948">
 <inputs>
 <instance name="inst1188960889"/>
 <instance name="inst1909089441"/>
@@ -447,7 +447,7 @@
 <instance name="inst1558651226"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="2.69" Rel="73.0" Res="3346.85" Suc="0.0" name="serv1028999622">
+<service Ava="0.94" Lat="0.0" Pri="2.69" Rel="0.73" Res="3346.85" Suc="0.0" name="serv1028999622">
 <inputs>
 <instance name="inst1367149955"/>
 <instance name="inst1388654804"/>
@@ -464,7 +464,7 @@
 <instance name="inst1639553153"/>
 </outputs>
 </service>
-<service Ava="35.0" Lat="0.0" Pri="5.0" Rel="73.0" Res="2267.73" Suc="0.0" name="serv357616642">
+<service Ava="0.35" Lat="0.0" Pri="5.0" Rel="0.73" Res="2267.73" Suc="0.0" name="serv357616642">
 <inputs>
 <instance name="inst1812212442"/>
 <instance name="inst905292040"/>
@@ -478,7 +478,7 @@
 <instance name="inst325256282"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="4.95" Rel="60.0" Res="1468.18" Suc="0.0" name="serv131296149">
+<service Ava="0.63" Lat="0.0" Pri="4.95" Rel="0.6" Res="1468.18" Suc="0.0" name="serv131296149">
 <inputs>
 <instance name="inst1795417052"/>
 <instance name="inst1150660612"/>
@@ -502,7 +502,7 @@
 <instance name="inst487674281"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="4.41" Rel="73.0" Res="3437.04" Suc="0.0" name="serv74972116">
+<service Ava="0.87" Lat="0.0" Pri="4.41" Rel="0.73" Res="3437.04" Suc="0.0" name="serv74972116">
 <inputs>
 <instance name="inst1410979971"/>
 <instance name="inst954037612"/>
@@ -517,7 +517,7 @@
 <instance name="inst1347077477"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="8.6" Rel="83.0" Res="4271.8" Suc="0.0" name="serv1939811257">
+<service Ava="0.85" Lat="0.0" Pri="8.6" Rel="0.83" Res="4271.8" Suc="0.0" name="serv1939811257">
 <inputs>
 <instance name="inst992337889"/>
 <instance name="inst1026132712"/>
@@ -533,7 +533,7 @@
 <instance name="inst1001554856"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="6.4" Rel="60.0" Res="649.81" Suc="0.0" name="serv1311644110">
+<service Ava="0.98" Lat="0.0" Pri="6.4" Rel="0.6" Res="649.81" Suc="0.0" name="serv1311644110">
 <inputs>
 <instance name="inst649888275"/>
 <instance name="inst2128241651"/>
@@ -547,7 +547,7 @@
 <instance name="inst998277806"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="0.99" Rel="73.0" Res="3889.51" Suc="0.0" name="serv2062290473">
+<service Ava="0.83" Lat="0.0" Pri="0.99" Rel="0.73" Res="3889.51" Suc="0.0" name="serv2062290473">
 <inputs>
 <instance name="inst297401376"/>
 <instance name="inst1921583458"/>
@@ -565,7 +565,7 @@
 <instance name="inst1153527522"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="1.45" Rel="73.0" Res="1547.56" Suc="0.0" name="serv909797456">
+<service Ava="0.92" Lat="0.0" Pri="1.45" Rel="0.73" Res="1547.56" Suc="0.0" name="serv909797456">
 <inputs>
 <instance name="inst1419786760"/>
 <instance name="inst1121781345"/>
@@ -577,7 +577,7 @@
 <instance name="inst1513796887"/>
 </outputs>
 </service>
-<service Ava="71.0" Lat="0.0" Pri="8.6" Rel="73.0" Res="783.05" Suc="0.0" name="serv1113178561">
+<service Ava="0.71" Lat="0.0" Pri="8.6" Rel="0.73" Res="783.05" Suc="0.0" name="serv1113178561">
 <inputs>
 <instance name="inst996639262"/>
 <instance name="inst1797055558"/>
@@ -593,7 +593,7 @@
 <instance name="inst2073556124"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="7.43" Rel="67.0" Res="2726.59" Suc="0.0" name="serv55309816">
+<service Ava="0.83" Lat="0.0" Pri="7.43" Rel="0.67" Res="2726.59" Suc="0.0" name="serv55309816">
 <inputs>
 <instance name="inst459819375"/>
 <instance name="inst1108058962"/>
@@ -607,7 +607,7 @@
 <instance name="inst877847274"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="0.45" Rel="60.0" Res="2350.58" Suc="0.0" name="serv215475126">
+<service Ava="0.91" Lat="0.0" Pri="0.45" Rel="0.6" Res="2350.58" Suc="0.0" name="serv215475126">
 <inputs>
 <instance name="inst616707597"/>
 <instance name="inst45274661"/>
@@ -626,7 +626,7 @@
 <instance name="inst449784182"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="1.79" Rel="60.0" Res="4954.4" Suc="0.0" name="serv2143192400">
+<service Ava="0.86" Lat="0.0" Pri="1.79" Rel="0.6" Res="4954.4" Suc="0.0" name="serv2143192400">
 <inputs>
 <instance name="inst889931113"/>
 <instance name="inst19672444"/>
@@ -644,7 +644,7 @@
 <instance name="inst487674281"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="7.76" Rel="73.0" Res="28.52" Suc="0.0" name="serv1455424170">
+<service Ava="0.93" Lat="0.0" Pri="7.76" Rel="0.73" Res="28.52" Suc="0.0" name="serv1455424170">
 <inputs>
 <instance name="inst183728949"/>
 <instance name="inst1396233227"/>
@@ -660,7 +660,7 @@
 <instance name="inst1413232660"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="9.61" Rel="58.0" Res="4510.56" Suc="0.0" name="serv355978098">
+<service Ava="0.99" Lat="0.0" Pri="9.61" Rel="0.58" Res="4510.56" Suc="0.0" name="serv355978098">
 <inputs>
 <instance name="inst1647745759"/>
 <instance name="inst1123419889"/>
@@ -673,7 +673,7 @@
 <instance name="inst1432894960"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="8.51" Rel="60.0" Res="4849.05" Suc="0.0" name="serv564274797">
+<service Ava="0.89" Lat="0.0" Pri="8.51" Rel="0.6" Res="4849.05" Suc="0.0" name="serv564274797">
 <inputs>
 <instance name="inst621623191"/>
 <instance name="inst1947389718"/>
@@ -686,7 +686,7 @@
 <instance name="inst6974384"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="7.32" Rel="80.0" Res="4464.29" Suc="0.0" name="serv2068844573">
+<service Ava="0.98" Lat="0.0" Pri="7.32" Rel="0.8" Res="4464.29" Suc="0.0" name="serv2068844573">
 <inputs>
 <instance name="inst1732538919"/>
 <instance name="inst1421425304"/>
@@ -708,7 +708,7 @@
 <instance name="inst1471195237"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="6.24" Rel="67.0" Res="113.31" Suc="0.0" name="serv1371245193">
+<service Ava="0.93" Lat="0.0" Pri="6.24" Rel="0.67" Res="113.31" Suc="0.0" name="serv1371245193">
 <inputs>
 <instance name="inst1009133279"/>
 <instance name="inst1909703624"/>
@@ -723,7 +723,7 @@
 <instance name="inst320340726"/>
 </outputs>
 </service>
-<service Ava="67.0" Lat="0.0" Pri="0.55" Rel="73.0" Res="2680.41" Suc="0.0" name="serv683476963">
+<service Ava="0.67" Lat="0.0" Pri="0.55" Rel="0.73" Res="2680.41" Suc="0.0" name="serv683476963">
 <inputs>
 <instance name="inst436880025"/>
 <instance name="inst1534483510"/>
@@ -742,7 +742,7 @@
 <instance name="inst1453581621"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="2.67" Rel="73.0" Res="1583.32" Suc="0.0" name="serv128019099">
+<service Ava="0.83" Lat="0.0" Pri="2.67" Rel="0.73" Res="1583.32" Suc="0.0" name="serv128019099">
 <inputs>
 <instance name="inst461457881"/>
 </inputs>
@@ -753,7 +753,7 @@
 <instance name="inst192331733"/>
 </outputs>
 </service>
-<service Ava="17.0" Lat="0.0" Pri="9.91" Rel="53.0" Res="1785.47" Suc="0.0" name="serv1095154805">
+<service Ava="0.17" Lat="0.0" Pri="9.91" Rel="0.53" Res="1785.47" Suc="0.0" name="serv1095154805">
 <inputs>
 <instance name="inst248245626"/>
 <instance name="inst2122915917"/>
@@ -773,7 +773,7 @@
 <instance name="inst682248597"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="9.46" Rel="53.0" Res="4754.59" Suc="0.0" name="serv1385991937">
+<service Ava="0.83" Lat="0.0" Pri="9.46" Rel="0.53" Res="4754.59" Suc="0.0" name="serv1385991937">
 <inputs>
 <instance name="inst523107648"/>
 <instance name="inst987218290"/>
@@ -790,7 +790,7 @@
 <instance name="inst1807296886"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="0.1" Rel="80.0" Res="2863.58" Suc="0.0" name="serv1951280951">
+<service Ava="0.85" Lat="0.0" Pri="0.1" Rel="0.8" Res="2863.58" Suc="0.0" name="serv1951280951">
 <inputs>
 <instance name="inst1607806976"/>
 <instance name="inst595816931"/>
@@ -803,7 +803,7 @@
 <instance name="inst1641805842"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="1.54" Rel="73.0" Res="4436.35" Suc="0.0" name="serv1300174454">
+<service Ava="0.86" Lat="0.0" Pri="1.54" Rel="0.73" Res="4436.35" Suc="0.0" name="serv1300174454">
 <inputs>
 <instance name="inst73743750"/>
 <instance name="inst516553548"/>
@@ -824,7 +824,7 @@
 <instance name="inst1453581621"/>
 </outputs>
 </service>
-<service Ava="52.0" Lat="0.0" Pri="5.13" Rel="73.0" Res="898.84" Suc="0.0" name="serv121464999">
+<service Ava="0.52" Lat="0.0" Pri="5.13" Rel="0.73" Res="898.84" Suc="0.0" name="serv121464999">
 <inputs>
 <instance name="inst1592446087"/>
 <instance name="inst1883283219"/>
@@ -839,7 +839,7 @@
 <instance name="inst100984511"/>
 </outputs>
 </service>
-<service Ava="73.0" Lat="0.0" Pri="6.96" Rel="73.0" Res="150.76" Suc="0.0" name="serv1738068658">
+<service Ava="0.73" Lat="0.0" Pri="6.96" Rel="0.73" Res="150.76" Suc="0.0" name="serv1738068658">
 <inputs>
 <instance name="inst1707757020"/>
 <instance name="inst839136857"/>
@@ -856,7 +856,7 @@
 <instance name="inst1825320642"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="9.51" Rel="80.0" Res="2928.94" Suc="0.0" name="serv341231392">
+<service Ava="0.83" Lat="0.0" Pri="9.51" Rel="0.8" Res="2928.94" Suc="0.0" name="serv341231392">
 <inputs>
 <instance name="inst427459015"/>
 <instance name="inst425206326"/>
@@ -878,7 +878,7 @@
 <instance name="inst226330599"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="4.89" Rel="83.0" Res="4392.85" Suc="0.0" name="serv906520406">
+<service Ava="0.86" Lat="0.0" Pri="4.89" Rel="0.83" Res="4392.85" Suc="0.0" name="serv906520406">
 <inputs>
 <instance name="inst1479387843"/>
 <instance name="inst912460323"/>
@@ -895,7 +895,7 @@
 <instance name="inst2038532935"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="3.31" Rel="53.0" Res="785.05" Suc="0.0" name="serv288184409">
+<service Ava="0.86" Lat="0.0" Pri="3.31" Rel="0.53" Res="785.05" Suc="0.0" name="serv288184409">
 <inputs>
 <instance name="inst1812212442"/>
 <instance name="inst905292040"/>
@@ -908,7 +908,7 @@
 <instance name="inst8202750"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="6.75" Rel="67.0" Res="4549.48" Suc="0.0" name="serv1925064551">
+<service Ava="0.94" Lat="0.0" Pri="6.75" Rel="0.67" Res="4549.48" Suc="0.0" name="serv1925064551">
 <inputs>
 <instance name="inst443230082"/>
 <instance name="inst1916667902"/>
@@ -930,7 +930,7 @@
 <instance name="inst2063724974"/>
 </outputs>
 </service>
-<service Ava="22.0" Lat="0.0" Pri="9.72" Rel="73.0" Res="1553.14" Suc="0.0" name="serv1376160787">
+<service Ava="0.22" Lat="0.0" Pri="9.72" Rel="0.73" Res="1553.14" Suc="0.0" name="serv1376160787">
 <inputs>
 <instance name="inst1912366491"/>
 <instance name="inst678971547"/>
@@ -952,7 +952,7 @@
 <instance name="inst2046725541"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="4.12" Rel="83.0" Res="3084.19" Suc="0.0" name="serv615683274">
+<service Ava="0.99" Lat="0.0" Pri="4.12" Rel="0.83" Res="3084.19" Suc="0.0" name="serv615683274">
 <inputs>
 <instance name="inst517577909"/>
 <instance name="inst231860376"/>
@@ -969,7 +969,7 @@
 <instance name="inst849582190"/>
 </outputs>
 </service>
-<service Ava="27.0" Lat="0.0" Pri="1.83" Rel="73.0" Res="4074.7" Suc="0.0" name="serv2019074640">
+<service Ava="0.27" Lat="0.0" Pri="1.83" Rel="0.73" Res="4074.7" Suc="0.0" name="serv2019074640">
 <inputs>
 <instance name="inst838522674"/>
 <instance name="inst283064810"/>
@@ -982,7 +982,7 @@
 <instance name="inst1302837321"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="0.29" Rel="73.0" Res="1758.96" Suc="0.0" name="serv1936534207">
+<service Ava="0.91" Lat="0.0" Pri="0.29" Rel="0.73" Res="1758.96" Suc="0.0" name="serv1936534207">
 <inputs>
 <instance name="inst2031568657"/>
 <instance name="inst450398365"/>
@@ -1003,7 +1003,7 @@
 <instance name="inst1079589873"/>
 </outputs>
 </service>
-<service Ava="14.0" Lat="0.0" Pri="9.7" Rel="67.0" Res="4204.62" Suc="0.0" name="serv471903214">
+<service Ava="0.14" Lat="0.0" Pri="9.7" Rel="0.67" Res="4204.62" Suc="0.0" name="serv471903214">
 <inputs>
 <instance name="inst1589783220"/>
 <instance name="inst567347842"/>
@@ -1020,7 +1020,7 @@
 <instance name="inst2117386140"/>
 </outputs>
 </service>
-<service Ava="77.0" Lat="0.0" Pri="0.18" Rel="73.0" Res="1152.75" Suc="0.0" name="serv1091877755">
+<service Ava="0.77" Lat="0.0" Pri="0.18" Rel="0.73" Res="1152.75" Suc="0.0" name="serv1091877755">
 <inputs>
 <instance name="inst1237092278"/>
 <instance name="inst1918306408"/>
@@ -1038,7 +1038,7 @@
 <instance name="inst1451943077"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="6.51" Rel="73.0" Res="2611.04" Suc="0.0" name="serv273437665">
+<service Ava="0.91" Lat="0.0" Pri="6.51" Rel="0.73" Res="2611.04" Suc="0.0" name="serv273437665">
 <inputs>
 <instance name="inst1383739210"/>
 <instance name="inst1901511018"/>
@@ -1058,7 +1058,7 @@
 <instance name="inst230017827"/>
 </outputs>
 </service>
-<service Ava="70.0" Lat="0.0" Pri="8.49" Rel="67.0" Res="799.99" Suc="0.0" name="serv2138276806">
+<service Ava="0.7" Lat="0.0" Pri="8.49" Rel="0.67" Res="799.99" Suc="0.0" name="serv2138276806">
 <inputs>
 <instance name="inst765813391"/>
 <instance name="inst1701202920"/>
@@ -1077,7 +1077,7 @@
 <instance name="inst2119024684"/>
 </outputs>
 </service>
-<service Ava="36.0" Lat="0.0" Pri="7.22" Rel="73.0" Res="1123.86" Suc="0.0" name="serv200728382">
+<service Ava="0.36" Lat="0.0" Pri="7.22" Rel="0.73" Res="1123.86" Suc="0.0" name="serv200728382">
 <inputs>
 <instance name="inst376664759"/>
 <instance name="inst1781080486"/>
@@ -1093,7 +1093,7 @@
 <instance name="inst896485213"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="2.28" Rel="67.0" Res="3849.28" Suc="0.0" name="serv489927008">
+<service Ava="0.92" Lat="0.0" Pri="2.28" Rel="0.67" Res="3849.28" Suc="0.0" name="serv489927008">
 <inputs>
 <instance name="inst1356294444"/>
 <instance name="inst1513182704"/>
@@ -1108,7 +1108,7 @@
 <instance name="inst785475691"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="8.18" Rel="60.0" Res="1118.93" Suc="0.0" name="serv283268815">
+<service Ava="0.63" Lat="0.0" Pri="8.18" Rel="0.6" Res="1118.93" Suc="0.0" name="serv283268815">
 <inputs>
 <instance name="inst456542325"/>
 <instance name="inst817221830"/>
@@ -1123,7 +1123,7 @@
 <instance name="inst203801427"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="3.48" Rel="73.0" Res="4850.32" Suc="0.0" name="serv1387630443">
+<service Ava="0.63" Lat="0.0" Pri="3.48" Rel="0.73" Res="4850.32" Suc="0.0" name="serv1387630443">
 <inputs>
 <instance name="inst1698129875"/>
 <instance name="inst1714515125"/>
@@ -1139,7 +1139,7 @@
 <instance name="inst991723706"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="9.16" Rel="67.0" Res="2056.35" Suc="0.0" name="serv752909196">
+<service Ava="0.93" Lat="0.0" Pri="9.16" Rel="0.67" Res="2056.35" Suc="0.0" name="serv752909196">
 <inputs>
 <instance name="inst947893690"/>
 <instance name="inst1751176858"/>
@@ -1155,7 +1155,7 @@
 <instance name="inst866377580"/>
 </outputs>
 </service>
-<service Ava="25.0" Lat="0.0" Pri="0.82" Rel="50.0" Res="2162.0" Suc="0.0" name="serv1880210174">
+<service Ava="0.25" Lat="0.0" Pri="0.82" Rel="0.5" Res="2162.0" Suc="0.0" name="serv1880210174">
 <inputs>
 <instance name="inst1568482376"/>
 <instance name="inst1606168470"/>
@@ -1169,7 +1169,7 @@
 <instance name="inst313786626"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="0.17" Rel="60.0" Res="1898.0" Suc="0.0" name="serv1810777941">
+<service Ava="0.92" Lat="0.0" Pri="0.17" Rel="0.6" Res="1898.0" Suc="0.0" name="serv1810777941">
 <inputs>
 <instance name="inst1893728552"/>
 <instance name="inst1917282085"/>
@@ -1181,7 +1181,7 @@
 <instance name="inst1291367627"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="7.29" Rel="67.0" Res="2235.23" Suc="0.0" name="serv58586866">
+<service Ava="0.97" Lat="0.0" Pri="7.29" Rel="0.67" Res="2235.23" Suc="0.0" name="serv58586866">
 <inputs>
 <instance name="inst305593982"/>
 <instance name="inst1753225542"/>
@@ -1197,7 +1197,7 @@
 <instance name="inst2011906357"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="4.33" Rel="73.0" Res="465.03" Suc="0.0" name="serv207282482">
+<service Ava="0.9" Lat="0.0" Pri="4.33" Rel="0.73" Res="465.03" Suc="0.0" name="serv207282482">
 <inputs>
 <instance name="inst817221830"/>
 <instance name="inst1336222004"/>
@@ -1215,7 +1215,7 @@
 <instance name="inst1164382995"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="0.04" Rel="80.0" Res="4526.2" Suc="0.0" name="serv8816933">
+<service Ava="0.91" Lat="0.0" Pri="0.04" Rel="0.8" Res="4526.2" Suc="0.0" name="serv8816933">
 <inputs>
 <instance name="inst539082758"/>
 <instance name="inst168368060"/>
@@ -1233,7 +1233,7 @@
 <instance name="inst1829826058"/>
 </outputs>
 </service>
-<service Ava="69.0" Lat="0.0" Pri="1.89" Rel="73.0" Res="4804.57" Suc="0.0" name="serv694946657">
+<service Ava="0.69" Lat="0.0" Pri="1.89" Rel="0.73" Res="4804.57" Suc="0.0" name="serv694946657">
 <inputs>
 <instance name="inst703549441"/>
 <instance name="inst911846140"/>
@@ -1251,7 +1251,7 @@
 <instance name="inst2052869501"/>
 </outputs>
 </service>
-<service Ava="78.0" Lat="0.0" Pri="7.78" Rel="60.0" Res="2477.14" Suc="0.0" name="serv1716767852">
+<service Ava="0.78" Lat="0.0" Pri="7.78" Rel="0.6" Res="2477.14" Suc="0.0" name="serv1716767852">
 <inputs>
 <instance name="inst1399510277"/>
 <instance name="inst1378823654"/>
@@ -1269,7 +1269,7 @@
 <instance name="inst1587530493"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="2.08" Rel="73.0" Res="2395.1" Suc="0.0" name="serv901604812">
+<service Ava="0.88" Lat="0.0" Pri="2.08" Rel="0.73" Res="2395.1" Suc="0.0" name="serv901604812">
 <inputs>
 <instance name="inst1984051451"/>
 <instance name="inst1540013287"/>
@@ -1289,7 +1289,7 @@
 <instance name="inst327304966"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="6.34" Rel="73.0" Res="3338.36" Suc="0.0" name="serv2078675723">
+<service Ava="1.0" Lat="0.0" Pri="6.34" Rel="0.73" Res="3338.36" Suc="0.0" name="serv2078675723">
 <inputs>
 <instance name="inst1734177425"/>
 <instance name="inst417013682"/>
@@ -1306,7 +1306,7 @@
 <instance name="inst857774796"/>
 </outputs>
 </service>
-<service Ava="73.0" Lat="0.0" Pri="7.89" Rel="80.0" Res="3673.19" Suc="0.0" name="serv1934895701">
+<service Ava="0.73" Lat="0.0" Pri="7.89" Rel="0.8" Res="3673.19" Suc="0.0" name="serv1934895701">
 <inputs>
 <instance name="inst1628493637"/>
 <instance name="inst383833042"/>
@@ -1319,7 +1319,7 @@
 <instance name="inst1734177425"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="1.66" Rel="60.0" Res="980.64" Suc="0.0" name="serv60225410">
+<service Ava="0.63" Lat="0.0" Pri="1.66" Rel="0.6" Res="980.64" Suc="0.0" name="serv60225410">
 <inputs>
 <instance name="inst361918015"/>
 <instance name="inst1543904520"/>
@@ -1337,7 +1337,7 @@
 <instance name="inst1571759426"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="3.65" Rel="73.0" Res="1116.9" Suc="0.0" name="serv1238934827">
+<service Ava="0.63" Lat="0.0" Pri="3.65" Rel="0.73" Res="1116.9" Suc="0.0" name="serv1238934827">
 <inputs>
 <instance name="inst1912366491"/>
 <instance name="inst1062794445"/>
@@ -1354,7 +1354,7 @@
 <instance name="inst1684407492"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="3.18" Rel="73.0" Res="1917.06" Suc="0.0" name="serv1118094155">
+<service Ava="0.85" Lat="0.0" Pri="3.18" Rel="0.73" Res="1917.06" Suc="0.0" name="serv1118094155">
 <inputs>
 <instance name="inst1893728552"/>
 <instance name="inst1917282085"/>
@@ -1365,7 +1365,7 @@
 <instance name="inst1587530493"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="3.01" Rel="80.0" Res="511.67" Suc="0.0" name="serv883581056">
+<service Ava="0.95" Lat="0.0" Pri="3.01" Rel="0.8" Res="511.67" Suc="0.0" name="serv883581056">
 <inputs>
 <instance name="inst355363915"/>
 <instance name="inst797149390"/>
@@ -1382,7 +1382,7 @@
 <instance name="inst464120748"/>
 </outputs>
 </service>
-<service Ava="52.0" Lat="0.0" Pri="4.15" Rel="33.0" Res="1243.65" Suc="0.0" name="serv1665359375">
+<service Ava="0.52" Lat="0.0" Pri="4.15" Rel="0.33" Res="1243.65" Suc="0.0" name="serv1665359375">
 <inputs>
 <instance name="inst842413907"/>
 <instance name="inst1147997745"/>
@@ -1400,7 +1400,7 @@
 <instance name="inst537854392"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="4.32" Rel="60.0" Res="868.19" Suc="0.0" name="serv1301812960">
+<service Ava="0.83" Lat="0.0" Pri="4.32" Rel="0.6" Res="868.19" Suc="0.0" name="serv1301812960">
 <inputs>
 <instance name="inst1979135857"/>
 <instance name="inst206054116"/>
@@ -1414,7 +1414,7 @@
 <instance name="inst413736632"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="2.34" Rel="78.0" Res="2227.16" Suc="0.0" name="serv1647335619">
+<service Ava="0.97" Lat="0.0" Pri="2.34" Rel="0.78" Res="2227.16" Suc="0.0" name="serv1647335619">
 <inputs>
 <instance name="inst376664759"/>
 <instance name="inst1535097693"/>
@@ -1427,7 +1427,7 @@
 <instance name="inst1347487655"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="1.82" Rel="73.0" Res="1020.81" Suc="0.0" name="serv688392557">
+<service Ava="0.98" Lat="0.0" Pri="1.82" Rel="0.73" Res="1020.81" Suc="0.0" name="serv688392557">
 <inputs>
 <instance name="inst765403213"/>
 <instance name="inst1645082892"/>
@@ -1442,7 +1442,7 @@
 <instance name="inst208306843"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="9.15" Rel="73.0" Res="2724.95" Suc="0.0" name="serv2065567523">
+<service Ava="0.63" Lat="0.0" Pri="9.15" Rel="0.73" Res="2724.95" Suc="0.0" name="serv2065567523">
 <inputs>
 <instance name="inst1358957311"/>
 <instance name="inst1339499054"/>
@@ -1456,7 +1456,7 @@
 <instance name="inst737344264"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="1.66" Rel="73.0" Res="442.8" Suc="0.0" name="serv1177695238">
+<service Ava="0.93" Lat="0.0" Pri="1.66" Rel="0.73" Res="442.8" Suc="0.0" name="serv1177695238">
 <inputs>
 <instance name="inst1756092452"/>
 <instance name="inst168368060"/>
@@ -1474,7 +1474,7 @@
 <instance name="inst2081748768"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="7.92" Rel="83.0" Res="3848.23" Suc="0.0" name="serv1862186418">
+<service Ava="0.56" Lat="0.0" Pri="7.92" Rel="0.83" Res="3848.23" Suc="0.0" name="serv1862186418">
 <inputs>
 <instance name="inst1607806976"/>
 <instance name="inst2106530667"/>
@@ -1489,7 +1489,7 @@
 <instance name="inst1641601837"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="9.84" Rel="73.0" Res="3101.79" Suc="0.0" name="serv1167864088">
+<service Ava="0.72" Lat="0.0" Pri="9.84" Rel="0.73" Res="3101.79" Suc="0.0" name="serv1167864088">
 <inputs>
 <instance name="inst1352403211"/>
 <instance name="inst1339499054"/>
@@ -1507,7 +1507,7 @@
 <instance name="inst661357931"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="4.66" Rel="73.0" Res="2936.56" Suc="0.0" name="serv136211743">
+<service Ava="0.94" Lat="0.0" Pri="4.66" Rel="0.73" Res="2936.56" Suc="0.0" name="serv136211743">
 <inputs>
 <instance name="inst694332474"/>
 <instance name="inst1644878887"/>
@@ -1523,7 +1523,7 @@
 <instance name="inst1431666594"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="2.13" Rel="67.0" Res="982.37" Suc="0.0" name="serv823979973">
+<service Ava="0.86" Lat="0.0" Pri="2.13" Rel="0.67" Res="982.37" Suc="0.0" name="serv823979973">
 <inputs>
 <instance name="inst1270476961"/>
 <instance name="inst737958447"/>
@@ -1542,7 +1542,7 @@
 <instance name="inst2034845707"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="3.3" Rel="67.0" Res="3966.55" Suc="0.0" name="serv2014159084">
+<service Ava="0.98" Lat="0.0" Pri="3.3" Rel="0.67" Res="3966.55" Suc="0.0" name="serv2014159084">
 <inputs>
 <instance name="inst1950666768"/>
 <instance name="inst1249790338"/>
@@ -1558,7 +1558,7 @@
 <instance name="inst1923222002"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="3.85" Rel="83.0" Res="404.29" Suc="0.0" name="serv703139263">
+<service Ava="0.92" Lat="0.0" Pri="3.85" Rel="0.83" Res="404.29" Suc="0.0" name="serv703139263">
 <inputs>
 <instance name="inst420290732"/>
 <instance name="inst818450196"/>
@@ -1571,7 +1571,7 @@
 <instance name="inst306618343"/>
 </outputs>
 </service>
-<service Ava="44.0" Lat="0.0" Pri="6.35" Rel="60.0" Res="3589.08" Suc="0.0" name="serv751270690">
+<service Ava="0.44" Lat="0.0" Pri="6.35" Rel="0.6" Res="3589.08" Suc="0.0" name="serv751270690">
 <inputs>
 <instance name="inst1628493637"/>
 <instance name="inst1799104242"/>
@@ -1592,7 +1592,7 @@
 <instance name="inst1362438404"/>
 </outputs>
 </service>
-<service Ava="64.0" Lat="0.0" Pri="3.34" Rel="60.0" Res="4153.18" Suc="0.0" name="serv218752176">
+<service Ava="0.64" Lat="0.0" Pri="3.34" Rel="0.6" Res="4153.18" Suc="0.0" name="serv218752176">
 <inputs>
 <instance name="inst1812212442"/>
 <instance name="inst905292040"/>
@@ -1607,7 +1607,7 @@
 <instance name="inst735295580"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="6.69" Rel="73.0" Res="2085.01" Suc="0.0" name="serv2015797590">
+<service Ava="0.83" Lat="0.0" Pri="6.69" Rel="0.73" Res="2085.01" Suc="0.0" name="serv2015797590">
 <inputs>
 <instance name="inst175536343"/>
 <instance name="inst797559530"/>
@@ -1623,7 +1623,7 @@
 <instance name="inst833196940"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="5.23" Rel="60.0" Res="3856.19" Suc="0.0" name="serv833811123">
+<service Ava="0.91" Lat="0.0" Pri="5.23" Rel="0.6" Res="3856.19" Suc="0.0" name="serv833811123">
 <inputs>
 <instance name="inst1133865222"/>
 <instance name="inst173283616"/>
@@ -1639,7 +1639,7 @@
 <instance name="inst1619890853"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="3.85" Rel="58.0" Res="2818.6" Suc="0.0" name="serv123103543">
+<service Ava="0.95" Lat="0.0" Pri="3.85" Rel="0.58" Res="2818.6" Suc="0.0" name="serv123103543">
 <inputs>
 <instance name="inst1594698776"/>
 <instance name="inst63298417"/>
@@ -1659,7 +1659,7 @@
 <instance name="inst578817498"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="2.8" Rel="67.0" Res="3127.58" Suc="0.0" name="serv635345574">
+<service Ava="0.9" Lat="0.0" Pri="2.8" Rel="0.67" Res="3127.58" Suc="0.0" name="serv635345574">
 <inputs>
 <instance name="inst1611084026"/>
 <instance name="inst1487580487"/>
@@ -1676,7 +1676,7 @@
 <instance name="inst1438834877"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="0.74" Rel="60.0" Res="505.71" Suc="0.0" name="serv2073760167">
+<service Ava="0.96" Lat="0.0" Pri="0.74" Rel="0.6" Res="505.71" Suc="0.0" name="serv2073760167">
 <inputs>
 <instance name="inst259101099"/>
 <instance name="inst1365511411"/>
@@ -1692,7 +1692,7 @@
 <instance name="inst1677239209"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="3.45" Rel="67.0" Res="3736.6" Suc="0.0" name="serv898327762">
+<service Ava="0.87" Lat="0.0" Pri="3.45" Rel="0.67" Res="3736.6" Suc="0.0" name="serv898327762">
 <inputs>
 <instance name="inst1355884304"/>
 <instance name="inst25612361"/>
@@ -1712,7 +1712,7 @@
 <instance name="inst1759165459"/>
 </outputs>
 </service>
-<service Ava="23.0" Lat="0.0" Pri="8.02" Rel="67.0" Res="1717.55" Suc="0.0" name="serv1868740518">
+<service Ava="0.23" Lat="0.0" Pri="8.02" Rel="0.67" Res="1717.55" Suc="0.0" name="serv1868740518">
 <inputs>
 <instance name="inst1893318374"/>
 <instance name="inst1046409195"/>
@@ -1726,7 +1726,7 @@
 <instance name="inst882762830"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="3.62" Rel="67.0" Res="3793.58" Suc="0.0" name="serv1796031235">
+<service Ava="0.98" Lat="0.0" Pri="3.62" Rel="0.67" Res="3793.58" Suc="0.0" name="serv1796031235">
 <inputs>
 <instance name="inst1249176155"/>
 <instance name="inst20696767"/>
@@ -1741,7 +1741,7 @@
 <instance name="inst2038532935"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="5.82" Rel="58.0" Res="3933.46" Suc="0.0" name="serv202366926">
+<service Ava="0.92" Lat="0.0" Pri="5.82" Rel="0.58" Res="3933.46" Suc="0.0" name="serv202366926">
 <inputs>
 <instance name="inst210355527"/>
 <instance name="inst567962025"/>
@@ -1755,7 +1755,7 @@
 <instance name="inst2009039485"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="9.36" Rel="60.0" Res="188.95" Suc="0.0" name="serv1526494909">
+<service Ava="0.83" Lat="0.0" Pri="9.36" Rel="0.6" Res="188.95" Suc="0.0" name="serv1526494909">
 <inputs>
 <instance name="inst1617638126"/>
 <instance name="inst1089421023"/>
@@ -1772,7 +1772,7 @@
 <instance name="inst1097203489"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="0.09" Rel="73.0" Res="878.09" Suc="0.0" name="serv1392546037">
+<service Ava="0.95" Lat="0.0" Pri="0.09" Rel="0.73" Res="878.09" Suc="0.0" name="serv1392546037">
 <inputs>
 <instance name="inst219162316"/>
 <instance name="inst1102733228"/>
@@ -1788,7 +1788,7 @@
 <instance name="inst1851537042"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="4.84" Rel="73.0" Res="4288.99" Suc="0.0" name="serv1243850421">
+<service Ava="0.87" Lat="0.0" Pri="4.84" Rel="0.73" Res="4288.99" Suc="0.0" name="serv1243850421">
 <inputs>
 <instance name="inst1968076341"/>
 <instance name="inst646201047"/>
@@ -1806,7 +1806,7 @@
 <instance name="inst762536341"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="3.17" Rel="78.0" Res="1791.08" Suc="0.0" name="serv1442315970">
+<service Ava="0.85" Lat="0.0" Pri="3.17" Rel="0.78" Res="1791.08" Suc="0.0" name="serv1442315970">
 <inputs>
 <instance name="inst1550868760"/>
 <instance name="inst2062700651"/>
@@ -1823,7 +1823,7 @@
 <instance name="inst1816103675"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="4.37" Rel="58.0" Res="4259.27" Suc="0.0" name="serv342869898">
+<service Ava="0.86" Lat="0.0" Pri="4.37" Rel="0.58" Res="4259.27" Suc="0.0" name="serv342869898">
 <inputs>
 <instance name="inst1593674453"/>
 <instance name="inst445072631"/>
@@ -1845,7 +1845,7 @@
 <instance name="inst1825320642"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="4.93" Rel="67.0" Res="2359.33" Suc="0.0" name="serv549528091">
+<service Ava="0.85" Lat="0.0" Pri="4.93" Rel="0.67" Res="2359.33" Suc="0.0" name="serv549528091">
 <inputs>
 <instance name="inst1393570360"/>
 <instance name="inst942363913"/>
@@ -1862,7 +1862,7 @@
 <instance name="inst1380872338"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="1.18" Rel="73.0" Res="2759.98" Suc="0.0" name="serv425410331">
+<service Ava="0.56" Lat="0.0" Pri="1.18" Rel="0.73" Res="2759.98" Suc="0.0" name="serv425410331">
 <inputs>
 <instance name="inst1893728552"/>
 <instance name="inst1847849852"/>
@@ -1873,7 +1873,7 @@
 <instance name="inst1951691091"/>
 </outputs>
 </service>
-<service Ava="60.0" Lat="0.0" Pri="4.22" Rel="83.0" Res="3959.33" Suc="0.0" name="serv1379437837">
+<service Ava="0.6" Lat="0.0" Pri="4.22" Rel="0.83" Res="3959.33" Suc="0.0" name="serv1379437837">
 <inputs>
 <instance name="inst1836380158"/>
 <instance name="inst1572783787"/>
@@ -1892,7 +1892,7 @@
 <instance name="inst554239642"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="2.92" Rel="73.0" Res="3957.01" Suc="0.0" name="serv1858909368">
+<service Ava="0.86" Lat="0.0" Pri="2.92" Rel="0.73" Res="3957.01" Suc="0.0" name="serv1858909368">
 <inputs>
 <instance name="inst890545296"/>
 <instance name="inst265655199"/>
@@ -1915,7 +1915,7 @@
 <instance name="inst762536341"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="9.36" Rel="58.0" Res="4170.93" Suc="0.0" name="serv903243356">
+<service Ava="0.98" Lat="0.0" Pri="9.36" Rel="0.58" Res="4170.93" Suc="0.0" name="serv903243356">
 <inputs>
 <instance name="inst425206326"/>
 <instance name="inst1911138125"/>
@@ -1933,7 +1933,7 @@
 <instance name="inst388544593"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="4.23" Rel="73.0" Res="2440.76" Suc="0.0" name="serv422133281">
+<service Ava="0.92" Lat="0.0" Pri="4.23" Rel="0.73" Res="2440.76" Suc="0.0" name="serv422133281">
 <inputs>
 <instance name="inst183524944"/>
 <instance name="inst874774229"/>
@@ -1947,7 +1947,7 @@
 <instance name="inst1177491195"/>
 </outputs>
 </service>
-<service Ava="34.0" Lat="0.0" Pri="9.52" Rel="83.0" Res="2179.63" Suc="0.0" name="serv696585163">
+<service Ava="0.34" Lat="0.0" Pri="9.52" Rel="0.83" Res="2179.63" Suc="0.0" name="serv696585163">
 <inputs>
 <instance name="inst268318066"/>
 <instance name="inst1698129875"/>
@@ -1964,7 +1964,7 @@
 <instance name="inst244764533"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="3.01" Rel="73.0" Res="3954.78" Suc="0.0" name="serv1731514558">
+<service Ava="0.99" Lat="0.0" Pri="3.01" Rel="0.73" Res="3954.78" Suc="0.0" name="serv1731514558">
 <inputs>
 <instance name="inst730994207"/>
 <instance name="inst437290165"/>
@@ -1982,7 +1982,7 @@
 <instance name="inst389772959"/>
 </outputs>
 </service>
-<service Ava="78.0" Lat="0.0" Pri="9.87" Rel="73.0" Res="895.1" Suc="0.0" name="serv68418016">
+<service Ava="0.78" Lat="0.0" Pri="9.87" Rel="0.73" Res="895.1" Suc="0.0" name="serv68418016">
 <inputs>
 <instance name="inst1663516826"/>
 <instance name="inst1470170876"/>
@@ -2000,7 +2000,7 @@
 <instance name="inst1432894960"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="3.88" Rel="53.0" Res="4606.94" Suc="0.0" name="serv2088506873">
+<service Ava="0.83" Lat="0.0" Pri="3.88" Rel="0.53" Res="4606.94" Suc="0.0" name="serv2088506873">
 <inputs>
 <instance name="inst420290732"/>
 <instance name="inst818450196"/>
@@ -2012,7 +2012,7 @@
 <instance name="inst2081748768"/>
 </outputs>
 </service>
-<service Ava="79.0" Lat="0.0" Pri="2.48" Rel="73.0" Res="1362.1" Suc="0.0" name="serv2144830906">
+<service Ava="0.79" Lat="0.0" Pri="2.48" Rel="0.73" Res="1362.1" Suc="0.0" name="serv2144830906">
 <inputs>
 <instance name="inst1568482376"/>
 <instance name="inst2095471151"/>
@@ -2023,7 +2023,7 @@
 <instance name="inst2078061540"/>
 </outputs>
 </service>
-<service Ava="32.0" Lat="0.0" Pri="3.95" Rel="53.0" Res="1959.89" Suc="0.0" name="serv3901377">
+<service Ava="0.32" Lat="0.0" Pri="3.95" Rel="0.53" Res="1959.89" Suc="0.0" name="serv3901377">
 <inputs>
 <instance name="inst1066685678"/>
 <instance name="inst601346708"/>
@@ -2043,7 +2043,7 @@
 <instance name="inst348809815"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="8.5" Rel="73.0" Res="1959.37" Suc="0.0" name="serv1045384872">
+<service Ava="0.83" Lat="0.0" Pri="8.5" Rel="0.73" Res="1959.37" Suc="0.0" name="serv1045384872">
 <inputs>
 <instance name="inst2040785624"/>
 <instance name="inst376050576"/>
@@ -2060,7 +2060,7 @@
 <instance name="inst1701202920"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="4.53" Rel="83.0" Res="208.15" Suc="0.0" name="serv61863916">
+<service Ava="0.56" Lat="0.0" Pri="4.53" Rel="0.83" Res="208.15" Suc="0.0" name="serv61863916">
 <inputs>
 <instance name="inst165705193"/>
 <instance name="inst2122711874"/>
@@ -2074,7 +2074,7 @@
 <instance name="inst828691524"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="3.9" Rel="73.0" Res="1831.42" Suc="0.0" name="serv1741345708">
+<service Ava="0.97" Lat="0.0" Pri="3.9" Rel="0.73" Res="1831.42" Suc="0.0" name="serv1741345708">
 <inputs>
 <instance name="inst890545296"/>
 <instance name="inst1647745759"/>
@@ -2087,7 +2087,7 @@
 <instance name="inst468422159"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="0.34" Rel="83.0" Res="1603.98" Suc="0.0" name="serv837088173">
+<service Ava="0.72" Lat="0.0" Pri="0.34" Rel="0.83" Res="1603.98" Suc="0.0" name="serv837088173">
 <inputs>
 <instance name="inst150344266"/>
 <instance name="inst676718858"/>
@@ -2108,7 +2108,7 @@
 <instance name="inst1174214145"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="9.91" Rel="78.0" Res="1987.26" Suc="0.0" name="serv268522109">
+<service Ava="0.96" Lat="0.0" Pri="9.91" Rel="0.78" Res="1987.26" Suc="0.0" name="serv268522109">
 <inputs>
 <instance name="inst2091579918"/>
 <instance name="inst1612312392"/>
@@ -2127,7 +2127,7 @@
 <instance name="inst724236064"/>
 </outputs>
 </service>
-<service Ava="61.0" Lat="0.0" Pri="6.72" Rel="73.0" Res="71.81" Suc="0.0" name="serv632068524">
+<service Ava="0.61" Lat="0.0" Pri="6.72" Rel="0.73" Res="71.81" Suc="0.0" name="serv632068524">
 <inputs>
 <instance name="inst2114519268"/>
 <instance name="inst88080316"/>
@@ -2147,7 +2147,7 @@
 <instance name="inst945845006"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="8.9" Rel="73.0" Res="3318.73" Suc="0.0" name="serv1599204192">
+<service Ava="0.97" Lat="0.0" Pri="8.9" Rel="0.73" Res="3318.73" Suc="0.0" name="serv1599204192">
 <inputs>
 <instance name="inst1110925872"/>
 <instance name="inst1156190389"/>
@@ -2161,7 +2161,7 @@
 <instance name="inst1108058962"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="7.98" Rel="53.0" Res="3543.99" Suc="0.0" name="serv1853993774">
+<service Ava="0.99" Lat="0.0" Pri="7.98" Rel="0.53" Res="3543.99" Suc="0.0" name="serv1853993774">
 <inputs>
 <instance name="inst378303265"/>
 <instance name="inst144814527"/>
@@ -2182,7 +2182,7 @@
 <instance name="inst1833103108"/>
 </outputs>
 </service>
-<service Ava="78.0" Lat="0.0" Pri="0.89" Rel="67.0" Res="3551.44" Suc="0.0" name="serv1933257157">
+<service Ava="0.78" Lat="0.0" Pri="0.89" Rel="0.67" Res="3551.44" Suc="0.0" name="serv1933257157">
 <inputs>
 <instance name="inst1026132712"/>
 <instance name="inst1681744625"/>
@@ -2201,7 +2201,7 @@
 <instance name="inst2124554423"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="8.32" Rel="73.0" Res="3482.65" Suc="0.0" name="serv405748031">
+<service Ava="0.63" Lat="0.0" Pri="8.32" Rel="0.73" Res="3482.65" Suc="0.0" name="serv405748031">
 <inputs>
 <instance name="inst1891065685"/>
 <instance name="inst562432248"/>
@@ -2223,7 +2223,7 @@
 <instance name="inst1595723137"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="1.01" Rel="53.0" Res="506.64" Suc="0.0" name="serv908158912">
+<service Ava="0.72" Lat="0.0" Pri="1.01" Rel="0.53" Res="506.64" Suc="0.0" name="serv908158912">
 <inputs>
 <instance name="inst1981184541"/>
 <instance name="inst1644468709"/>
@@ -2242,7 +2242,7 @@
 <instance name="inst626538747"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="7.19" Rel="83.0" Res="2917.14" Suc="0.0" name="serv1166225544">
+<service Ava="0.94" Lat="0.0" Pri="7.19" Rel="0.83" Res="2917.14" Suc="0.0" name="serv1166225544">
 <inputs>
 <instance name="inst1924860508"/>
 <instance name="inst778511413"/>
@@ -2258,7 +2258,7 @@
 <instance name="inst238210433"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="9.13" Rel="67.0" Res="2387.09" Suc="0.0" name="serv701500757">
+<service Ava="0.83" Lat="0.0" Pri="9.13" Rel="0.67" Res="2387.09" Suc="0.0" name="serv701500757">
 <inputs>
 <instance name="inst9841294"/>
 <instance name="inst1704479970"/>
@@ -2270,7 +2270,7 @@
 <instance name="inst625310381"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="5.24" Rel="73.0" Res="586.59" Suc="0.0" name="serv681838457">
+<service Ava="0.89" Lat="0.0" Pri="5.24" Rel="0.73" Res="586.59" Suc="0.0" name="serv681838457">
 <inputs>
 <instance name="inst1120142839"/>
 <instance name="inst1255730255"/>
@@ -2284,7 +2284,7 @@
 <instance name="inst1387016260"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="0.79" Rel="58.0" Res="2753.37" Suc="0.0" name="serv399193931">
+<service Ava="0.86" Lat="0.0" Pri="0.79" Rel="0.58" Res="2753.37" Suc="0.0" name="serv399193931">
 <inputs>
 <instance name="inst86237767"/>
 </inputs>
@@ -2294,7 +2294,7 @@
 <instance name="inst1763670875"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="5.73" Rel="67.0" Res="2992.54" Suc="0.0" name="serv546251041">
+<service Ava="0.56" Lat="0.0" Pri="5.73" Rel="0.67" Res="2992.54" Suc="0.0" name="serv546251041">
 <inputs>
 <instance name="inst1892090008"/>
 <instance name="inst1889427141"/>
@@ -2309,7 +2309,7 @@
 <instance name="inst1471195237"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="6.3" Rel="83.0" Res="1967.15" Suc="0.0" name="serv1164587038">
+<service Ava="0.83" Lat="0.0" Pri="6.3" Rel="0.83" Res="1967.15" Suc="0.0" name="serv1164587038">
 <inputs>
 <instance name="inst1731924736"/>
 <instance name="inst1726394959"/>
@@ -2324,7 +2324,7 @@
 <instance name="inst327304966"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="2.96" Rel="73.0" Res="1797.95" Suc="0.0" name="serv2131722706">
+<service Ava="0.94" Lat="0.0" Pri="2.96" Rel="0.73" Res="1797.95" Suc="0.0" name="serv2131722706">
 <inputs>
 <instance name="inst785679696"/>
 <instance name="inst1897005602"/>
@@ -2345,7 +2345,7 @@
 <instance name="inst1137552412"/>
 </outputs>
 </service>
-<service Ava="66.0" Lat="0.0" Pri="4.97" Rel="33.0" Res="4503.73" Suc="0.0" name="serv1931618651">
+<service Ava="0.66" Lat="0.0" Pri="4.97" Rel="0.33" Res="4503.73" Suc="0.0" name="serv1931618651">
 <inputs>
 <instance name="inst2673011"/>
 <instance name="inst19058261"/>
@@ -2364,7 +2364,7 @@
 <instance name="inst1426340860"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="3.72" Rel="73.0" Res="1756.83" Suc="0.0" name="serv888496612">
+<service Ava="0.99" Lat="0.0" Pri="3.72" Rel="0.73" Res="1756.83" Suc="0.0" name="serv888496612">
 <inputs>
 <instance name="inst54081450"/>
 <instance name="inst1238320644"/>
@@ -2376,7 +2376,7 @@
 <instance name="inst894846707"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="2.99" Rel="60.0" Res="817.16" Suc="0.0" name="serv10455477">
+<service Ava="0.86" Lat="0.0" Pri="2.99" Rel="0.6" Res="817.16" Suc="0.0" name="serv10455477">
 <inputs>
 <instance name="inst420290732"/>
 <instance name="inst818450196"/>
@@ -2388,7 +2388,7 @@
 <instance name="inst473951898"/>
 </outputs>
 </service>
-<service Ava="9.0" Lat="0.0" Pri="0.84" Rel="78.0" Res="4449.65" Suc="0.0" name="serv494842564">
+<service Ava="0.09" Lat="0.0" Pri="0.84" Rel="0.78" Res="4449.65" Suc="0.0" name="serv494842564">
 <inputs>
 <instance name="inst533552981"/>
 <instance name="inst105489927"/>
@@ -2401,7 +2401,7 @@
 <instance name="inst595202748"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="3.57" Rel="73.0" Res="577.9" Suc="0.0" name="serv1111540055">
+<service Ava="0.85" Lat="0.0" Pri="3.57" Rel="0.73" Res="577.9" Suc="0.0" name="serv1111540055">
 <inputs>
 <instance name="inst871497179"/>
 <instance name="inst782402646"/>
@@ -2419,7 +2419,7 @@
 <instance name="inst1977293308"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="8.03" Rel="73.0" Res="4209.19" Suc="0.0" name="serv1809139435">
+<service Ava="0.85" Lat="0.0" Pri="8.03" Rel="0.73" Res="4209.19" Suc="0.0" name="serv1809139435">
 <inputs>
 <instance name="inst1979135857"/>
 <instance name="inst575540448"/>
@@ -2435,7 +2435,7 @@
 <instance name="inst512662315"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="2.54" Rel="73.0" Res="1962.22" Suc="0.0" name="serv817425873">
+<service Ava="0.94" Lat="0.0" Pri="2.54" Rel="0.73" Res="1962.22" Suc="0.0" name="serv817425873">
 <inputs>
 <instance name="inst1410569793"/>
 <instance name="inst1352607254"/>
@@ -2455,7 +2455,7 @@
 <instance name="inst560793742"/>
 </outputs>
 </service>
-<service Ava="71.0" Lat="0.0" Pri="2.41" Rel="67.0" Res="1295.45" Suc="0.0" name="serv1384353393">
+<service Ava="0.71" Lat="0.0" Pri="2.41" Rel="0.67" Res="1295.45" Suc="0.0" name="serv1384353393">
 <inputs>
 <instance name="inst2064953340"/>
 <instance name="inst837498313"/>
@@ -2474,7 +2474,7 @@
 <instance name="inst2054508007"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="8.9" Rel="67.0" Res="2312.71" Suc="0.0" name="serv1648974125">
+<service Ava="0.98" Lat="0.0" Pri="8.9" Rel="0.67" Res="2312.71" Suc="0.0" name="serv1648974125">
 <inputs>
 <instance name="inst1974220301"/>
 <instance name="inst2047339724"/>
@@ -2496,7 +2496,7 @@
 <instance name="inst487674281"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="7.55" Rel="67.0" Res="1944.23" Suc="0.0" name="serv957928845">
+<service Ava="0.99" Lat="0.0" Pri="7.55" Rel="0.67" Res="1944.23" Suc="0.0" name="serv957928845">
 <inputs>
 <instance name="inst1016711740"/>
 <instance name="inst686139830"/>
@@ -2515,7 +2515,7 @@
 <instance name="inst512662315"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="6.66" Rel="73.0" Res="189.6" Suc="0.0" name="serv1450508576">
+<service Ava="0.85" Lat="0.0" Pri="6.66" Rel="0.73" Res="189.6" Suc="0.0" name="serv1450508576">
 <inputs>
 <instance name="inst1504375877"/>
 <instance name="inst1820405086"/>
@@ -2531,7 +2531,7 @@
 <instance name="inst103851383"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="8.11" Rel="73.0" Res="1950.59" Suc="0.0" name="serv473541758">
+<service Ava="0.94" Lat="0.0" Pri="8.11" Rel="0.73" Res="1950.59" Suc="0.0" name="serv473541758">
 <inputs>
 <instance name="inst962230256"/>
 <instance name="inst19058261"/>
@@ -2543,7 +2543,7 @@
 <instance name="inst322389410"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="8.32" Rel="73.0" Res="2569.78" Suc="0.0" name="serv1465255320">
+<service Ava="0.99" Lat="0.0" Pri="8.32" Rel="0.73" Res="2569.78" Suc="0.0" name="serv1465255320">
 <inputs>
 <instance name="inst420290732"/>
 <instance name="inst818450196"/>
@@ -2554,7 +2554,7 @@
 <instance name="inst227969143"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="3.25" Rel="73.0" Res="3943.73" Suc="0.0" name="serv336315798">
+<service Ava="1.0" Lat="0.0" Pri="3.25" Rel="0.73" Res="3943.73" Suc="0.0" name="serv336315798">
 <inputs>
 <instance name="inst1467304004"/>
 <instance name="inst895460890"/>
@@ -2564,7 +2564,7 @@
 <instance name="inst607286625"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="9.39" Rel="80.0" Res="925.71" Suc="0.0" name="serv542973991">
+<service Ava="0.97" Lat="0.0" Pri="9.39" Rel="0.8" Res="925.71" Suc="0.0" name="serv542973991">
 <inputs>
 <instance name="inst1920969275"/>
 <instance name="inst1377185110"/>
@@ -2577,7 +2577,7 @@
 <instance name="inst1215177289"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="5.55" Rel="73.0" Res="492.13" Suc="0.0" name="serv286545865">
+<service Ava="0.72" Lat="0.0" Pri="5.55" Rel="0.73" Res="492.13" Suc="0.0" name="serv286545865">
 <inputs>
 <instance name="inst1647745759"/>
 <instance name="inst1123419889"/>
@@ -2591,7 +2591,7 @@
 <instance name="inst1722093586"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="5.5" Rel="73.0" Res="2842.17" Suc="0.0" name="serv822341429">
+<service Ava="1.0" Lat="0.0" Pri="5.5" Rel="0.73" Res="2842.17" Suc="0.0" name="serv822341429">
 <inputs>
 <instance name="inst574105947"/>
 <instance name="inst1145745056"/>
@@ -2611,7 +2611,7 @@
 <instance name="inst571853258"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="5.01" Rel="67.0" Res="3942.85" Suc="0.0" name="serv1319836754">
+<service Ava="0.56" Lat="0.0" Pri="5.01" Rel="0.67" Res="3942.85" Suc="0.0" name="serv1319836754">
 <inputs>
 <instance name="inst2104892123"/>
 <instance name="inst962230256"/>
@@ -2627,7 +2627,7 @@
 <instance name="inst954447790"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="1.08" Rel="73.0" Res="2422.64" Suc="0.0" name="serv146042893">
+<service Ava="0.89" Lat="0.0" Pri="1.08" Rel="0.73" Res="2422.64" Suc="0.0" name="serv146042893">
 <inputs>
 <instance name="inst1055626162"/>
 <instance name="inst780560097"/>
@@ -2643,7 +2643,7 @@
 <instance name="inst459819375"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="8.75" Rel="73.0" Res="1273.5" Suc="0.0" name="serv2146469450">
+<service Ava="0.92" Lat="0.0" Pri="8.75" Rel="0.73" Res="1273.5" Suc="0.0" name="serv2146469450">
 <inputs>
 <instance name="inst1470170876"/>
 <instance name="inst2061676290"/>
@@ -2658,7 +2658,7 @@
 <instance name="inst1349126161"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="6.33" Rel="73.0" Res="1083.29" Suc="0.0" name="serv1305090010">
+<service Ava="0.98" Lat="0.0" Pri="6.33" Rel="0.73" Res="1083.29" Suc="0.0" name="serv1305090010">
 <inputs>
 <instance name="inst359051143"/>
 <instance name="inst1090649389"/>
@@ -2675,7 +2675,7 @@
 <instance name="inst145838850"/>
 </outputs>
 </service>
-<service Ava="11.0" Lat="0.0" Pri="1.0" Rel="67.0" Res="1169.45" Suc="0.0" name="serv2083591317">
+<service Ava="0.11" Lat="0.0" Pri="1.0" Rel="0.67" Res="1169.45" Suc="0.0" name="serv2083591317">
 <inputs>
 <instance name="inst1594698776"/>
 <instance name="inst1296693361"/>
@@ -2688,7 +2688,7 @@
 <instance name="inst205439933"/>
 </outputs>
 </service>
-<service Ava="13.0" Lat="0.0" Pri="6.44" Rel="73.0" Res="1647.88" Suc="0.0" name="serv744716590">
+<service Ava="0.13" Lat="0.0" Pri="6.44" Rel="0.73" Res="1647.88" Suc="0.0" name="serv744716590">
 <inputs>
 <instance name="inst205029793"/>
 <instance name="inst894846707"/>
@@ -2704,7 +2704,7 @@
 <instance name="inst1432894960"/>
 </outputs>
 </service>
-<service Ava="80.0" Lat="0.0" Pri="0.05" Rel="42.0" Res="4408.34" Suc="0.0" name="serv1812416485">
+<service Ava="0.8" Lat="0.0" Pri="0.05" Rel="0.42" Res="4408.34" Suc="0.0" name="serv1812416485">
 <inputs>
 <instance name="inst1493110226"/>
 <instance name="inst8202750"/>
@@ -2719,7 +2719,7 @@
 <instance name="inst744102407"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="5.36" Rel="73.0" Res="527.15" Suc="0.0" name="serv1949642407">
+<service Ava="0.88" Lat="0.0" Pri="5.36" Rel="0.73" Res="527.15" Suc="0.0" name="serv1949642407">
 <inputs>
 <instance name="inst63298417"/>
 <instance name="inst1926499052"/>
@@ -2731,7 +2731,7 @@
 <instance name="inst1211900239"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="0.7" Rel="83.0" Res="4524.92" Suc="0.0" name="serv1022445522">
+<service Ava="0.96" Lat="0.0" Pri="0.7" Rel="0.83" Res="4524.92" Suc="0.0" name="serv1022445522">
 <inputs>
 <instance name="inst1250200478"/>
 <instance name="inst63298417"/>
@@ -2752,7 +2752,7 @@
 <instance name="inst1130588172"/>
 </outputs>
 </service>
-<service Ava="52.0" Lat="0.0" Pri="5.43" Rel="80.0" Res="3080.72" Suc="0.0" name="serv767655940">
+<service Ava="0.52" Lat="0.0" Pri="5.43" Rel="0.8" Res="3080.72" Suc="0.0" name="serv767655940">
 <inputs>
 <instance name="inst389158776"/>
 <instance name="inst1649384303"/>
@@ -2771,7 +2771,7 @@
 <instance name="inst1720455042"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="2.49" Rel="83.0" Res="3481.1" Suc="0.0" name="serv1032276672">
+<service Ava="0.72" Lat="0.0" Pri="2.49" Rel="0.83" Res="3481.1" Suc="0.0" name="serv1032276672">
 <inputs>
 <instance name="inst436880025"/>
 <instance name="inst1283585161"/>
@@ -2787,7 +2787,7 @@
 <instance name="inst1573808110"/>
 </outputs>
 </service>
-<service Ava="46.0" Lat="0.0" Pri="9.97" Rel="73.0" Res="2622.71" Suc="0.0" name="serv56948360">
+<service Ava="0.46" Lat="0.0" Pri="9.97" Rel="0.73" Res="2622.71" Suc="0.0" name="serv56948360">
 <inputs>
 <instance name="inst527409059"/>
 <instance name="inst530275931"/>
@@ -2803,7 +2803,7 @@
 <instance name="inst373797849"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="9.22" Rel="50.0" Res="679.6" Suc="0.0" name="serv607490630">
+<service Ava="0.88" Lat="0.0" Pri="9.22" Rel="0.5" Res="679.6" Suc="0.0" name="serv607490630">
 <inputs>
 <instance name="inst848557829"/>
 <instance name="inst395098693"/>
@@ -2826,7 +2826,7 @@
 <instance name="inst1221935394"/>
 </outputs>
 </service>
-<service Ava="36.0" Lat="0.0" Pri="2.13" Rel="58.0" Res="261.84" Suc="0.0" name="serv1171141138">
+<service Ava="0.36" Lat="0.0" Pri="2.13" Rel="0.58" Res="261.84" Suc="0.0" name="serv1171141138">
 <inputs>
 <instance name="inst166115333"/>
 <instance name="inst819474557"/>
@@ -2848,7 +2848,7 @@
 <instance name="inst571853258"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="1.14" Rel="78.0" Res="3998.6" Suc="0.0" name="serv1789477135">
+<service Ava="0.85" Lat="0.0" Pri="1.14" Rel="0.78" Res="3998.6" Suc="0.0" name="serv1789477135">
 <inputs>
 <instance name="inst38720561"/>
 <instance name="inst325666460"/>
@@ -2866,7 +2866,7 @@
 <instance name="inst312148082"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="6.73" Rel="73.0" Res="3925.16" Suc="0.0" name="serv1515025253">
+<service Ava="0.99" Lat="0.0" Pri="6.73" Rel="0.73" Res="3925.16" Suc="0.0" name="serv1515025253">
 <inputs>
 <instance name="inst1383739210"/>
 <instance name="inst311533899"/>
@@ -2887,7 +2887,7 @@
 <instance name="inst1629722003"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="4.86" Rel="80.0" Res="3000.95" Suc="0.0" name="serv1098431855">
+<service Ava="0.91" Lat="0.0" Pri="4.86" Rel="0.8" Res="3000.95" Suc="0.0" name="serv1098431855">
 <inputs>
 <instance name="inst1924860508"/>
 <instance name="inst882352690"/>
@@ -2898,7 +2898,7 @@
 <instance name="inst1289525078"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="2.02" Rel="73.0" Res="3205.4" Suc="0.0" name="serv1374522243">
+<service Ava="0.86" Lat="0.0" Pri="2.02" Rel="0.73" Res="3205.4" Suc="0.0" name="serv1374522243">
 <inputs>
 <instance name="inst1175852689"/>
 <instance name="inst1607192793"/>
@@ -2916,7 +2916,7 @@
 <instance name="inst230017827"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="5.21" Rel="42.0" Res="4836.28" Suc="0.0" name="serv1870379024">
+<service Ava="0.91" Lat="0.0" Pri="5.21" Rel="0.42" Res="4836.28" Suc="0.0" name="serv1870379024">
 <inputs>
 <instance name="inst947893690"/>
 <instance name="inst826028657"/>
@@ -2929,7 +2929,7 @@
 <instance name="inst1718816536"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="6.76" Rel="58.0" Res="2399.83" Suc="0.0" name="serv2005966440">
+<service Ava="0.91" Lat="0.0" Pri="6.76" Rel="0.58" Res="2399.83" Suc="0.0" name="serv2005966440">
 <inputs>
 <instance name="inst817221830"/>
 <instance name="inst107742616"/>
@@ -2946,7 +2946,7 @@
 <instance name="inst1385787894"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="8.36" Rel="73.0" Res="409.29" Suc="0.0" name="serv1602481242">
+<service Ava="0.95" Lat="0.0" Pri="8.36" Rel="0.73" Res="409.29" Suc="0.0" name="serv1602481242">
 <inputs>
 <instance name="inst1419786760"/>
 <instance name="inst1121781345"/>
@@ -2960,7 +2960,7 @@
 <instance name="inst1200430545"/>
 </outputs>
 </service>
-<service Ava="10.0" Lat="0.0" Pri="2.89" Rel="89.0" Res="4617.5" Suc="0.0" name="serv333038748">
+<service Ava="0.1" Lat="0.0" Pri="2.89" Rel="0.89" Res="4617.5" Suc="0.0" name="serv333038748">
 <inputs>
 <instance name="inst2011292174"/>
 <instance name="inst1121781345"/>
@@ -2980,7 +2980,7 @@
 <instance name="inst1289525078"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="1.05" Rel="83.0" Res="3190.95" Suc="0.0" name="serv71695066">
+<service Ava="0.98" Lat="0.0" Pri="1.05" Rel="0.83" Res="3190.95" Suc="0.0" name="serv71695066">
 <inputs>
 <instance name="inst331196199"/>
 <instance name="inst2000436701"/>
@@ -2998,7 +2998,7 @@
 <instance name="inst1701202920"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="5.33" Rel="73.0" Res="2796.2" Suc="0.0" name="serv1784561541">
+<service Ava="0.96" Lat="0.0" Pri="5.33" Rel="0.73" Res="2796.2" Suc="0.0" name="serv1784561541">
 <inputs>
 <instance name="inst633092847"/>
 <instance name="inst1277031061"/>
@@ -3017,7 +3017,7 @@
 <instance name="inst1692600136"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="7.71" Rel="73.0" Res="2289.82" Suc="0.0" name="serv1506832609">
+<service Ava="0.97" Lat="0.0" Pri="7.71" Rel="0.73" Res="2289.82" Suc="0.0" name="serv1506832609">
 <inputs>
 <instance name="inst2028905790"/>
 <instance name="inst1514821210"/>
@@ -3035,7 +3035,7 @@
 <instance name="inst830330030"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="9.5" Rel="73.0" Res="204.1" Suc="0.0" name="serv1721683408">
+<service Ava="1.0" Lat="0.0" Pri="9.5" Rel="0.73" Res="204.1" Suc="0.0" name="serv1721683408">
 <inputs>
 <instance name="inst171645110"/>
 <instance name="inst1087986522"/>
@@ -3051,7 +3051,7 @@
 <instance name="inst307232526"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="1.32" Rel="67.0" Res="2384.28" Suc="0.0" name="serv1926703057">
+<service Ava="0.88" Lat="0.0" Pri="1.32" Rel="0.67" Res="2384.28" Suc="0.0" name="serv1926703057">
 <inputs>
 <instance name="inst1168888411"/>
 <instance name="inst1479798021"/>
@@ -3064,7 +3064,7 @@
 <instance name="inst1000326490"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="8.33" Rel="73.0" Res="3551.09" Suc="0.0" name="serv1324752310">
+<service Ava="0.95" Lat="0.0" Pri="8.33" Rel="0.73" Res="3551.09" Suc="0.0" name="serv1324752310">
 <inputs>
 <instance name="inst1484917620"/>
 <instance name="inst1622553720"/>
@@ -3078,7 +3078,7 @@
 <instance name="inst315425132"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="9.4" Rel="60.0" Res="3674.92" Suc="0.0" name="serv417217725">
+<service Ava="0.83" Lat="0.0" Pri="9.4" Rel="0.6" Res="3674.92" Suc="0.0" name="serv417217725">
 <inputs>
 <instance name="inst711331907"/>
 <instance name="inst796535207"/>
@@ -3094,7 +3094,7 @@
 <instance name="inst1349126161"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="4.95" Rel="67.0" Res="868.47" Suc="0.0" name="serv2009243490">
+<service Ava="0.83" Lat="0.0" Pri="4.95" Rel="0.67" Res="868.47" Suc="0.0" name="serv2009243490">
 <inputs>
 <instance name="inst277739076"/>
 <instance name="inst851834879"/>
@@ -3108,7 +3108,7 @@
 <instance name="inst1501302870"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="0.49" Rel="73.0" Res="4797.9" Suc="0.0" name="serv1326390854">
+<service Ava="0.93" Lat="0.0" Pri="0.49" Rel="0.73" Res="4797.9" Suc="0.0" name="serv1326390854">
 <inputs>
 <instance name="inst1531206460"/>
 <instance name="inst283064810"/>
@@ -3121,7 +3121,7 @@
 <instance name="inst154031494"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="1.0" Rel="58.0" Res="4605.93" Suc="0.0" name="serv1461978270">
+<service Ava="1.0" Lat="0.0" Pri="1.0" Rel="0.58" Res="4605.93" Suc="0.0" name="serv1461978270">
 <inputs>
 <instance name="inst760487657"/>
 <instance name="inst1269862778"/>
@@ -3133,7 +3133,7 @@
 <instance name="inst2038532935"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="5.91" Rel="73.0" Res="2296.11" Suc="0.0" name="serv1025722572">
+<service Ava="0.87" Lat="0.0" Pri="5.91" Rel="0.73" Res="2296.11" Suc="0.0" name="serv1025722572">
 <inputs>
 <instance name="inst646201047"/>
 </inputs>
@@ -3145,7 +3145,7 @@
 <instance name="inst1619890853"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="8.99" Rel="73.0" Res="2434.54" Suc="0.0" name="serv747993640">
+<service Ava="0.86" Lat="0.0" Pri="8.99" Rel="0.73" Res="2434.54" Suc="0.0" name="serv747993640">
 <inputs>
 <instance name="inst2099976567"/>
 <instance name="inst653779508"/>
@@ -3159,7 +3159,7 @@
 <instance name="inst1289525078"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="2.24" Rel="67.0" Res="1187.15" Suc="0.0" name="serv5539883">
+<service Ava="0.93" Lat="0.0" Pri="2.24" Rel="0.67" Res="1187.15" Suc="0.0" name="serv5539883">
 <inputs>
 <instance name="inst1588144676"/>
 <instance name="inst1778827759"/>
@@ -3175,7 +3175,7 @@
 <instance name="inst1276416878"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="0.06" Rel="73.0" Res="3091.3" Suc="0.0" name="serv977591145">
+<service Ava="0.89" Lat="0.0" Pri="0.06" Rel="0.73" Res="3091.3" Suc="0.0" name="serv977591145">
 <inputs>
 <instance name="inst633092847"/>
 <instance name="inst1917896268"/>
@@ -3191,7 +3191,7 @@
 <instance name="inst1527929410"/>
 </outputs>
 </service>
-<service Ava="78.0" Lat="0.0" Pri="3.54" Rel="67.0" Res="1241.04" Suc="0.0" name="serv1724960458">
+<service Ava="0.78" Lat="0.0" Pri="3.54" Rel="0.67" Res="1241.04" Suc="0.0" name="serv1724960458">
 <inputs>
 <instance name="inst788956746"/>
 <instance name="inst1619276670"/>
@@ -3213,7 +3213,7 @@
 <instance name="inst603395392"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="8.5" Rel="73.0" Res="1653.2" Suc="0.0" name="serv1048661922">
+<service Ava="0.96" Lat="0.0" Pri="8.5" Rel="0.73" Res="1653.2" Suc="0.0" name="serv1048661922">
 <inputs>
 <instance name="inst890545296"/>
 <instance name="inst1647745759"/>
@@ -3227,7 +3227,7 @@
 <instance name="inst1873452069"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="8.36" Rel="67.0" Res="3194.1" Suc="0.0" name="serv1235657777">
+<service Ava="0.83" Lat="0.0" Pri="8.36" Rel="0.67" Res="3194.1" Suc="0.0" name="serv1235657777">
 <inputs>
 <instance name="inst973699912"/>
 <instance name="inst594178425"/>
@@ -3242,7 +3242,7 @@
 <instance name="inst1350354527"/>
 </outputs>
 </service>
-<service Ava="60.0" Lat="0.0" Pri="9.52" Rel="80.0" Res="2444.2" Suc="0.0" name="serv1660443819">
+<service Ava="0.6" Lat="0.0" Pri="9.52" Rel="0.8" Res="2444.2" Suc="0.0" name="serv1660443819">
 <inputs>
 <instance name="inst226944782"/>
 <instance name="inst574105947"/>
@@ -3258,7 +3258,7 @@
 <instance name="inst578817498"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="4.73" Rel="73.0" Res="3838.14" Suc="0.0" name="serv610767680">
+<service Ava="0.97" Lat="0.0" Pri="4.73" Rel="0.73" Res="3838.14" Suc="0.0" name="serv610767680">
 <inputs>
 <instance name="inst789366924"/>
 <instance name="inst379327626"/>
@@ -3274,7 +3274,7 @@
 <instance name="inst390183099"/>
 </outputs>
 </service>
-<service Ava="18.0" Lat="0.0" Pri="3.3" Rel="60.0" Res="867.66" Suc="0.0" name="serv1328029360">
+<service Ava="0.18" Lat="0.0" Pri="3.3" Rel="0.6" Res="867.66" Suc="0.0" name="serv1328029360">
 <inputs>
 <instance name="inst1611084026"/>
 <instance name="inst1487580487"/>
@@ -3290,7 +3290,7 @@
 <instance name="inst1534073370"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="4.97" Rel="73.0" Res="974.37" Suc="0.0" name="serv1587734536">
+<service Ava="0.92" Lat="0.0" Pri="4.97" Rel="0.73" Res="974.37" Suc="0.0" name="serv1587734536">
 <inputs>
 <instance name="inst969194496"/>
 <instance name="inst1057878889"/>
@@ -3302,7 +3302,7 @@
 <instance name="inst26226544"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="3.98" Rel="60.0" Res="2513.58" Suc="0.0" name="serv1865463468">
+<service Ava="0.86" Lat="0.0" Pri="3.98" Rel="0.6" Res="2513.58" Suc="0.0" name="serv1865463468">
 <inputs>
 <instance name="inst1865259425"/>
 <instance name="inst361918015"/>
@@ -3323,7 +3323,7 @@
 <instance name="inst1471195237"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="1.0" Rel="80.0" Res="3461.96" Suc="0.0" name="serv890135156">
+<service Ava="0.87" Lat="0.0" Pri="1.0" Rel="0.8" Res="3461.96" Suc="0.0" name="serv890135156">
 <inputs>
 <instance name="inst1155780211"/>
 <instance name="inst295762832"/>
@@ -3341,7 +3341,7 @@
 <instance name="inst1276006738"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="6.33" Rel="73.0" Res="3269.84" Suc="0.0" name="serv699862213">
+<service Ava="0.86" Lat="0.0" Pri="6.33" Rel="0.73" Res="3269.84" Suc="0.0" name="serv699862213">
 <inputs>
 <instance name="inst769090441"/>
 <instance name="inst172259293"/>
@@ -3360,7 +3360,7 @@
 <instance name="inst1426340860"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="1.49" Rel="67.0" Res="2940.36" Suc="0.0" name="serv1255320077">
+<service Ava="1.0" Lat="0.0" Pri="1.49" Rel="0.67" Res="2940.36" Suc="0.0" name="serv1255320077">
 <inputs>
 <instance name="inst427459015"/>
 <instance name="inst109177117"/>
@@ -3378,7 +3378,7 @@
 <instance name="inst263402510"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="6.35" Rel="83.0" Res="4132.65" Suc="0.0" name="serv337954342">
+<service Ava="0.72" Lat="0.0" Pri="6.35" Rel="0.83" Res="4132.65" Suc="0.0" name="serv337954342">
 <inputs>
 <instance name="inst696995341"/>
 <instance name="inst557516692"/>
@@ -3395,7 +3395,7 @@
 <instance name="inst263402510"/>
 </outputs>
 </service>
-<service Ava="62.0" Lat="0.0" Pri="8.74" Rel="73.0" Res="3646.16" Suc="0.0" name="serv552805141">
+<service Ava="0.62" Lat="0.0" Pri="8.74" Rel="0.73" Res="3646.16" Suc="0.0" name="serv552805141">
 <inputs>
 <instance name="inst879075640"/>
 <instance name="inst184139127"/>
@@ -3410,7 +3410,7 @@
 <instance name="inst1914005035"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="3.72" Rel="80.0" Res="1088.19" Suc="0.0" name="serv842003729">
+<service Ava="0.85" Lat="0.0" Pri="3.72" Rel="0.8" Res="1088.19" Suc="0.0" name="serv842003729">
 <inputs>
 <instance name="inst1092287895"/>
 <instance name="inst1953329635"/>
@@ -3428,7 +3428,7 @@
 <instance name="inst1658601270"/>
 </outputs>
 </service>
-<service Ava="67.0" Lat="0.0" Pri="3.05" Rel="83.0" Res="4497.22" Suc="0.0" name="serv1050300428">
+<service Ava="0.67" Lat="0.0" Pri="3.05" Rel="0.83" Res="4497.22" Suc="0.0" name="serv1050300428">
 <inputs>
 <instance name="inst1812212442"/>
 <instance name="inst905292040"/>
@@ -3444,7 +3444,7 @@
 <instance name="inst525974558"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="9.37" Rel="80.0" Res="2670.0" Suc="0.0" name="serv470264708">
+<service Ava="0.91" Lat="0.0" Pri="9.37" Rel="0.8" Res="2670.0" Suc="0.0" name="serv470264708">
 <inputs>
 <instance name="inst895460890"/>
 <instance name="inst1361210038"/>
@@ -3457,7 +3457,7 @@
 <instance name="inst1184045295"/>
 </outputs>
 </service>
-<service Ava="30.0" Lat="0.0" Pri="5.68" Rel="80.0" Res="1592.03" Suc="0.0" name="serv260329465">
+<service Ava="0.3" Lat="0.0" Pri="5.68" Rel="0.8" Res="1592.03" Suc="0.0" name="serv260329465">
 <inputs>
 <instance name="inst2127627468"/>
 <instance name="inst557516692"/>
@@ -3473,7 +3473,7 @@
 <instance name="inst2046725541"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="9.06" Rel="67.0" Res="4325.27" Suc="0.0" name="serv1372883737">
+<service Ava="0.94" Lat="0.0" Pri="9.06" Rel="0.67" Res="4325.27" Suc="0.0" name="serv1372883737">
 <inputs>
 <instance name="inst999916312"/>
 <instance name="inst758849113"/>
@@ -3485,7 +3485,7 @@
 <instance name="inst543384131"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="9.37" Rel="60.0" Res="1540.86" Suc="0.0" name="serv1728237508">
+<service Ava="0.88" Lat="0.0" Pri="9.37" Rel="0.6" Res="1540.86" Suc="0.0" name="serv1728237508">
 <inputs>
 <instance name="inst739596991"/>
 <instance name="inst831968574"/>
@@ -3501,7 +3501,7 @@
 <instance name="inst1818356402"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="6.06" Rel="67.0" Res="3721.86" Suc="0.0" name="serv749632146">
+<service Ava="1.0" Lat="0.0" Pri="6.06" Rel="0.67" Res="3721.86" Suc="0.0" name="serv749632146">
 <inputs>
 <instance name="inst1202273094"/>
 <instance name="inst1209237372"/>
@@ -3520,7 +3520,7 @@
 <instance name="inst1164382995"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="9.6" Rel="67.0" Res="3137.38" Suc="0.0" name="serv1310005604">
+<service Ava="0.93" Lat="0.0" Pri="9.6" Rel="0.67" Res="3137.38" Suc="0.0" name="serv1310005604">
 <inputs>
 <instance name="inst1510519837"/>
 <instance name="inst1059517395"/>
@@ -3534,7 +3534,7 @@
 <instance name="inst325256282"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="8.53" Rel="73.0" Res="2193.27" Suc="0.0" name="serv1857270824">
+<service Ava="0.99" Lat="0.0" Pri="8.53" Rel="0.73" Res="2193.27" Suc="0.0" name="serv1857270824">
 <inputs>
 <instance name="inst954037612"/>
 <instance name="inst1150864655"/>
@@ -3555,7 +3555,7 @@
 <instance name="inst626948925"/>
 </outputs>
 </service>
-<service Ava="14.0" Lat="0.0" Pri="6.6" Rel="73.0" Res="1674.19" Suc="0.0" name="serv1591011586">
+<service Ava="0.14" Lat="0.0" Pri="6.6" Rel="0.73" Res="1674.19" Suc="0.0" name="serv1591011586">
 <inputs>
 <instance name="inst962230256"/>
 <instance name="inst937038179"/>
@@ -3573,7 +3573,7 @@
 <instance name="inst307642666"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="2.25" Rel="67.0" Res="3133.2" Suc="0.0" name="serv685115507">
+<service Ava="0.89" Lat="0.0" Pri="2.25" Rel="0.67" Res="3133.2" Suc="0.0" name="serv685115507">
 <inputs>
 <instance name="inst576768814"/>
 <instance name="inst1009133279"/>
@@ -3588,7 +3588,7 @@
 <instance name="inst970422862"/>
 </outputs>
 </service>
-<service Ava="17.0" Lat="0.0" Pri="7.71" Rel="83.0" Res="316.16" Suc="0.0" name="serv830534073">
+<service Ava="0.17" Lat="0.0" Pri="7.71" Rel="0.83" Res="316.16" Suc="0.0" name="serv830534073">
 <inputs>
 <instance name="inst820498880"/>
 <instance name="inst1467918187"/>
@@ -3604,7 +3604,7 @@
 <instance name="inst866377580"/>
 </outputs>
 </service>
-<service Ava="66.0" Lat="0.0" Pri="3.87" Rel="33.0" Res="4057.25" Suc="0.0" name="serv1453785626">
+<service Ava="0.66" Lat="0.0" Pri="3.87" Rel="0.33" Res="4057.25" Suc="0.0" name="serv1453785626">
 <inputs>
 <instance name="inst1753225542"/>
 <instance name="inst1748924169"/>
@@ -3620,7 +3620,7 @@
 <instance name="inst603395392"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="6.12" Rel="73.0" Res="1949.77" Suc="0.0" name="serv1800946791">
+<service Ava="0.95" Lat="0.0" Pri="6.12" Rel="0.73" Res="1949.77" Suc="0.0" name="serv1800946791">
 <inputs>
 <instance name="inst203391249"/>
 <instance name="inst85827627"/>
@@ -3635,7 +3635,7 @@
 <instance name="inst448145676"/>
 </outputs>
 </service>
-<service Ava="52.0" Lat="0.0" Pri="8.53" Rel="58.0" Res="823.78" Suc="0.0" name="serv904881862">
+<service Ava="0.52" Lat="0.0" Pri="8.53" Rel="0.58" Res="823.78" Suc="0.0" name="serv904881862">
 <inputs>
 <instance name="inst890545296"/>
 <instance name="inst1026132712"/>
@@ -3655,7 +3655,7 @@
 <instance name="inst1211900239"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="1.0" Rel="73.0" Res="2137.94" Suc="0.0" name="serv208921026">
+<service Ava="0.89" Lat="0.0" Pri="1.0" Rel="0.73" Res="2137.94" Suc="0.0" name="serv208921026">
 <inputs>
 <instance name="inst1815489492"/>
 <instance name="inst958953206"/>
@@ -3675,7 +3675,7 @@
 <instance name="inst183114766"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="6.16" Rel="73.0" Res="3493.86" Suc="0.0" name="serv1381076343">
+<service Ava="0.95" Lat="0.0" Pri="6.16" Rel="0.73" Res="3493.86" Suc="0.0" name="serv1381076343">
 <inputs>
 <instance name="inst1172165461"/>
 <instance name="inst2003099568"/>
@@ -3693,7 +3693,7 @@
 <instance name="inst484397231"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="8.73" Rel="73.0" Res="2820.24" Suc="0.0" name="serv1736430152">
+<service Ava="0.83" Lat="0.0" Pri="8.73" Rel="0.73" Res="2820.24" Suc="0.0" name="serv1736430152">
 <inputs>
 <instance name="inst210355527"/>
 <instance name="inst862076207"/>
@@ -3710,7 +3710,7 @@
 <instance name="inst1011386006"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="9.65" Rel="67.0" Res="1678.95" Suc="0.0" name="serv2081952773">
+<service Ava="0.86" Lat="0.0" Pri="9.65" Rel="0.67" Res="1678.95" Suc="0.0" name="serv2081952773">
 <inputs>
 <instance name="inst383833042"/>
 <instance name="inst1865259425"/>
@@ -3721,7 +3721,7 @@
 <instance name="inst1990401508"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="1.3" Rel="73.0" Res="1826.04" Suc="0.0" name="serv557720697">
+<service Ava="0.93" Lat="0.0" Pri="1.3" Rel="0.73" Res="1826.04" Suc="0.0" name="serv557720697">
 <inputs>
 <instance name="inst172669433"/>
 <instance name="inst575744491"/>
@@ -3735,7 +3735,7 @@
 <instance name="inst2034845707"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="9.38" Rel="67.0" Res="225.75" Suc="0.0" name="serv1162948494">
+<service Ava="0.89" Lat="0.0" Pri="9.38" Rel="0.67" Res="225.75" Suc="0.0" name="serv1162948494">
 <inputs>
 <instance name="inst1141033505"/>
 <instance name="inst1027157073"/>
@@ -3750,7 +3750,7 @@
 <instance name="inst667912031"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="1.48" Rel="73.0" Res="3117.8" Suc="0.0" name="serv538058397">
+<service Ava="0.94" Lat="0.0" Pri="1.48" Rel="0.73" Res="3117.8" Suc="0.0" name="serv538058397">
 <inputs>
 <instance name="inst457566648"/>
 <instance name="inst612202181"/>
@@ -3769,7 +3769,7 @@
 <instance name="inst2116157774"/>
 </outputs>
 </service>
-<service Ava="14.0" Lat="0.0" Pri="6.34" Rel="73.0" Res="3556.68" Suc="0.0" name="serv52032766">
+<service Ava="0.14" Lat="0.0" Pri="6.34" Rel="0.73" Res="3556.68" Suc="0.0" name="serv52032766">
 <inputs>
 <instance name="inst2018870635"/>
 <instance name="inst1891679868"/>
@@ -3785,7 +3785,7 @@
 <instance name="inst1003603540"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="0.6" Rel="83.0" Res="4214.8" Suc="0.0" name="serv126380593">
+<service Ava="0.86" Lat="0.0" Pri="0.6" Rel="0.83" Res="4214.8" Suc="0.0" name="serv126380593">
 <inputs>
 <instance name="inst1193876445"/>
 <instance name="inst964278940"/>
@@ -3798,7 +3798,7 @@
 <instance name="inst868016124"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="4.64" Rel="80.0" Res="3191.75" Suc="0.0" name="serv886858106">
+<service Ava="0.85" Lat="0.0" Pri="4.64" Rel="0.8" Res="3191.75" Suc="0.0" name="serv886858106">
 <inputs>
 <instance name="inst9841294"/>
 <instance name="inst1555784354"/>
@@ -3815,7 +3815,7 @@
 <instance name="inst1576060837"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="6.56" Rel="42.0" Res="1038.32" Suc="0.0" name="serv761101840">
+<service Ava="0.88" Lat="0.0" Pri="6.56" Rel="0.42" Res="1038.32" Suc="0.0" name="serv761101840">
 <inputs>
 <instance name="inst1815079352"/>
 <instance name="inst1350968710"/>
@@ -3830,7 +3830,7 @@
 <instance name="inst603395392"/>
 </outputs>
 </service>
-<service Ava="65.0" Lat="0.0" Pri="4.02" Rel="89.0" Res="1708.51" Suc="0.0" name="serv339592848">
+<service Ava="0.65" Lat="0.0" Pri="4.02" Rel="0.89" Res="1708.51" Suc="0.0" name="serv339592848">
 <inputs>
 <instance name="inst1631974692"/>
 <instance name="inst1291163622"/>
@@ -3846,7 +3846,7 @@
 <instance name="inst1130998312"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="9.17" Rel="73.0" Res="3443.35" Suc="0.0" name="serv630429980">
+<service Ava="0.94" Lat="0.0" Pri="9.17" Rel="0.73" Res="3443.35" Suc="0.0" name="serv630429980">
 <inputs>
 <instance name="inst782198641"/>
 <instance name="inst679995908"/>
@@ -3859,7 +3859,7 @@
 <instance name="inst1221731389"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="6.1" Rel="78.0" Res="2583.52" Suc="0.0" name="serv1804223841">
+<service Ava="0.88" Lat="0.0" Pri="6.1" Rel="0.78" Res="2583.52" Suc="0.0" name="serv1804223841">
 <inputs>
 <instance name="inst2145855267"/>
 <instance name="inst1211900239"/>
@@ -3873,7 +3873,7 @@
 <instance name="inst1408317104"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="4.81" Rel="58.0" Res="2560.74" Suc="0.0" name="serv276714715">
+<service Ava="0.94" Lat="0.0" Pri="4.81" Rel="0.58" Res="2560.74" Suc="0.0" name="serv276714715">
 <inputs>
 <instance name="inst141537477"/>
 <instance name="inst1583843303"/>
@@ -3890,7 +3890,7 @@
 <instance name="inst626538747"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="8.02" Rel="73.0" Res="4433.86" Suc="0.0" name="serv1873656074">
+<service Ava="0.87" Lat="0.0" Pri="8.02" Rel="0.73" Res="4433.86" Suc="0.0" name="serv1873656074">
 <inputs>
 <instance name="inst1293006171"/>
 <instance name="inst425206326"/>
@@ -3903,7 +3903,7 @@
 <instance name="inst1497411637"/>
 </outputs>
 </service>
-<service Ava="69.0" Lat="0.0" Pri="4.71" Rel="73.0" Res="4970.58" Suc="0.0" name="serv832172579">
+<service Ava="0.69" Lat="0.0" Pri="4.71" Rel="0.73" Res="4970.58" Suc="0.0" name="serv832172579">
 <inputs>
 <instance name="inst1734177425"/>
 <instance name="inst493614198"/>
@@ -3917,7 +3917,7 @@
 <instance name="inst51828761"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="3.08" Rel="73.0" Res="818.08" Suc="0.0" name="serv2001050884">
+<service Ava="0.9" Lat="0.0" Pri="3.08" Rel="0.73" Res="818.08" Suc="0.0" name="serv2001050884">
 <inputs>
 <instance name="inst997663623"/>
 <instance name="inst200114199"/>
@@ -3931,7 +3931,7 @@
 <instance name="inst785475691"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="7.09" Rel="67.0" Res="669.38" Suc="0.0" name="serv828895529">
+<service Ava="0.95" Lat="0.0" Pri="7.09" Rel="0.67" Res="669.38" Suc="0.0" name="serv828895529">
 <inputs>
 <instance name="inst1270066821"/>
 <instance name="inst759259291"/>
@@ -3945,7 +3945,7 @@
 <instance name="inst47527350"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="4.07" Rel="73.0" Res="2956.69" Suc="0.0" name="serv2136638300">
+<service Ava="0.88" Lat="0.0" Pri="4.07" Rel="0.73" Res="2956.69" Suc="0.0" name="serv2136638300">
 <inputs>
 <instance name="inst259101099"/>
 <instance name="inst676718858"/>
@@ -3964,7 +3964,7 @@
 <instance name="inst1978521674"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="5.28" Rel="73.0" Res="727.51" Suc="0.0" name="serv1663720869">
+<service Ava="0.98" Lat="0.0" Pri="5.28" Rel="0.73" Res="727.51" Suc="0.0" name="serv1663720869">
 <inputs>
 <instance name="inst1520965170"/>
 <instance name="inst1351378888"/>
@@ -3988,7 +3988,7 @@
 <instance name="inst665863347"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="5.02" Rel="83.0" Res="501.53" Suc="0.0" name="serv1595927142">
+<service Ava="0.86" Lat="0.0" Pri="5.02" Rel="0.83" Res="501.53" Suc="0.0" name="serv1595927142">
 <inputs>
 <instance name="inst9227111"/>
 <instance name="inst615069091"/>
@@ -4002,7 +4002,7 @@
 <instance name="inst1289525078"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="1.77" Rel="80.0" Res="715.36" Suc="0.0" name="serv1792754185">
+<service Ava="0.9" Lat="0.0" Pri="1.77" Rel="0.8" Res="715.36" Suc="0.0" name="serv1792754185">
 <inputs>
 <instance name="inst814558963"/>
 <instance name="inst258486916"/>
@@ -4018,7 +4018,7 @@
 <instance name="inst1408317104"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="3.51" Rel="67.0" Res="2237.37" Suc="0.0" name="serv2134999756">
+<service Ava="0.85" Lat="0.0" Pri="3.51" Rel="0.67" Res="2237.37" Suc="0.0" name="serv2134999756">
 <inputs>
 <instance name="inst1849488358"/>
 <instance name="inst713994774"/>
@@ -4039,7 +4039,7 @@
 <instance name="inst484397231"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="8.81" Rel="73.0" Res="3739.11" Suc="0.0" name="serv1511748203">
+<service Ava="0.99" Lat="0.0" Pri="8.81" Rel="0.73" Res="3739.11" Suc="0.0" name="serv1511748203">
 <inputs>
 <instance name="inst2097723840"/>
 <instance name="inst1032686812"/>
@@ -4059,7 +4059,7 @@
 <instance name="inst682248597"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="4.27" Rel="53.0" Res="3983.65" Suc="0.0" name="serv204005432">
+<service Ava="0.83" Lat="0.0" Pri="4.27" Rel="0.53" Res="3983.65" Suc="0.0" name="serv204005432">
 <inputs>
 <instance name="inst683887141"/>
 <instance name="inst876412773"/>
@@ -4074,7 +4074,7 @@
 <instance name="inst733657074"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="4.2" Rel="73.0" Res="713.32" Suc="0.0" name="serv1185887844">
+<service Ava="0.86" Lat="0.0" Pri="4.2" Rel="0.73" Res="713.32" Suc="0.0" name="serv1185887844">
 <inputs>
 <instance name="inst166115333"/>
 <instance name="inst587624325"/>
@@ -4091,7 +4091,7 @@
 <instance name="inst1788248769"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="1.91" Rel="83.0" Res="3991.88" Suc="0.0" name="serv281630309">
+<service Ava="0.92" Lat="0.0" Pri="1.91" Rel="0.83" Res="3991.88" Suc="0.0" name="serv281630309">
 <inputs>
 <instance name="inst290233093"/>
 <instance name="inst73743750"/>
@@ -4108,7 +4108,7 @@
 <instance name="inst2145855267"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="8.76" Rel="73.0" Res="1880.51" Suc="0.0" name="serv142765843">
+<service Ava="0.92" Lat="0.0" Pri="8.76" Rel="0.73" Res="1880.51" Suc="0.0" name="serv142765843">
 <inputs>
 <instance name="inst1343186244"/>
 <instance name="inst45274661"/>
@@ -4128,7 +4128,7 @@
 <instance name="inst601756848"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="1.04" Rel="78.0" Res="4027.51" Suc="0.0" name="serv759463296">
+<service Ava="0.95" Lat="0.0" Pri="1.04" Rel="0.78" Res="4027.51" Suc="0.0" name="serv759463296">
 <inputs>
 <instance name="inst1399510277"/>
 <instance name="inst561407925"/>
@@ -4148,7 +4148,7 @@
 <instance name="inst103851383"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="3.65" Rel="73.0" Res="1356.41" Suc="0.0" name="serv413940675">
+<service Ava="0.92" Lat="0.0" Pri="3.65" Rel="0.73" Res="1356.41" Suc="0.0" name="serv413940675">
 <inputs>
 <instance name="inst796535207"/>
 <instance name="inst223667732"/>
@@ -4164,7 +4164,7 @@
 <instance name="inst1621939537"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="6.58" Rel="67.0" Res="3365.99" Suc="0.0" name="serv1594288636">
+<service Ava="0.85" Lat="0.0" Pri="6.58" Rel="0.67" Res="3365.99" Suc="0.0" name="serv1594288636">
 <inputs>
 <instance name="inst1896595424"/>
 <instance name="inst161199777"/>
@@ -4181,7 +4181,7 @@
 <instance name="inst1876729119"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="3.53" Rel="73.0" Res="2615.73" Suc="0.0" name="serv1458701220">
+<service Ava="0.87" Lat="0.0" Pri="3.53" Rel="0.73" Res="2615.73" Suc="0.0" name="serv1458701220">
 <inputs>
 <instance name="inst1032686812"/>
 <instance name="inst57358500"/>
@@ -4200,7 +4200,7 @@
 <instance name="inst1172575639"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="4.01" Rel="67.0" Res="3982.04" Suc="0.0" name="serv1666997919">
+<service Ava="0.92" Lat="0.0" Pri="4.01" Rel="0.67" Res="3982.04" Suc="0.0" name="serv1666997919">
 <inputs>
 <instance name="inst612202181"/>
 <instance name="inst514504864"/>
@@ -4219,7 +4219,7 @@
 <instance name="inst468422159"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="1.93" Rel="73.0" Res="759.19" Suc="0.0" name="serv966121489">
+<service Ava="0.9" Lat="0.0" Pri="1.93" Rel="0.73" Res="759.19" Suc="0.0" name="serv966121489">
 <inputs>
 <instance name="inst573491764"/>
 <instance name="inst1939607252"/>
@@ -4237,7 +4237,7 @@
 <instance name="inst603395392"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="7.11" Rel="73.0" Res="3130.45" Suc="0.0" name="serv825618479">
+<service Ava="0.83" Lat="0.0" Pri="7.11" Rel="0.73" Res="3130.45" Suc="0.0" name="serv825618479">
 <inputs>
 <instance name="inst29913734"/>
 <instance name="inst2146265407"/>
@@ -4255,7 +4255,7 @@
 <instance name="inst254595683"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="1.5" Rel="73.0" Res="2370.65" Suc="0.0" name="serv1308367060">
+<service Ava="0.93" Lat="0.0" Pri="1.5" Rel="0.73" Res="2370.65" Suc="0.0" name="serv1308367060">
 <inputs>
 <instance name="inst1237092278"/>
 <instance name="inst451422726"/>
@@ -4273,7 +4273,7 @@
 <instance name="inst244764533"/>
 </outputs>
 </service>
-<service Ava="52.0" Lat="0.0" Pri="2.51" Rel="67.0" Res="2309.34" Suc="0.0" name="serv2010882034">
+<service Ava="0.52" Lat="0.0" Pri="2.51" Rel="0.67" Res="2309.34" Suc="0.0" name="serv2010882034">
 <inputs>
 <instance name="inst637394258"/>
 <instance name="inst2018870635"/>
@@ -4286,7 +4286,7 @@
 <instance name="inst974110090"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="8.72" Rel="53.0" Res="2803.14" Suc="0.0" name="serv1733153102">
+<service Ava="0.72" Lat="0.0" Pri="8.72" Rel="0.53" Res="2803.14" Suc="0.0" name="serv1733153102">
 <inputs>
 <instance name="inst144200344"/>
 <instance name="inst825004296"/>
@@ -4299,7 +4299,7 @@
 <instance name="inst115935260"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="0.73" Rel="73.0" Res="714.16" Suc="0.0" name="serv1531410503">
+<service Ava="0.86" Lat="0.0" Pri="0.73" Rel="0.73" Res="714.16" Suc="0.0" name="serv1531410503">
 <inputs>
 <instance name="inst1663516826"/>
 <instance name="inst806776497"/>
@@ -4317,7 +4317,7 @@
 <instance name="inst1974016258"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="9.97" Rel="67.0" Res="1453.67" Suc="0.0" name="serv79887710">
+<service Ava="0.86" Lat="0.0" Pri="9.97" Rel="0.67" Res="1453.67" Suc="0.0" name="serv79887710">
 <inputs>
 <instance name="inst420290732"/>
 <instance name="inst818450196"/>
@@ -4331,7 +4331,7 @@
 <instance name="inst1079589873"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="2.63" Rel="80.0" Res="4857.87" Suc="0.0" name="serv1881848718">
+<service Ava="0.85" Lat="0.0" Pri="2.63" Rel="0.8" Res="4857.87" Suc="0.0" name="serv1881848718">
 <inputs>
 <instance name="inst1083070928"/>
 <instance name="inst565299158"/>
@@ -4343,7 +4343,7 @@
 <instance name="inst1500688687"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="6.67" Rel="60.0" Res="512.97" Suc="0.0" name="serv1247127471">
+<service Ava="0.83" Lat="0.0" Pri="6.67" Rel="0.6" Res="512.97" Suc="0.0" name="serv1247127471">
 <inputs>
 <instance name="inst678357364"/>
 <instance name="inst1542676154"/>
@@ -4359,7 +4359,7 @@
 <instance name="inst444868626"/>
 </outputs>
 </service>
-<service Ava="73.0" Lat="0.0" Pri="1.55" Rel="73.0" Res="4794.42" Suc="0.0" name="serv1182610794">
+<service Ava="0.73" Lat="0.0" Pri="1.55" Rel="0.73" Res="4794.42" Suc="0.0" name="serv1182610794">
 <inputs>
 <instance name="inst369496476"/>
 <instance name="inst223053549"/>
@@ -4380,7 +4380,7 @@
 <instance name="inst1347487655"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="4.97" Rel="80.0" Res="2267.28" Suc="0.0" name="serv284907359">
+<service Ava="0.87" Lat="0.0" Pri="4.97" Rel="0.8" Res="2267.28" Suc="0.0" name="serv284907359">
 <inputs>
 <instance name="inst250908493"/>
 <instance name="inst1127311122"/>
@@ -4394,7 +4394,7 @@
 <instance name="inst193970277"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="9.21" Rel="73.0" Res="3043.44" Suc="0.0" name="serv420494775">
+<service Ava="0.96" Lat="0.0" Pri="9.21" Rel="0.73" Res="3043.44" Suc="0.0" name="serv420494775">
 <inputs>
 <instance name="inst1880620352"/>
 <instance name="inst1553121487"/>
@@ -4410,7 +4410,7 @@
 <instance name="inst1385787894"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="7.96" Rel="42.0" Res="3406.05" Suc="0.0" name="serv693308113">
+<service Ava="0.92" Lat="0.0" Pri="7.96" Rel="0.42" Res="3406.05" Suc="0.0" name="serv693308113">
 <inputs>
 <instance name="inst1121781345"/>
 <instance name="inst575744491"/>
@@ -4422,7 +4422,7 @@
 <instance name="inst1177081055"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="5.16" Rel="58.0" Res="4192.1" Suc="0.0" name="serv134573199">
+<service Ava="0.95" Lat="0.0" Pri="5.16" Rel="0.58" Res="4192.1" Suc="0.0" name="serv134573199">
 <inputs>
 <instance name="inst539082758"/>
 <instance name="inst1440063243"/>
@@ -4442,7 +4442,7 @@
 <instance name="inst2145855267"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="0.85" Rel="67.0" Res="4922.09" Suc="0.0" name="serv1670274969">
+<service Ava="0.96" Lat="0.0" Pri="0.85" Rel="0.67" Res="4922.09" Suc="0.0" name="serv1670274969">
 <inputs>
 <instance name="inst1918920591"/>
 <instance name="inst1847849852"/>
@@ -4457,7 +4457,7 @@
 <instance name="inst1625216587"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="5.28" Rel="67.0" Res="3597.91" Suc="0.0" name="serv1316559704">
+<service Ava="0.93" Lat="0.0" Pri="5.28" Rel="0.67" Res="3597.91" Suc="0.0" name="serv1316559704">
 <inputs>
 <instance name="inst352497043"/>
 <instance name="inst1594084593"/>
@@ -4479,7 +4479,7 @@
 <instance name="inst104261561"/>
 </outputs>
 </service>
-<service Ava="66.0" Lat="0.0" Pri="3.81" Rel="73.0" Res="207.98" Suc="0.0" name="serv756186246">
+<service Ava="0.66" Lat="0.0" Pri="3.81" Rel="0.73" Res="207.98" Suc="0.0" name="serv756186246">
 <inputs>
 <instance name="inst1453171443"/>
 <instance name="inst1174828328"/>
@@ -4490,7 +4490,7 @@
 <instance name="inst1914005035"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="9.15" Rel="73.0" Res="1182.3" Suc="0.0" name="serv2139915350">
+<service Ava="0.95" Lat="0.0" Pri="9.15" Rel="0.73" Res="1182.3" Suc="0.0" name="serv2139915350">
 <inputs>
 <instance name="inst2022761868"/>
 <instance name="inst456542325"/>
@@ -4505,7 +4505,7 @@
 <instance name="inst1242007872"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="0.94" Rel="73.0" Res="1370.54" Suc="0.0" name="serv1597565686">
+<service Ava="0.94" Lat="0.0" Pri="0.94" Rel="0.73" Res="1370.54" Suc="0.0" name="serv1597565686">
 <inputs>
 <instance name="inst1026746895"/>
 <instance name="inst1775550709"/>
@@ -4521,7 +4521,7 @@
 <instance name="inst1845186985"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="8.42" Rel="73.0" Res="3308.35" Suc="0.0" name="serv478457314">
+<service Ava="0.93" Lat="0.0" Pri="8.42" Rel="0.73" Res="3308.35" Suc="0.0" name="serv478457314">
 <inputs>
 <instance name="inst1836380158"/>
 <instance name="inst1001964996"/>
@@ -4538,7 +4538,7 @@
 <instance name="inst550962592"/>
 </outputs>
 </service>
-<service Ava="78.0" Lat="0.0" Pri="6.28" Rel="73.0" Res="562.54" Suc="0.0" name="serv971037045">
+<service Ava="0.78" Lat="0.0" Pri="6.28" Rel="0.73" Res="562.54" Suc="0.0" name="serv971037045">
 <inputs>
 <instance name="inst1909499619"/>
 <instance name="inst1396233227"/>
@@ -4558,7 +4558,7 @@
 <instance name="inst1429617910"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="3.15" Rel="73.0" Res="959.63" Suc="0.0" name="serv347785492">
+<service Ava="0.83" Lat="0.0" Pri="3.15" Rel="0.73" Res="959.63" Suc="0.0" name="serv347785492">
 <inputs>
 <instance name="inst1799104242"/>
 <instance name="inst79273527"/>
@@ -4581,7 +4581,7 @@
 <instance name="inst2081748768"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="3.42" Rel="67.0" Res="45.06" Suc="0.0" name="serv1106624461">
+<service Ava="0.9" Lat="0.0" Pri="3.42" Rel="0.67" Res="45.06" Suc="0.0" name="serv1106624461">
 <inputs>
 <instance name="inst826642840"/>
 <instance name="inst1506218426"/>
@@ -4599,7 +4599,7 @@
 <instance name="inst717271824"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="5.97" Rel="67.0" Res="2918.8" Suc="0.0" name="serv1671913475">
+<service Ava="0.91" Lat="0.0" Pri="5.97" Rel="0.67" Res="2918.8" Suc="0.0" name="serv1671913475">
 <inputs>
 <instance name="inst1419786760"/>
 <instance name="inst1121781345"/>
@@ -4612,7 +4612,7 @@
 <instance name="inst1444364654"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="5.92" Rel="73.0" Res="1721.14" Suc="0.0" name="serv1042107822">
+<service Ava="0.63" Lat="0.0" Pri="5.92" Rel="0.73" Res="1721.14" Suc="0.0" name="serv1042107822">
 <inputs>
 <instance name="inst1691575775"/>
 <instance name="inst646611225"/>
@@ -4632,7 +4632,7 @@
 <instance name="inst2081748768"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="3.99" Rel="73.0" Res="1377.44" Suc="0.0" name="serv562636291">
+<service Ava="0.56" Lat="0.0" Pri="3.99" Rel="0.73" Res="1377.44" Suc="0.0" name="serv562636291">
 <inputs>
 <instance name="inst497505431"/>
 <instance name="inst441181398"/>
@@ -4650,7 +4650,7 @@
 <instance name="inst43021934"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="8.45" Rel="78.0" Res="1276.36" Suc="0.0" name="serv1448870070">
+<service Ava="0.96" Lat="0.0" Pri="8.45" Rel="0.78" Res="1276.36" Suc="0.0" name="serv1448870070">
 <inputs>
 <instance name="inst892183840"/>
 <instance name="inst277739076"/>
@@ -4664,7 +4664,7 @@
 <instance name="inst630225975"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="1.44" Rel="73.0" Res="834.46" Suc="0.0" name="serv1103347411">
+<service Ava="0.99" Lat="0.0" Pri="1.44" Rel="0.73" Res="834.46" Suc="0.0" name="serv1103347411">
 <inputs>
 <instance name="inst2121277373"/>
 <instance name="inst1193876445"/>
@@ -4682,7 +4682,7 @@
 <instance name="inst1920969275"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="0.93" Rel="73.0" Res="541.94" Suc="0.0" name="serv404109525">
+<service Ava="0.9" Lat="0.0" Pri="0.93" Rel="0.73" Res="541.94" Suc="0.0" name="serv404109525">
 <inputs>
 <instance name="inst359051143"/>
 <instance name="inst842413907"/>
@@ -4699,7 +4699,7 @@
 <instance name="inst796945347"/>
 </outputs>
 </service>
-<service Ava="52.0" Lat="0.0" Pri="9.46" Rel="73.0" Res="3207.36" Suc="0.0" name="serv554443647">
+<service Ava="0.52" Lat="0.0" Pri="9.46" Rel="0.73" Res="3207.36" Suc="0.0" name="serv554443647">
 <inputs>
 <instance name="inst1650408626"/>
 <instance name="inst1555374176"/>
@@ -4722,7 +4722,7 @@
 <instance name="inst205439933"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="8.39" Rel="73.0" Res="3936.19" Suc="0.0" name="serv1390907493">
+<service Ava="0.97" Lat="0.0" Pri="8.39" Rel="0.73" Res="3936.19" Suc="0.0" name="serv1390907493">
 <inputs>
 <instance name="inst1607192793"/>
 <instance name="inst1674576342"/>
@@ -4736,7 +4736,7 @@
 <instance name="inst34829328"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="3.3" Rel="73.0" Res="4772.36" Suc="0.0" name="serv766017396">
+<service Ava="1.0" Lat="0.0" Pri="3.3" Rel="0.73" Res="4772.36" Suc="0.0" name="serv766017396">
 <inputs>
 <instance name="inst947893690"/>
 <instance name="inst1261874177"/>
@@ -4755,7 +4755,7 @@
 <instance name="inst449784182"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="3.59" Rel="67.0" Res="813.78" Suc="0.0" name="serv969398539">
+<service Ava="0.9" Lat="0.0" Pri="3.59" Rel="0.67" Res="813.78" Suc="0.0" name="serv969398539">
 <inputs>
 <instance name="inst117573766"/>
 <instance name="inst1978931852"/>
@@ -4773,7 +4773,7 @@
 <instance name="inst115935260"/>
 </outputs>
 </service>
-<service Ava="57.0" Lat="0.0" Pri="6.2" Rel="67.0" Res="813.86" Suc="0.0" name="serv407386575">
+<service Ava="0.57" Lat="0.0" Pri="6.2" Rel="0.67" Res="813.86" Suc="0.0" name="serv407386575">
 <inputs>
 <instance name="inst1547181570"/>
 <instance name="inst1433509143"/>
@@ -4787,7 +4787,7 @@
 <instance name="inst1633409193"/>
 </outputs>
 </service>
-<service Ava="14.0" Lat="0.0" Pri="2.33" Rel="89.0" Res="805.38" Suc="0.0" name="serv485011414">
+<service Ava="0.14" Lat="0.0" Pri="2.33" Rel="0.89" Res="805.38" Suc="0.0" name="serv485011414">
 <inputs>
 <instance name="inst1516049576"/>
 <instance name="inst1769610792"/>
@@ -4805,7 +4805,7 @@
 <instance name="inst2145855267"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="0.0" Rel="73.0" Res="2744.13" Suc="0.0" name="serv1878571668">
+<service Ava="0.9" Lat="0.0" Pri="0.0" Rel="0.73" Res="2744.13" Suc="0.0" name="serv1878571668">
 <inputs>
 <instance name="inst1274368194"/>
 <instance name="inst307642666"/>
@@ -4822,7 +4822,7 @@
 <instance name="inst998687946"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="1.37" Rel="67.0" Res="3794.57" Suc="0.0" name="serv149319943">
+<service Ava="0.89" Lat="0.0" Pri="1.37" Rel="0.67" Res="3794.57" Suc="0.0" name="serv149319943">
 <inputs>
 <instance name="inst819474557"/>
 <instance name="inst1718816536"/>
@@ -4836,7 +4836,7 @@
 <instance name="inst3697334"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="9.25" Rel="80.0" Res="4142.98" Suc="0.0" name="serv885219562">
+<service Ava="0.56" Lat="0.0" Pri="9.25" Rel="0.8" Res="4142.98" Suc="0.0" name="serv885219562">
 <inputs>
 <instance name="inst1695877186"/>
 <instance name="inst1799104242"/>
@@ -4852,7 +4852,7 @@
 <instance name="inst1153527522"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="5.86" Rel="60.0" Res="3874.66" Suc="0.0" name="serv76610660">
+<service Ava="0.89" Lat="0.0" Pri="5.86" Rel="0.6" Res="3874.66" Suc="0.0" name="serv76610660">
 <inputs>
 <instance name="inst735909763"/>
 <instance name="inst828281346"/>
@@ -4869,7 +4869,7 @@
 <instance name="inst1177491195"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="6.75" Rel="60.0" Res="3587.49" Suc="0.0" name="serv1652251175">
+<service Ava="0.92" Lat="0.0" Pri="6.75" Rel="0.6" Res="3587.49" Suc="0.0" name="serv1652251175">
 <inputs>
 <instance name="inst1725370636"/>
 <instance name="inst1491881860"/>
@@ -4882,7 +4882,7 @@
 <instance name="inst2036894391"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="9.95" Rel="67.0" Res="2782.21" Suc="0.0" name="serv686754013">
+<service Ava="0.83" Lat="0.0" Pri="9.95" Rel="0.67" Res="2782.21" Suc="0.0" name="serv686754013">
 <inputs>
 <instance name="inst1266175588"/>
 <instance name="inst1355884304"/>
@@ -4899,7 +4899,7 @@
 <instance name="inst725464430"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="2.57" Rel="80.0" Res="2565.04" Suc="0.0" name="serv78249166">
+<service Ava="0.94" Lat="0.0" Pri="2.57" Rel="0.8" Res="2565.04" Suc="0.0" name="serv78249166">
 <inputs>
 <instance name="inst1649384303"/>
 <instance name="inst336725976"/>
@@ -4917,7 +4917,7 @@
 <instance name="inst970422862"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="7.12" Rel="73.0" Res="3850.47" Suc="0.0" name="serv623875880">
+<service Ava="0.89" Lat="0.0" Pri="7.12" Rel="0.73" Res="3850.47" Suc="0.0" name="serv623875880">
 <inputs>
 <instance name="inst782812824"/>
 <instance name="inst845690957"/>
@@ -4934,7 +4934,7 @@
 <instance name="inst1631360509"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="8.77" Rel="67.0" Res="711.02" Suc="0.0" name="serv1037192228">
+<service Ava="0.85" Lat="0.0" Pri="8.77" Rel="0.67" Res="711.02" Suc="0.0" name="serv1037192228">
 <inputs>
 <instance name="inst1181996611"/>
 <instance name="inst19058261"/>
@@ -4953,7 +4953,7 @@
 <instance name="inst322389410"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="6.64" Rel="73.0" Res="2193.88" Suc="0.0" name="serv1437400376">
+<service Ava="0.83" Lat="0.0" Pri="6.64" Rel="0.73" Res="2193.88" Suc="0.0" name="serv1437400376">
 <inputs>
 <instance name="inst182090443"/>
 <instance name="inst1618866492"/>
@@ -4967,7 +4967,7 @@
 <instance name="inst1033711173"/>
 </outputs>
 </service>
-<service Ava="65.0" Lat="0.0" Pri="5.51" Rel="73.0" Res="232.04" Suc="0.0" name="serv1174418188">
+<service Ava="0.65" Lat="0.0" Pri="5.51" Rel="0.73" Res="232.04" Suc="0.0" name="serv1174418188">
 <inputs>
 <instance name="inst1710009709"/>
 <instance name="inst831968574"/>
@@ -4989,7 +4989,7 @@
 <instance name="inst1987124458"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="6.04" Rel="58.0" Res="1586.34" Suc="0.0" name="serv1519940809">
+<service Ava="0.99" Lat="0.0" Pri="6.04" Rel="0.58" Res="1586.34" Suc="0.0" name="serv1519940809">
 <inputs>
 <instance name="inst872521540"/>
 <instance name="inst1405040054"/>
@@ -5004,7 +5004,7 @@
 <instance name="inst928845573"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="7.15" Rel="80.0" Res="3341.41" Suc="0.0" name="serv954651795">
+<service Ava="0.88" Lat="0.0" Pri="7.15" Rel="0.8" Res="3341.41" Suc="0.0" name="serv954651795">
 <inputs>
 <instance name="inst60635550"/>
 <instance name="inst1502737371"/>
@@ -5020,7 +5020,7 @@
 <instance name="inst743898364"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="2.83" Rel="58.0" Res="4994.19" Suc="0.0" name="serv1944726851">
+<service Ava="0.98" Lat="0.0" Pri="2.83" Rel="0.58" Res="4994.19" Suc="0.0" name="serv1944726851">
 <inputs>
 <instance name="inst2118410501"/>
 <instance name="inst362942376"/>
@@ -5031,7 +5031,7 @@
 <instance name="inst1777393258"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="1.69" Rel="73.0" Res="3208.41" Suc="0.0" name="serv953013289">
+<service Ava="1.0" Lat="0.0" Pri="1.69" Rel="0.73" Res="3208.41" Suc="0.0" name="serv953013289">
 <inputs>
 <instance name="inst1996545468"/>
 <instance name="inst1610059703"/>
@@ -5049,7 +5049,7 @@
 <instance name="inst244764533"/>
 </outputs>
 </service>
-<service Ava="69.0" Lat="0.0" Pri="7.9" Rel="60.0" Res="4863.89" Suc="0.0" name="serv1581180436">
+<service Ava="0.69" Lat="0.0" Pri="7.9" Rel="0.6" Res="4863.89" Suc="0.0" name="serv1581180436">
 <inputs>
 <instance name="inst854497746"/>
 <instance name="inst1946775535"/>
@@ -5064,7 +5064,7 @@
 <instance name="inst1707961025"/>
 </outputs>
 </service>
-<service Ava="18.0" Lat="0.0" Pri="2.47" Rel="73.0" Res="2456.47" Suc="0.0" name="serv1033915178">
+<service Ava="0.18" Lat="0.0" Pri="2.47" Rel="0.73" Res="2456.47" Suc="0.0" name="serv1033915178">
 <inputs>
 <instance name="inst1840067386"/>
 <instance name="inst128429277"/>
@@ -5081,7 +5081,7 @@
 <instance name="inst1362438404"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="7.98" Rel="73.0" Res="4475.8" Suc="0.0" name="serv53671310">
+<service Ava="0.94" Lat="0.0" Pri="7.98" Rel="0.73" Res="4475.8" Suc="0.0" name="serv53671310">
 <inputs>
 <instance name="inst848968007"/>
 <instance name="inst1544518703"/>
@@ -5099,7 +5099,7 @@
 <instance name="inst2076833174"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="6.6" Rel="73.0" Res="3045.16" Suc="0.0" name="serv409025081">
+<service Ava="0.92" Lat="0.0" Pri="6.6" Rel="0.73" Res="3045.16" Suc="0.0" name="serv409025081">
 <inputs>
 <instance name="inst1856042458"/>
 <instance name="inst1871403385"/>
@@ -5116,7 +5116,7 @@
 <instance name="inst1125672578"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="6.05" Rel="67.0" Res="1325.79" Suc="0.0" name="serv2086868367">
+<service Ava="0.99" Lat="0.0" Pri="6.05" Rel="0.67" Res="1325.79" Suc="0.0" name="serv2086868367">
 <inputs>
 <instance name="inst157922727"/>
 <instance name="inst173283616"/>
@@ -5131,7 +5131,7 @@
 <instance name="inst444868626"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="4.12" Rel="53.0" Res="2564.46" Suc="0.0" name="serv624327">
+<service Ava="0.95" Lat="0.0" Pri="4.12" Rel="0.53" Res="2564.46" Suc="0.0" name="serv624327">
 <inputs>
 <instance name="inst2031978835"/>
 <instance name="inst880099963"/>
@@ -5148,7 +5148,7 @@
 <instance name="inst1232176722"/>
 </outputs>
 </service>
-<service Ava="52.0" Lat="0.0" Pri="1.68" Rel="33.0" Res="1524.8" Suc="0.0" name="serv1252043027">
+<service Ava="0.52" Lat="0.0" Pri="1.68" Rel="0.33" Res="1524.8" Suc="0.0" name="serv1252043027">
 <inputs>
 <instance name="inst2073145984"/>
 <instance name="inst466373475"/>
@@ -5164,7 +5164,7 @@
 <instance name="inst571853258"/>
 </outputs>
 </service>
-<service Ava="17.0" Lat="0.0" Pri="8.54" Rel="53.0" Res="2931.07" Suc="0.0" name="serv2002689390">
+<service Ava="0.17" Lat="0.0" Pri="8.54" Rel="0.53" Res="2931.07" Suc="0.0" name="serv2002689390">
 <inputs>
 <instance name="inst2127627468"/>
 <instance name="inst347581449"/>
@@ -5183,7 +5183,7 @@
 <instance name="inst2051641135"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="9.25" Rel="78.0" Res="463.29" Suc="0.0" name="serv483372908">
+<service Ava="0.94" Lat="0.0" Pri="9.25" Rel="0.78" Res="463.29" Suc="0.0" name="serv483372908">
 <inputs>
 <instance name="inst726488791"/>
 <instance name="inst1931414608"/>
@@ -5197,7 +5197,7 @@
 <instance name="inst1282970978"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="7.49" Rel="60.0" Res="1389.69" Suc="0.0" name="serv1582818942">
+<service Ava="0.94" Lat="0.0" Pri="7.49" Rel="0.6" Res="1389.69" Suc="0.0" name="serv1582818942">
 <inputs>
 <instance name="inst519216415"/>
 <instance name="inst1408727244"/>
@@ -5212,7 +5212,7 @@
 <instance name="inst2050002591"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="5.78" Rel="73.0" Res="4804.88" Suc="0.0" name="serv1999412340">
+<service Ava="0.93" Lat="0.0" Pri="5.78" Rel="0.73" Res="4804.88" Suc="0.0" name="serv1999412340">
 <inputs>
 <instance name="inst1462388410"/>
 <instance name="inst1893728552"/>
@@ -5227,7 +5227,7 @@
 <instance name="inst2038532935"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="4.33" Rel="67.0" Res="4777.41" Suc="0.0" name="serv1650612669">
+<service Ava="0.91" Lat="0.0" Pri="4.33" Rel="0.67" Res="4777.41" Suc="0.0" name="serv1650612669">
 <inputs>
 <instance name="inst331196199"/>
 <instance name="inst591925698"/>
@@ -5245,7 +5245,7 @@
 <instance name="inst2038532935"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="7.8" Rel="60.0" Res="2607.0" Suc="0.0" name="serv627152930">
+<service Ava="0.86" Lat="0.0" Pri="7.8" Rel="0.6" Res="2607.0" Suc="0.0" name="serv627152930">
 <inputs>
 <instance name="inst1949028224"/>
 <instance name="inst1562542459"/>
@@ -5262,7 +5262,7 @@
 <instance name="inst292485782"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="4.16" Rel="73.0" Res="1072.91" Suc="0.0" name="serv1739707202">
+<service Ava="0.99" Lat="0.0" Pri="4.16" Rel="0.73" Res="1072.91" Suc="0.0" name="serv1739707202">
 <inputs>
 <instance name="inst118598127"/>
 <instance name="inst1713286759"/>
@@ -5281,7 +5281,7 @@
 <instance name="inst1852151225"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="9.15" Rel="73.0" Res="3565.57" Suc="0.0" name="serv1114817105">
+<service Ava="0.72" Lat="0.0" Pri="9.15" Rel="0.73" Res="3565.57" Suc="0.0" name="serv1114817105">
 <inputs>
 <instance name="inst1717177992"/>
 <instance name="inst35443511"/>
@@ -5297,7 +5297,7 @@
 <instance name="inst464120748"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="2.76" Rel="73.0" Res="1406.0" Suc="0.0" name="serv1802585335">
+<service Ava="0.89" Lat="0.0" Pri="2.76" Rel="0.73" Res="1406.0" Suc="0.0" name="serv1802585335">
 <inputs>
 <instance name="inst1294644677"/>
 <instance name="inst863100530"/>
@@ -5314,7 +5314,7 @@
 <instance name="inst1816103675"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="2.88" Rel="73.0" Res="4109.18" Suc="0.0" name="serv1463616776">
+<service Ava="0.99" Lat="0.0" Pri="2.88" Rel="0.73" Res="4109.18" Suc="0.0" name="serv1463616776">
 <inputs>
 <instance name="inst63298417"/>
 <instance name="inst1926499052"/>
@@ -5328,7 +5328,7 @@
 <instance name="inst1164382995"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="2.86" Rel="50.0" Res="3477.29" Suc="0.0" name="serv556082191">
+<service Ava="0.86" Lat="0.0" Pri="2.86" Rel="0.5" Res="3477.29" Suc="0.0" name="serv556082191">
 <inputs>
 <instance name="inst697609524"/>
 <instance name="inst1068734362"/>
@@ -5344,7 +5344,7 @@
 <instance name="inst1831874742"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="6.09" Rel="53.0" Res="4983.63" Suc="0.0" name="serv1867101974">
+<service Ava="0.86" Lat="0.0" Pri="6.09" Rel="0.53" Res="4983.63" Suc="0.0" name="serv1867101974">
 <inputs>
 <instance name="inst1316355661"/>
 <instance name="inst1561928276"/>
@@ -5354,7 +5354,7 @@
 <instance name="inst1884511585"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="1.73" Rel="73.0" Res="4616.75" Suc="0.0" name="serv1248765977">
+<service Ava="0.87" Lat="0.0" Pri="1.73" Rel="0.73" Res="4616.75" Suc="0.0" name="serv1248765977">
 <inputs>
 <instance name="inst352497043"/>
 <instance name="inst621623191"/>
@@ -5373,7 +5373,7 @@
 <instance name="inst1937968708"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="7.32" Rel="73.0" Res="3788.51" Suc="0.0" name="serv565913341">
+<service Ava="0.83" Lat="0.0" Pri="7.32" Rel="0.73" Res="3788.51" Suc="0.0" name="serv565913341">
 <inputs>
 <instance name="inst63298417"/>
 <instance name="inst1926499052"/>
@@ -5387,7 +5387,7 @@
 <instance name="inst1844572802"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="2.97" Rel="83.0" Res="4224.97" Suc="0.0" name="serv764378890">
+<service Ava="0.91" Lat="0.0" Pri="2.97" Rel="0.83" Res="4224.97" Suc="0.0" name="serv764378890">
 <inputs>
 <instance name="inst1817742219"/>
 <instance name="inst1916257724"/>
@@ -5405,7 +5405,7 @@
 <instance name="inst175332300"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="4.09" Rel="67.0" Res="3992.37" Suc="0.0" name="serv1992858240">
+<service Ava="0.93" Lat="0.0" Pri="4.09" Rel="0.67" Res="3992.37" Suc="0.0" name="serv1992858240">
 <inputs>
 <instance name="inst861051846"/>
 <instance name="inst758849113"/>
@@ -5423,7 +5423,7 @@
 <instance name="inst514300859"/>
 </outputs>
 </service>
-<service Ava="46.0" Lat="0.0" Pri="7.58" Rel="73.0" Res="4129.63" Suc="0.0" name="serv1720044902">
+<service Ava="0.46" Lat="0.0" Pri="7.58" Rel="0.73" Res="4129.63" Suc="0.0" name="serv1720044902">
 <inputs>
 <instance name="inst327509009"/>
 <instance name="inst547275364"/>
@@ -5443,7 +5443,7 @@
 <instance name="inst950556557"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="1.14" Rel="73.0" Res="1093.38" Suc="0.0" name="serv1460339726">
+<service Ava="0.86" Lat="0.0" Pri="1.14" Rel="0.73" Res="1093.38" Suc="0.0" name="serv1460339726">
 <inputs>
 <instance name="inst646611225"/>
 <instance name="inst2144216723"/>
@@ -5460,7 +5460,7 @@
 <instance name="inst1844572802"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="3.17" Rel="73.0" Res="4999.93" Suc="0.0" name="serv1030638128">
+<service Ava="0.72" Lat="0.0" Pri="3.17" Rel="0.73" Res="4999.93" Suc="0.0" name="serv1030638128">
 <inputs>
 <instance name="inst286956043"/>
 <instance name="inst1102119045"/>
@@ -5479,7 +5479,7 @@
 <instance name="inst813944780"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="0.39" Rel="53.0" Res="1572.16" Suc="0.0" name="serv962844439">
+<service Ava="0.86" Lat="0.0" Pri="0.39" Rel="0.53" Res="1572.16" Suc="0.0" name="serv962844439">
 <inputs>
 <instance name="inst555878148"/>
 <instance name="inst9841294"/>
@@ -5494,7 +5494,7 @@
 <instance name="inst1299970411"/>
 </outputs>
 </service>
-<service Ava="66.0" Lat="0.0" Pri="5.97" Rel="33.0" Res="92.37" Suc="0.0" name="serv217113632">
+<service Ava="0.66" Lat="0.0" Pri="5.97" Rel="0.33" Res="92.37" Suc="0.0" name="serv217113632">
 <inputs>
 <instance name="inst1419786760"/>
 <instance name="inst1121781345"/>
@@ -5506,7 +5506,7 @@
 <instance name="inst1444364654"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="4.34" Rel="80.0" Res="3727.14" Suc="0.0" name="serv271799159">
+<service Ava="0.56" Lat="0.0" Pri="4.34" Rel="0.8" Res="3727.14" Suc="0.0" name="serv271799159">
 <inputs>
 <instance name="inst620394825"/>
 <instance name="inst1972581757"/>
@@ -5521,7 +5521,7 @@
 <instance name="inst1125672578"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="4.13" Rel="53.0" Res="3876.27" Suc="0.0" name="serv2063929017">
+<service Ava="0.98" Lat="0.0" Pri="4.13" Rel="0.53" Res="3876.27" Suc="0.0" name="serv2063929017">
 <inputs>
 <instance name="inst2023376051"/>
 <instance name="inst1974220301"/>
@@ -5539,7 +5539,7 @@
 <instance name="inst208306843"/>
 </outputs>
 </service>
-<service Ava="44.0" Lat="0.0" Pri="3.49" Rel="33.0" Res="1600.66" Suc="0.0" name="serv410663625">
+<service Ava="0.44" Lat="0.0" Pri="3.49" Rel="0.33" Res="1600.66" Suc="0.0" name="serv410663625">
 <inputs>
 <instance name="inst2096699517"/>
 <instance name="inst496891248"/>
@@ -5554,7 +5554,7 @@
 <instance name="inst1415281344"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="1.31" Rel="53.0" Res="1775.88" Suc="0.0" name="serv1860547874">
+<service Ava="0.88" Lat="0.0" Pri="1.31" Rel="0.53" Res="1775.88" Suc="0.0" name="serv1860547874">
 <inputs>
 <instance name="inst828281346"/>
 <instance name="inst671393124"/>
@@ -5570,7 +5570,7 @@
 <instance name="inst661357931"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="3.27" Rel="67.0" Res="4127.85" Suc="0.0" name="serv73333610">
+<service Ava="0.85" Lat="0.0" Pri="3.27" Rel="0.67" Res="4127.85" Suc="0.0" name="serv73333610">
 <inputs>
 <instance name="inst1925474691"/>
 <instance name="inst220800860"/>
@@ -5591,7 +5591,7 @@
 <instance name="inst103851383"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="4.78" Rel="53.0" Res="3285.47" Suc="0.0" name="serv1923426007">
+<service Ava="0.99" Lat="0.0" Pri="4.78" Rel="0.53" Res="3285.47" Suc="0.0" name="serv1923426007">
 <inputs>
 <instance name="inst1018964429"/>
 <instance name="inst623671875"/>
@@ -5610,7 +5610,7 @@
 <instance name="inst1557422860"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="3.66" Rel="73.0" Res="2712.68" Suc="0.0" name="serv1035553722">
+<service Ava="0.92" Lat="0.0" Pri="3.66" Rel="0.73" Res="2712.68" Suc="0.0" name="serv1035553722">
 <inputs>
 <instance name="inst288594549"/>
 <instance name="inst818450196"/>
@@ -5626,7 +5626,7 @@
 <instance name="inst1347077477"/>
 </outputs>
 </service>
-<service Ava="78.0" Lat="0.0" Pri="1.04" Rel="53.0" Res="3849.85" Suc="0.0" name="serv265245059">
+<service Ava="0.78" Lat="0.0" Pri="1.04" Rel="0.53" Res="3849.85" Suc="0.0" name="serv265245059">
 <inputs>
 <instance name="inst1549230254"/>
 <instance name="inst1683793309"/>
@@ -5640,7 +5640,7 @@
 <instance name="inst1291163622"/>
 </outputs>
 </service>
-<service Ava="67.0" Lat="0.0" Pri="7.82" Rel="73.0" Res="3786.3" Suc="0.0" name="serv1875294618">
+<service Ava="0.67" Lat="0.0" Pri="7.82" Rel="0.73" Res="3786.3" Suc="0.0" name="serv1875294618">
 <inputs>
 <instance name="inst1840681569"/>
 <instance name="inst1953329635"/>
@@ -5656,7 +5656,7 @@
 <instance name="inst1625216587"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="3.33" Rel="73.0" Res="2706.53" Suc="0.0" name="serv488288464">
+<service Ava="0.9" Lat="0.0" Pri="3.33" Rel="0.73" Res="2706.53" Suc="0.0" name="serv488288464">
 <inputs>
 <instance name="inst26226544"/>
 <instance name="inst117983944"/>
@@ -5670,7 +5670,7 @@
 <instance name="inst1210261695"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="7.76" Rel="78.0" Res="3580.94" Suc="0.0" name="serv1997773834">
+<service Ava="0.86" Lat="0.0" Pri="7.76" Rel="0.78" Res="3580.94" Suc="0.0" name="serv1997773834">
 <inputs>
 <instance name="inst405544026"/>
 <instance name="inst2095060973"/>
@@ -5688,7 +5688,7 @@
 <instance name="inst2038532935"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="7.29" Rel="73.0" Res="2828.67" Suc="0.0" name="serv1161309988">
+<service Ava="0.9" Lat="0.0" Pri="7.29" Rel="0.73" Res="2828.67" Suc="0.0" name="serv1161309988">
 <inputs>
 <instance name="inst245378716"/>
 <instance name="inst1392341994"/>
@@ -5704,7 +5704,7 @@
 <instance name="inst1200430545"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="6.73" Rel="73.0" Res="1332.02" Suc="0.0" name="serv141127299">
+<service Ava="0.85" Lat="0.0" Pri="6.73" Rel="0.73" Res="1332.02" Suc="0.0" name="serv141127299">
 <inputs>
 <instance name="inst535805708"/>
 <instance name="inst1212514422"/>
@@ -5718,7 +5718,7 @@
 <instance name="inst1071397229"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="7.8" Rel="73.0" Res="2125.5" Suc="0.0" name="serv124742049">
+<service Ava="0.9" Lat="0.0" Pri="7.8" Rel="0.73" Res="2125.5" Suc="0.0" name="serv124742049">
 <inputs>
 <instance name="inst1301198777"/>
 <instance name="inst43021934"/>
@@ -5734,7 +5734,7 @@
 <instance name="inst2078061540"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="8.4" Rel="67.0" Res="3382.06" Suc="0.0" name="serv620598830">
+<service Ava="0.93" Lat="0.0" Pri="8.4" Rel="0.67" Res="3382.06" Suc="0.0" name="serv620598830">
 <inputs>
 <instance name="inst997049440"/>
 <instance name="inst1950666768"/>
@@ -5752,7 +5752,7 @@
 <instance name="inst623671875"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="7.77" Rel="73.0" Res="3188.13" Suc="0.0" name="serv675284357">
+<service Ava="0.9" Lat="0.0" Pri="7.77" Rel="0.73" Res="3188.13" Suc="0.0" name="serv675284357">
 <inputs>
 <instance name="inst1267199911"/>
 <instance name="inst359665326"/>
@@ -5769,7 +5769,7 @@
 <instance name="inst389772959"/>
 </outputs>
 </service>
-<service Ava="51.0" Lat="0.0" Pri="3.7" Rel="67.0" Res="4984.02" Suc="0.0" name="serv1734791608">
+<service Ava="0.51" Lat="0.0" Pri="3.7" Rel="0.67" Res="4984.02" Suc="0.0" name="serv1734791608">
 <inputs>
 <instance name="inst521058964"/>
 <instance name="inst1851537042"/>
@@ -5786,7 +5786,7 @@
 <instance name="inst899352123"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="4.11" Rel="73.0" Res="375.52" Suc="0.0" name="serv617321780">
+<service Ava="0.86" Lat="0.0" Pri="4.11" Rel="0.73" Res="375.52" Suc="0.0" name="serv617321780">
 <inputs>
 <instance name="inst1162744489"/>
 <instance name="inst1150250472"/>
@@ -5805,7 +5805,7 @@
 <instance name="inst1384149388"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="5.16" Rel="73.0" Res="2829.28" Suc="0.0" name="serv1369606687">
+<service Ava="0.83" Lat="0.0" Pri="5.16" Rel="0.73" Res="2829.28" Suc="0.0" name="serv1369606687">
 <inputs>
 <instance name="inst696995341"/>
 </inputs>
@@ -5815,7 +5815,7 @@
 <instance name="inst527409059"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="0.99" Rel="73.0" Res="2933.06" Suc="0.0" name="serv1253681571">
+<service Ava="0.56" Lat="0.0" Pri="0.99" Rel="0.73" Res="2933.06" Suc="0.0" name="serv1253681571">
 <inputs>
 <instance name="inst1568482376"/>
 <instance name="inst619984647"/>
@@ -5831,7 +5831,7 @@
 <instance name="inst1451943077"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="4.07" Rel="53.0" Res="1590.75" Suc="0.0" name="serv559359241">
+<service Ava="0.93" Lat="0.0" Pri="4.07" Rel="0.53" Res="1590.75" Suc="0.0" name="serv559359241">
 <inputs>
 <instance name="inst1187322345"/>
 <instance name="inst539492898"/>
@@ -5850,7 +5850,7 @@
 <instance name="inst1690961592"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="8.04" Rel="67.0" Res="1075.88" Suc="0.0" name="serv1943088307">
+<service Ava="0.85" Lat="0.0" Pri="8.04" Rel="0.67" Res="1075.88" Suc="0.0" name="serv1943088307">
 <inputs>
 <instance name="inst930484079"/>
 <instance name="inst345532765"/>
@@ -5863,7 +5863,7 @@
 <instance name="inst90743183"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="9.34" Rel="83.0" Res="1123.36" Suc="0.0" name="serv275076209">
+<service Ava="0.93" Lat="0.0" Pri="9.34" Rel="0.83" Res="1123.36" Suc="0.0" name="serv275076209">
 <inputs>
 <instance name="inst1856042458"/>
 <instance name="inst863100530"/>
@@ -5886,7 +5886,7 @@
 <instance name="inst28275228"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="4.61" Rel="60.0" Res="2500.26" Suc="0.0" name="serv1445593020">
+<service Ava="0.63" Lat="0.0" Pri="4.61" Rel="0.6" Res="2500.26" Suc="0.0" name="serv1445593020">
 <inputs>
 <instance name="inst1167249905"/>
 <instance name="inst917990062"/>
@@ -5904,7 +5904,7 @@
 <instance name="inst970422862"/>
 </outputs>
 </service>
-<service Ava="54.0" Lat="0.0" Pri="6.04" Rel="58.0" Res="1363.32" Suc="0.0" name="serv195812826">
+<service Ava="0.54" Lat="0.0" Pri="6.04" Rel="0.58" Res="1363.32" Suc="0.0" name="serv195812826">
 <inputs>
 <instance name="inst206054116"/>
 <instance name="inst1049686245"/>
@@ -5920,7 +5920,7 @@
 <instance name="inst1800332608"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="2.31" Rel="83.0" Res="3077.77" Suc="0.0" name="serv1245488927">
+<service Ava="0.85" Lat="0.0" Pri="2.31" Rel="0.83" Res="3077.77" Suc="0.0" name="serv1245488927">
 <inputs>
 <instance name="inst226944782"/>
 <instance name="inst1282970978"/>
@@ -5936,7 +5936,7 @@
 <instance name="inst488084459"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="7.05" Rel="67.0" Res="3787.32" Suc="0.0" name="serv129657643">
+<service Ava="0.92" Lat="0.0" Pri="7.05" Rel="0.67" Res="3787.32" Suc="0.0" name="serv129657643">
 <inputs>
 <instance name="inst281426266"/>
 <instance name="inst1087986522"/>
@@ -5957,7 +5957,7 @@
 <instance name="inst667912031"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="0.77" Rel="73.0" Res="4565.85" Suc="0.0" name="serv491565514">
+<service Ava="0.98" Lat="0.0" Pri="0.77" Rel="0.73" Res="4565.85" Suc="0.0" name="serv491565514">
 <inputs>
 <instance name="inst1250200478"/>
 <instance name="inst355363915"/>
@@ -5978,7 +5978,7 @@
 <instance name="inst532528658"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="5.93" Rel="83.0" Res="1698.69" Suc="0.0" name="serv1805862385">
+<service Ava="0.56" Lat="0.0" Pri="5.93" Rel="0.83" Res="1698.69" Suc="0.0" name="serv1805862385">
 <inputs>
 <instance name="inst314400809"/>
 <instance name="inst837498313"/>
@@ -5992,7 +5992,7 @@
 <instance name="inst866377580"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="5.26" Rel="58.0" Res="2260.0" Suc="0.0" name="serv1038830772">
+<service Ava="0.88" Lat="0.0" Pri="5.26" Rel="0.58" Res="2260.0" Suc="0.0" name="serv1038830772">
 <inputs>
 <instance name="inst1249176155"/>
 <instance name="inst1298946088"/>
@@ -6007,7 +6007,7 @@
 <instance name="inst167139694"/>
 </outputs>
 </service>
-<service Ava="28.0" Lat="0.0" Pri="5.99" Rel="73.0" Res="2236.11" Suc="0.0" name="serv1794392691">
+<service Ava="0.28" Lat="0.0" Pri="5.99" Rel="0.73" Res="2236.11" Suc="0.0" name="serv1794392691">
 <inputs>
 <instance name="inst2056146551"/>
 <instance name="inst258486916"/>
@@ -6027,7 +6027,7 @@
 <instance name="inst158536910"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="0.19" Rel="73.0" Res="4436.91" Suc="0.0" name="serv331400242">
+<service Ava="0.9" Lat="0.0" Pri="0.19" Rel="0.73" Res="4436.91" Suc="0.0" name="serv331400242">
 <inputs>
 <instance name="inst1164997178"/>
 <instance name="inst519216415"/>
@@ -6041,7 +6041,7 @@
 <instance name="inst1621939537"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="6.84" Rel="73.0" Res="1875.28" Suc="0.0" name="serv427048875">
+<service Ava="0.83" Lat="0.0" Pri="6.84" Rel="0.73" Res="1875.28" Suc="0.0" name="serv427048875">
 <inputs>
 <instance name="inst1083070928"/>
 <instance name="inst565299158"/>
@@ -6053,7 +6053,7 @@
 <instance name="inst226330599"/>
 </outputs>
 </service>
-<service Ava="66.0" Lat="0.0" Pri="1.92" Rel="73.0" Res="299.38" Suc="0.0" name="serv1321475260">
+<service Ava="0.66" Lat="0.0" Pri="1.92" Rel="0.73" Res="299.38" Suc="0.0" name="serv1321475260">
 <inputs>
 <instance name="inst1740117342"/>
 <instance name="inst671189081"/>
@@ -6070,7 +6070,7 @@
 <instance name="inst1811802302"/>
 </outputs>
 </service>
-<service Ava="60.0" Lat="0.0" Pri="1.26" Rel="73.0" Res="3813.84" Suc="0.0" name="serv772571496">
+<service Ava="0.6" Lat="0.0" Pri="1.26" Rel="0.73" Res="3813.84" Suc="0.0" name="serv772571496">
 <inputs>
 <instance name="inst420290732"/>
 <instance name="inst818450196"/>
@@ -6083,7 +6083,7 @@
 <instance name="inst717271824"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="7.31" Rel="67.0" Res="4437.22" Suc="0.0" name="serv964482945">
+<service Ava="0.91" Lat="0.0" Pri="7.31" Rel="0.67" Res="4437.22" Suc="0.0" name="serv964482945">
 <inputs>
 <instance name="inst248245626"/>
 <instance name="inst1087986522"/>
@@ -6098,7 +6098,7 @@
 <instance name="inst954447790"/>
 </outputs>
 </service>
-<service Ava="67.0" Lat="0.0" Pri="1.75" Rel="83.0" Res="1318.89" Suc="0.0" name="serv1184249338">
+<service Ava="0.67" Lat="0.0" Pri="1.75" Rel="0.83" Res="1318.89" Suc="0.0" name="serv1184249338">
 <inputs>
 <instance name="inst1302223138"/>
 <instance name="inst2048978268"/>
@@ -6115,7 +6115,7 @@
 <instance name="inst103851383"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="9.69" Rel="73.0" Res="3070.17" Suc="0.0" name="serv486649958">
+<service Ava="0.92" Lat="0.0" Pri="9.69" Rel="0.73" Res="3070.17" Suc="0.0" name="serv486649958">
 <inputs>
 <instance name="inst1598590009"/>
 <instance name="inst1940835618"/>
@@ -6134,7 +6134,7 @@
 <instance name="inst847943646"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="9.3" Rel="80.0" Res="3288.53" Suc="0.0" name="serv412302131">
+<service Ava="0.56" Lat="0.0" Pri="9.3" Rel="0.8" Res="3288.53" Suc="0.0" name="serv412302131">
 <inputs>
 <instance name="inst889931113"/>
 <instance name="inst1094540622"/>
@@ -6154,7 +6154,7 @@
 <instance name="inst487674281"/>
 </outputs>
 </service>
-<service Ava="84.0" Lat="0.0" Pri="4.49" Rel="67.0" Res="3709.15" Suc="0.0" name="serv814148823">
+<service Ava="0.84" Lat="0.0" Pri="4.49" Rel="0.67" Res="3709.15" Suc="0.0" name="serv814148823">
 <inputs>
 <instance name="inst585371598"/>
 <instance name="inst919424563"/>
@@ -6174,7 +6174,7 @@
 <instance name="inst1835151792"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="2.1" Rel="78.0" Res="443.22" Suc="0.0" name="serv144404349">
+<service Ava="0.92" Lat="0.0" Pri="2.1" Rel="0.78" Res="443.22" Suc="0.0" name="serv144404349">
 <inputs>
 <instance name="inst879689823"/>
 <instance name="inst837498313"/>
@@ -6186,7 +6186,7 @@
 <instance name="inst922291473"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="2.49" Rel="58.0" Res="1702.87" Suc="0.0" name="serv2080314267">
+<service Ava="1.0" Lat="0.0" Pri="2.49" Rel="0.58" Res="1702.87" Suc="0.0" name="serv2080314267">
 <inputs>
 <instance name="inst880714146"/>
 <instance name="inst1753225542"/>
@@ -6200,7 +6200,7 @@
 <instance name="inst852859240"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="0.68" Rel="73.0" Res="352.76" Suc="0.0" name="serv1242211877">
+<service Ava="0.89" Lat="0.0" Pri="0.68" Rel="0.73" Res="352.76" Suc="0.0" name="serv1242211877">
 <inputs>
 <instance name="inst1051324789"/>
 <instance name="inst945230823"/>
@@ -6212,7 +6212,7 @@
 <instance name="inst1905812391"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="3.75" Rel="73.0" Res="534.33" Suc="0.0" name="serv1240573371">
+<service Ava="0.91" Lat="0.0" Pri="3.75" Rel="0.73" Res="534.33" Suc="0.0" name="serv1240573371">
 <inputs>
 <instance name="inst269546432"/>
 <instance name="inst1604529926"/>
@@ -6223,7 +6223,7 @@
 <instance name="inst1621939537"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="8.88" Rel="80.0" Res="3981.29" Suc="0.0" name="serv1723321952">
+<service Ava="0.98" Lat="0.0" Pri="8.88" Rel="0.8" Res="3981.29" Suc="0.0" name="serv1723321952">
 <inputs>
 <instance name="inst27250867"/>
 <instance name="inst1830236236"/>
@@ -6237,7 +6237,7 @@
 <instance name="inst856136290"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="8.8" Rel="80.0" Res="1847.01" Suc="0.0" name="serv1258597127">
+<service Ava="0.92" Lat="0.0" Pri="8.8" Rel="0.8" Res="1847.01" Suc="0.0" name="serv1258597127">
 <inputs>
 <instance name="inst63298417"/>
 <instance name="inst1926499052"/>
@@ -6250,7 +6250,7 @@
 <instance name="inst896485213"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="6.57" Rel="73.0" Res="1147.1" Suc="0.0" name="serv625514424">
+<service Ava="0.56" Lat="0.0" Pri="6.57" Rel="0.73" Res="1147.1" Suc="0.0" name="serv625514424">
 <inputs>
 <instance name="inst355363915"/>
 <instance name="inst1901511018"/>
@@ -6265,7 +6265,7 @@
 <instance name="inst1203297455"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="5.46" Rel="73.0" Res="1613.24" Suc="0.0" name="serv194174282">
+<service Ava="0.56" Lat="0.0" Pri="5.46" Rel="0.73" Res="1613.24" Suc="0.0" name="serv194174282">
 <inputs>
 <instance name="inst1410979971"/>
 <instance name="inst1893318374"/>
@@ -6285,7 +6285,7 @@
 <instance name="inst3697334"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="0.64" Rel="67.0" Res="1026.18" Suc="0.0" name="serv895050712">
+<service Ava="0.96" Lat="0.0" Pri="0.64" Rel="0.67" Res="1026.18" Suc="0.0" name="serv895050712">
 <inputs>
 <instance name="inst1704479970"/>
 <instance name="inst575130308"/>
@@ -6298,7 +6298,7 @@
 <instance name="inst1641601837"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="9.39" Rel="73.0" Res="2009.72" Suc="0.0" name="serv676922863">
+<service Ava="0.88" Lat="0.0" Pri="9.39" Rel="0.73" Res="2009.72" Suc="0.0" name="serv676922863">
 <inputs>
 <instance name="inst2056146551"/>
 <instance name="inst1188960889"/>
@@ -6317,7 +6317,7 @@
 <instance name="inst590287192"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="6.1" Rel="67.0" Res="3593.15" Suc="0.0" name="serv770932990">
+<service Ava="0.83" Lat="0.0" Pri="6.1" Rel="0.67" Res="3593.15" Suc="0.0" name="serv770932990">
 <inputs>
 <instance name="inst1649384303"/>
 <instance name="inst336725976"/>
@@ -6331,7 +6331,7 @@
 <instance name="inst1664745192"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="4.05" Rel="60.0" Res="474.7" Suc="0.0" name="serv418856231">
+<service Ava="0.97" Lat="0.0" Pri="4.05" Rel="0.6" Res="474.7" Suc="0.0" name="serv418856231">
 <inputs>
 <instance name="inst567962025"/>
 <instance name="inst1198792039"/>
@@ -6348,7 +6348,7 @@
 <instance name="inst2119024684"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="9.75" Rel="73.0" Res="4803.56" Suc="0.0" name="serv1256958621">
+<service Ava="0.93" Lat="0.0" Pri="9.75" Rel="0.73" Res="4803.56" Suc="0.0" name="serv1256958621">
 <inputs>
 <instance name="inst63298417"/>
 <instance name="inst1926499052"/>
@@ -6361,7 +6361,7 @@
 <instance name="inst1845186985"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="7.72" Rel="73.0" Res="4106.85" Suc="0.0" name="serv1179333744">
+<service Ava="0.85" Lat="0.0" Pri="7.72" Rel="0.73" Res="4106.85" Suc="0.0" name="serv1179333744">
 <inputs>
 <instance name="inst1145949061"/>
 <instance name="inst869654630"/>
@@ -6373,7 +6373,7 @@
 <instance name="inst1093312256"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="4.46" Rel="60.0" Res="1783.65" Suc="0.0" name="serv1658805275">
+<service Ava="0.93" Lat="0.0" Pri="4.46" Rel="0.6" Res="1783.65" Suc="0.0" name="serv1658805275">
 <inputs>
 <instance name="inst1516049576"/>
 <instance name="inst1327415177"/>
@@ -6383,7 +6383,7 @@
 <instance name="inst1852151225"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="7.47" Rel="67.0" Res="4004.36" Suc="0.0" name="serv1518302303">
+<service Ava="0.85" Lat="0.0" Pri="7.47" Rel="0.67" Res="4004.36" Suc="0.0" name="serv1518302303">
 <inputs>
 <instance name="inst767041757"/>
 <instance name="inst717681964"/>
@@ -6403,7 +6403,7 @@
 <instance name="inst1851537042"/>
 </outputs>
 </service>
-<service Ava="44.0" Lat="0.0" Pri="4.28" Rel="60.0" Res="4050.95" Suc="0.0" name="serv212198076">
+<service Ava="0.44" Lat="0.0" Pri="4.28" Rel="0.6" Res="4050.95" Suc="0.0" name="serv212198076">
 <inputs>
 <instance name="inst1293006171"/>
 <instance name="inst574105947"/>
@@ -6421,7 +6421,7 @@
 <instance name="inst188440500"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="8.36" Rel="73.0" Res="1071.77" Suc="0.0" name="serv1457062676">
+<service Ava="0.86" Lat="0.0" Pri="8.36" Rel="0.73" Res="1071.77" Suc="0.0" name="serv1457062676">
 <inputs>
 <instance name="inst1267199911"/>
 <instance name="inst220800860"/>
@@ -6443,7 +6443,7 @@
 <instance name="inst386906049"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="3.77" Rel="73.0" Res="4528.49" Suc="0.0" name="serv622237374">
+<service Ava="0.86" Lat="0.0" Pri="3.77" Rel="0.73" Res="4528.49" Suc="0.0" name="serv622237374">
 <inputs>
 <instance name="inst1508881293"/>
 <instance name="inst425820509"/>
@@ -6461,7 +6461,7 @@
 <instance name="inst1842934258"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="2.02" Rel="67.0" Res="1808.72" Suc="0.0" name="serv1657166769">
+<service Ava="0.96" Lat="0.0" Pri="2.02" Rel="0.67" Res="1808.72" Suc="0.0" name="serv1657166769">
 <inputs>
 <instance name="inst673031630"/>
 <instance name="inst416603542"/>
@@ -6477,7 +6477,7 @@
 <instance name="inst531914475"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="8.97" Rel="73.0" Res="136.55" Suc="0.0" name="serv1108263005">
+<service Ava="0.93" Lat="0.0" Pri="8.97" Rel="0.73" Res="136.55" Suc="0.0" name="serv1108263005">
 <inputs>
 <instance name="inst230632010"/>
 <instance name="inst1954968141"/>
@@ -6492,7 +6492,7 @@
 <instance name="inst1269862778"/>
 </outputs>
 </service>
-<service Ava="71.0" Lat="0.0" Pri="8.59" Rel="67.0" Res="4863.7" Suc="0.0" name="serv896689256">
+<service Ava="0.71" Lat="0.0" Pri="8.59" Rel="0.67" Res="4863.7" Suc="0.0" name="serv896689256">
 <inputs>
 <instance name="inst497505431"/>
 <instance name="inst337340159"/>
@@ -6510,7 +6510,7 @@
 <instance name="inst624900241"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="2.33" Rel="73.0" Res="2808.75" Suc="0.0" name="serv1655528225">
+<service Ava="0.91" Lat="0.0" Pri="2.33" Rel="0.73" Res="2808.75" Suc="0.0" name="serv1655528225">
 <inputs>
 <instance name="inst57358500"/>
 <instance name="inst935809813"/>
@@ -6526,7 +6526,7 @@
 <instance name="inst1816103675"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="5.9" Rel="73.0" Res="4554.3" Suc="0.0" name="serv279991765">
+<service Ava="0.87" Lat="0.0" Pri="5.9" Rel="0.73" Res="4554.3" Suc="0.0" name="serv279991765">
 <inputs>
 <instance name="inst777283047"/>
 <instance name="inst1720455042"/>
@@ -6538,7 +6538,7 @@
 <instance name="inst1132226678"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="4.24" Rel="73.0" Res="3823.53" Suc="0.0" name="serv192535776">
+<service Ava="0.87" Lat="0.0" Pri="4.24" Rel="0.73" Res="3823.53" Suc="0.0" name="serv192535776">
 <inputs>
 <instance name="inst1637914609"/>
 <instance name="inst1324138127"/>
@@ -6555,7 +6555,7 @@
 <instance name="inst1524242220"/>
 </outputs>
 </service>
-<service Ava="60.0" Lat="0.0" Pri="7.61" Rel="73.0" Res="147.63" Suc="0.0" name="serv2072121623">
+<service Ava="0.6" Lat="0.0" Pri="7.61" Rel="0.73" Res="147.63" Suc="0.0" name="serv2072121623">
 <inputs>
 <instance name="inst294534466"/>
 <instance name="inst1433919321"/>
@@ -6572,7 +6572,7 @@
 <instance name="inst115935260"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="4.78" Rel="67.0" Res="4617.23" Suc="0.0" name="serv1946365357">
+<service Ava="0.87" Lat="0.0" Pri="4.78" Rel="0.67" Res="4617.23" Suc="0.0" name="serv1946365357">
 <inputs>
 <instance name="inst2064953340"/>
 <instance name="inst808415041"/>
@@ -6591,7 +6591,7 @@
 <instance name="inst1177491195"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="0.23" Rel="67.0" Res="2186.36" Suc="0.0" name="serv633707030">
+<service Ava="0.95" Lat="0.0" Pri="0.23" Rel="0.67" Res="2186.36" Suc="0.0" name="serv633707030">
 <inputs>
 <instance name="inst420290732"/>
 <instance name="inst818450196"/>
@@ -6603,7 +6603,7 @@
 <instance name="inst292895960"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="0.87" Rel="73.0" Res="4908.15" Suc="0.0" name="serv2085229823">
+<service Ava="0.87" Lat="0.0" Pri="0.87" Rel="0.73" Res="4908.15" Suc="0.0" name="serv2085229823">
 <inputs>
 <instance name="inst1818970585"/>
 <instance name="inst1429617910"/>
@@ -6614,7 +6614,7 @@
 <instance name="inst1137552412"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="5.29" Rel="80.0" Res="622.23" Suc="0.0" name="serv2017436134">
+<service Ava="0.87" Lat="0.0" Pri="5.29" Rel="0.8" Res="622.23" Suc="0.0" name="serv2017436134">
 <inputs>
 <instance name="inst1740731525"/>
 <instance name="inst555468008"/>
@@ -6629,7 +6629,7 @@
 <instance name="inst413736632"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="1.6" Rel="73.0" Res="365.12" Suc="0.0" name="serv481734364">
+<service Ava="0.86" Lat="0.0" Pri="1.6" Rel="0.73" Res="365.12" Suc="0.0" name="serv481734364">
 <inputs>
 <instance name="inst705802130"/>
 <instance name="inst141537477"/>
@@ -6647,7 +6647,7 @@
 <instance name="inst263402510"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="9.87" Rel="73.0" Res="870.03" Suc="0.0" name="serv1104985955">
+<service Ava="0.83" Lat="0.0" Pri="9.87" Rel="0.73" Res="870.03" Suc="0.0" name="serv1104985955">
 <inputs>
 <instance name="inst1155780211"/>
 <instance name="inst1434533504"/>
@@ -6664,7 +6664,7 @@
 <instance name="inst1816103675"/>
 </outputs>
 </service>
-<service Ava="78.0" Lat="0.0" Pri="5.99" Rel="50.0" Res="3933.75" Suc="0.0" name="serv266883565">
+<service Ava="0.78" Lat="0.0" Pri="5.99" Rel="0.5" Res="3933.75" Suc="0.0" name="serv266883565">
 <inputs>
 <instance name="inst1156190389"/>
 <instance name="inst1704479970"/>
@@ -6682,7 +6682,7 @@
 <instance name="inst2034845707"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="6.45" Rel="53.0" Res="2283.75" Suc="0.0" name="serv1513386709">
+<service Ava="0.83" Lat="0.0" Pri="6.45" Rel="0.53" Res="2283.75" Suc="0.0" name="serv1513386709">
 <inputs>
 <instance name="inst1650408626"/>
 <instance name="inst461253876"/>
@@ -6697,7 +6697,7 @@
 <instance name="inst1641191659"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="5.31" Rel="73.0" Res="1624.93" Suc="0.0" name="serv1855632318">
+<service Ava="0.83" Lat="0.0" Pri="5.31" Rel="0.73" Res="1624.93" Suc="0.0" name="serv1855632318">
 <inputs>
 <instance name="inst2144626901"/>
 <instance name="inst1836790336"/>
@@ -6716,7 +6716,7 @@
 <instance name="inst190693227"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="0.49" Rel="53.0" Res="3245.53" Suc="0.0" name="serv1799308285">
+<service Ava="1.0" Lat="0.0" Pri="0.49" Rel="0.53" Res="3245.53" Suc="0.0" name="serv1799308285">
 <inputs>
 <instance name="inst1539399104"/>
 <instance name="inst631864481"/>
@@ -6731,7 +6731,7 @@
 <instance name="inst1611698209"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="3.82" Rel="83.0" Res="3181.92" Suc="0.0" name="serv480095858">
+<service Ava="0.92" Lat="0.0" Pri="3.82" Rel="0.83" Res="3181.92" Suc="0.0" name="serv480095858">
 <inputs>
 <instance name="inst1086143973"/>
 <instance name="inst1899258291"/>
@@ -6746,7 +6746,7 @@
 <instance name="inst1084095289"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="1.41" Rel="60.0" Res="1350.01" Suc="0.0" name="serv1668636425">
+<service Ava="0.92" Lat="0.0" Pri="1.41" Rel="0.6" Res="1350.01" Suc="0.0" name="serv1668636425">
 <inputs>
 <instance name="inst26226544"/>
 <instance name="inst740621314"/>
@@ -6767,7 +6767,7 @@
 <instance name="inst1787634586"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="5.45" Rel="67.0" Res="2978.49" Suc="0.0" name="serv1941449801">
+<service Ava="0.97" Lat="0.0" Pri="5.45" Rel="0.67" Res="2978.49" Suc="0.0" name="serv1941449801">
 <inputs>
 <instance name="inst1133251039"/>
 <instance name="inst1432894960"/>
@@ -6783,7 +6783,7 @@
 <instance name="inst1087372339"/>
 </outputs>
 </service>
-<service Ava="51.0" Lat="0.0" Pri="0.37" Rel="80.0" Res="2856.16" Suc="0.0" name="serv1929980107">
+<service Ava="0.51" Lat="0.0" Pri="0.37" Rel="0.8" Res="2856.16" Suc="0.0" name="serv1929980107">
 <inputs>
 <instance name="inst11479800"/>
 <instance name="inst1972377752"/>
@@ -6800,7 +6800,7 @@
 <instance name="inst1701202920"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="8.62" Rel="73.0" Res="4490.95" Suc="0.0" name="serv2007604984">
+<service Ava="0.86" Lat="0.0" Pri="8.62" Rel="0.73" Res="4490.95" Suc="0.0" name="serv2007604984">
 <inputs>
 <instance name="inst1660853959"/>
 <instance name="inst1751176858"/>
@@ -6818,7 +6818,7 @@
 <instance name="inst550962592"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="7.51" Rel="73.0" Res="3533.11" Suc="0.0" name="serv1508471153">
+<service Ava="0.96" Lat="0.0" Pri="7.51" Rel="0.73" Res="3533.11" Suc="0.0" name="serv1508471153">
 <inputs>
 <instance name="inst320954909"/>
 <instance name="inst1960497918"/>
@@ -6834,7 +6834,7 @@
 <instance name="inst429711742"/>
 </outputs>
 </service>
-<service Ava="18.0" Lat="0.0" Pri="5.15" Rel="67.0" Res="475.84" Suc="0.0" name="serv1169502594">
+<service Ava="0.18" Lat="0.0" Pri="5.15" Rel="0.67" Res="475.84" Suc="0.0" name="serv1169502594">
 <inputs>
 <instance name="inst2035255885"/>
 <instance name="inst1535097693"/>
@@ -6847,7 +6847,7 @@
 <instance name="inst1410365788"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="5.36" Rel="80.0" Res="4233.36" Suc="0.0" name="serv344508442">
+<service Ava="0.89" Lat="0.0" Pri="5.36" Rel="0.8" Res="4233.36" Suc="0.0" name="serv344508442">
 <inputs>
 <instance name="inst1084505429"/>
 <instance name="inst472927575"/>
@@ -6858,7 +6858,7 @@
 <instance name="inst985169606"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="5.63" Rel="73.0" Res="3278.48" Suc="0.0" name="serv1187526388">
+<service Ava="0.83" Lat="0.0" Pri="5.63" Rel="0.73" Res="3278.48" Suc="0.0" name="serv1187526388">
 <inputs>
 <instance name="inst1016301562"/>
 <instance name="inst1006470412"/>
@@ -6872,7 +6872,7 @@
 <instance name="inst728741480"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="4.96" Rel="73.0" Res="3197.07" Suc="0.0" name="serv838726679">
+<service Ava="0.9" Lat="0.0" Pri="4.96" Rel="0.73" Res="3197.07" Suc="0.0" name="serv838726679">
 <inputs>
 <instance name="inst539082758"/>
 <instance name="inst791619613"/>
@@ -6890,7 +6890,7 @@
 <instance name="inst1108058962"/>
 </outputs>
 </service>
-<service Ava="40.0" Lat="0.0" Pri="3.68" Rel="60.0" Res="154.4" Suc="0.0" name="serv1653889719">
+<service Ava="0.4" Lat="0.0" Pri="3.68" Rel="0.6" Res="154.4" Suc="0.0" name="serv1653889719">
 <inputs>
 <instance name="inst172669433"/>
 <instance name="inst181886400"/>
@@ -6907,7 +6907,7 @@
 <instance name="inst3697334"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="9.6" Rel="60.0" Res="1475.94" Suc="0.0" name="serv551166597">
+<service Ava="0.86" Lat="0.0" Pri="9.6" Rel="0.6" Res="1475.94" Suc="0.0" name="serv551166597">
 <inputs>
 <instance name="inst999916312"/>
 <instance name="inst108152794"/>
@@ -6922,7 +6922,7 @@
 <instance name="inst1552097126"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="9.49" Rel="73.0" Res="1454.43" Suc="0.0" name="serv1872017568">
+<service Ava="0.99" Lat="0.0" Pri="9.49" Rel="0.73" Res="1454.43" Suc="0.0" name="serv1872017568">
 <inputs>
 <instance name="inst1243236238"/>
 </inputs>
@@ -6937,7 +6937,7 @@
 <instance name="inst1501302870"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="6.71" Rel="67.0" Res="3726.62" Suc="0.0" name="serv1516663759">
+<service Ava="0.9" Lat="0.0" Pri="6.71" Rel="0.67" Res="3726.62" Suc="0.0" name="serv1516663759">
 <inputs>
 <instance name="inst598479798"/>
 <instance name="inst1352403211"/>
@@ -6955,7 +6955,7 @@
 <instance name="inst710717724"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="5.09" Rel="73.0" Res="3963.6" Suc="0.0" name="serv1377799293">
+<service Ava="0.89" Lat="0.0" Pri="5.09" Rel="0.73" Res="3963.6" Suc="0.0" name="serv1377799293">
 <inputs>
 <instance name="inst1478159477"/>
 <instance name="inst2145241084"/>
@@ -6970,7 +6970,7 @@
 <instance name="inst760487657"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="5.21" Rel="53.0" Res="690.73" Suc="0.0" name="serv1673552019">
+<service Ava="0.88" Lat="0.0" Pri="5.21" Rel="0.53" Res="690.73" Suc="0.0" name="serv1673552019">
 <inputs>
 <instance name="inst1812212442"/>
 <instance name="inst905292040"/>
@@ -6982,7 +6982,7 @@
 <instance name="inst1664745192"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="3.91" Rel="67.0" Res="2366.48" Suc="0.0" name="serv1234019271">
+<service Ava="0.9" Lat="0.0" Pri="3.91" Rel="0.67" Res="2366.48" Suc="0.0" name="serv1234019271">
 <inputs>
 <instance name="inst1688708903"/>
 <instance name="inst575744491"/>
@@ -7000,7 +7000,7 @@
 <instance name="inst1571759426"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="2.19" Rel="58.0" Res="1611.13" Suc="0.0" name="serv1027361078">
+<service Ava="0.85" Lat="0.0" Pri="2.19" Rel="0.58" Res="1611.13" Suc="0.0" name="serv1027361078">
 <inputs>
 <instance name="inst9841294"/>
 <instance name="inst1649998486"/>
@@ -7016,7 +7016,7 @@
 <instance name="inst322389410"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="4.93" Rel="67.0" Res="2149.76" Suc="0.0" name="serv1534687553">
+<service Ava="0.86" Lat="0.0" Pri="4.93" Rel="0.67" Res="2149.76" Suc="0.0" name="serv1534687553">
 <inputs>
 <instance name="inst1092287895"/>
 <instance name="inst1953329635"/>
@@ -7032,7 +7032,7 @@
 <instance name="inst43021934"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="6.05" Rel="42.0" Res="1572.98" Suc="0.0" name="serv1447231526">
+<service Ava="0.91" Lat="0.0" Pri="6.05" Rel="0.42" Res="1572.98" Suc="0.0" name="serv1447231526">
 <inputs>
 <instance name="inst262992332"/>
 <instance name="inst598479798"/>
@@ -7052,7 +7052,7 @@
 <instance name="inst1873452069"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="4.33" Rel="67.0" Res="4677.19" Suc="0.0" name="serv1994496784">
+<service Ava="0.85" Lat="0.0" Pri="4.33" Rel="0.67" Res="4677.19" Suc="0.0" name="serv1994496784">
 <inputs>
 <instance name="inst1016711740"/>
 <instance name="inst662586297"/>
@@ -7066,7 +7066,7 @@
 <instance name="inst737344264"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="4.39" Rel="58.0" Res="3137.74" Suc="0.0" name="serv2130084200">
+<service Ava="0.97" Lat="0.0" Pri="4.39" Rel="0.58" Res="3137.74" Suc="0.0" name="serv2130084200">
 <inputs>
 <instance name="inst1216815795"/>
 <instance name="inst714404914"/>
@@ -7081,7 +7081,7 @@
 <instance name="inst1276006738"/>
 </outputs>
 </service>
-<service Ava="70.0" Lat="0.0" Pri="3.64" Rel="73.0" Res="468.96" Suc="0.0" name="serv1662082325">
+<service Ava="0.7" Lat="0.0" Pri="3.64" Rel="0.73" Res="468.96" Suc="0.0" name="serv1662082325">
 <inputs>
 <instance name="inst1901511018"/>
 <instance name="inst1917282085"/>
@@ -7098,7 +7098,7 @@
 <instance name="inst876208730"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="7.0" Rel="80.0" Res="4323.67" Suc="0.0" name="serv1600842736">
+<service Ava="1.0" Lat="0.0" Pri="7.0" Rel="0.8" Res="4323.67" Suc="0.0" name="serv1600842736">
 <inputs>
 <instance name="inst943592279"/>
 <instance name="inst1370016827"/>
@@ -7109,7 +7109,7 @@
 <instance name="inst292485782"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="8.99" Rel="60.0" Res="1448.99" Suc="0.0" name="serv614044730">
+<service Ava="0.91" Lat="0.0" Pri="8.99" Rel="0.6" Res="1448.99" Suc="0.0" name="serv614044730">
 <inputs>
 <instance name="inst370724842"/>
 <instance name="inst1008108956"/>
@@ -7124,7 +7124,7 @@
 <instance name="inst1629722003"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="8.24" Rel="67.0" Res="956.51" Suc="0.0" name="serv329761698">
+<service Ava="0.93" Lat="0.0" Pri="8.24" Rel="0.67" Res="956.51" Suc="0.0" name="serv329761698">
 <inputs>
 <instance name="inst181476260"/>
 <instance name="inst1485327760"/>
@@ -7141,7 +7141,7 @@
 <instance name="inst1501302870"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="9.08" Rel="73.0" Res="2965.34" Suc="0.0" name="serv1230742221">
+<service Ava="0.72" Lat="0.0" Pri="9.08" Rel="0.73" Res="2965.34" Suc="0.0" name="serv1230742221">
 <inputs>
 <instance name="inst1598590009"/>
 <instance name="inst19672444"/>
@@ -7155,7 +7155,7 @@
 <instance name="inst1921583458"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="0.94" Rel="73.0" Res="1895.44" Suc="0.0" name="serv1938172751">
+<service Ava="0.95" Lat="0.0" Pri="0.94" Rel="0.73" Res="1895.44" Suc="0.0" name="serv1938172751">
 <inputs>
 <instance name="inst1997159651"/>
 <instance name="inst2128241651"/>
@@ -7172,7 +7172,7 @@
 <instance name="inst1558651226"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="4.19" Rel="60.0" Res="1812.92" Suc="0.0" name="serv618960324">
+<service Ava="0.94" Lat="0.0" Pri="4.19" Rel="0.6" Res="1812.92" Suc="0.0" name="serv618960324">
 <inputs>
 <instance name="inst1150250472"/>
 <instance name="inst809029224"/>
@@ -7190,7 +7190,7 @@
 <instance name="inst446507132"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="7.0" Rel="73.0" Res="3780.65" Suc="0.0" name="serv975952639">
+<service Ava="0.95" Lat="0.0" Pri="7.0" Rel="0.73" Res="3780.65" Suc="0.0" name="serv975952639">
 <inputs>
 <instance name="inst347581449"/>
 <instance name="inst1106010278"/>
@@ -7206,7 +7206,7 @@
 <instance name="inst2078061540"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="3.42" Rel="73.0" Res="548.54" Suc="0.0" name="serv1523217859">
+<service Ava="0.88" Lat="0.0" Pri="3.42" Rel="0.73" Res="548.54" Suc="0.0" name="serv1523217859">
 <inputs>
 <instance name="inst1887174452"/>
 <instance name="inst1264947222"/>
@@ -7226,7 +7226,7 @@
 <instance name="inst273233660"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="7.66" Rel="83.0" Res="2036.84" Suc="0.0" name="serv1742984252">
+<service Ava="1.0" Lat="0.0" Pri="7.66" Rel="0.83" Res="2036.84" Suc="0.0" name="serv1742984252">
 <inputs>
 <instance name="inst1812212442"/>
 <instance name="inst905292040"/>
@@ -7239,7 +7239,7 @@
 <instance name="inst386495909"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="1.07" Rel="73.0" Res="1309.12" Suc="0.0" name="serv1043746328">
+<service Ava="0.85" Lat="0.0" Pri="1.07" Rel="0.73" Res="1309.12" Suc="0.0" name="serv1043746328">
 <inputs>
 <instance name="inst771957313"/>
 <instance name="inst1283585161"/>
@@ -7256,7 +7256,7 @@
 <instance name="inst1001554856"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="7.38" Rel="73.0" Res="1073.03" Suc="0.0" name="serv1928341601">
+<service Ava="0.99" Lat="0.0" Pri="7.38" Rel="0.73" Res="1073.03" Suc="0.0" name="serv1928341601">
 <inputs>
 <instance name="inst226944782"/>
 <instance name="inst223053549"/>
@@ -7270,7 +7270,7 @@
 <instance name="inst1501098827"/>
 </outputs>
 </service>
-<service Ava="61.0" Lat="0.0" Pri="4.87" Rel="73.0" Res="3784.13" Suc="0.0" name="serv1592650092">
+<service Ava="0.61" Lat="0.0" Pri="4.87" Rel="0.73" Res="3784.13" Suc="0.0" name="serv1592650092">
 <inputs>
 <instance name="inst893208163"/>
 <instance name="inst255824049"/>
@@ -7284,7 +7284,7 @@
 <instance name="inst1298331905"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="0.45" Rel="73.0" Res="1110.01" Suc="0.0" name="serv840365223">
+<service Ava="0.93" Lat="0.0" Pri="0.45" Rel="0.73" Res="1110.01" Suc="0.0" name="serv840365223">
 <inputs>
 <instance name="inst1649384303"/>
 <instance name="inst336725976"/>
@@ -7306,7 +7306,7 @@
 <instance name="inst1164382995"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="7.57" Rel="73.0" Res="1450.31" Suc="0.0" name="serv819064379">
+<service Ava="0.94" Lat="0.0" Pri="7.57" Rel="0.73" Res="1450.31" Suc="0.0" name="serv819064379">
 <inputs>
 <instance name="inst1067095856"/>
 <instance name="inst947483512"/>
@@ -7330,7 +7330,7 @@
 <instance name="inst762536341"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="8.29" Rel="67.0" Res="2449.26" Suc="0.0" name="serv544612497">
+<service Ava="0.88" Lat="0.0" Pri="8.29" Rel="0.67" Res="2449.26" Suc="0.0" name="serv544612497">
 <inputs>
 <instance name="inst1277645244"/>
 <instance name="inst819474557"/>
@@ -7345,7 +7345,7 @@
 <instance name="inst508360942"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="0.12" Rel="73.0" Res="1432.03" Suc="0.0" name="serv1589373042">
+<service Ava="0.63" Lat="0.0" Pri="0.12" Rel="0.73" Res="1432.03" Suc="0.0" name="serv1589373042">
 <inputs>
 <instance name="inst291871599"/>
 <instance name="inst862076207"/>
@@ -7363,7 +7363,7 @@
 <instance name="inst1001554856"/>
 </outputs>
 </service>
-<service Ava="14.0" Lat="0.0" Pri="9.8" Rel="73.0" Res="3563.41" Suc="0.0" name="serv1323113804">
+<service Ava="0.14" Lat="0.0" Pri="9.8" Rel="0.73" Res="3563.41" Suc="0.0" name="serv1323113804">
 <inputs>
 <instance name="inst1732949059"/>
 <instance name="inst1004217723"/>
@@ -7382,7 +7382,7 @@
 <instance name="inst404519665"/>
 </outputs>
 </service>
-<service Ava="70.0" Lat="0.0" Pri="6.17" Rel="67.0" Res="556.79" Suc="0.0" name="serv967759995">
+<service Ava="0.7" Lat="0.0" Pri="6.17" Rel="0.67" Res="556.79" Suc="0.0" name="serv967759995">
 <inputs>
 <instance name="inst1953943818"/>
 <instance name="inst1067095856"/>
@@ -7401,7 +7401,7 @@
 <instance name="inst2081748768"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="8.91" Rel="80.0" Res="1540.42" Suc="0.0" name="serv354339592">
+<service Ava="0.56" Lat="0.0" Pri="8.91" Rel="0.8" Res="1540.42" Suc="0.0" name="serv354339592">
 <inputs>
 <instance name="inst530890114"/>
 <instance name="inst163862644"/>
@@ -7414,7 +7414,7 @@
 <instance name="inst120646811"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="7.96" Rel="73.0" Res="2533.86" Suc="0.0" name="serv493204058">
+<service Ava="0.88" Lat="0.0" Pri="7.96" Rel="0.73" Res="2533.86" Suc="0.0" name="serv493204058">
 <inputs>
 <instance name="inst1781080486"/>
 <instance name="inst1195514989"/>
@@ -7432,7 +7432,7 @@
 <instance name="inst1897619785"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="3.23" Rel="58.0" Res="1019.91" Suc="0.0" name="serv1100070361">
+<service Ava="0.97" Lat="0.0" Pri="3.23" Rel="0.58" Res="1019.91" Suc="0.0" name="serv1100070361">
 <inputs>
 <instance name="inst19058261"/>
 <instance name="inst861462024"/>
@@ -7445,7 +7445,7 @@
 <instance name="inst1664745192"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="9.44" Rel="80.0" Res="2312.12" Suc="0.0" name="serv415579181">
+<service Ava="0.91" Lat="0.0" Pri="9.44" Rel="0.8" Res="2312.12" Suc="0.0" name="serv415579181">
 <inputs>
 <instance name="inst1817742219"/>
 <instance name="inst577793175"/>
@@ -7463,7 +7463,7 @@
 <instance name="inst970422862"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="2.27" Rel="67.0" Res="2961.61" Suc="0.0" name="serv1395823087">
+<service Ava="0.86" Lat="0.0" Pri="2.27" Rel="0.67" Res="2961.61" Suc="0.0" name="serv1395823087">
 <inputs>
 <instance name="inst420290732"/>
 <instance name="inst818450196"/>
@@ -7476,7 +7476,7 @@
 <instance name="inst264016693"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="6.82" Rel="67.0" Res="765.28" Suc="0.0" name="serv139488793">
+<service Ava="0.98" Lat="0.0" Pri="6.82" Rel="0.67" Res="765.28" Suc="0.0" name="serv139488793">
 <inputs>
 <instance name="inst1555374176"/>
 <instance name="inst1628493637"/>
@@ -7501,7 +7501,7 @@
 <instance name="inst1298331905"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="0.08" Rel="58.0" Res="4805.0" Suc="0.0" name="serv1367968143">
+<service Ava="0.86" Lat="0.0" Pri="0.08" Rel="0.58" Res="4805.0" Suc="0.0" name="serv1367968143">
 <inputs>
 <instance name="inst1479798021"/>
 </inputs>
@@ -7513,7 +7513,7 @@
 <instance name="inst508360942"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="2.34" Rel="73.0" Res="409.2" Suc="0.0" name="serv205643976">
+<service Ava="0.99" Lat="0.0" Pri="2.34" Rel="0.73" Res="409.2" Suc="0.0" name="serv205643976">
 <inputs>
 <instance name="inst1799104242"/>
 <instance name="inst997663623"/>
@@ -7529,7 +7529,7 @@
 <instance name="inst626948925"/>
 </outputs>
 </service>
-<service Ava="21.0" Lat="0.0" Pri="8.28" Rel="73.0" Res="305.51" Suc="0.0" name="serv1797669741">
+<service Ava="0.21" Lat="0.0" Pri="8.28" Rel="0.73" Res="305.51" Suc="0.0" name="serv1797669741">
 <inputs>
 <instance name="inst910207596"/>
 <instance name="inst1897619785"/>
@@ -7547,7 +7547,7 @@
 <instance name="inst530686109"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="4.95" Rel="73.0" Res="3178.57" Suc="0.0" name="serv980868195">
+<service Ava="0.72" Lat="0.0" Pri="4.95" Rel="0.73" Res="3178.57" Suc="0.0" name="serv980868195">
 <inputs>
 <instance name="inst1812212442"/>
 <instance name="inst905292040"/>
@@ -7560,7 +7560,7 @@
 <instance name="inst106104110"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="6.7" Rel="73.0" Res="192.26" Suc="0.0" name="serv1524856403">
+<service Ava="0.56" Lat="0.0" Pri="6.7" Rel="0.73" Res="192.26" Suc="0.0" name="serv1524856403">
 <inputs>
 <instance name="inst1796441375"/>
 <instance name="inst1102733228"/>
@@ -7577,7 +7577,7 @@
 <instance name="inst1576060837"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="8.47" Rel="78.0" Res="3869.33" Suc="0.0" name="serv827257023">
+<service Ava="0.56" Lat="0.0" Pri="8.47" Rel="0.78" Res="3869.33" Suc="0.0" name="serv827257023">
 <inputs>
 <instance name="inst1296693361"/>
 <instance name="inst1523628037"/>
@@ -7596,7 +7596,7 @@
 <instance name="inst473951898"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="8.24" Rel="80.0" Res="2619.8" Suc="0.0" name="serv137850249">
+<service Ava="0.86" Lat="0.0" Pri="8.24" Rel="0.8" Res="2619.8" Suc="0.0" name="serv137850249">
 <inputs>
 <instance name="inst1736840292"/>
 <instance name="inst1222345572"/>
@@ -7609,7 +7609,7 @@
 <instance name="inst669550575"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="9.41" Rel="60.0" Res="1678.35" Suc="0.0" name="serv1577903386">
+<service Ava="0.98" Lat="0.0" Pri="9.41" Rel="0.6" Res="1678.35" Suc="0.0" name="serv1577903386">
 <inputs>
 <instance name="inst621623191"/>
 <instance name="inst1544518703"/>
@@ -7625,7 +7625,7 @@
 <instance name="inst1779031802"/>
 </outputs>
 </service>
-<service Ava="78.0" Lat="0.0" Pri="5.62" Rel="73.0" Res="2289.75" Suc="0.0" name="serv560997747">
+<service Ava="0.78" Lat="0.0" Pri="5.62" Rel="0.73" Res="2289.75" Suc="0.0" name="serv560997747">
 <inputs>
 <instance name="inst926182706"/>
 <instance name="inst1192441944"/>
@@ -7645,7 +7645,7 @@
 <instance name="inst454699776"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="4.84" Rel="83.0" Res="3260.84" Suc="0.0" name="serv1876933124">
+<service Ava="0.99" Lat="0.0" Pri="4.84" Rel="0.83" Res="3260.84" Suc="0.0" name="serv1876933124">
 <inputs>
 <instance name="inst1968076341"/>
 <instance name="inst1869764841"/>
@@ -7664,7 +7664,7 @@
 <instance name="inst940725407"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="7.26" Rel="83.0" Res="2876.36" Suc="0.0" name="serv210559532">
+<service Ava="0.92" Lat="0.0" Pri="7.26" Rel="0.83" Res="2876.36" Suc="0.0" name="serv210559532">
 <inputs>
 <instance name="inst1619276670"/>
 <instance name="inst1772477702"/>
@@ -7679,7 +7679,7 @@
 <instance name="inst386906049"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="1.27" Rel="73.0" Res="4957.19" Suc="0.0" name="serv1176056694">
+<service Ava="0.94" Lat="0.0" Pri="1.27" Rel="0.73" Res="4957.19" Suc="0.0" name="serv1176056694">
 <inputs>
 <instance name="inst331196199"/>
 <instance name="inst511023809"/>
@@ -7697,7 +7697,7 @@
 <instance name="inst66575467"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="8.34" Rel="73.0" Res="3248.81" Suc="0.0" name="serv278353259">
+<service Ava="0.56" Lat="0.0" Pri="8.34" Rel="0.73" Res="3248.81" Suc="0.0" name="serv278353259">
 <inputs>
 <instance name="inst216499449"/>
 <instance name="inst379327626"/>
@@ -7710,7 +7710,7 @@
 <instance name="inst1618662487"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="0.71" Rel="73.0" Res="4702.34" Suc="0.0" name="serv351062542">
+<service Ava="0.83" Lat="0.0" Pri="0.71" Rel="0.73" Res="4702.34" Suc="0.0" name="serv351062542">
 <inputs>
 <instance name="inst857160613"/>
 <instance name="inst1271705327"/>
@@ -7726,7 +7726,7 @@
 <instance name="inst1664745192"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="4.97" Rel="67.0" Res="4980.17" Suc="0.0" name="serv197451332">
+<service Ava="0.85" Lat="0.0" Pri="4.97" Rel="0.67" Res="4980.17" Suc="0.0" name="serv197451332">
 <inputs>
 <instance name="inst45274661"/>
 <instance name="inst995410896"/>
@@ -7749,7 +7749,7 @@
 <instance name="inst454699776"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="3.34" Rel="67.0" Res="2320.15" Suc="0.0" name="serv2141553856">
+<service Ava="0.94" Lat="0.0" Pri="3.34" Rel="0.67" Res="2320.15" Suc="0.0" name="serv2141553856">
 <inputs>
 <instance name="inst1831464602"/>
 <instance name="inst234523243"/>
@@ -7765,7 +7765,7 @@
 <instance name="inst815583324"/>
 </outputs>
 </service>
-<service Ava="56.0" Lat="0.0" Pri="9.73" Rel="67.0" Res="3123.5" Suc="0.0" name="serv1586095992">
+<service Ava="0.56" Lat="0.0" Pri="9.73" Rel="0.67" Res="3123.5" Suc="0.0" name="serv1586095992">
 <inputs>
 <instance name="inst343894259"/>
 <instance name="inst867605946"/>
@@ -7785,7 +7785,7 @@
 <instance name="inst934171307"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="0.92" Rel="73.0" Res="1531.11" Suc="0.0" name="serv690031063">
+<service Ava="0.9" Lat="0.0" Pri="0.92" Rel="0.73" Res="1531.11" Suc="0.0" name="serv690031063">
 <inputs>
 <instance name="inst466169432"/>
 <instance name="inst733042891"/>
@@ -7802,7 +7802,7 @@
 <instance name="inst605033898"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="9.33" Rel="80.0" Res="950.62" Suc="0.0" name="serv899966306">
+<service Ava="0.63" Lat="0.0" Pri="9.33" Rel="0.8" Res="950.62" Suc="0.0" name="serv899966306">
 <inputs>
 <instance name="inst1466279643"/>
 <instance name="inst1124444212"/>
@@ -7817,7 +7817,7 @@
 <instance name="inst1209851555"/>
 </outputs>
 </service>
-<service Ava="65.0" Lat="0.0" Pri="0.0" Rel="73.0" Res="4277.78" Suc="0.0" name="serv199089876">
+<service Ava="0.65" Lat="0.0" Pri="0.0" Rel="0.73" Res="4277.78" Suc="0.0" name="serv199089876">
 <inputs>
 <instance name="inst715633280"/>
 <instance name="inst1800332608"/>
@@ -7835,7 +7835,7 @@
 <instance name="inst1835151792"/>
 </outputs>
 </service>
-<service Ava="67.0" Lat="0.0" Pri="9.97" Rel="53.0" Res="1838.58" Suc="0.0" name="serv190897232">
+<service Ava="0.67" Lat="0.0" Pri="9.97" Rel="0.53" Res="1838.58" Suc="0.0" name="serv190897232">
 <inputs>
 <instance name="inst574105947"/>
 <instance name="inst1154551845"/>
@@ -7856,7 +7856,7 @@
 <instance name="inst1905812391"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="1.4" Rel="78.0" Res="4324.86" Suc="0.0" name="serv63502460">
+<service Ava="0.99" Lat="0.0" Pri="1.4" Rel="0.78" Res="4324.86" Suc="0.0" name="serv63502460">
 <inputs>
 <instance name="inst1420196938"/>
 <instance name="inst18033900"/>
@@ -7870,7 +7870,7 @@
 <instance name="inst94020233"/>
 </outputs>
 </service>
-<service Ava="73.0" Lat="0.0" Pri="6.89" Rel="73.0" Res="3141.33" Suc="0.0" name="serv475180264">
+<service Ava="0.73" Lat="0.0" Pri="6.89" Rel="0.73" Res="3141.33" Suc="0.0" name="serv475180264">
 <inputs>
 <instance name="inst863100530"/>
 <instance name="inst558130875"/>
@@ -7888,7 +7888,7 @@
 <instance name="inst1825320642"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="4.31" Rel="78.0" Res="4463.83" Suc="0.0" name="serv270160615">
+<service Ava="0.97" Lat="0.0" Pri="4.31" Rel="0.78" Res="4463.83" Suc="0.0" name="serv270160615">
 <inputs>
 <instance name="inst1815489492"/>
 <instance name="inst1415895527"/>
@@ -7905,7 +7905,7 @@
 <instance name="inst388544593"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="8.58" Rel="80.0" Res="237.38" Suc="0.0" name="serv213836582">
+<service Ava="0.86" Lat="0.0" Pri="8.58" Rel="0.8" Res="237.38" Suc="0.0" name="serv213836582">
 <inputs>
 <instance name="inst663200480"/>
 <instance name="inst670778941"/>
@@ -7922,7 +7922,7 @@
 <instance name="inst882762830"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="6.06" Rel="83.0" Res="2407.55" Suc="0.0" name="serv1313282654">
+<service Ava="0.85" Lat="0.0" Pri="6.06" Rel="0.83" Res="2407.55" Suc="0.0" name="serv1313282654">
 <inputs>
 <instance name="inst298015559"/>
 <instance name="inst294534466"/>
@@ -7937,7 +7937,7 @@
 <instance name="inst389772959"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="9.74" Rel="80.0" Res="4703.71" Suc="0.0" name="serv769294446">
+<service Ava="0.99" Lat="0.0" Pri="9.74" Rel="0.8" Res="4703.71" Suc="0.0" name="serv769294446">
 <inputs>
 <instance name="inst1884921725"/>
 <instance name="inst585371598"/>
@@ -7957,7 +7957,7 @@
 <instance name="inst1453581621"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="0.19" Rel="73.0" Res="2040.67" Suc="0.0" name="serv352701048">
+<service Ava="1.0" Lat="0.0" Pri="0.19" Rel="0.73" Res="2040.67" Suc="0.0" name="serv352701048">
 <inputs>
 <instance name="inst1631974692"/>
 <instance name="inst1579337887"/>
@@ -7973,7 +7973,7 @@
 <instance name="inst1180358105"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="4.89" Rel="73.0" Res="4432.33" Suc="0.0" name="serv1389268987">
+<service Ava="0.89" Lat="0.0" Pri="4.89" Rel="0.73" Res="4432.33" Suc="0.0" name="serv1389268987">
 <inputs>
 <instance name="inst618756281"/>
 <instance name="inst2096085334"/>
@@ -7992,7 +7992,7 @@
 <instance name="inst1164382995"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="9.27" Rel="67.0" Res="3744.54" Suc="0.0" name="serv1250404521">
+<service Ava="0.97" Lat="0.0" Pri="9.27" Rel="0.67" Res="3744.54" Suc="0.0" name="serv1250404521">
 <inputs>
 <instance name="inst33804967"/>
 <instance name="inst1644468709"/>
@@ -8010,7 +8010,7 @@
 <instance name="inst626538747"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="1.83" Rel="73.0" Res="3702.68" Suc="0.0" name="serv1047023378">
+<service Ava="0.95" Lat="0.0" Pri="1.83" Rel="0.73" Res="3702.68" Suc="0.0" name="serv1047023378">
 <inputs>
 <instance name="inst1569506737"/>
 <instance name="inst699248030"/>
@@ -8033,7 +8033,7 @@
 <instance name="inst1425112494"/>
 </outputs>
 </service>
-<service Ava="63.0" Lat="0.0" Pri="0.95" Rel="83.0" Res="1352.5" Suc="0.0" name="serv1584457486">
+<service Ava="0.63" Lat="0.0" Pri="0.95" Rel="0.83" Res="1352.5" Suc="0.0" name="serv1584457486">
 <inputs>
 <instance name="inst183524944"/>
 <instance name="inst927617207"/>
@@ -8052,7 +8052,7 @@
 <instance name="inst1990401508"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="5.5" Rel="83.0" Res="3691.99" Suc="0.0" name="serv132934693">
+<service Ava="0.92" Lat="0.0" Pri="5.5" Rel="0.83" Res="3691.99" Suc="0.0" name="serv132934693">
 <inputs>
 <instance name="inst1587120353"/>
 <instance name="inst559769381"/>
@@ -8070,7 +8070,7 @@
 <instance name="inst1958859374"/>
 </outputs>
 </service>
-<service Ava="18.0" Lat="0.0" Pri="2.51" Rel="73.0" Res="3738.74" Suc="0.0" name="serv1314921160">
+<service Ava="0.18" Lat="0.0" Pri="2.51" Rel="0.73" Res="3738.74" Suc="0.0" name="serv1314921160">
 <inputs>
 <instance name="inst1086347978"/>
 <instance name="inst1781080486"/>
@@ -8088,7 +8088,7 @@
 <instance name="inst373797849"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="9.06" Rel="60.0" Res="349.05" Suc="0.0" name="serv746355096">
+<service Ava="0.83" Lat="0.0" Pri="9.06" Rel="0.6" Res="349.05" Suc="0.0" name="serv746355096">
 <inputs>
 <instance name="inst1344210605"/>
 <instance name="inst1810163758"/>
@@ -8103,7 +8103,7 @@
 <instance name="inst1691371770"/>
 </outputs>
 </service>
-<service Ava="36.0" Lat="0.0" Pri="1.53" Rel="73.0" Res="2847.81" Suc="0.0" name="serv1528133453">
+<service Ava="0.36" Lat="0.0" Pri="1.53" Rel="0.73" Res="2847.81" Suc="0.0" name="serv1528133453">
 <inputs>
 <instance name="inst1174828328"/>
 <instance name="inst1272729688"/>
@@ -8120,7 +8120,7 @@
 <instance name="inst600118342"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="7.39" Rel="73.0" Res="3035.77" Suc="0.0" name="serv2133361250">
+<service Ava="0.83" Lat="0.0" Pri="7.39" Rel="0.73" Res="3035.77" Suc="0.0" name="serv2133361250">
 <inputs>
 <instance name="inst1916667902"/>
 <instance name="inst1213538745"/>
@@ -8135,7 +8135,7 @@
 <instance name="inst2145855267"/>
 </outputs>
 </service>
-<service Ava="78.0" Lat="0.0" Pri="6.7" Rel="60.0" Res="2123.84" Suc="0.0" name="serv1729876052">
+<service Ava="0.78" Lat="0.0" Pri="6.7" Rel="0.6" Res="2123.84" Suc="0.0" name="serv1729876052">
 <inputs>
 <instance name="inst1566843870"/>
 <instance name="inst1159467439"/>
@@ -8153,7 +8153,7 @@
 <instance name="inst8202750"/>
 </outputs>
 </service>
-<service Ava="51.0" Lat="0.0" Pri="0.16" Rel="67.0" Res="1299.02" Suc="0.0" name="serv2020713184">
+<service Ava="0.51" Lat="0.0" Pri="0.16" Rel="0.67" Res="1299.02" Suc="0.0" name="serv2020713184">
 <inputs>
 <instance name="inst63298417"/>
 <instance name="inst1926499052"/>
@@ -8172,7 +8172,7 @@
 <instance name="inst572467441"/>
 </outputs>
 </service>
-<service Ava="46.0" Lat="0.0" Pri="7.99" Rel="73.0" Res="3182.64" Suc="0.0" name="serv1093516261">
+<service Ava="0.46" Lat="0.0" Pri="7.99" Rel="0.73" Res="3182.64" Suc="0.0" name="serv1093516261">
 <inputs>
 <instance name="inst946255146"/>
 <instance name="inst1710009709"/>
@@ -8192,7 +8192,7 @@
 <instance name="inst1079589873"/>
 </outputs>
 </service>
-<service Ava="57.0" Lat="0.0" Pri="4.28" Rel="53.0" Res="3379.38" Suc="0.0" name="serv820702923">
+<service Ava="0.57" Lat="0.0" Pri="4.28" Rel="0.53" Res="3379.38" Suc="0.0" name="serv820702923">
 <inputs>
 <instance name="inst517577909"/>
 <instance name="inst1698129875"/>
@@ -8209,7 +8209,7 @@
 <instance name="inst386906049"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="7.56" Rel="73.0" Res="1116.6" Suc="0.0" name="serv754547740">
+<service Ava="0.9" Lat="0.0" Pri="7.56" Rel="0.73" Res="1116.6" Suc="0.0" name="serv754547740">
 <inputs>
 <instance name="inst1055011979"/>
 <instance name="inst876412773"/>
@@ -8227,7 +8227,7 @@
 <instance name="inst1431666594"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="2.21" Rel="80.0" Res="69.9" Suc="0.0" name="serv400832475">
+<service Ava="0.95" Lat="0.0" Pri="2.21" Rel="0.8" Res="69.9" Suc="0.0" name="serv400832475">
 <inputs>
 <instance name="inst1594084593"/>
 <instance name="inst1498025820"/>
@@ -8245,7 +8245,7 @@
 <instance name="inst1139190956"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="9.5" Rel="67.0" Res="985.15" Suc="0.0" name="serv893412206">
+<service Ava="0.85" Lat="0.0" Pri="9.5" Rel="0.67" Res="985.15" Suc="0.0" name="serv893412206">
 <inputs>
 <instance name="inst20696767"/>
 <instance name="inst1668432420"/>
@@ -8262,7 +8262,7 @@
 <instance name="inst1777393258"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="7.8" Rel="67.0" Res="1061.14" Suc="0.0" name="serv2004327934">
+<service Ava="0.97" Lat="0.0" Pri="7.8" Rel="0.67" Res="1061.14" Suc="0.0" name="serv2004327934">
 <inputs>
 <instance name="inst120850816"/>
 <instance name="inst2095471151"/>
@@ -8282,7 +8282,7 @@
 <instance name="inst1079179695"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="2.65" Rel="73.0" Res="1710.36" Suc="0.0" name="serv1863824924">
+<service Ava="0.83" Lat="0.0" Pri="2.65" Rel="0.73" Res="1710.36" Suc="0.0" name="serv1863824924">
 <inputs>
 <instance name="inst2004123891"/>
 <instance name="inst1352607254"/>
@@ -8299,7 +8299,7 @@
 <instance name="inst2073556124"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="0.3" Rel="67.0" Res="891.9" Suc="0.0" name="serv1439038920">
+<service Ava="0.9" Lat="0.0" Pri="0.3" Rel="0.67" Res="891.9" Suc="0.0" name="serv1439038920">
 <inputs>
 <instance name="inst832582757"/>
 <instance name="inst377689082"/>
@@ -8315,7 +8315,7 @@
 <instance name="inst1787634586"/>
 </outputs>
 </service>
-<service Ava="62.0" Lat="0.0" Pri="8.76" Rel="53.0" Res="4582.53" Suc="0.0" name="serv1579541892">
+<service Ava="0.62" Lat="0.0" Pri="8.76" Rel="0.53" Res="4582.53" Suc="0.0" name="serv1579541892">
 <inputs>
 <instance name="inst1262898538"/>
 <instance name="inst1327825355"/>
@@ -8329,7 +8329,7 @@
 <instance name="inst1269862778"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="2.94" Rel="78.0" Res="1372.72" Suc="0.0" name="serv66779510">
+<service Ava="0.86" Lat="0.0" Pri="2.94" Rel="0.78" Res="1372.72" Suc="0.0" name="serv66779510">
 <inputs>
 <instance name="inst914098829"/>
 <instance name="inst134369194"/>
@@ -8342,7 +8342,7 @@
 <instance name="inst670778941"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="6.81" Rel="73.0" Res="3601.82" Suc="0.0" name="serv1109901511">
+<service Ava="0.97" Lat="0.0" Pri="6.81" Rel="0.73" Res="3601.82" Suc="0.0" name="serv1109901511">
 <inputs>
 <instance name="inst1462388410"/>
 <instance name="inst1638528792"/>
@@ -8362,7 +8362,7 @@
 <instance name="inst717271824"/>
 </outputs>
 </service>
-<service Ava="22.0" Lat="0.0" Pri="8.61" Rel="67.0" Res="439.92" Suc="0.0" name="serv7178427">
+<service Ava="0.22" Lat="0.0" Pri="8.61" Rel="0.67" Res="439.92" Suc="0.0" name="serv7178427">
 <inputs>
 <instance name="inst1056650523"/>
 <instance name="inst1291777805"/>
@@ -8378,7 +8378,7 @@
 <instance name="inst484397231"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="7.33" Rel="73.0" Res="590.31" Suc="0.0" name="serv1119732661">
+<service Ava="0.99" Lat="0.0" Pri="7.33" Rel="0.73" Res="590.31" Suc="0.0" name="serv1119732661">
 <inputs>
 <instance name="inst495866925"/>
 <instance name="inst1083070928"/>
@@ -8389,7 +8389,7 @@
 <instance name="inst100984511"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="4.68" Rel="73.0" Res="1561.83" Suc="0.0" name="serv2075398673">
+<service Ava="0.88" Lat="0.0" Pri="4.68" Rel="0.73" Res="1561.83" Suc="0.0" name="serv2075398673">
 <inputs>
 <instance name="inst1344210605"/>
 <instance name="inst628177291"/>
@@ -8403,7 +8403,7 @@
 <instance name="inst2080110224"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="0.69" Rel="67.0" Res="222.32" Suc="0.0" name="serv1440677426">
+<service Ava="0.83" Lat="0.0" Pri="0.69" Rel="0.67" Res="222.32" Suc="0.0" name="serv1440677426">
 <inputs>
 <instance name="inst1461364087"/>
 <instance name="inst1537760560"/>
@@ -8424,7 +8424,7 @@
 <instance name="inst1429617910"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="5.55" Rel="73.0" Res="2846.76" Suc="0.0" name="serv956290339">
+<service Ava="0.72" Lat="0.0" Pri="5.55" Rel="0.73" Res="2846.76" Suc="0.0" name="serv956290339">
 <inputs>
 <instance name="inst1668022242"/>
 <instance name="inst376664759"/>
@@ -8446,7 +8446,7 @@
 <instance name="inst1595723137"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="8.5" Rel="73.0" Res="244.39" Suc="0.0" name="serv402470981">
+<service Ava="0.72" Lat="0.0" Pri="8.5" Rel="0.73" Res="244.39" Suc="0.0" name="serv402470981">
 <inputs>
 <instance name="inst1049686245"/>
 <instance name="inst1111336012"/>
@@ -8460,7 +8460,7 @@
 <instance name="inst1432894960"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="2.98" Rel="60.0" Res="4682.06" Suc="0.0" name="serv423771825">
+<service Ava="0.91" Lat="0.0" Pri="2.98" Rel="0.6" Res="4682.06" Suc="0.0" name="serv423771825">
 <inputs>
 <instance name="inst1365511411"/>
 <instance name="inst1968076341"/>
@@ -8473,7 +8473,7 @@
 <instance name="inst508975125"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="9.08" Rel="67.0" Res="476.14" Suc="0.0" name="serv1718406358">
+<service Ava="0.85" Lat="0.0" Pri="9.08" Rel="0.67" Res="476.14" Suc="0.0" name="serv1718406358">
 <inputs>
 <instance name="inst946255146"/>
 <instance name="inst1149226111"/>
@@ -8493,7 +8493,7 @@
 <instance name="inst2078061540"/>
 </outputs>
 </service>
-<service Ava="69.0" Lat="0.0" Pri="3.7" Rel="33.0" Res="1151.68" Suc="0.0" name="serv628791474">
+<service Ava="0.69" Lat="0.0" Pri="3.7" Rel="0.33" Res="1151.68" Suc="0.0" name="serv628791474">
 <inputs>
 <instance name="inst1063204623"/>
 <instance name="inst1467918187"/>
@@ -8507,7 +8507,7 @@
 <instance name="inst1746671442"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="2.36" Rel="73.0" Res="406.96" Suc="0.0" name="serv609129174">
+<service Ava="0.97" Lat="0.0" Pri="2.36" Rel="0.73" Res="406.96" Suc="0.0" name="serv609129174">
 <inputs>
 <instance name="inst1721069225"/>
 <instance name="inst1884921725"/>
@@ -8526,7 +8526,7 @@
 <instance name="inst1069758723"/>
 </outputs>
 </service>
-<service Ava="60.0" Lat="0.0" Pri="6.54" Rel="73.0" Res="4462.49" Suc="0.0" name="serv1237296321">
+<service Ava="0.6" Lat="0.0" Pri="6.54" Rel="0.73" Res="4462.49" Suc="0.0" name="serv1237296321">
 <inputs>
 <instance name="inst1164997178"/>
 <instance name="inst1110925872"/>
@@ -8545,7 +8545,7 @@
 <instance name="inst1690961592"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="1.05" Rel="73.0" Res="4198.94" Suc="0.0" name="serv1318198210">
+<service Ava="1.0" Lat="0.0" Pri="1.05" Rel="0.73" Res="4198.94" Suc="0.0" name="serv1318198210">
 <inputs>
 <instance name="inst1065047172"/>
 <instance name="inst1830850419"/>
@@ -8559,7 +8559,7 @@
 <instance name="inst1337246327"/>
 </outputs>
 </service>
-<service Ava="92.0" Lat="0.0" Pri="8.32" Rel="73.0" Res="156.19" Suc="0.0" name="serv835449629">
+<service Ava="0.92" Lat="0.0" Pri="8.32" Rel="0.73" Res="156.19" Suc="0.0" name="serv835449629">
 <inputs>
 <instance name="inst611177858"/>
 <instance name="inst992748029"/>
@@ -8575,7 +8575,7 @@
 <instance name="inst1410365788"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="4.76" Rel="42.0" Res="4642.63" Suc="0.0" name="serv959567389">
+<service Ava="0.91" Lat="0.0" Pri="4.76" Rel="0.42" Res="4642.63" Suc="0.0" name="serv959567389">
 <inputs>
 <instance name="inst696995341"/>
 <instance name="inst2144216723"/>
@@ -8598,7 +8598,7 @@
 <instance name="inst2094446790"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="9.63" Rel="73.0" Res="2272.9" Suc="0.0" name="serv496481108">
+<service Ava="0.88" Lat="0.0" Pri="9.63" Rel="0.73" Res="2272.9" Suc="0.0" name="serv496481108">
 <inputs>
 <instance name="inst1607806976"/>
 <instance name="inst595816931"/>
@@ -8612,7 +8612,7 @@
 <instance name="inst91153361"/>
 </outputs>
 </service>
-<service Ava="55.0" Lat="0.0" Pri="1.62" Rel="73.0" Res="439.33" Suc="0.0" name="serv65140966">
+<service Ava="0.55" Lat="0.0" Pri="1.62" Rel="0.73" Res="439.33" Suc="0.0" name="serv65140966">
 <inputs>
 <instance name="inst678357364"/>
 <instance name="inst750042324"/>
@@ -8634,7 +8634,7 @@
 <instance name="inst847943646"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="4.11" Rel="42.0" Res="2725.96" Suc="0.0" name="serv1443954476">
+<service Ava="0.85" Lat="0.0" Pri="4.11" Rel="0.42" Res="2725.96" Suc="0.0" name="serv1443954476">
 <inputs>
 <instance name="inst1764695236"/>
 <instance name="inst117983944"/>
@@ -8653,7 +8653,7 @@
 <instance name="inst1471195237"/>
 </outputs>
 </service>
-<service Ava="80.0" Lat="0.0" Pri="6.64" Rel="60.0" Res="3324.36" Suc="0.0" name="serv1604119786">
+<service Ava="0.8" Lat="0.0" Pri="6.64" Rel="0.6" Res="3324.36" Suc="0.0" name="serv1604119786">
 <inputs>
 <instance name="inst63298417"/>
 <instance name="inst1926499052"/>
@@ -8667,7 +8667,7 @@
 <instance name="inst1812212442"/>
 </outputs>
 </service>
-<service Ava="85.0" Lat="0.0" Pri="6.58" Rel="73.0" Res="1953.18" Suc="0.0" name="serv1394184543">
+<service Ava="0.85" Lat="0.0" Pri="6.58" Rel="0.73" Res="1953.18" Suc="0.0" name="serv1394184543">
 <inputs>
 <instance name="inst295762832"/>
 <instance name="inst1365715454"/>
@@ -8682,7 +8682,7 @@
 <instance name="inst244354393"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="6.73" Rel="67.0" Res="185.84" Suc="0.0" name="serv1948003901">
+<service Ava="0.98" Lat="0.0" Pri="6.73" Rel="0.67" Res="185.84" Suc="0.0" name="serv1948003901">
 <inputs>
 <instance name="inst1453171443"/>
 <instance name="inst1237092278"/>
@@ -8698,7 +8698,7 @@
 <instance name="inst1689733226"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="8.77" Rel="67.0" Res="959.76" Suc="0.0" name="serv2012520540">
+<service Ava="0.97" Lat="0.0" Pri="8.77" Rel="0.67" Res="959.76" Suc="0.0" name="serv2012520540">
 <inputs>
 <instance name="inst778921591"/>
 <instance name="inst1829826058"/>
@@ -8714,7 +8714,7 @@
 <instance name="inst1097203489"/>
 </outputs>
 </service>
-<service Ava="94.0" Lat="0.0" Pri="3.21" Rel="73.0" Res="2060.09" Suc="0.0" name="serv911435962">
+<service Ava="0.94" Lat="0.0" Pri="3.21" Rel="0.73" Res="2060.09" Suc="0.0" name="serv911435962">
 <inputs>
 <instance name="inst63298417"/>
 <instance name="inst1926499052"/>
@@ -8729,7 +8729,7 @@
 <instance name="inst766427574"/>
 </outputs>
 </service>
-<service Ava="100.0" Lat="0.0" Pri="1.62" Rel="80.0" Res="3772.17" Suc="0.0" name="serv1024084028">
+<service Ava="1.0" Lat="0.0" Pri="1.62" Rel="0.8" Res="3772.17" Suc="0.0" name="serv1024084028">
 <inputs>
 <instance name="inst159561233"/>
 <instance name="inst1704479970"/>
@@ -8742,7 +8742,7 @@
 <instance name="inst454699776"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="9.61" Rel="83.0" Res="3890.49" Suc="0.0" name="serv979229689">
+<service Ava="0.97" Lat="0.0" Pri="9.61" Rel="0.83" Res="3890.49" Suc="0.0" name="serv979229689">
 <inputs>
 <instance name="inst1419786760"/>
 <instance name="inst1121781345"/>
@@ -8755,7 +8755,7 @@
 <instance name="inst222439366"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="1.24" Rel="80.0" Res="1019.11" Suc="0.0" name="serv70056560">
+<service Ava="0.83" Lat="0.0" Pri="1.24" Rel="0.8" Res="1019.11" Suc="0.0" name="serv70056560">
 <inputs>
 <instance name="inst219162316"/>
 <instance name="inst643948358"/>
@@ -8777,7 +8777,7 @@
 <instance name="inst115935260"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="7.3" Rel="60.0" Res="649.74" Suc="0.0" name="serv541335447">
+<service Ava="0.98" Lat="0.0" Pri="7.3" Rel="0.6" Res="649.74" Suc="0.0" name="serv541335447">
 <inputs>
 <instance name="inst20696767"/>
 <instance name="inst1778827759"/>
@@ -8798,7 +8798,7 @@
 <instance name="inst1347077477"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="6.52" Rel="83.0" Res="559.39" Suc="0.0" name="serv1533049009">
+<service Ava="0.87" Lat="0.0" Pri="6.52" Rel="0.83" Res="559.39" Suc="0.0" name="serv1533049009">
 <inputs>
 <instance name="inst1649384303"/>
 <instance name="inst336725976"/>
@@ -8813,7 +8813,7 @@
 <instance name="inst483783048"/>
 </outputs>
 </service>
-<service Ava="99.0" Lat="0.0" Pri="8.51" Rel="73.0" Res="780.96" Suc="0.0" name="serv698223707">
+<service Ava="0.99" Lat="0.0" Pri="8.51" Rel="0.73" Res="780.96" Suc="0.0" name="serv698223707">
 <inputs>
 <instance name="inst1885125768"/>
 <instance name="inst240052982"/>
@@ -8830,7 +8830,7 @@
 <instance name="inst590287192"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="9.25" Rel="73.0" Res="1668.01" Suc="0.0" name="serv2077037217">
+<service Ava="0.86" Lat="0.0" Pri="9.25" Rel="0.73" Res="1668.01" Suc="0.0" name="serv2077037217">
 <inputs>
 <instance name="inst1810163758"/>
 <instance name="inst347171309"/>
@@ -8853,7 +8853,7 @@
 <instance name="inst183114766"/>
 </outputs>
 </service>
-<service Ava="96.0" Lat="0.0" Pri="6.46" Rel="80.0" Res="3340.45" Suc="0.0" name="serv539696941">
+<service Ava="0.96" Lat="0.0" Pri="6.46" Rel="0.8" Res="3340.45" Suc="0.0" name="serv539696941">
 <inputs>
 <instance name="inst997049440"/>
 <instance name="inst1555988359"/>
@@ -8869,7 +8869,7 @@
 <instance name="inst103851383"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="8.31" Rel="73.0" Res="183.3" Suc="0.0" name="serv1172779644">
+<service Ava="0.87" Lat="0.0" Pri="8.31" Rel="0.73" Res="183.3" Suc="0.0" name="serv1172779644">
 <inputs>
 <instance name="inst1840681569"/>
 <instance name="inst208716983"/>
@@ -8889,7 +8889,7 @@
 <instance name="inst1690961592"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="3.04" Rel="73.0" Res="2600.17" Suc="0.0" name="serv1180972288">
+<service Ava="0.86" Lat="0.0" Pri="3.04" Rel="0.73" Res="2600.17" Suc="0.0" name="serv1180972288">
 <inputs>
 <instance name="inst480505998"/>
 <instance name="inst1811188119"/>
@@ -8907,7 +8907,7 @@
 <instance name="inst2041399807"/>
 </outputs>
 </service>
-<service Ava="72.0" Lat="0.0" Pri="6.1" Rel="67.0" Res="4002.65" Suc="0.0" name="serv678561407">
+<service Ava="0.72" Lat="0.0" Pri="6.1" Rel="0.67" Res="4002.65" Suc="0.0" name="serv678561407">
 <inputs>
 <instance name="inst43225977"/>
 <instance name="inst1888812958"/>
@@ -8931,7 +8931,7 @@
 <instance name="inst1298331905"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="3.8" Rel="60.0" Res="2495.22" Suc="0.0" name="serv334677292">
+<service Ava="0.86" Lat="0.0" Pri="3.8" Rel="0.6" Res="2495.22" Suc="0.0" name="serv334677292">
 <inputs>
 <instance name="inst157922727"/>
 <instance name="inst942363913"/>
@@ -8942,7 +8942,7 @@
 <instance name="inst1269862778"/>
 </outputs>
 </service>
-<service Ava="97.0" Lat="0.0" Pri="6.47" Rel="67.0" Res="3952.76" Suc="0.0" name="serv147681399">
+<service Ava="0.97" Lat="0.0" Pri="6.47" Rel="0.67" Res="3952.76" Suc="0.0" name="serv147681399">
 <inputs>
 <instance name="inst1649384303"/>
 <instance name="inst336725976"/>
@@ -8959,7 +8959,7 @@
 <instance name="inst672417447"/>
 </outputs>
 </service>
-<service Ava="88.0" Lat="0.0" Pri="4.95" Rel="73.0" Res="889.45" Suc="0.0" name="serv815787329">
+<service Ava="0.88" Lat="0.0" Pri="4.95" Rel="0.73" Res="889.45" Suc="0.0" name="serv815787329">
 <inputs>
 <instance name="inst696995341"/>
 <instance name="inst574516125"/>
@@ -8976,7 +8976,7 @@
 <instance name="inst1759165459"/>
 </outputs>
 </service>
-<service Ava="83.0" Lat="0.0" Pri="1.64" Rel="73.0" Res="2520.96" Suc="0.0" name="serv1382714887">
+<service Ava="0.83" Lat="0.0" Pri="1.64" Rel="0.73" Res="2520.96" Suc="0.0" name="serv1382714887">
 <inputs>
 <instance name="inst1470170876"/>
 <instance name="inst861462024"/>
@@ -8992,7 +8992,7 @@
 <instance name="inst1965413474"/>
 </outputs>
 </service>
-<service Ava="93.0" Lat="0.0" Pri="6.83" Rel="73.0" Res="4835.02" Suc="0.0" name="serv1791115641">
+<service Ava="0.93" Lat="0.0" Pri="6.83" Rel="0.73" Res="4835.02" Suc="0.0" name="serv1791115641">
 <inputs>
 <instance name="inst585575641"/>
 <instance name="inst1487580487"/>
@@ -9009,7 +9009,7 @@
 <instance name="inst1200430545"/>
 </outputs>
 </service>
-<service Ava="69.0" Lat="0.0" Pri="8.78" Rel="60.0" Res="479.91" Suc="0.0" name="serv1996135290">
+<service Ava="0.69" Lat="0.0" Pri="8.78" Rel="0.6" Res="479.91" Suc="0.0" name="serv1996135290">
 <inputs>
 <instance name="inst808619046"/>
 <instance name="inst553829464"/>
@@ -9025,7 +9025,7 @@
 <instance name="inst882762830"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="5.86" Rel="73.0" Res="237.44" Suc="0.0" name="serv2060651967">
+<service Ava="0.86" Lat="0.0" Pri="5.86" Rel="0.73" Res="237.44" Suc="0.0" name="serv2060651967">
 <inputs>
 <instance name="inst1777803436"/>
 <instance name="inst2126603107"/>
@@ -9038,7 +9038,7 @@
 <instance name="inst44250300"/>
 </outputs>
 </service>
-<service Ava="89.0" Lat="0.0" Pri="8.94" Rel="67.0" Res="2897.04" Suc="0.0" name="serv1096793311">
+<service Ava="0.89" Lat="0.0" Pri="8.94" Rel="0.67" Res="2897.04" Suc="0.0" name="serv1096793311">
 <inputs>
 <instance name="inst943592279"/>
 <instance name="inst557516692"/>
@@ -9057,7 +9057,7 @@
 <instance name="inst1816103675"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="8.3" Rel="83.0" Res="3043.76" Suc="0.0" name="serv1101708905">
+<service Ava="0.86" Lat="0.0" Pri="8.3" Rel="0.83" Res="3043.76" Suc="0.0" name="serv1101708905">
 <inputs>
 <instance name="inst1294440672"/>
 <instance name="inst1009747462"/>
@@ -9069,7 +9069,7 @@
 <instance name="inst2076833174"/>
 </outputs>
 </service>
-<service Ava="79.0" Lat="0.0" Pri="5.06" Rel="80.0" Res="114.46" Suc="0.0" name="serv891773662">
+<service Ava="0.79" Lat="0.0" Pri="5.06" Rel="0.8" Res="114.46" Suc="0.0" name="serv891773662">
 <inputs>
 <instance name="inst842413907"/>
 <instance name="inst1480002026"/>
@@ -9084,7 +9084,7 @@
 <instance name="inst1125672578"/>
 </outputs>
 </service>
-<service Ava="95.0" Lat="0.0" Pri="7.11" Rel="83.0" Res="699.76" Suc="0.0" name="serv468626164">
+<service Ava="0.95" Lat="0.0" Pri="7.11" Rel="0.83" Res="699.76" Suc="0.0" name="serv468626164">
 <inputs>
 <instance name="inst1949028224"/>
 <instance name="inst1410569793"/>
@@ -9099,7 +9099,7 @@
 <instance name="inst1921583458"/>
 </outputs>
 </service>
-<service Ava="91.0" Lat="0.0" Pri="9.59" Rel="80.0" Res="4135.34" Suc="0.0" name="serv263606515">
+<service Ava="0.91" Lat="0.0" Pri="9.59" Rel="0.8" Res="4135.34" Suc="0.0" name="serv263606515">
 <inputs>
 <instance name="inst1109287328"/>
 <instance name="inst1286452071"/>
@@ -9114,7 +9114,7 @@
 <instance name="inst279787760"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="1.78" Rel="73.0" Res="1473.8" Suc="0.0" name="serv1116455611">
+<service Ava="0.9" Lat="0.0" Pri="1.78" Rel="0.73" Res="1473.8" Suc="0.0" name="serv1116455611">
 <inputs>
 <instance name="inst914098829"/>
 <instance name="inst929869896"/>
@@ -9136,7 +9136,7 @@
 <instance name="inst44864483"/>
 </outputs>
 </service>
-<service Ava="98.0" Lat="0.0" Pri="3.96" Rel="53.0" Res="664.98" Suc="0.0" name="serv1576264842">
+<service Ava="0.98" Lat="0.0" Pri="3.96" Rel="0.53" Res="664.98" Suc="0.0" name="serv1576264842">
 <inputs>
 <instance name="inst1688708903"/>
 <instance name="inst395712876"/>
@@ -9154,7 +9154,7 @@
 <instance name="inst1412004294"/>
 </outputs>
 </service>
-<service Ava="86.0" Lat="0.0" Pri="2.66" Rel="80.0" Res="445.88" Suc="0.0" name="serv1303451504">
+<service Ava="0.86" Lat="0.0" Pri="2.66" Rel="0.8" Res="445.88" Suc="0.0" name="serv1303451504">
 <inputs>
 <instance name="inst387110092"/>
 <instance name="inst523107648"/>
@@ -9168,7 +9168,7 @@
 <instance name="inst1210261695"/>
 </outputs>
 </service>
-<service Ava="90.0" Lat="0.0" Pri="0.73" Rel="80.0" Res="2232.94" Suc="0.0" name="serv1715129308">
+<service Ava="0.9" Lat="0.0" Pri="0.73" Rel="0.8" Res="2232.94" Suc="0.0" name="serv1715129308">
 <inputs>
 <instance name="inst1887174452"/>
 <instance name="inst45274661"/>
@@ -9188,7 +9188,7 @@
 <instance name="inst1625216587"/>
 </outputs>
 </service>
-<service Ava="32.0" Lat="0.0" Pri="6.18" Rel="73.0" Res="1542.87" Suc="0.0" name="serv1306728554">
+<service Ava="0.32" Lat="0.0" Pri="6.18" Rel="0.73" Res="1542.87" Suc="0.0" name="serv1306728554">
 <inputs>
 <instance name="inst1309801561"/>
 <instance name="inst1964799291"/>
@@ -9206,7 +9206,7 @@
 <instance name="inst1766947925"/>
 </outputs>
 </service>
-<service Ava="87.0" Lat="0.0" Pri="6.09" Rel="73.0" Res="808.02" Suc="0.0" name="serv349423998">
+<service Ava="0.87" Lat="0.0" Pri="6.09" Rel="0.73" Res="808.02" Suc="0.0" name="serv349423998">
 <inputs>
 <instance name="inst1944522808"/>
 <instance name="inst1251839022"/>
