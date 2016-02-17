@@ -1,4 +1,4 @@
-package ec.graph;
+/*package ec.graph;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -337,3 +337,4 @@ public class Solution implements Comparable<Solution> {
 		System.out.println("scores: " + scores);
 	}
 }
+*/

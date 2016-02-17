@@ -1,4 +1,4 @@
-package ec.graph;
+/*package ec.graph;
 
 import java.util.Comparator;
 
@@ -16,3 +16,4 @@ public class crowdingDistanceComparator implements Comparator<Solution> {
 		return 0;
 	}
 }
+*/
